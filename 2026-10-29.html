@@ -1,0 +1,112 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Internet &amp; Cloud Health Digest — Oct 29, 2026</title>
+<link rel="alternate" type="application/rss+xml" title="Internet &amp; Cloud Health Digest (RSS)" href="https://papagiglio.github.io/internet-status-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Internet &amp; Cloud Health Digest (Atom)" href="https://papagiglio.github.io/internet-status-digest/atom.xml">
+<link rel="canonical" href="https://papagiglio.github.io/internet-status-digest/2026-10-29.html"><style>body{font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:46rem;margin:0 auto;padding:1rem;color:#1d1d1f;background:#fff}
+header{border-bottom:2px solid #0b5cad;margin-bottom:1rem;padding-bottom:.5rem}header h1{margin:.2rem 0;font-size:1.5rem}header h1 a{color:inherit;text-decoration:none}
+nav a,.sub a{margin-right:1rem}a{color:#0b5cad}ul{padding-left:1.2rem}li{margin:.2rem 0}.note{color:#555;font-size:.9rem}
+article p strong:only-child{display:block;margin-top:1.2rem;font-size:1.05rem}code{background:#f2f2f2;padding:0 .2rem;border-radius:3px}
+footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85rem;color:#666}
+@media (prefers-color-scheme:dark){body{background:#111;color:#e6e6e6}a{color:#6cb4ff}code{background:#222}.note,footer{color:#aaa}}</style></head><body>
+<header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
+<p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
+<nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
+<article><p class="note">Digest for Oct 29, 2026</p><p><strong>Daily internet &amp; cloud health digest, Oct 29, 2026 (past 24 hours)</strong>
+Source: Scout run <code>2026-10-29-0600.md</code> (plus Scout's <code>2026-10-28-1800.md</code> and <code>2026-10-29-0000.md</code> runs for the rest of the window), with direct checks of the cloud, EDI VAN and Cloudflare status pages, CISA's exploited-vulnerability list and BleepingComputer.</p>
+<p><strong>1. Cyber incidents</strong></p>
+<p><strong>U.S. Department of Homeland Security (DHS, CBP, ICE)</strong></p>
+<ul>
+<li>Industry: Government</li>
+<li>Threat actor: Hacktivists ("Icepick" leak, published by Distributed Denial of Secrets)</li>
+<li>Date reported: Oct 28, 2026</li>
+<li>Status: Investigating</li>
+<li>Summary: Distributed Denial of Secrets published names, phone numbers and assignments of about 40,000 DHS, CBP and ICE employees, reportedly pulled from a DHS Okta single sign-on directory. WIRED verified parts of the data, and Okta denies its own systems were compromised.</li>
+<li>Supply chain / third-party risk: Medium. If the data came from a misconfigured or abused identity directory, other agencies and contractors using the same setup could be exposed, and the leaked staff details invite targeted phishing.</li>
+<li>Source: <a href="https://x.com/i/trending/2115561874767159488">X news summary</a></li>
+</ul>
+<p><strong>Unnamed California city (police and 911 data)</strong></p>
+<ul>
+<li>Industry: Government</li>
+<li>Threat actor: Rhysida</li>
+<li>Date reported: Oct 28, 2026</li>
+<li>Status: Claimed</li>
+<li>Summary: Rhysida posted a leak-site listing claiming police and 911 data from a California city it didn't name. The claim hasn't been verified.</li>
+<li>Supply chain / third-party risk: Low for business, but it's a public-safety system.</li>
+<li>Source: <a href="https://ransomnews.com/ransomware-attacks-today/">RansomNews</a></li>
+</ul>
+<p><strong>EWM Group (Peacocks, Bonmarché)</strong></p>
+<ul>
+<li>Industry: Retail</li>
+<li>Threat actor: Aurora</li>
+<li>Date reported: Oct 28, 2026</li>
+<li>Status: Claimed</li>
+<li>Summary: The Aurora group listed the UK fashion retailer EWM Group, which owns Peacocks and Bonmarché, on its leak site. Neither the scope nor the claim has been confirmed.</li>
+<li>Supply chain / third-party risk: Medium for its suppliers and logistics partners if order or partner data was taken.</li>
+<li>Source: <a href="https://ransomnews.com/ransomware-attacks-today/">RansomNews</a></li>
+</ul>
+<p><strong>Chrome Web Store search-hijacking campaign</strong></p>
+<ul>
+<li>Industry: Technology providers</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Oct 29, 2026</li>
+<li>Status: Confirmed</li>
+<li>Summary: Researchers found 319 Chrome extensions, with about 13.4 million combined installs, quietly sending users' searches through tracking servers to make advertising money from Bing and Yahoo.</li>
+<li>Supply chain / third-party risk: Medium. Unvetted browser extensions on work PCs can see and redirect browsing traffic, so it's worth auditing what's installed.</li>
+<li>Source: <a href="https://www.bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches/">BleepingComputer</a></li>
+</ul>
+<p><strong>Ledger hardware wallets sold in Singapore</strong></p>
+<ul>
+<li>Industry: Technology / retail (hardware supply chain)</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Oct 29, 2026</li>
+<li>Status: Investigating</li>
+<li>Summary: Singapore police say tampered Ledger hardware wallets sold through local retailers stole recovery phrases, costing two users about $2.7 million. Ledger has asked resellers in the region to stop sales while it reviews.</li>
+<li>Supply chain / third-party risk: High for hardware bought through third-party resellers, since the devices were compromised before they reached buyers.</li>
+<li>Source: <a href="https://x.com/i/trending/2115717341136765410">X news summary</a></li>
+</ul>
+<p><strong>Morrison Foerster</strong></p>
+<ul>
+<li>Industry: Legal services</li>
+<li>Threat actor: SilentRansomGroup</li>
+<li>Date reported: Oct 28, 2026</li>
+<li>Status: Claimed</li>
+<li>Summary: SilentRansomGroup listed the US law firm Morrison Foerster on its leak site. The firm hasn't confirmed an incident.</li>
+<li>Supply chain / third-party risk: Medium, because large law firms hold confidential deal and litigation files for many corporate clients.</li>
+<li>Source: <a href="https://ransomnews.com/ransomware-attacks-today/">RansomNews</a></li>
+</ul>
+<p><strong>zkLink Nova bridge</strong></p>
+<ul>
+<li>Industry: Crypto / fintech</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Oct 29, 2026</li>
+<li>Status: Investigating</li>
+<li>Summary: An attacker drained about $786,000 from the zkLink Nova Ethereum bridge late Oct 28 by reusing a valid message hash to forge withdrawals. zkLink paused the affected contracts and offered a 20% bounty.</li>
+<li>Supply chain / third-party risk: Low outside crypto.</li>
+<li>Source: <a href="https://x.com/i/trending/2115675509099258274">X news summary</a></li>
+</ul>
+<p><strong>Virtualine bulletproof hosting (law enforcement action)</strong></p>
+<ul>
+<li>Industry: Cybercrime infrastructure</li>
+<li>Threat actor: Virtualine (hosting used by ransomware and other criminals)</li>
+<li>Date reported: Oct 28, 2026</li>
+<li>Status: Resolved (domain seized)</li>
+<li>Summary: U.S. law enforcement seized the main domain of Virtualine, a hosting service advertised on crime forums for ransomware and other illegal activity.</li>
+<li>Supply chain / third-party risk: Positive in the short term, though such groups usually move to new hosting quickly.</li>
+<li>Source: <a href="https://www.bleepingcomputer.com/news/security/police-seize-virtualine-bulletproof-service-tied-to-ransowmare-cybercrime/">BleepingComputer</a></li>
+</ul>
+<p><strong>2. AI service outages</strong></p>
+<ul>
+<li>Grok Bot, Cloud Agents and Origin were degraded from about 4:15 PM CDT Oct 28 for roughly two hours, leaving many bots unresponsive before service recovered. Status: resolved. <a href="https://x.com/i/trending/2115556128025198745">X news summary</a></li>
+</ul>
+<p><strong>3. Internet, network, cloud and EDI VAN issues</strong></p>
+<ul>
+<li>A deep-sea fiber cut near Mtunzini, South Africa damaged the Seacom and EASSy submarine cables, slowing Safaricom home fiber and other Kenyan internet providers while traffic shifts to backup cables. Status: ongoing (repairs expected to take about a week). <a href="https://x.com/i/trending/2115540889980338426">X news summary</a></li>
+<li>Bet365 customers in several countries couldn't log in or saw missing bets for about two hours during Oct 28 evening football matches. Status: resolved. <a href="https://x.com/i/trending/2115525364906877294">X news summary</a></li>
+<li>AWS, Google Cloud, Microsoft Azure (no active events) and Oracle Cloud (Normal Performance) had no new incidents, and Cloudflare had only a few short, minor incidents that are all resolved. The EDI VAN pages I could read show nothing new: Cleo, SPS Commerce and TrueCommerce are all operational, and OpenText lists only an old Middle East item from May. I couldn't read the DiCentral, Descartes or ECGrid pages.</li>
+</ul>
+<p><strong>4. Status changes</strong></p>
+<ul>
+<li>FEC electronic filing went from investigating and offline to restored after an outage of nearly 41 hours; the FEC says voting wasn't affected and hasn't confirmed a data breach. <a href="https://x.com/i/trending/2115165541749211461">X news summary</a></li>
+<li>Cloudflare's Ashburn, Virginia network performance issue went from monitoring to resolved. <a href="https://www.cloudflarestatus.com/incidents/snth5ero95rz">Cloudflare Status</a></li>
+</ul></article>
+<footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>

@@ -1,7 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Internet &amp; Cloud Health Digest</title><id>https://papagiglio.github.io/internet-status-digest/</id>
 <link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/"/><link rel="self" type="application/atom+xml" href="https://papagiglio.github.io/internet-status-digest/atom.xml"/>
-<updated>2026-10-29T06:58:00-05:00</updated><author><name>Internet Status</name></author>
+<updated>2026-10-29T12:00:00-05:00</updated><author><name>Internet Status</name></author>
+<entry><title>Internet &amp; Cloud Health Digest — Oct 29, 2026</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/2026-10-29.html"/><id>https://papagiglio.github.io/internet-status-digest/2026-10-29.html</id>
+<published>2026-10-29T12:00:00-05:00</published><updated>2026-10-29T12:00:00-05:00</updated><summary>U.S. Department of Homeland Security (DHS, CBP, ICE); Unnamed California city (police and 911 data); EWM Group (Peacocks, Bonmarché); Chrome Web Store search-hijacking campaign; Ledger hardware wallets sold in Singapore; Morrison Foerster; zkLink Nova bridge; Virtualine bulletproof hosting (law…</summary><content type="html">&lt;p&gt;&lt;strong&gt;Daily internet &amp;amp; cloud health digest, Oct 29, 2026 (past 24 hours)&lt;/strong&gt;
+Source: Scout run &lt;code&gt;2026-10-29-0600.md&lt;/code&gt; (plus Scout&#x27;s &lt;code&gt;2026-10-28-1800.md&lt;/code&gt; and &lt;code&gt;2026-10-29-0000.md&lt;/code&gt; runs for the rest of the window), with direct checks of the cloud, EDI VAN and Cloudflare status pages, CISA&#x27;s exploited-vulnerability list and BleepingComputer.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Cyber incidents&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;U.S. Department of Homeland Security (DHS, CBP, ICE)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Government&lt;/li&gt;
+&lt;li&gt;Threat actor: Hacktivists (&quot;Icepick&quot; leak, published by Distributed Denial of Secrets)&lt;/li&gt;
+&lt;li&gt;Date reported: Oct 28, 2026&lt;/li&gt;
+&lt;li&gt;Status: Investigating&lt;/li&gt;
+&lt;li&gt;Summary: Distributed Denial of Secrets published names, phone numbers and assignments of about 40,000 DHS, CBP and ICE employees, reportedly pulled from a DHS Okta single sign-on directory. WIRED verified parts of the data, and Okta denies its own systems were compromised.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium. If the data came from a misconfigured or abused identity directory, other agencies and contractors using the same setup could be exposed, and the leaked staff details invite targeted phishing.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://x.com/i/trending/2115561874767159488&quot;&gt;X news summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Unnamed California city (police and 911 data)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Government&lt;/li&gt;
+&lt;li&gt;Threat actor: Rhysida&lt;/li&gt;
+&lt;li&gt;Date reported: Oct 28, 2026&lt;/li&gt;
+&lt;li&gt;Status: Claimed&lt;/li&gt;
+&lt;li&gt;Summary: Rhysida posted a leak-site listing claiming police and 911 data from a California city it didn&#x27;t name. The claim hasn&#x27;t been verified.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Low for business, but it&#x27;s a public-safety system.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://ransomnews.com/ransomware-attacks-today/&quot;&gt;RansomNews&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;EWM Group (Peacocks, Bonmarché)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Retail&lt;/li&gt;
+&lt;li&gt;Threat actor: Aurora&lt;/li&gt;
+&lt;li&gt;Date reported: Oct 28, 2026&lt;/li&gt;
+&lt;li&gt;Status: Claimed&lt;/li&gt;
+&lt;li&gt;Summary: The Aurora group listed the UK fashion retailer EWM Group, which owns Peacocks and Bonmarché, on its leak site. Neither the scope nor the claim has been confirmed.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium for its suppliers and logistics partners if order or partner data was taken.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://ransomnews.com/ransomware-attacks-today/&quot;&gt;RansomNews&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Chrome Web Store search-hijacking campaign&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology providers&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Oct 29, 2026&lt;/li&gt;
+&lt;li&gt;Status: Confirmed&lt;/li&gt;
+&lt;li&gt;Summary: Researchers found 319 Chrome extensions, with about 13.4 million combined installs, quietly sending users&#x27; searches through tracking servers to make advertising money from Bing and Yahoo.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium. Unvetted browser extensions on work PCs can see and redirect browsing traffic, so it&#x27;s worth auditing what&#x27;s installed.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches/&quot;&gt;BleepingComputer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Ledger hardware wallets sold in Singapore&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology / retail (hardware supply chain)&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Oct 29, 2026&lt;/li&gt;
+&lt;li&gt;Status: Investigating&lt;/li&gt;
+&lt;li&gt;Summary: Singapore police say tampered Ledger hardware wallets sold through local retailers stole recovery phrases, costing two users about $2.7 million. Ledger has asked resellers in the region to stop sales while it reviews.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: High for hardware bought through third-party resellers, since the devices were compromised before they reached buyers.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://x.com/i/trending/2115717341136765410&quot;&gt;X news summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Morrison Foerster&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Legal services&lt;/li&gt;
+&lt;li&gt;Threat actor: SilentRansomGroup&lt;/li&gt;
+&lt;li&gt;Date reported: Oct 28, 2026&lt;/li&gt;
+&lt;li&gt;Status: Claimed&lt;/li&gt;
+&lt;li&gt;Summary: SilentRansomGroup listed the US law firm Morrison Foerster on its leak site. The firm hasn&#x27;t confirmed an incident.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium, because large law firms hold confidential deal and litigation files for many corporate clients.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://ransomnews.com/ransomware-attacks-today/&quot;&gt;RansomNews&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;zkLink Nova bridge&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Crypto / fintech&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Oct 29, 2026&lt;/li&gt;
+&lt;li&gt;Status: Investigating&lt;/li&gt;
+&lt;li&gt;Summary: An attacker drained about $786,000 from the zkLink Nova Ethereum bridge late Oct 28 by reusing a valid message hash to forge withdrawals. zkLink paused the affected contracts and offered a 20% bounty.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Low outside crypto.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://x.com/i/trending/2115675509099258274&quot;&gt;X news summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Virtualine bulletproof hosting (law enforcement action)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Cybercrime infrastructure&lt;/li&gt;
+&lt;li&gt;Threat actor: Virtualine (hosting used by ransomware and other criminals)&lt;/li&gt;
+&lt;li&gt;Date reported: Oct 28, 2026&lt;/li&gt;
+&lt;li&gt;Status: Resolved (domain seized)&lt;/li&gt;
+&lt;li&gt;Summary: U.S. law enforcement seized the main domain of Virtualine, a hosting service advertised on crime forums for ransomware and other illegal activity.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Positive in the short term, though such groups usually move to new hosting quickly.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.bleepingcomputer.com/news/security/police-seize-virtualine-bulletproof-service-tied-to-ransowmare-cybercrime/&quot;&gt;BleepingComputer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. AI service outages&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Grok Bot, Cloud Agents and Origin were degraded from about 4:15 PM CDT Oct 28 for roughly two hours, leaving many bots unresponsive before service recovered. Status: resolved. &lt;a href=&quot;https://x.com/i/trending/2115556128025198745&quot;&gt;X news summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Internet, network, cloud and EDI VAN issues&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A deep-sea fiber cut near Mtunzini, South Africa damaged the Seacom and EASSy submarine cables, slowing Safaricom home fiber and other Kenyan internet providers while traffic shifts to backup cables. Status: ongoing (repairs expected to take about a week). &lt;a href=&quot;https://x.com/i/trending/2115540889980338426&quot;&gt;X news summary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bet365 customers in several countries couldn&#x27;t log in or saw missing bets for about two hours during Oct 28 evening football matches. Status: resolved. &lt;a href=&quot;https://x.com/i/trending/2115525364906877294&quot;&gt;X news summary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;AWS, Google Cloud, Microsoft Azure (no active events) and Oracle Cloud (Normal Performance) had no new incidents, and Cloudflare had only a few short, minor incidents that are all resolved. The EDI VAN pages I could read show nothing new: Cleo, SPS Commerce and TrueCommerce are all operational, and OpenText lists only an old Middle East item from May. I couldn&#x27;t read the DiCentral, Descartes or ECGrid pages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4. Status changes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FEC electronic filing went from investigating and offline to restored after an outage of nearly 41 hours; the FEC says voting wasn&#x27;t affected and hasn&#x27;t confirmed a data breach. &lt;a href=&quot;https://x.com/i/trending/2115165541749211461&quot;&gt;X news summary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cloudflare&#x27;s Ashburn, Virginia network performance issue went from monitoring to resolved. &lt;a href=&quot;https://www.cloudflarestatus.com/incidents/snth5ero95rz&quot;&gt;Cloudflare Status&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content></entry>
 <entry><title>Alert: Cisco ASA and Firepower firewall zero-day exploited (Ongoing)</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/alerts/2026-10-29-0658-cisco-asa-ftd-firewall-zero-day.html"/><id>https://papagiglio.github.io/internet-status-digest/alerts/2026-10-29-0658-cisco-asa-ftd-firewall-zero-day.html</id>
 <published>2026-10-29T06:58:00-05:00</published><updated>2026-10-29T06:58:00-05:00</updated><summary>Attackers are exploiting CVE-2026-76418, a flaw that lets an unauthenticated attacker remotely crash and reboot Cisco ASA and FTD firewalls with SSL VPN turned on, and Cisco has released patches. Status: Ongoing.</summary><content type="html">&lt;p&gt;&lt;strong&gt;Cisco ASA and Firepower firewall zero-day exploited&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Attackers are exploiting CVE-2026-76418, a flaw that lets an unauthenticated attacker remotely crash and reboot Cisco ASA and FTD firewalls with SSL VPN turned on, and Cisco has released patches.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Status: Ongoing&lt;/li&gt;&lt;li&gt;Source: &lt;a href=&quot;https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/&quot;&gt;BleepingComputer&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Alert time: Oct 29, 2026 6:58 AM CDT&lt;/li&gt;&lt;/ul&gt;</content></entry>
 <entry><title>Alert: Amadeus breach hits Japan Airlines (Ongoing)</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/alerts/2026-10-28-2007-amadeus-breach-hits-japan-airlines.html"/><id>https://papagiglio.github.io/internet-status-digest/alerts/2026-10-28-2007-amadeus-breach-hits-japan-airlines.html</id>

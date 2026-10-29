@@ -11,115 +11,102 @@ footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85
 <header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
 <p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
 <nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
-<section><h2>Alerts since this digest</h2><ul><li><a href="https://papagiglio.github.io/internet-status-digest/alerts/2026-10-29-0658-cisco-asa-ftd-firewall-zero-day.html">Alert: Cisco ASA and Firepower firewall zero-day exploited (Ongoing)</a> <span class="note">Oct 29 6:58 AM CDT</span></li><li><a href="https://papagiglio.github.io/internet-status-digest/alerts/2026-10-28-2007-amadeus-breach-hits-japan-airlines.html">Alert: Amadeus breach hits Japan Airlines (Ongoing)</a> <span class="note">Oct 28 8:07 PM CDT</span></li><li><a href="https://papagiglio.github.io/internet-status-digest/alerts/2026-10-28-1500-cisa-adds-exploited-linux-kernel-flaw.html">Alert: CISA adds exploited Linux kernel flaw CVE-2026-46300 (Ongoing)</a> <span class="note">Oct 28 3:00 PM CDT</span></li></ul></section><article><p class="note">Latest: Oct 28, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-10-28.html">permalink</a></p><p><strong>Daily internet &amp; cloud health digest, Oct 28, 2026 (past 24 hours)</strong>
-Sources: Scout run <code>2026-10-28-1200.md</code> (plus Scout's 1800, 0000 and 0600 runs) and direct checks of the EDI VAN, AI and CDN status pages.</p>
+<article><p class="note">Latest: Oct 29, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-10-29.html">permalink</a></p><p><strong>Daily internet &amp; cloud health digest, Oct 29, 2026 (past 24 hours)</strong>
+Source: Scout run <code>2026-10-29-0600.md</code> (plus Scout's <code>2026-10-28-1800.md</code> and <code>2026-10-29-0000.md</code> runs for the rest of the window), with direct checks of the cloud, EDI VAN and Cloudflare status pages, CISA's exploited-vulnerability list and BleepingComputer.</p>
 <p><strong>1. Cyber incidents</strong></p>
-<p><strong>Federal Election Commission (FEC)</strong></p>
+<p><strong>U.S. Department of Homeland Security (DHS, CBP, ICE)</strong></p>
 <ul>
 <li>Industry: Government</li>
-<li>Threat actor: Unknown</li>
-<li>Date reported: Oct 27, 2026</li>
-<li>Status: Investigating</li>
-<li>Summary: The FEC took its web-facing services offline, including electronic filing, after a "bad actor" tried to breach its systems around 9 PM CDT on Oct 26. The system was still offline Wednesday morning. Nobody has confirmed a successful intrusion or data theft, and voting isn't affected.</li>
-<li>Supply chain / third-party risk: Low for business, but campaign-finance filers can't submit their 24- and 48-hour reports a week before the midterms.</li>
-<li>Sources: <a href="https://www.politico.com/news/2026/10/27/national-campaign-finance-systems-attempted-hack-01137820">Politico</a>, <a href="https://www.cnbc.com/2026/10/28/fec-hack-outage-campaign-finance-filings.html">CNBC</a></li>
-</ul>
-<p><strong>Volt Typhoon "Silent Train" framework</strong></p>
-<ul>
-<li>Industry: Technology providers and critical infrastructure (network devices)</li>
-<li>Threat actor: Volt Typhoon (China)</li>
+<li>Threat actor: Hacktivists ("Icepick" leak, published by Distributed Denial of Secrets)</li>
 <li>Date reported: Oct 28, 2026</li>
 <li>Status: Investigating</li>
-<li>Summary: Researchers found Volt Typhoon chaining hijacked routers, IoT devices and business network gear into short-lived relay paths. The paths are rebuilt daily and hide zero-day attacks. The exploited flaws include CVE-2026-16812, CVE-2026-20127 and a suspected zero-day in Quest KACE.</li>
-<li>Supply chain / third-party risk: High, because edge and network devices at any company can be quietly used as relays for attacks.</li>
-<li>Sources: <a href="https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/">BleepingComputer</a>, <a href="https://cyberscoop.com/volt-typhoon-silent-train-covert-ephemeral-network-black-lotus-labs/">CyberScoop</a></li>
+<li>Summary: Distributed Denial of Secrets published names, phone numbers and assignments of about 40,000 DHS, CBP and ICE employees, reportedly pulled from a DHS Okta single sign-on directory. WIRED verified parts of the data, and Okta denies its own systems were compromised.</li>
+<li>Supply chain / third-party risk: Medium. If the data came from a misconfigured or abused identity directory, other agencies and contractors using the same setup could be exposed, and the leaked staff details invite targeted phishing.</li>
+<li>Source: <a href="https://x.com/i/trending/2115561874767159488">X news summary</a></li>
 </ul>
-<p><strong>GitHub "Gheist" token-theft campaign / Dodo Payments</strong></p>
+<p><strong>Unnamed California city (police and 911 data)</strong></p>
 <ul>
-<li>Industry: Technology providers</li>
-<li>Threat actor: Unknown ("Gheist" campaign)</li>
-<li>Date reported: Oct 27–28, 2026</li>
-<li>Status: Investigating</li>
-<li>Summary: Someone deleted a private Dodo Payments repository through the GitHub command-line tool, and the deletion left no trace in the audit log. Researchers tie it to a campaign using stolen tokens that has hit more than 850 GitHub accounts. GitHub is investigating.</li>
-<li>Supply chain / third-party risk: High for software supply chains, since stolen developer tokens can be used to change or delete code.</li>
-<li>Source: <a href="https://x.com/i/trending/2115228361790210207">X news summary</a></li>
+<li>Industry: Government</li>
+<li>Threat actor: Rhysida</li>
+<li>Date reported: Oct 28, 2026</li>
+<li>Status: Claimed</li>
+<li>Summary: Rhysida posted a leak-site listing claiming police and 911 data from a California city it didn't name. The claim hasn't been verified.</li>
+<li>Supply chain / third-party risk: Low for business, but it's a public-safety system.</li>
+<li>Source: <a href="https://ransomnews.com/ransomware-attacks-today/">RansomNews</a></li>
 </ul>
-<p><strong>Oracle E-Business Suite CVE-2026-101767</strong></p>
-<ul>
-<li>Industry: Technology providers (an ERP system widely used in manufacturing and logistics)</li>
-<li>Threat actor: Unknown</li>
-<li>Date reported: Oct 27, 2026</li>
-<li>Status: Investigating</li>
-<li>Summary: Attackers have started probing a critical flaw that Oracle patched on Oct 20. It lets an attacker who isn't logged in use SQL injection to run code on the server. Defused's decoy systems have caught attempts, but there are no confirmed compromises yet, and CISA hasn't added it to its list of exploited vulnerabilities.</li>
-<li>Supply chain / third-party risk: High if attackers get it working, because EBS runs orders, finance and supply-chain work at many large companies. Patch now.</li>
-<li>Sources: <a href="https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw/">BleepingComputer</a>, <a href="https://www.securityweek.com/hackers-start-probing-fresh-oracle-ebs-vulnerability/">SecurityWeek</a></li>
-</ul>
-<p><strong>Convertr (Brazilian e-commerce platform)</strong></p>
+<p><strong>EWM Group (Peacocks, Bonmarché)</strong></p>
 <ul>
 <li>Industry: Retail</li>
-<li>Threat actor: A Magecart card-skimming group focused on Brazil</li>
-<li>Date reported: Oct 26–27, 2026</li>
-<li>Status: Resolved (skimmer removed, but how much damage it did is disputed)</li>
-<li>Summary: Attackers planted a card skimmer in the Plausible analytics script that Convertr hosts itself and loads on every Convertr checkout. From Oct 24 to 27 it stole card details and taxpayer IDs. Convertr has removed it and says no real store checkouts were affected, but Sansec's findings dispute that.</li>
-<li>Supply chain / third-party risk: High. It's a textbook case of one shared third-party script hitting dozens of merchant checkouts at once.</li>
-<li>Sources: <a href="https://www.bleepingcomputer.com/news/security/hackers-hijack-convertr-analytics-script-to-steal-payment-card-data/">BleepingComputer</a>, <a href="https://sansec.io/research/convertr-plausible-supply-chain-attack">Sansec</a></li>
+<li>Threat actor: Aurora</li>
+<li>Date reported: Oct 28, 2026</li>
+<li>Status: Claimed</li>
+<li>Summary: The Aurora group listed the UK fashion retailer EWM Group, which owns Peacocks and Bonmarché, on its leak site. Neither the scope nor the claim has been confirmed.</li>
+<li>Supply chain / third-party risk: Medium for its suppliers and logistics partners if order or partner data was taken.</li>
+<li>Source: <a href="https://ransomnews.com/ransomware-attacks-today/">RansomNews</a></li>
 </ul>
-<p><strong>Sony Network Communications (So-net / plala)</strong></p>
+<p><strong>Chrome Web Store search-hijacking campaign</strong></p>
 <ul>
-<li>Industry: Telecom / ISP</li>
+<li>Industry: Technology providers</li>
 <li>Threat actor: Unknown</li>
-<li>Date reported: Oct 27, 2026</li>
+<li>Date reported: Oct 29, 2026</li>
 <li>Status: Confirmed</li>
-<li>Summary: An Oct 19 intrusion at the Japanese internet providers So-net and plala exposed personal details of about 2.59 million current and former customers, along with about 54,000 email passwords. Sony shut the servers down on Oct 23 and has reset the affected passwords.</li>
-<li>Supply chain / third-party risk: Low outside Japan's consumer customers, apart from the phishing risk.</li>
-<li>Sources: <a href="https://www.so-net.ne.jp/info/2026/20261027_0001.html">So-net notice</a>, <a href="https://www.helpnetsecurity.com/2026/10/28/sony-network-communications-data-breach-so-net/">Help Net Security</a></li>
+<li>Summary: Researchers found 319 Chrome extensions, with about 13.4 million combined installs, quietly sending users' searches through tracking servers to make advertising money from Bing and Yahoo.</li>
+<li>Supply chain / third-party risk: Medium. Unvetted browser extensions on work PCs can see and redirect browsing traffic, so it's worth auditing what's installed.</li>
+<li>Source: <a href="https://www.bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches/">BleepingComputer</a></li>
 </ul>
-<p><strong>Coinbase / Amplitude</strong></p>
+<p><strong>Ledger hardware wallets sold in Singapore</strong></p>
 <ul>
-<li>Industry: Financial services (through a third-party analytics vendor)</li>
+<li>Industry: Technology / retail (hardware supply chain)</li>
 <li>Threat actor: Unknown</li>
-<li>Date reported: Oct 27–28, 2026</li>
-<li>Status: Confirmed</li>
-<li>Summary: Coinbase told some customers that a security incident at its analytics vendor Amplitude exposed their contact details. Coinbase says its own systems and customer funds weren't affected.</li>
-<li>Supply chain / third-party risk: Medium, because Amplitude serves many companies and their customers may be exposed too.</li>
-<li>Source: <a href="https://x.com/i/trending/2115262479601484050">X news summary</a></li>
-</ul>
-<p><strong>Bithumb and Daishin Securities (South Korea)</strong></p>
-<ul>
-<li>Industry: Financial services</li>
-<li>Threat actor: Unknown</li>
-<li>Date reported: Oct 27–28, 2026</li>
+<li>Date reported: Oct 29, 2026</li>
 <li>Status: Investigating</li>
-<li>Summary: The crypto exchange Bithumb found hackers in its internal groupware on Oct 27. Separately, Daishin Securities said data on 38,490 customers was exposed. Regulators are opening inspections.</li>
-<li>Supply chain / third-party risk: Low for US supply chains.</li>
-<li>Source: <a href="https://x.com/i/trending/2115273453700075587">X news summary</a></li>
+<li>Summary: Singapore police say tampered Ledger hardware wallets sold through local retailers stole recovery phrases, costing two users about $2.7 million. Ledger has asked resellers in the region to stop sales while it reviews.</li>
+<li>Supply chain / third-party risk: High for hardware bought through third-party resellers, since the devices were compromised before they reached buyers.</li>
+<li>Source: <a href="https://x.com/i/trending/2115717341136765410">X news summary</a></li>
 </ul>
-<p><strong>Solflare</strong></p>
+<p><strong>Morrison Foerster</strong></p>
+<ul>
+<li>Industry: Legal services</li>
+<li>Threat actor: SilentRansomGroup</li>
+<li>Date reported: Oct 28, 2026</li>
+<li>Status: Claimed</li>
+<li>Summary: SilentRansomGroup listed the US law firm Morrison Foerster on its leak site. The firm hasn't confirmed an incident.</li>
+<li>Supply chain / third-party risk: Medium, because large law firms hold confidential deal and litigation files for many corporate clients.</li>
+<li>Source: <a href="https://ransomnews.com/ransomware-attacks-today/">RansomNews</a></li>
+</ul>
+<p><strong>zkLink Nova bridge</strong></p>
 <ul>
 <li>Industry: Crypto / fintech</li>
 <li>Threat actor: Unknown</li>
+<li>Date reported: Oct 29, 2026</li>
+<li>Status: Investigating</li>
+<li>Summary: An attacker drained about $786,000 from the zkLink Nova Ethereum bridge late Oct 28 by reusing a valid message hash to forge withdrawals. zkLink paused the affected contracts and offered a 20% bounty.</li>
+<li>Supply chain / third-party risk: Low outside crypto.</li>
+<li>Source: <a href="https://x.com/i/trending/2115675509099258274">X news summary</a></li>
+</ul>
+<p><strong>Virtualine bulletproof hosting (law enforcement action)</strong></p>
+<ul>
+<li>Industry: Cybercrime infrastructure</li>
+<li>Threat actor: Virtualine (hosting used by ransomware and other criminals)</li>
 <li>Date reported: Oct 28, 2026</li>
-<li>Status: Confirmed</li>
-<li>Summary: A breach at Solflare's staking provider exposed validator keys and paused rewards on about 1.56 million SOL. Solflare says no user funds were lost and is moving stakers to a new validator.</li>
-<li>Supply chain / third-party risk: Low. The breach came in through Solflare's staking provider.</li>
-<li>Source: <a href="https://x.com/i/trending/2115246077167431759">X news summary</a></li>
+<li>Status: Resolved (domain seized)</li>
+<li>Summary: U.S. law enforcement seized the main domain of Virtualine, a hosting service advertised on crime forums for ransomware and other illegal activity.</li>
+<li>Supply chain / third-party risk: Positive in the short term, though such groups usually move to new hosting quickly.</li>
+<li>Source: <a href="https://www.bleepingcomputer.com/news/security/police-seize-virtualine-bulletproof-service-tied-to-ransowmare-cybercrime/">BleepingComputer</a></li>
 </ul>
 <p><strong>2. AI service outages</strong></p>
 <ul>
-<li>Some GitHub Copilot models from OpenAI and Microsoft were partly unavailable from 9:12 to 10:28 AM CDT today because of a problem at an upstream provider. Status: resolved. <a href="https://stspg.io/bwcyq078jzms">GitHub Status</a></li>
+<li>Grok Bot, Cloud Agents and Origin were degraded from about 4:15 PM CDT Oct 28 for roughly two hours, leaving many bots unresponsive before service recovered. Status: resolved. <a href="https://x.com/i/trending/2115556128025198745">X news summary</a></li>
 </ul>
 <p><strong>3. Internet, network, cloud and EDI VAN issues</strong></p>
 <ul>
-<li>YouTube had widespread playback errors in the US and elsewhere, with Downdetector reports peaking near 24,000. Most of it cleared within about two hours. Status: resolved. <a href="https://x.com/i/trending/2115453668250022163">X news summary</a></li>
-<li>Sign-in to Revolut's app was partly down for about 44 minutes in the UK and Europe today. Status: resolved. <a href="https://www.rte.ie/news/business/2026/1028/1597120-revolut-issues/">RTÉ</a></li>
-<li>Safaricom's M-Pesa mobile-money service went down across Kenya early Oct 28. It doesn't affect US users. Status: ongoing as of Scout's 6 AM CDT run. <a href="https://x.com/i/trending/2115294990771564773">X news summary</a></li>
-<li>Cloudflare has had minor network performance issues at its Ashburn, Virginia location since about 11:39 PM CDT last night. Status: ongoing (monitoring). <a href="https://www.cloudflarestatus.com/incidents/snth5ero95rz">Cloudflare Status</a></li>
-<li>AWS, Azure, Google Cloud and Oracle Cloud had no new incidents. The EDI VAN status pages I checked show nothing new: SPS Commerce, TrueCommerce/DiCentral, Cleo and OpenText. I couldn't read Descartes' status page.</li>
+<li>A deep-sea fiber cut near Mtunzini, South Africa damaged the Seacom and EASSy submarine cables, slowing Safaricom home fiber and other Kenyan internet providers while traffic shifts to backup cables. Status: ongoing (repairs expected to take about a week). <a href="https://x.com/i/trending/2115540889980338426">X news summary</a></li>
+<li>Bet365 customers in several countries couldn't log in or saw missing bets for about two hours during Oct 28 evening football matches. Status: resolved. <a href="https://x.com/i/trending/2115525364906877294">X news summary</a></li>
+<li>AWS, Google Cloud, Microsoft Azure (no active events) and Oracle Cloud (Normal Performance) had no new incidents, and Cloudflare had only a few short, minor incidents that are all resolved. The EDI VAN pages I could read show nothing new: Cleo, SPS Commerce and TrueCommerce are all operational, and OpenText lists only an old Middle East item from May. I couldn't read the DiCentral, Descartes or ECGrid pages.</li>
 </ul>
 <p><strong>4. Status changes</strong></p>
 <ul>
-<li>Tailscale "Tailworm" flaws went from patches promised to fixed in Tailscale v1.104.4, under security bulletins TS-2026-014 through TS-2026-017. Update your clients, especially if you use Tailscale SSH. <a href="https://tailscale.com/blog/tailscale-ssh-findings-fixes">Tailscale</a></li>
-<li>UNM Health went from investigating to critical systems restored and hospitals reopened. The Byod ransomware group claims it hit 36,000 systems and stole data, which UNM hasn't confirmed. <a href="https://hscnews.unm.edu/news/ambulance-traffic-diverted-clinical-appointments-cancelled-and-classes-cancelled-due-to-cybersecurity-issue-at-unm-hsc">UNM HSC</a>, <a href="https://nm.news/2026/10/27/ransomware-group-claims-unm-hack-as-health-clinics-reopen/">nm.news</a></li>
-<li>The GMO Onamae.com Desktop Cloud breach went from ongoing to stolen customer and company data being published after GMO refused to pay the ransom. <a href="https://techcrunch.com/2026/10/27/japan-internet-giant-gmo-says-hackers-posted-stolen-customer-data/">TechCrunch</a></li>
+<li>FEC electronic filing went from investigating and offline to restored after an outage of nearly 41 hours; the FEC says voting wasn't affected and hasn't confirmed a data breach. <a href="https://x.com/i/trending/2115165541749211461">X news summary</a></li>
+<li>Cloudflare's Ashburn, Virginia network performance issue went from monitoring to resolved. <a href="https://www.cloudflarestatus.com/incidents/snth5ero95rz">Cloudflare Status</a></li>
 </ul></article>
 <footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
