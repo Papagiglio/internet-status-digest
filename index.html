@@ -11,102 +11,82 @@ footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85
 <header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
 <p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
 <nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
-<section><h2>Alerts since this digest</h2><ul><li><a href="https://papagiglio.github.io/internet-status-digest/alerts/2026-10-30-1008-malicious-claude-code-extension-on-cursor-marketpl.html">Alert: Malicious Claude Code extension on Cursor marketplace planted SSH backdoors (Ongoing)</a> <span class="note">Oct 30 10:08 AM CDT</span></li><li><a href="https://papagiglio.github.io/internet-status-digest/alerts/2026-10-30-0600-drupal-commerce-core-flaw-cve-2026-118539-exploite.html">Alert: Drupal Commerce Core flaw CVE-2026-118539 exploited in attacks (Ongoing)</a> <span class="note">Oct 30 6:00 AM CDT</span></li><li><a href="https://papagiglio.github.io/internet-status-digest/alerts/2026-10-29-1505-cisa-gitlab-ci-cd-remote-code-execution-flaw-under.html">Alert: CISA: GitLab CI/CD remote code execution flaw under active exploitation (Ongoing)</a> <span class="note">Oct 29 3:05 PM CDT</span></li><li><a href="https://papagiglio.github.io/internet-status-digest/alerts/2026-10-29-1307-university-hospitals-cleveland-cyber-incident-webs.html">Alert: University Hospitals (Cleveland) cyber incident: websites and MyChart still down (Ongoing)</a> <span class="note">Oct 29 1:07 PM CDT</span></li></ul></section><article><p class="note">Latest: Oct 29, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-10-29.html">permalink</a></p><p><strong>Daily internet &amp; cloud health digest, Oct 29, 2026 (past 24 hours)</strong>
-Source: Scout run <code>2026-10-29-0600.md</code> (plus Scout's <code>2026-10-28-1800.md</code> and <code>2026-10-29-0000.md</code> runs for the rest of the window), with direct checks of the cloud, EDI VAN and Cloudflare status pages, CISA's exploited-vulnerability list and BleepingComputer.</p>
+<article><p class="note">Latest: Oct 30, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-10-30.html">permalink</a></p><p><strong>Daily internet &amp; cloud health digest, Oct 30, 2026 (past 24 hours)</strong>
+Source: Scout run <code>2026-10-30-0600.md</code> (plus Scout's <code>2026-10-30-0000.md</code> run for the rest of the window), with direct checks of the Oracle Cloud, Azure and EDI VAN status pages.</p>
 <p><strong>1. Cyber incidents</strong></p>
-<p><strong>U.S. Department of Homeland Security (DHS, CBP, ICE)</strong></p>
+<p><strong>Cisco Catalyst SD-WAN customers (space, defense, policy research)</strong></p>
 <ul>
-<li>Industry: Government</li>
-<li>Threat actor: Hacktivists ("Icepick" leak, published by Distributed Denial of Secrets)</li>
-<li>Date reported: Oct 28, 2026</li>
-<li>Status: Investigating</li>
-<li>Summary: Distributed Denial of Secrets published names, phone numbers and assignments of about 40,000 DHS, CBP and ICE employees, reportedly pulled from a DHS Okta single sign-on directory. WIRED verified parts of the data, and Okta denies its own systems were compromised.</li>
-<li>Supply chain / third-party risk: Medium. If the data came from a misconfigured or abused identity directory, other agencies and contractors using the same setup could be exposed, and the leaked staff details invite targeted phishing.</li>
-<li>Source: <a href="https://x.com/i/trending/2115561874767159488">X news summary</a></li>
+<li>Industry: Technology providers / Government and defense</li>
+<li>Threat actor: UAT-11473 (China-linked APT per Talos, with infrastructure overlapping Volt Typhoon's "Silent Train" network)</li>
+<li>Date reported: Oct 28–29, 2026</li>
+<li>Status: Confirmed</li>
+<li>Summary: Cisco Talos says UAT-11473 exploited the max-severity SD-WAN authentication bypass CVE-2026-20127 (patched in February) to plant a custom malware framework called KeyDrift inside SD-WAN controllers. It hides in legitimate controller processes and steals the encryption keys that protect traffic between sites.</li>
+<li>Supply chain / third-party risk: High. SD-WAN controllers sit at the center of company and supplier networks, so anyone still unpatched should update, hunt for compromise and consider rotating keys.</li>
+<li>Sources: <a href="https://blog.talosintelligence.com/uat-11473-keydrift/">Cisco Talos</a>, <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/">BleepingComputer</a></li>
 </ul>
-<p><strong>Unnamed California city (police and 911 data)</strong></p>
-<ul>
-<li>Industry: Government</li>
-<li>Threat actor: Rhysida</li>
-<li>Date reported: Oct 28, 2026</li>
-<li>Status: Claimed</li>
-<li>Summary: Rhysida posted a leak-site listing claiming police and 911 data from a California city it didn't name. The claim hasn't been verified.</li>
-<li>Supply chain / third-party risk: Low for business, but it's a public-safety system.</li>
-<li>Source: <a href="https://ransomnews.com/ransomware-attacks-today/">RansomNews</a></li>
-</ul>
-<p><strong>EWM Group (Peacocks, Bonmarché)</strong></p>
-<ul>
-<li>Industry: Retail</li>
-<li>Threat actor: Aurora</li>
-<li>Date reported: Oct 28, 2026</li>
-<li>Status: Claimed</li>
-<li>Summary: The Aurora group listed the UK fashion retailer EWM Group, which owns Peacocks and Bonmarché, on its leak site. Neither the scope nor the claim has been confirmed.</li>
-<li>Supply chain / third-party risk: Medium for its suppliers and logistics partners if order or partner data was taken.</li>
-<li>Source: <a href="https://ransomnews.com/ransomware-attacks-today/">RansomNews</a></li>
-</ul>
-<p><strong>Chrome Web Store search-hijacking campaign</strong></p>
+<p><strong>Hugging Face model repositories (self-hosted AI servers)</strong></p>
 <ul>
 <li>Industry: Technology providers</li>
-<li>Threat actor: Unknown</li>
+<li>Threat actor: Unknown (Pluto Security assesses a financially motivated, Chinese-speaking operator)</li>
 <li>Date reported: Oct 29, 2026</li>
-<li>Status: Confirmed</li>
-<li>Summary: Researchers found 319 Chrome extensions, with about 13.4 million combined installs, quietly sending users' searches through tracking servers to make advertising money from Bing and Yahoo.</li>
-<li>Supply chain / third-party risk: Medium. Unvetted browser extensions on work PCs can see and redirect browsing traffic, so it's worth auditing what's installed.</li>
-<li>Source: <a href="https://www.bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches/">BleepingComputer</a></li>
+<li>Status: Confirmed (ongoing)</li>
+<li>Summary: Pluto Security found 31 fake Qwen2 model repositories with more than 32,000 downloads that run hidden Python when loaded with trust_remote_code, installing a cryptominer, persistence and in some versions a reverse shell. The campaign came back within days of a takedown, and a near-identical copy was still live when BleepingComputer reported it.</li>
+<li>Supply chain / third-party risk: Medium to high for teams running self-hosted AI inference or CI jobs that pull models, since infected machines should be treated as compromised.</li>
+<li>Sources: <a href="https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/">BleepingComputer</a>, <a href="https://pluto.security/blog/hugging-face-malware-campaign-load-mine/">Pluto Security</a></li>
 </ul>
-<p><strong>Ledger hardware wallets sold in Singapore</strong></p>
+<p><strong>Trezor hardware wallets sold by CryptoBilis (Southeast Asia)</strong></p>
 <ul>
 <li>Industry: Technology / retail (hardware supply chain)</li>
 <li>Threat actor: Unknown</li>
-<li>Date reported: Oct 29, 2026</li>
+<li>Date reported: Oct 30, 2026</li>
 <li>Status: Investigating</li>
-<li>Summary: Singapore police say tampered Ledger hardware wallets sold through local retailers stole recovery phrases, costing two users about $2.7 million. Ledger has asked resellers in the region to stop sales while it reviews.</li>
-<li>Supply chain / third-party risk: High for hardware bought through third-party resellers, since the devices were compromised before they reached buyers.</li>
-<li>Source: <a href="https://x.com/i/trending/2115717341136765410">X news summary</a></li>
+<li>Summary: Trezor says it received a credible report of an extra circuit board with a cellular module inside a Safe 5 bought from former reseller CryptoBilis, which reportedly reads the recovery phrase off the screen and sends it out. Trezor hasn't examined the device yet, no losses have been reported, and buyers from CryptoBilis since March 2026 are told to move funds to a new wallet.</li>
+<li>Supply chain / third-party risk: High for hardware bought through third-party resellers; it's the same distributor tied to the tampered Ledger devices.</li>
+<li>Sources: <a href="https://trezor.io/blog/news/implant-reported-in-a-trezor-sold-by-cryptobilis">Trezor</a>, <a href="https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/">BleepingComputer</a></li>
 </ul>
-<p><strong>Morrison Foerster</strong></p>
+<p><strong>INTAX Inc. (Lexington, Kentucky)</strong></p>
 <ul>
-<li>Industry: Legal services</li>
-<li>Threat actor: SilentRansomGroup</li>
-<li>Date reported: Oct 28, 2026</li>
+<li>Industry: Financial services (property-tax compliance)</li>
+<li>Threat actor: Rhysida</li>
+<li>Date reported: Oct 29, 2026</li>
 <li>Status: Claimed</li>
-<li>Summary: SilentRansomGroup listed the US law firm Morrison Foerster on its leak site. The firm hasn't confirmed an incident.</li>
-<li>Supply chain / third-party risk: Medium, because large law firms hold confidential deal and litigation files for many corporate clients.</li>
-<li>Source: <a href="https://ransomnews.com/ransomware-attacks-today/">RansomNews</a></li>
+<li>Summary: Rhysida published what it says is 1.27 TB of data from INTAX, including client tax returns, bank details and IDs. The company hasn't confirmed it.</li>
+<li>Supply chain / third-party risk: Medium to high for INTAX's corporate clients, whose tax and banking data could be in the leak.</li>
+<li>Source: <a href="https://qpulse.quasarcybertech.com/news/7492/rhysida-ransomware-group-exfiltrates-1-27-tb-of-data-from-intax-inc">Quasar CyberTech</a></li>
 </ul>
-<p><strong>zkLink Nova bridge</strong></p>
+<p><strong>Archive of Our Own (AO3)</strong></p>
 <ul>
-<li>Industry: Crypto / fintech</li>
+<li>Industry: Technology / nonprofit</li>
 <li>Threat actor: Unknown</li>
 <li>Date reported: Oct 29, 2026</li>
 <li>Status: Investigating</li>
-<li>Summary: An attacker drained about $786,000 from the zkLink Nova Ethereum bridge late Oct 28 by reusing a valid message hash to forge withdrawals. zkLink paused the affected contracts and offered a 20% bounty.</li>
-<li>Supply chain / third-party risk: Low outside crypto.</li>
-<li>Source: <a href="https://x.com/i/trending/2115675509099258274">X news summary</a></li>
+<li>Summary: The AO3 fan-fiction site's outage is now described as a security incident, and its operator can't rule out theft of the user database (usernames, emails, IP addresses and hashed passwords). It expects two to four weeks of downtime and advises changing reused passwords.</li>
+<li>Supply chain / third-party risk: Low for business, though leaked emails and password hashes feed credential-stuffing elsewhere.</li>
+<li>Source: <a href="https://techcrunch.com/2026/10/29/fan-fiction-site-archive-of-our-own-could-be-offline-for-up-to-4-weeks/">TechCrunch</a></li>
 </ul>
-<p><strong>Virtualine bulletproof hosting (law enforcement action)</strong></p>
+<p><strong>Polymarket (via compromised DebugBear script)</strong></p>
 <ul>
-<li>Industry: Cybercrime infrastructure</li>
-<li>Threat actor: Virtualine (hosting used by ransomware and other criminals)</li>
-<li>Date reported: Oct 28, 2026</li>
-<li>Status: Resolved (domain seized)</li>
-<li>Summary: U.S. law enforcement seized the main domain of Virtualine, a hosting service advertised on crime forums for ransomware and other illegal activity.</li>
-<li>Supply chain / third-party risk: Positive in the short term, though such groups usually move to new hosting quickly.</li>
-<li>Source: <a href="https://www.bleepingcomputer.com/news/security/police-seize-virtualine-bulletproof-service-tied-to-ransowmare-cybercrime/">BleepingComputer</a></li>
-</ul>
-<p><strong>2. AI service outages</strong></p>
-<ul>
-<li>Grok Bot, Cloud Agents and Origin were degraded from about 4:15 PM CDT Oct 28 for roughly two hours, leaving many bots unresponsive before service recovered. Status: resolved. <a href="https://x.com/i/trending/2115556128025198745">X news summary</a></li>
+<li>Industry: Fintech / crypto</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Oct 29, 2026</li>
+<li>Status: Resolved</li>
+<li>Summary: A compromised DebugBear monitoring script loaded on Polymarket's international site drained about $2.5 to $2.7 million from logged-in users. Polymarket halted trading for about an hour, removed the script and says it will reimburse users.</li>
+<li>Supply chain / third-party risk: Medium. It's a classic third-party script compromise, a reminder to audit what outside JavaScript runs on sensitive pages.</li>
+<li>Source: <a href="https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/">BleepingComputer</a></li>
 </ul>
 <p><strong>3. Internet, network, cloud and EDI VAN issues</strong></p>
 <ul>
-<li>A deep-sea fiber cut near Mtunzini, South Africa damaged the Seacom and EASSy submarine cables, slowing Safaricom home fiber and other Kenyan internet providers while traffic shifts to backup cables. Status: ongoing (repairs expected to take about a week). <a href="https://x.com/i/trending/2115540889980338426">X news summary</a></li>
-<li>Bet365 customers in several countries couldn't log in or saw missing bets for about two hours during Oct 28 evening football matches. Status: resolved. <a href="https://x.com/i/trending/2115525364906877294">X news summary</a></li>
-<li>AWS, Google Cloud, Microsoft Azure (no active events) and Oracle Cloud (Normal Performance) had no new incidents, and Cloudflare had only a few short, minor incidents that are all resolved. The EDI VAN pages I could read show nothing new: Cleo, SPS Commerce and TrueCommerce are all operational, and OpenText lists only an old Middle East item from May. I couldn't read the DiCentral, Descartes or ECGrid pages.</li>
+<li>Twilio SMS and MMS messages to Altice (Optimum) subscribers in the US have been delayed since about 7:10 PM CDT Oct 29, and Twilio has identified the cause but not fixed it yet. Status: ongoing. <a href="https://stspg.io/lbrcfbct44zs">Twilio Status</a></li>
+<li>AWS API Gateway HTTP APIs in US-West-2 (Oregon) had intermittent invoke errors and latency on and off from 9:27 AM to 6:15 PM CDT Oct 29, worst from 5:12 to 5:45 PM. Status: resolved. <a href="https://status.aws.amazon.com/data.json">AWS Health</a></li>
+<li>Infoblox Endpoint customers in North America had intermittent DNS resolution failures from about 10:57 AM to 2:23 PM CDT Oct 29. Status: resolved. <a href="https://outagedb.com/status/infoblox/2026-10-29-intermittent-dns-resolution-issues-noticed-in-infoblox-endpo/">OutageDB</a></li>
+<li>Oracle Cloud (Normal Performance), Microsoft Azure (no active events), Google Cloud and Cloudflare had nothing major. Cleo, SPS Commerce, TrueCommerce and DiCentral are all operational, and I didn't get a direct read on the other EDI VAN providers.</li>
 </ul>
 <p><strong>4. Status changes</strong></p>
 <ul>
-<li>FEC electronic filing went from investigating and offline to restored after an outage of nearly 41 hours; the FEC says voting wasn't affected and hasn't confirmed a data breach. <a href="https://x.com/i/trending/2115165541749211461">X news summary</a></li>
-<li>Cloudflare's Ashburn, Virginia network performance issue went from monitoring to resolved. <a href="https://www.cloudflarestatus.com/incidents/snth5ero95rz">Cloudflare Status</a></li>
+<li>Binance hack went from investigating to confirmed: Binance links about $6.3 billion in stolen crypto to a compromised DevOps laptop, withdrawals are paused and expected to resume within about 48 hours. <a href="https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/">BleepingComputer</a></li>
+<li>Malicious Claude Code extension on Cursor's marketplace went from ongoing to resolved: the package was pulled and the attacker's server is offline, but anyone who installed it between about 4:27 AM and 3:35 PM CDT Oct 29 still needs to remove the planted SSH key, run Cursor's cleanup scripts and rotate credentials. <a href="https://cursor.com/blog/claude-code-extension-security-notice">Cursor</a></li>
+<li>Cisco ASA/FTD zero-day CVE-2026-76418 went from exploited and patched but not in CISA's list to added to the Known Exploited Vulnerabilities catalog, with a Nov 1 federal deadline. <a href="https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA</a></li>
+<li>Palo Alto PHP2Shell (CVE-2026-109618) went from fixes still rolling out to fixed builds for every supported PAN-OS branch, with the last hotfix 11.1.7-h12 released Oct 29, while exploitation of exposed management interfaces continues. <a href="https://security.paloaltonetworks.com/CVE-2026-109618">Palo Alto Networks</a></li>
+<li>Amadeus airline reservation breach widened from Japan Airlines and JTA to also include ANA (about 37,800 customers), Cathay Pacific (about 53,000 bookings), Jin Air, Korean Air, Asiana and reportedly Condor, all tied to stolen Amadeus account credentials used from August 2023 to September 2026. Status: still ongoing, scope expanded. <a href="https://www.businesstimes.com.sg/companies-markets/transport-logistics/data-breach-exposes-personal-details-53000-cathay-pacific-passengers-other-major-airlines-hit">The Business Times</a></li>
 </ul></article>
 <footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
