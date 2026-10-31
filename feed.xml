@@ -1,7 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>Internet &amp; Cloud Health Digest</title><link>https://papagiglio.github.io/internet-status-digest/</link><description>Daily digest of major internet, cloud, AI and EDI VAN outages and cyber incidents. Published around noon Central, plus major incident alerts as they happen.</description>
-<language>en-us</language><lastBuildDate>Fri, 30 Oct 2026 13:04:55 -0500</lastBuildDate><atom:link href="https://papagiglio.github.io/internet-status-digest/feed.xml" rel="self" type="application/rss+xml"/>
+<language>en-us</language><lastBuildDate>Sat, 31 Oct 2026 12:00:00 -0500</lastBuildDate><atom:link href="https://papagiglio.github.io/internet-status-digest/feed.xml" rel="self" type="application/rss+xml"/>
+<item><title>Internet &amp; Cloud Health Digest — Oct 31, 2026</title><link>https://papagiglio.github.io/internet-status-digest/2026-10-31.html</link><guid isPermaLink="true">https://papagiglio.github.io/internet-status-digest/2026-10-31.html</guid>
+<pubDate>Sat, 31 Oct 2026 12:00:00 -0500</pubDate><description>Northflank (cloud app hosting platform); Palo Alto Networks firewall customers (US, Japan, Taiwan, South Korea, including US government-linked servers); AU Small Finance Bank (India), via a Salesforce-hosted platform; Chainalysis; About a dozen crypto project websites (flap.sh, Kintsu,…</description><content:encoded><![CDATA[<p><strong>Daily internet &amp; cloud health digest, Oct 31, 2026 (past 24 hours)</strong>
+Source: Scout run <code>2026-10-31-0600.md</code> (plus Scout's <code>2026-10-30-1800.md</code> and <code>2026-10-31-0000.md</code> runs for the rest of the window), with direct checks of the Oracle Cloud, Azure and EDI VAN status pages.</p>
+<p><strong>1. Cyber incidents</strong></p>
+<p><strong>Northflank (cloud app hosting platform)</strong></p>
+<ul>
+<li>Industry: Technology providers</li>
+<li>Threat actor: Unknown (Northflank says the activity may fit the wider attacks on AI credentials in Wiz's "Black October" report)</li>
+<li>Date reported: Oct 30, 2026</li>
+<li>Status: Investigating</li>
+<li>Summary: After a Wiz threat alert, Northflank told every customer to assume their environment variables and stored secrets were decrypted and to rotate all of them, and users report their AI API keys were already misused. No root cause has been published yet, and the latest update (8:34 AM CDT Oct 31) added secret rotation for MySQL and Redis.</li>
+<li>Supply chain / third-party risk: High for any company or vendor that deploys apps on Northflank, since database passwords and API keys for outside services may be exposed and need revoking at the issuing provider.</li>
+<li>Source: <a href="https://status.northflank.com/cmvv0rn5a092f14rutwccodpp">Northflank Status</a></li>
+</ul>
+<p><strong>Palo Alto Networks firewall customers (US, Japan, Taiwan, South Korea, including US government-linked servers)</strong></p>
+<ul>
+<li>Industry: Technology providers / Government</li>
+<li>Threat actor: Unknown (suspected China-nexus, AI-assisted)</li>
+<li>Date reported: Oct 30, 2026</li>
+<li>Status: Confirmed</li>
+<li>Summary: Researchers at Dream and Palo Alto's Unit 42 say an attacker chained the PHP2Shell flaws with the Linux kernel bug CVE-2026-46300 to get root on about 25 internet-exposed PAN-OS firewalls and management servers, then went after Active Directory and stole credentials. Palo Alto says about 0.02% of its firewalls were exposed and tells customers to lock management access to trusted IPs and patch.</li>
+<li>Supply chain / third-party risk: High. A rooted firewall gives an attacker a foothold into the whole network behind it, including connections to partners.</li>
+<li>Source: <a href="https://www.cybersecuritydive.com/news/palo-alto-networks-firewalls-compromised-chained-attacks-php2shell/873323/">Cybersecurity Dive</a></li>
+</ul>
+<p><strong>AU Small Finance Bank (India), via a Salesforce-hosted platform</strong></p>
+<ul>
+<li>Industry: Financial services</li>
+<li>Threat actor: ScarlettGroup</li>
+<li>Date reported: Oct 29–30, 2026</li>
+<li>Status: Investigating (claimed by the group)</li>
+<li>Summary: ScarlettGroup claims it took KYC records, ID numbers, credit reports, bank statements and loan files and is threatening to leak them. The bank says it's investigating a possible leak from a Salesforce-hosted platform that holds limited vehicle-loan customer data, and that its own banking systems are unaffected.</li>
+<li>Supply chain / third-party risk: Medium. It's another case of data exposed through a SaaS vendor rather than the bank's own systems.</li>
+<li>Source: <a href="https://theprint.in/tech/au-small-finance-bank-probes-potential-data-leak-from-saas-platform-after-hacker-group-claims-breach/3086172/">ThePrint</a></li>
+</ul>
+<p><strong>Chainalysis</strong></p>
+<ul>
+<li>Industry: Technology providers (blockchain analytics)</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Oct 30–31, 2026</li>
+<li>Status: Confirmed</li>
+<li>Summary: Chainalysis says attackers used "offensive agentic techniques" to get into internal systems and tools, exposing customer names, email addresses, user IDs and organizational roles. It found no sign that passwords, tokens or investigation data were taken and warns customers to watch for phishing.</li>
+<li>Supply chain / third-party risk: Low to medium. Its customers include law enforcement and exchanges, so expect targeted phishing using the stolen contact list.</li>
+<li>Source: <a href="https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/">BleepingComputer</a></li>
+</ul>
+<p><strong>About a dozen crypto project websites (flap.sh, Kintsu, pickle.finance, echelon.market and others)</strong></p>
+<ul>
+<li>Industry: Fintech / crypto</li>
+<li>Threat actor: Unknown (sites redirected to Step Drainer phishing pages)</li>
+<li>Date reported: Oct 30–31, 2026</li>
+<li>Status: Confirmed (ongoing)</li>
+<li>Summary: Blockaid flagged 12 crypto project sites whose DNS was hijacked to send visitors to wallet-draining phishing pages. Users are told not to connect wallets and to revoke recent approvals.</li>
+<li>Supply chain / third-party risk: Low for most businesses, though hijacking at the DNS level points to a shared registrar or DNS provider weakness worth watching.</li>
+<li>Source: <a href="https://x.com/i/trending/2116359578120274100">X news summary</a></li>
+</ul>
+<p><strong>2. AI service outages</strong></p>
+<ul>
+<li>Cursor's Automations, Cloud Agents, cursor.com and Grok Bot were degraded for about 44 minutes, from 1:04 to 1:47 AM CDT Oct 31. Status: resolved. <a href="https://status.cursor.com/incidents/ps_061cf14060aff263">Cursor Status</a></li>
+</ul>
+<p><strong>3. Internet, network, cloud and EDI VAN issues</strong></p>
+<ul>
+<li>Akamai is investigating the remote code execution flaw CVE-2026-98432 on its platform and taking mitigation steps, with its last update at 9:08 PM CDT Oct 30 and no customer impact listed. Status: ongoing. <a href="https://outagedb.com/status/akamai/2026-10-30-customer-security-advisory-cve-2026-98432/">OutageDB (Akamai advisory)</a></li>
+<li>GPU cloud provider Lambda's lambda.ai was unreachable because of a DNS issue from 11:35 PM CDT Oct 30 to 2:07 AM CDT Oct 31. Status: resolved. <a href="https://status.lambda.ai/incidents/01M683W20M5EA4M9A6WKWXV1D1">Lambda Status</a></li>
+<li>GitHub Actions, Pages deployments and webhooks were delayed from 12:50 to about 1:32 PM CDT Oct 30. Status: resolved. <a href="https://www.githubstatus.com/incidents/pwxsjgnvrk6b">GitHub Status</a></li>
+<li>Oracle Cloud (Normal Performance), Microsoft Azure (no active events), AWS, Google Cloud and Cloudflare had nothing major. Cleo, SPS Commerce and TrueCommerce are all operational, OpenText shows no new incidents (only a long-running Middle East regional outage from May), and I didn't get a direct read on the other EDI VAN providers.</li>
+</ul>
+<p><strong>4. Status changes</strong></p>
+<ul>
+<li>Twilio SMS and MMS delays to Altice (Optimum) subscribers in the US went from ongoing to resolved at about 5:15 PM CDT Oct 30. <a href="https://stspg.io/lbrcfbct44zs">Twilio Status</a></li>
+<li>PHP2Shell (CVE-2026-109618/109619) went from exploited in the wild to confirmed root compromises of about 25 Palo Alto firewalls when chained with Linux CVE-2026-46300 (details in section 1). <a href="https://www.cybersecuritydive.com/news/palo-alto-networks-firewalls-compromised-chained-attacks-php2shell/873323/">Cybersecurity Dive</a></li>
+</ul>]]></content:encoded></item>
 <item><title>Alert: Ivanti Connect Secure VPN zero-day chain added to CISA KEV (Ongoing)</title><link>https://papagiglio.github.io/internet-status-digest/alerts/2026-10-30-1304-ivanti-connect-secure-vpn-zero-day-chain-added-to-.html</link><guid isPermaLink="true">https://papagiglio.github.io/internet-status-digest/alerts/2026-10-30-1304-ivanti-connect-secure-vpn-zero-day-chain-added-to-.html</guid>
 <pubDate>Fri, 30 Oct 2026 13:04:55 -0500</pubDate><description>CISA added two more Ivanti Connect Secure flaws (CVE-2026-111357 and CVE-2026-118527) to its exploited list today; chained with CVE-2026-104935 they give attackers unauthenticated root on the VPN, which actor UTA0576 has used since early October to steal domain credentials and Active Directory secrets, and fixes are in 25.1.1.3 and 22.8R2.6. Status: Ongoing.</description><content:encoded><![CDATA[<p><strong>Ivanti Connect Secure VPN zero-day chain added to CISA KEV</strong></p><p>CISA added two more Ivanti Connect Secure flaws (CVE-2026-111357 and CVE-2026-118527) to its exploited list today; chained with CVE-2026-104935 they give attackers unauthenticated root on the VPN, which actor UTA0576 has used since early October to steal domain credentials and Active Directory secrets, and fixes are in 25.1.1.3 and 22.8R2.6.</p><ul><li>Status: Ongoing</li><li>Source: <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a></li><li>Alert time: Oct 30, 2026 1:04 PM CDT</li></ul>]]></content:encoded></item>
 <item><title>Internet &amp; Cloud Health Digest — Oct 30, 2026</title><link>https://papagiglio.github.io/internet-status-digest/2026-10-30.html</link><guid isPermaLink="true">https://papagiglio.github.io/internet-status-digest/2026-10-30.html</guid>

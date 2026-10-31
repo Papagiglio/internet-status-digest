@@ -11,82 +11,73 @@ footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85
 <header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
 <p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
 <nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
-<section><h2>Alerts since this digest</h2><ul><li><a href="https://papagiglio.github.io/internet-status-digest/alerts/2026-10-30-1304-ivanti-connect-secure-vpn-zero-day-chain-added-to-.html">Alert: Ivanti Connect Secure VPN zero-day chain added to CISA KEV (Ongoing)</a> <span class="note">Oct 30 1:04 PM CDT</span></li></ul></section><article><p class="note">Latest: Oct 30, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-10-30.html">permalink</a></p><p><strong>Daily internet &amp; cloud health digest, Oct 30, 2026 (past 24 hours)</strong>
-Source: Scout run <code>2026-10-30-0600.md</code> (plus Scout's <code>2026-10-30-0000.md</code> run for the rest of the window), with direct checks of the Oracle Cloud, Azure and EDI VAN status pages.</p>
+<article><p class="note">Latest: Oct 31, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-10-31.html">permalink</a></p><p><strong>Daily internet &amp; cloud health digest, Oct 31, 2026 (past 24 hours)</strong>
+Source: Scout run <code>2026-10-31-0600.md</code> (plus Scout's <code>2026-10-30-1800.md</code> and <code>2026-10-31-0000.md</code> runs for the rest of the window), with direct checks of the Oracle Cloud, Azure and EDI VAN status pages.</p>
 <p><strong>1. Cyber incidents</strong></p>
-<p><strong>Cisco Catalyst SD-WAN customers (space, defense, policy research)</strong></p>
-<ul>
-<li>Industry: Technology providers / Government and defense</li>
-<li>Threat actor: UAT-11473 (China-linked APT per Talos, with infrastructure overlapping Volt Typhoon's "Silent Train" network)</li>
-<li>Date reported: Oct 28–29, 2026</li>
-<li>Status: Confirmed</li>
-<li>Summary: Cisco Talos says UAT-11473 exploited the max-severity SD-WAN authentication bypass CVE-2026-20127 (patched in February) to plant a custom malware framework called KeyDrift inside SD-WAN controllers. It hides in legitimate controller processes and steals the encryption keys that protect traffic between sites.</li>
-<li>Supply chain / third-party risk: High. SD-WAN controllers sit at the center of company and supplier networks, so anyone still unpatched should update, hunt for compromise and consider rotating keys.</li>
-<li>Sources: <a href="https://blog.talosintelligence.com/uat-11473-keydrift/">Cisco Talos</a>, <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/">BleepingComputer</a></li>
-</ul>
-<p><strong>Hugging Face model repositories (self-hosted AI servers)</strong></p>
+<p><strong>Northflank (cloud app hosting platform)</strong></p>
 <ul>
 <li>Industry: Technology providers</li>
-<li>Threat actor: Unknown (Pluto Security assesses a financially motivated, Chinese-speaking operator)</li>
-<li>Date reported: Oct 29, 2026</li>
-<li>Status: Confirmed (ongoing)</li>
-<li>Summary: Pluto Security found 31 fake Qwen2 model repositories with more than 32,000 downloads that run hidden Python when loaded with trust_remote_code, installing a cryptominer, persistence and in some versions a reverse shell. The campaign came back within days of a takedown, and a near-identical copy was still live when BleepingComputer reported it.</li>
-<li>Supply chain / third-party risk: Medium to high for teams running self-hosted AI inference or CI jobs that pull models, since infected machines should be treated as compromised.</li>
-<li>Sources: <a href="https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/">BleepingComputer</a>, <a href="https://pluto.security/blog/hugging-face-malware-campaign-load-mine/">Pluto Security</a></li>
-</ul>
-<p><strong>Trezor hardware wallets sold by CryptoBilis (Southeast Asia)</strong></p>
-<ul>
-<li>Industry: Technology / retail (hardware supply chain)</li>
-<li>Threat actor: Unknown</li>
+<li>Threat actor: Unknown (Northflank says the activity may fit the wider attacks on AI credentials in Wiz's "Black October" report)</li>
 <li>Date reported: Oct 30, 2026</li>
 <li>Status: Investigating</li>
-<li>Summary: Trezor says it received a credible report of an extra circuit board with a cellular module inside a Safe 5 bought from former reseller CryptoBilis, which reportedly reads the recovery phrase off the screen and sends it out. Trezor hasn't examined the device yet, no losses have been reported, and buyers from CryptoBilis since March 2026 are told to move funds to a new wallet.</li>
-<li>Supply chain / third-party risk: High for hardware bought through third-party resellers; it's the same distributor tied to the tampered Ledger devices.</li>
-<li>Sources: <a href="https://trezor.io/blog/news/implant-reported-in-a-trezor-sold-by-cryptobilis">Trezor</a>, <a href="https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/">BleepingComputer</a></li>
+<li>Summary: After a Wiz threat alert, Northflank told every customer to assume their environment variables and stored secrets were decrypted and to rotate all of them, and users report their AI API keys were already misused. No root cause has been published yet, and the latest update (8:34 AM CDT Oct 31) added secret rotation for MySQL and Redis.</li>
+<li>Supply chain / third-party risk: High for any company or vendor that deploys apps on Northflank, since database passwords and API keys for outside services may be exposed and need revoking at the issuing provider.</li>
+<li>Source: <a href="https://status.northflank.com/cmvv0rn5a092f14rutwccodpp">Northflank Status</a></li>
 </ul>
-<p><strong>INTAX Inc. (Lexington, Kentucky)</strong></p>
+<p><strong>Palo Alto Networks firewall customers (US, Japan, Taiwan, South Korea, including US government-linked servers)</strong></p>
 <ul>
-<li>Industry: Financial services (property-tax compliance)</li>
-<li>Threat actor: Rhysida</li>
-<li>Date reported: Oct 29, 2026</li>
-<li>Status: Claimed</li>
-<li>Summary: Rhysida published what it says is 1.27 TB of data from INTAX, including client tax returns, bank details and IDs. The company hasn't confirmed it.</li>
-<li>Supply chain / third-party risk: Medium to high for INTAX's corporate clients, whose tax and banking data could be in the leak.</li>
-<li>Source: <a href="https://qpulse.quasarcybertech.com/news/7492/rhysida-ransomware-group-exfiltrates-1-27-tb-of-data-from-intax-inc">Quasar CyberTech</a></li>
+<li>Industry: Technology providers / Government</li>
+<li>Threat actor: Unknown (suspected China-nexus, AI-assisted)</li>
+<li>Date reported: Oct 30, 2026</li>
+<li>Status: Confirmed</li>
+<li>Summary: Researchers at Dream and Palo Alto's Unit 42 say an attacker chained the PHP2Shell flaws with the Linux kernel bug CVE-2026-46300 to get root on about 25 internet-exposed PAN-OS firewalls and management servers, then went after Active Directory and stole credentials. Palo Alto says about 0.02% of its firewalls were exposed and tells customers to lock management access to trusted IPs and patch.</li>
+<li>Supply chain / third-party risk: High. A rooted firewall gives an attacker a foothold into the whole network behind it, including connections to partners.</li>
+<li>Source: <a href="https://www.cybersecuritydive.com/news/palo-alto-networks-firewalls-compromised-chained-attacks-php2shell/873323/">Cybersecurity Dive</a></li>
 </ul>
-<p><strong>Archive of Our Own (AO3)</strong></p>
+<p><strong>AU Small Finance Bank (India), via a Salesforce-hosted platform</strong></p>
 <ul>
-<li>Industry: Technology / nonprofit</li>
+<li>Industry: Financial services</li>
+<li>Threat actor: ScarlettGroup</li>
+<li>Date reported: Oct 29–30, 2026</li>
+<li>Status: Investigating (claimed by the group)</li>
+<li>Summary: ScarlettGroup claims it took KYC records, ID numbers, credit reports, bank statements and loan files and is threatening to leak them. The bank says it's investigating a possible leak from a Salesforce-hosted platform that holds limited vehicle-loan customer data, and that its own banking systems are unaffected.</li>
+<li>Supply chain / third-party risk: Medium. It's another case of data exposed through a SaaS vendor rather than the bank's own systems.</li>
+<li>Source: <a href="https://theprint.in/tech/au-small-finance-bank-probes-potential-data-leak-from-saas-platform-after-hacker-group-claims-breach/3086172/">ThePrint</a></li>
+</ul>
+<p><strong>Chainalysis</strong></p>
+<ul>
+<li>Industry: Technology providers (blockchain analytics)</li>
 <li>Threat actor: Unknown</li>
-<li>Date reported: Oct 29, 2026</li>
-<li>Status: Investigating</li>
-<li>Summary: The AO3 fan-fiction site's outage is now described as a security incident, and its operator can't rule out theft of the user database (usernames, emails, IP addresses and hashed passwords). It expects two to four weeks of downtime and advises changing reused passwords.</li>
-<li>Supply chain / third-party risk: Low for business, though leaked emails and password hashes feed credential-stuffing elsewhere.</li>
-<li>Source: <a href="https://techcrunch.com/2026/10/29/fan-fiction-site-archive-of-our-own-could-be-offline-for-up-to-4-weeks/">TechCrunch</a></li>
+<li>Date reported: Oct 30–31, 2026</li>
+<li>Status: Confirmed</li>
+<li>Summary: Chainalysis says attackers used "offensive agentic techniques" to get into internal systems and tools, exposing customer names, email addresses, user IDs and organizational roles. It found no sign that passwords, tokens or investigation data were taken and warns customers to watch for phishing.</li>
+<li>Supply chain / third-party risk: Low to medium. Its customers include law enforcement and exchanges, so expect targeted phishing using the stolen contact list.</li>
+<li>Source: <a href="https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/">BleepingComputer</a></li>
 </ul>
-<p><strong>Polymarket (via compromised DebugBear script)</strong></p>
+<p><strong>About a dozen crypto project websites (flap.sh, Kintsu, pickle.finance, echelon.market and others)</strong></p>
 <ul>
 <li>Industry: Fintech / crypto</li>
-<li>Threat actor: Unknown</li>
-<li>Date reported: Oct 29, 2026</li>
-<li>Status: Resolved</li>
-<li>Summary: A compromised DebugBear monitoring script loaded on Polymarket's international site drained about $2.5 to $2.7 million from logged-in users. Polymarket halted trading for about an hour, removed the script and says it will reimburse users.</li>
-<li>Supply chain / third-party risk: Medium. It's a classic third-party script compromise, a reminder to audit what outside JavaScript runs on sensitive pages.</li>
-<li>Source: <a href="https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/">BleepingComputer</a></li>
+<li>Threat actor: Unknown (sites redirected to Step Drainer phishing pages)</li>
+<li>Date reported: Oct 30–31, 2026</li>
+<li>Status: Confirmed (ongoing)</li>
+<li>Summary: Blockaid flagged 12 crypto project sites whose DNS was hijacked to send visitors to wallet-draining phishing pages. Users are told not to connect wallets and to revoke recent approvals.</li>
+<li>Supply chain / third-party risk: Low for most businesses, though hijacking at the DNS level points to a shared registrar or DNS provider weakness worth watching.</li>
+<li>Source: <a href="https://x.com/i/trending/2116359578120274100">X news summary</a></li>
+</ul>
+<p><strong>2. AI service outages</strong></p>
+<ul>
+<li>Cursor's Automations, Cloud Agents, cursor.com and Grok Bot were degraded for about 44 minutes, from 1:04 to 1:47 AM CDT Oct 31. Status: resolved. <a href="https://status.cursor.com/incidents/ps_061cf14060aff263">Cursor Status</a></li>
 </ul>
 <p><strong>3. Internet, network, cloud and EDI VAN issues</strong></p>
 <ul>
-<li>Twilio SMS and MMS messages to Altice (Optimum) subscribers in the US have been delayed since about 7:10 PM CDT Oct 29, and Twilio has identified the cause but not fixed it yet. Status: ongoing. <a href="https://stspg.io/lbrcfbct44zs">Twilio Status</a></li>
-<li>AWS API Gateway HTTP APIs in US-West-2 (Oregon) had intermittent invoke errors and latency on and off from 9:27 AM to 6:15 PM CDT Oct 29, worst from 5:12 to 5:45 PM. Status: resolved. <a href="https://status.aws.amazon.com/data.json">AWS Health</a></li>
-<li>Infoblox Endpoint customers in North America had intermittent DNS resolution failures from about 10:57 AM to 2:23 PM CDT Oct 29. Status: resolved. <a href="https://outagedb.com/status/infoblox/2026-10-29-intermittent-dns-resolution-issues-noticed-in-infoblox-endpo/">OutageDB</a></li>
-<li>Oracle Cloud (Normal Performance), Microsoft Azure (no active events), Google Cloud and Cloudflare had nothing major. Cleo, SPS Commerce, TrueCommerce and DiCentral are all operational, and I didn't get a direct read on the other EDI VAN providers.</li>
+<li>Akamai is investigating the remote code execution flaw CVE-2026-98432 on its platform and taking mitigation steps, with its last update at 9:08 PM CDT Oct 30 and no customer impact listed. Status: ongoing. <a href="https://outagedb.com/status/akamai/2026-10-30-customer-security-advisory-cve-2026-98432/">OutageDB (Akamai advisory)</a></li>
+<li>GPU cloud provider Lambda's lambda.ai was unreachable because of a DNS issue from 11:35 PM CDT Oct 30 to 2:07 AM CDT Oct 31. Status: resolved. <a href="https://status.lambda.ai/incidents/01M683W20M5EA4M9A6WKWXV1D1">Lambda Status</a></li>
+<li>GitHub Actions, Pages deployments and webhooks were delayed from 12:50 to about 1:32 PM CDT Oct 30. Status: resolved. <a href="https://www.githubstatus.com/incidents/pwxsjgnvrk6b">GitHub Status</a></li>
+<li>Oracle Cloud (Normal Performance), Microsoft Azure (no active events), AWS, Google Cloud and Cloudflare had nothing major. Cleo, SPS Commerce and TrueCommerce are all operational, OpenText shows no new incidents (only a long-running Middle East regional outage from May), and I didn't get a direct read on the other EDI VAN providers.</li>
 </ul>
 <p><strong>4. Status changes</strong></p>
 <ul>
-<li>Binance hack went from investigating to confirmed: Binance links about $6.3 billion in stolen crypto to a compromised DevOps laptop, withdrawals are paused and expected to resume within about 48 hours. <a href="https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/">BleepingComputer</a></li>
-<li>Malicious Claude Code extension on Cursor's marketplace went from ongoing to resolved: the package was pulled and the attacker's server is offline, but anyone who installed it between about 4:27 AM and 3:35 PM CDT Oct 29 still needs to remove the planted SSH key, run Cursor's cleanup scripts and rotate credentials. <a href="https://cursor.com/blog/claude-code-extension-security-notice">Cursor</a></li>
-<li>Cisco ASA/FTD zero-day CVE-2026-76418 went from exploited and patched but not in CISA's list to added to the Known Exploited Vulnerabilities catalog, with a Nov 1 federal deadline. <a href="https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA</a></li>
-<li>Palo Alto PHP2Shell (CVE-2026-109618) went from fixes still rolling out to fixed builds for every supported PAN-OS branch, with the last hotfix 11.1.7-h12 released Oct 29, while exploitation of exposed management interfaces continues. <a href="https://security.paloaltonetworks.com/CVE-2026-109618">Palo Alto Networks</a></li>
-<li>Amadeus airline reservation breach widened from Japan Airlines and JTA to also include ANA (about 37,800 customers), Cathay Pacific (about 53,000 bookings), Jin Air, Korean Air, Asiana and reportedly Condor, all tied to stolen Amadeus account credentials used from August 2023 to September 2026. Status: still ongoing, scope expanded. <a href="https://www.businesstimes.com.sg/companies-markets/transport-logistics/data-breach-exposes-personal-details-53000-cathay-pacific-passengers-other-major-airlines-hit">The Business Times</a></li>
+<li>Twilio SMS and MMS delays to Altice (Optimum) subscribers in the US went from ongoing to resolved at about 5:15 PM CDT Oct 30. <a href="https://stspg.io/lbrcfbct44zs">Twilio Status</a></li>
+<li>PHP2Shell (CVE-2026-109618/109619) went from exploited in the wild to confirmed root compromises of about 25 Palo Alto firewalls when chained with Linux CVE-2026-46300 (details in section 1). <a href="https://www.cybersecuritydive.com/news/palo-alto-networks-firewalls-compromised-chained-attacks-php2shell/873323/">Cybersecurity Dive</a></li>
 </ul></article>
 <footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
