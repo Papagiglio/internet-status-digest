@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>Internet &amp; Cloud Health Digest</title><link>https://papagiglio.github.io/internet-status-digest/</link><description>Daily digest of major internet, cloud, AI and EDI VAN outages and cyber incidents. Published around noon Central, plus major incident alerts as they happen.</description>
-<language>en-us</language><lastBuildDate>Sat, 31 Oct 2026 12:00:00 -0500</lastBuildDate><atom:link href="https://papagiglio.github.io/internet-status-digest/feed.xml" rel="self" type="application/rss+xml"/>
+<language>en-us</language><lastBuildDate>Sun, 01 Nov 2026 12:00:00 -0600</lastBuildDate><atom:link href="https://papagiglio.github.io/internet-status-digest/feed.xml" rel="self" type="application/rss+xml"/>
+<item><title>Internet &amp; Cloud Health Digest — Nov 1, 2026</title><link>https://papagiglio.github.io/internet-status-digest/2026-11-01.html</link><guid isPermaLink="true">https://papagiglio.github.io/internet-status-digest/2026-11-01.html</guid>
+<pubDate>Sun, 01 Nov 2026 12:00:00 -0600</pubDate><description>WordPress sites (versions 4.7 through 7.1.3); b14g (Bitcoin staking protocol on the Core network); Gmail and YouTube users (abuse of real Google security alerts); Linode (Akamai Cloud) had intermittent connection timeouts and errors for all services in its Chennai (IN-MAA) and Mumbai 2 (IN-BOM-2)…</description><content:encoded><![CDATA[<p><strong>Daily internet &amp; cloud health digest, Nov 1, 2026 (past 24 hours)</strong>
+Source: Scout run <code>2026-11-01-1200.md</code> (plus Scout's <code>2026-10-31-1800.md</code>, <code>2026-11-01-0000.md</code> and <code>2026-11-01-0600.md</code> runs for the rest of the window), with direct checks of the Oracle Cloud, Azure and EDI VAN status pages.</p>
+<p><strong>1. Cyber incidents</strong></p>
+<p><strong>WordPress sites (versions 4.7 through 7.1.3)</strong></p>
+<ul>
+<li>Industry: Technology providers (web platform)</li>
+<li>Threat actor: Unknown (mass automated scanning)</li>
+<li>Date reported: Nov 1, 2026</li>
+<li>Status: Investigating (exploitation attempts, no confirmed compromises yet)</li>
+<li>Summary: Wordfence says attackers are hammering <code>wp-content/upgrade</code> installer paths to hit the few-second window during full-package WordPress updates and get remote code execution through CVE-2026-119977, with roughly 58,700 to 63,000 blocked attempts in 24 hours. The fix is WordPress 7.1.4 (released Oct 28) or its branch backports.</li>
+<li>Supply chain / third-party risk: Medium. Lots of vendor, supplier and customer-facing sites run WordPress, so any that haven't updated are exposed, and a hijacked site can be used to serve malware or phish partners.</li>
+<li>Source: <a href="https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html">The Hacker News</a></li>
+</ul>
+<p><strong>b14g (Bitcoin staking protocol on the Core network)</strong></p>
+<ul>
+<li>Industry: Fintech / crypto</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Oct 31–Nov 1, 2026</li>
+<li>Status: Confirmed (investigating)</li>
+<li>Summary: About 97 million staked CORE tokens were withdrawn without authorization at 4:29 AM CDT Oct 31 and sent to attacker addresses. b14g paused the affected contracts, exchanges froze about 9 million tokens, Core DAO says the Core network itself wasn't affected, and no post-mortem is out yet.</li>
+<li>Supply chain / third-party risk: Low outside crypto.</li>
+<li>Source: <a href="https://www.cryptotimes.io/2026/11/01/b14g-probes-97m-core-withdrawal-as-exchanges-freeze-9m-tokens/">The Crypto Times</a></li>
+</ul>
+<p><strong>Gmail and YouTube users (abuse of real Google security alerts)</strong></p>
+<ul>
+<li>Industry: Technology providers / consumers</li>
+<li>Threat actor: Unknown (scammers)</li>
+<li>Date reported: Oct 31, 2026</li>
+<li>Status: Ongoing</li>
+<li>Summary: Scammers put fake invoice text, like a $399 McAfee charge, into Google app-password names on throwaway accounts, so Google sends genuine, authenticated security alerts that they forward to victims to push them toward scam phone numbers. Some YouTube creators have lost access to their channels.</li>
+<li>Supply chain / third-party risk: Low to medium. Because the emails really come from Google, they get past normal filters, so staff should be warned not to call numbers in security alerts.</li>
+<li>Source: <a href="https://x.com/i/trending/2116601284442591433">X news summary</a></li>
+</ul>
+<p><strong>3. Internet, network, cloud and EDI VAN issues</strong></p>
+<ul>
+<li>Linode (Akamai Cloud) had intermittent connection timeouts and errors for all services in its Chennai (IN-MAA) and Mumbai 2 (IN-BOM-2) data centers starting at 10:40 AM CST today, and a fix was in place at 11:23 AM CST. Status: ongoing (monitoring). <a href="https://stspg.io/wtr6kw3lz45j">Linode Status</a></li>
+<li>Linode (Akamai Cloud) has a growing number of host failures in its US-Southeast (Atlanta) region that leave some instances unable to boot, open since 12:49 PM CDT Oct 31 with no update since 3:17 PM CDT. Status: ongoing. <a href="https://stspg.io/kjvggy81n8p4">Linode Status</a></li>
+<li>TrueCommerce DiCentral had an AS2 connectivity problem on its COMM2 server from 4:40 PM CDT Oct 30 to 12:36 AM CDT Oct 31. Status: resolved. <a href="https://stspg.io/lp38dr95vfqn">TrueCommerce DiCentral Status</a></li>
+<li>Discord voice calls had connection problems from 10:26 AM to 4:43 PM CDT Oct 31. Status: resolved. <a href="https://stspg.io/pl4x16p74j68">Discord Status</a></li>
+<li>Oracle Cloud (Normal Performance), Microsoft Azure (no active events), AWS, Google Cloud and Cloudflare had nothing major. Cleo, SPS Commerce and TrueCommerce are all operational, Descartes finished planned data-center maintenance on its EDI and integration services this morning, OpenText Trading Grid shows only a certificate renewal on Nov 22 (the ongoing outage is its unrelated Middle East service-management region), and I didn't get a direct read on the other EDI VAN providers.</li>
+</ul>
+<p><strong>4. Status changes</strong></p>
+<ul>
+<li>Binance's $6.3 billion theft went from confirmed with withdrawals paused to attributed by the FBI to North Korea's TraderTraitor unit, with Binance covering about 95% of the stolen funds and reopening withdrawals in phases starting around 1:00 AM CDT today. A THORChain emergency pause is also stalling the hackers' laundering. <a href="https://www.nbcnews.com/business/business-news/fbi-says-north-korea-was-6-billion-binance-crypto-hack-rcna606758">NBC News</a>, <a href="https://www.investing.com/news/stock-market-news/binance-to-resume-withdrawals-after-recovering-bulk-of-6-billion-in-stolen-funds-4989388">Investing.com</a></li>
+</ul>]]></content:encoded></item>
 <item><title>Internet &amp; Cloud Health Digest — Oct 31, 2026</title><link>https://papagiglio.github.io/internet-status-digest/2026-10-31.html</link><guid isPermaLink="true">https://papagiglio.github.io/internet-status-digest/2026-10-31.html</guid>
 <pubDate>Sat, 31 Oct 2026 12:00:00 -0500</pubDate><description>Northflank (cloud app hosting platform); Palo Alto Networks firewall customers (US, Japan, Taiwan, South Korea, including US government-linked servers); AU Small Finance Bank (India), via a Salesforce-hosted platform; Chainalysis; About a dozen crypto project websites (flap.sh, Kintsu,…</description><content:encoded><![CDATA[<p><strong>Daily internet &amp; cloud health digest, Oct 31, 2026 (past 24 hours)</strong>
 Source: Scout run <code>2026-10-31-0600.md</code> (plus Scout's <code>2026-10-30-1800.md</code> and <code>2026-10-31-0000.md</code> runs for the rest of the window), with direct checks of the Oracle Cloud, Azure and EDI VAN status pages.</p>
