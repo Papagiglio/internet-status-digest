@@ -1,0 +1,119 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Internet &amp; Cloud Health Digest — Nov 2, 2026</title>
+<link rel="alternate" type="application/rss+xml" title="Internet &amp; Cloud Health Digest (RSS)" href="https://papagiglio.github.io/internet-status-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Internet &amp; Cloud Health Digest (Atom)" href="https://papagiglio.github.io/internet-status-digest/atom.xml">
+<link rel="canonical" href="https://papagiglio.github.io/internet-status-digest/2026-11-02.html"><style>body{font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:46rem;margin:0 auto;padding:1rem;color:#1d1d1f;background:#fff}
+header{border-bottom:2px solid #0b5cad;margin-bottom:1rem;padding-bottom:.5rem}header h1{margin:.2rem 0;font-size:1.5rem}header h1 a{color:inherit;text-decoration:none}
+nav a,.sub a{margin-right:1rem}a{color:#0b5cad}ul{padding-left:1.2rem}li{margin:.2rem 0}.note{color:#555;font-size:.9rem}
+article p strong:only-child{display:block;margin-top:1.2rem;font-size:1.05rem}code{background:#f2f2f2;padding:0 .2rem;border-radius:3px}
+footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85rem;color:#666}
+@media (prefers-color-scheme:dark){body{background:#111;color:#e6e6e6}a{color:#6cb4ff}code{background:#222}.note,footer{color:#aaa}}</style></head><body>
+<header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
+<p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
+<nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
+<article><p class="note">Digest for Nov 2, 2026</p><p><strong>Daily internet &amp; cloud health digest, Nov 2, 2026 (past 24 hours)</strong>
+Source: Scout run <code>2026-11-02-0600.md</code> (plus Scout's <code>2026-11-01-1800.md</code> and <code>2026-11-02-0000.md</code> runs for the rest of the window), with direct checks of the Oracle Cloud, Azure and EDI VAN status pages and security news.</p>
+<p><strong>1. Cyber incidents</strong></p>
+<p><strong>Delhaize, Carrefour, Spar, ICA and Coop supermarkets (Belgium, Luxembourg, Sweden)</strong></p>
+<ul>
+<li>Industry: Retail / Food &amp; Agriculture</li>
+<li>Threat actor: Unknown (unclaimed)</li>
+<li>Date reported: Nov 2, 2026</li>
+<li>Status: Investigating</li>
+<li>Summary: Overnight attacks switched off or overheated refrigerators and freezers at about 40 Delhaize and 15 Carrefour stores in Belgium, Spar shops in Belgium and Luxembourg, and several ICA and six Coop stores in Sweden, with some freezers set to 50°C and food lost. Delhaize's refrigeration contractor called it a cyberattack and Sweden's national cybersecurity center is investigating; it follows a similar attack on French supermarkets last month.</li>
+<li>Supply chain / third-party risk: High. The way in appears to be a shared refrigeration-management contractor, so any grocer or cold-chain site using remotely managed refrigeration controls should check vendor remote access now.</li>
+<li>Source: <a href="https://www.nbcnews.com/world/europe/european-supermarkets-hit-new-fridge-cyberattack-rcna606972">NBC News</a></li>
+</ul>
+<p><strong>Florida Department of Education (student financial aid website)</strong></p>
+<ul>
+<li>Industry: Government</li>
+<li>Threat actor: Unknown (unclaimed)</li>
+<li>Date reported: Nov 2, 2026</li>
+<li>Status: Confirmed (contained)</li>
+<li>Summary: Hackers breached FloridaStudentFinancialAidSG.org, discovered Oct 19, potentially exposing names, Social Security numbers, birth dates, addresses, phone numbers and emails of about 4.9 million people. The department says the breach is contained and limited to that site; how attackers got in hasn't been disclosed.</li>
+<li>Supply chain / third-party risk: Low for businesses directly, but the stolen SSNs raise identity-fraud and phishing risk for employees who applied for Florida aid.</li>
+<li>Source: <a href="https://www.securityweek.com/florida-student-aid-website-hack-puts-data-of-4-9-million-people-at-risk/">SecurityWeek</a></li>
+</ul>
+<p><strong>BTCPay Server (self-hosted Bitcoin payment processor)</strong></p>
+<ul>
+<li>Industry: Technology providers / fintech</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 1–2, 2026</li>
+<li>Status: Confirmed (investigating)</li>
+<li>Summary: Attackers drained Bitcoin and Litecoin hot wallets on merchant servers running BTCPay Server 2.4.1 or earlier, using a new way to exploit a flaw fixed in 2.4.2 and logging in with admin access. BTCPay says operators on old versions should sweep funds to a new wallet and rebuild on a fresh server, since updating alone won't remove attacker access; hosts like LunaNode took instances offline, and losses haven't been disclosed.</li>
+<li>Supply chain / third-party risk: Medium for merchants accepting crypto through self-hosted BTCPay.</li>
+<li>Source: <a href="https://blog.btcpayserver.org/btcpay-server-security-incident-2-4-1-and-earlier/">BTCPay Server blog</a>, <a href="https://decrypt.co/382324/btcpay-tells-merchants-to-switch-off-servers-amid-hot-wallet-attack-reports">Decrypt</a></li>
+</ul>
+<p><strong>Videostrong Android TV boxes (botnet takedown by Google)</strong></p>
+<ul>
+<li>Industry: Technology providers (consumer devices)</li>
+<li>Threat actor: Device maker Videostrong (per Google) plus criminal buyers</li>
+<li>Date reported: Nov 2, 2026</li>
+<li>Status: Resolved (botnet disrupted; backdoor remains on devices)</li>
+<li>Summary: Google took down the control servers of a 1.3-million-device botnet made up mostly of Android TV set-top boxes, saying it's highly confident Shenzhen maker Videostrong built in a backdoor called x.cpe and sold access for ad fraud and residential proxy traffic. The backdoor is still on the boxes and owners can't remove it.</li>
+<li>Supply chain / third-party risk: Medium. Cheap Android TV boxes on home or office networks can relay attacker traffic, so they should be kept off business networks.</li>
+<li>Source: <a href="https://thehackernews.com/">The Hacker News</a></li>
+</ul>
+<p><strong>Unnamed companies hit via Microsoft Teams help-desk impersonation</strong></p>
+<ul>
+<li>Industry: Multiple (enterprise)</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 2, 2026</li>
+<li>Status: Confirmed</li>
+<li>Summary: Microsoft investigated two intrusions where attackers posing as IT support on Teams talked employees into opening Quick Assist, then abused insecurely configured Active Directory Certificate Services to get certificates for privileged accounts, including a domain controller. In one case company data was copied out; no Teams flaw was used.</li>
+<li>Supply chain / third-party risk: Medium. External-tenant Teams chats are a growing entry point, so restricting external Teams access and auditing AD CS templates is worthwhile.</li>
+<li>Source: <a href="https://thehackernews.com/">The Hacker News</a></li>
+</ul>
+<p><strong>HYBE (BTS's label, South Korea)</strong></p>
+<ul>
+<li>Industry: Entertainment</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 2, 2026</li>
+<li>Status: Resolved (access blocked)</li>
+<li>Summary: Attackers got in through an outside vendor's document-preview tool and an expense system in September and October and stole ID, passport, bank, card and medical details of current and former employees and partners. HYBE says the access routes are closed and it has seen no misuse, but hasn't said how many people were affected.</li>
+<li>Supply chain / third-party risk: Medium. It's another breach that came in through a vendor's software.</li>
+<li>Source: <a href="https://www.koreajoongangdaily.com/business/hybe-employee-id-passport-and-medical-data-exposed-in-cyberattack/12951355">Korea JoongAng Daily</a></li>
+</ul>
+<p><strong>Ukraine's Air Alert app (and Russia's emergency alert app)</strong></p>
+<ul>
+<li>Industry: Government</li>
+<li>Threat actor: Hitcore (claimed, unconfirmed by Ukraine)</li>
+<li>Date reported: Nov 1–2, 2026</li>
+<li>Status: Resolved</li>
+<li>Summary: Ukraine's air-raid warning app pushed fake radiation, chemical and street-fighting alerts for about an hour before they were cleared; a Russian group called Hitcore says it phished an administrator. Hours later Russia's Emergencies Ministry said its own alert app was hit by a cyberattack that sent fake information.</li>
+<li>Supply chain / third-party risk: Low outside the region.</li>
+<li>Source: <a href="https://kyivindependent.com/ukraines-air-raid-alert-system-hacked-air-force-says-as-false-nuclear-chemical-warnings-sound/">Kyiv Independent</a></li>
+</ul>
+<p><strong>Israeli target and Kurdistan Region of Iraq government cloud</strong></p>
+<ul>
+<li>Industry: Government</li>
+<li>Threat actor: DarkBlinders (Iran-nexus)</li>
+<li>Date reported: Nov 2, 2026</li>
+<li>Status: Confirmed</li>
+<li>Summary: Dream Research Labs says DarkBlinders ran spear-phishing with trojanized utilities from August to October, compromising a high-profile individual in Israel and a government cloud environment in Iraq's Kurdistan Region.</li>
+<li>Supply chain / third-party risk: Low for U.S. businesses.</li>
+<li>Source: <a href="https://thehackernews.com/">The Hacker News</a></li>
+</ul>
+<p><strong>Solana Mobile dApp Store</strong></p>
+<ul>
+<li>Industry: Technology providers / crypto</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 1, 2026</li>
+<li>Status: Resolved</li>
+<li>Summary: Attackers got into the publishing portal and listed a fake "SKR Claim" airdrop app that asked for seed phrases for about an hour before Solana Mobile pulled it, wiped it from devices and fixed the bug.</li>
+<li>Supply chain / third-party risk: Low.</li>
+<li>Source: <a href="https://x.com/i/trending/2116978256545010134">X news summary</a></li>
+</ul>
+<p><strong>3. Internet, network, cloud and EDI VAN issues</strong></p>
+<ul>
+<li>A global disruption in airline Advance Passenger Processing systems knocked out self-service check-in kiosks at Singapore's Changi Airport and other airports from about 6:30 to 9 PM CST Sunday, with airlines switching to manual check-in. Status: resolved. <a href="https://www.straitstimes.com/singapore/some-airlines-hit-by-self-service-check-in-kiosk-disruption-at-changi-airport">The Straits Times</a></li>
+<li>Tradovate futures traders, including NinjaTrader and TradingView users, couldn't log in or manage live positions for about an hour at the Sunday-evening market open. Status: resolved. <a href="https://x.com/i/trending/2117064632926175737">X news summary</a></li>
+<li>Linode (Akamai Cloud) is investigating intermittent connection timeouts and errors for all services in its Paris 2 (FR-PAR-2) data center since 12:03 PM CST today. Status: ongoing. <a href="https://stspg.io/9whblgmkt6x6">Linode Status</a></li>
+<li>Oracle Cloud (Normal Performance), Microsoft Azure (no active events), AWS, Google Cloud and Cloudflare had nothing major, and Cloudflare's only incident was a brief delay in Worker deployments this morning. Cleo, SPS Commerce and TrueCommerce are all operational with no new incidents, and I didn't get a direct read on the other EDI VAN providers.</li>
+</ul>
+<p><strong>4. Status changes</strong></p>
+<ul>
+<li>Linode's Chennai and Mumbai 2 (IN-MAA / IN-BOM-2) connectivity issue went from ongoing (monitoring) to resolved at 1:52 PM CST Nov 1. <a href="https://stspg.io/wtr6kw3lz45j">Linode Status</a></li>
+<li>GMO Internet's Onamae.com Desktop Cloud breach went from stolen data published to GMO confirming more than 26,000 cases of leaked information and unrecognized transactions across dozens of securities firms and other businesses, with executives apologizing publicly and promising compensation. <a href="https://apnews.com/article/hack-cyberattack-security-gmo-japan-1a14fac1015f2bbca62a07358615af19">AP News</a></li>
+</ul></article>
+<footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
