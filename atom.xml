@@ -1,7 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Internet &amp; Cloud Health Digest</title><id>https://papagiglio.github.io/internet-status-digest/</id>
 <link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/"/><link rel="self" type="application/atom+xml" href="https://papagiglio.github.io/internet-status-digest/atom.xml"/>
-<updated>2026-11-03T10:03:26-06:00</updated><author><name>Internet Status</name></author>
+<updated>2026-11-03T12:00:00-06:00</updated><author><name>Internet Status</name></author>
+<entry><title>Internet &amp; Cloud Health Digest — Nov 3, 2026</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/2026-11-03.html"/><id>https://papagiglio.github.io/internet-status-digest/2026-11-03.html</id>
+<published>2026-11-03T12:00:00-06:00</published><updated>2026-11-03T12:00:00-06:00</updated><summary>WordPress sites running the CryptoPayment Gateway plugin; Enterprises with hijacked AI model accounts (&quot;LLMjacking&quot;); Thousands of web apps built with Lovable; Ukrainian law enforcement, justice, local government and defense organizations; Philippine network RADIUS Telecoms leaked about 2,600…</summary><content type="html">&lt;p&gt;&lt;strong&gt;Daily internet &amp;amp; cloud health digest, Nov 3, 2026 (past 24 hours)&lt;/strong&gt;
+Source: Scout run &lt;code&gt;2026-11-03-0600.md&lt;/code&gt;, with direct checks of the Oracle Cloud, Azure, Cloudflare, AI provider and EDI VAN status pages, CISA&#x27;s exploited-vulnerabilities list and security news.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Cyber incidents&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WordPress sites running the CryptoPayment Gateway plugin&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Retail / e-commerce (crypto payments)&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 3, 2026&lt;/li&gt;
+&lt;li&gt;Status: Investigating (exploitation attempts seen, no fix available)&lt;/li&gt;
+&lt;li&gt;Summary: Defused Cyber has seen attackers trying to exploit CVE-2026-81648 (CVSS 10) in the CryptoPayment Gateway plugin, versions 1.2.1 through 1.2.2, the latest release. The bug lets anyone with no login delete files on the server, rewrite the payment settings and pull stored wallet credentials in plain text, and WPScan lists no fix.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium for online stores taking crypto through this plugin; removing or disabling it is the only protection for now.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://thehackernews.com/2026/11/attackers-target-unpatched.html&quot;&gt;The Hacker News&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Enterprises with hijacked AI model accounts (&quot;LLMjacking&quot;)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Financial services, Retail, Technology, Transportation&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown (multiple)&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 2–3, 2026&lt;/li&gt;
+&lt;li&gt;Status: Ongoing&lt;/li&gt;
+&lt;li&gt;Summary: Google&#x27;s Threat Intelligence Group and Mandiant warned that attackers are stealing cloud AI API keys through phishing, leaked source code, misconfigured environments and exposed client-side code, then running up model usage on the victim&#x27;s bill. Single incidents have cost some companies up to about $1 million in cloud charges, often within hours.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium. Any company with AI keys in code, CI pipelines or vendor apps should check for exposed keys and set spending alerts and caps.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html&quot;&gt;The Hacker News&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Thousands of web apps built with Lovable&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology providers (AI app builder)&lt;/li&gt;
+&lt;li&gt;Threat actor: None identified (researcher finding)&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 3, 2026&lt;/li&gt;
+&lt;li&gt;Status: Ongoing&lt;/li&gt;
+&lt;li&gt;Summary: Security firm Crissy Field found that 24,664 of 34,545 Lovable-built apps using a Supabase database handed out database records with no sign-in, and records with email addresses on 7,403 sites. The worst cases exposed passport records, payment details, contracts, invoices and more than 200,000 chat messages; it&#x27;s unknown whether anyone misused the data, and Lovable says customers are responsible for their own data handling.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium. Vendors or internal teams shipping quick AI-built apps may be leaking customer data without knowing it.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.indiatoday.in/technology/news/story/ai-app-maker-lovable-apps-expose-personal-details-researchers-find-thousands-of-cases-3031369-2026-11-03&quot;&gt;India Today&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Ukrainian law enforcement, justice, local government and defense organizations&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Government&lt;/li&gt;
+&lt;li&gt;Threat actor: Gorbag (Russia-aligned, also tracked as UAC-0226)&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 3, 2026&lt;/li&gt;
+&lt;li&gt;Status: Confirmed&lt;/li&gt;
+&lt;li&gt;Summary: ESET says Gorbag has been sending government-themed phishing emails, including ones exploiting a WinRAR flaw and macro-laden Excel files, to plant its BeautyStealer malware, which grabs browser data, VPN and RDP settings, password-manager databases and Office files. The group has hit only Ukrainian targets since early 2025.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Low for U.S. businesses, though it&#x27;s another reason to keep WinRAR patched.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html&quot;&gt;The Hacker News&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Internet, network, cloud and EDI VAN issues&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Philippine network RADIUS Telecoms leaked about 2,600 internet routes learned from PCCW, Lumen, Cogent and others to Telstra for about 21 minutes starting 11:36 PM CST Nov 2, which could misroute traffic for networks in 6 countries. Status: resolved. &lt;a href=&quot;https://x.com/Qrator_Radar/status/2117548628214792261&quot;&gt;Qrator Radar on X&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hetzner&#x27;s Cloud DNS API and reverse-DNS APIs were down from 2:58 to 3:55 AM CST today. Status: resolved. &lt;a href=&quot;https://status.hetzner.com/incident/ca26bc3c-8872-43eb-8215-69e85ee23081&quot;&gt;Hetzner Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cloudflare had congestion in Hong Kong that caused extra 5xx errors and interconnect timeouts from 12:20 to 12:32 AM CST today. Status: resolved. &lt;a href=&quot;https://www.cloudflarestatus.com/incidents/6c4ak19xodyt&quot;&gt;Cloudflare Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Oracle Cloud (Normal Performance) and Microsoft Azure (no active events) had nothing to report, and Cloudflare&#x27;s other incidents were minor, with a Workers and Pages build-errors issue still being monitored. Cleo, SPS Commerce and TrueCommerce are all operational with no new incidents, and I didn&#x27;t find any outage or security reports for the other EDI VAN providers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4. Status changes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Binance&#x27;s $6.43 billion theft went from attributed to North Korea&#x27;s TraderTraitor with withdrawals reopening to Binance publishing the root cause: a trojanized Homebrew installer and fake job interviews compromised two engineers, then attackers abused an internal AI tool and a stolen deployment token to reach the wallet signing service on Oct 29. Binance says it has rebuilt the wallet system and the AI tool. &lt;a href=&quot;https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html&quot;&gt;The Hacker News&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The European supermarket refrigeration attacks went from investigating at Belgian, Luxembourg and Swedish chains to Danfoss confirming its controls were involved, with more victims named in Ireland (13 SuperValu stores), Estonia, the Netherlands, Finland, Portugal and Italy. They&#x27;re still unclaimed and under investigation. &lt;a href=&quot;https://thehackernews.com/2026/11/second-wave-of-cyberattacks-hits.html&quot;&gt;The Hacker News&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The critical Linux TCP remote code execution flaw CVE-2026-98432 (the one Akamai and Linode are still investigating on their platforms) went from no Red Hat fix to fixed kernels for RHEL 8, 9 and 10, rated 9.8. Ubuntu&#x27;s fixes are still only in testing, and no attacks have been reported. &lt;a href=&quot;https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html&quot;&gt;The Hacker News&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Linode&#x27;s Paris 2 (FR-PAR-2) connectivity issue went from ongoing to resolved at 2:53 PM CST Nov 2. &lt;a href=&quot;https://stspg.io/9whblgmkt6x6&quot;&gt;Linode Status&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content></entry>
 <entry><title>Alert: cPGuard update channel hijacked to backdoor Linux servers (Ongoing)</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/alerts/2026-11-03-1003-cpguard-update-channel-hijacked-to-backdoor-linux-.html"/><id>https://papagiglio.github.io/internet-status-digest/alerts/2026-11-03-1003-cpguard-update-channel-hijacked-to-backdoor-linux-.html</id>
 <published>2026-11-03T10:03:26-06:00</published><updated>2026-11-03T10:03:26-06:00</updated><summary>An attacker used stolen credentials to push a malicious script through cPGuard&#x27;s update system on Nov 2 (versions 5.88.12 to 5.88.19), backdooring customers&#x27; Linux servers and stealing password hashes and other sensitive files; fixed in 5.88.25, but affected servers need new passwords and keys. Status: Ongoing.</summary><content type="html">&lt;p&gt;&lt;strong&gt;cPGuard update channel hijacked to backdoor Linux servers&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;An attacker used stolen credentials to push a malicious script through cPGuard&amp;#x27;s update system on Nov 2 (versions 5.88.12 to 5.88.19), backdooring customers&amp;#x27; Linux servers and stealing password hashes and other sensitive files; fixed in 5.88.25, but affected servers need new passwords and keys.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Status: Ongoing&lt;/li&gt;&lt;li&gt;Source: &lt;a href=&quot;https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html&quot;&gt;The Hacker News&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Alert time: Nov 3, 2026 10:03 AM CST&lt;/li&gt;&lt;/ul&gt;</content></entry>
 <entry><title>Alert: Synology NAS ransomware attacks exploit patched DSM flaw (Ongoing)</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/alerts/2026-11-03-0208-synology-nas-ransomware-attacks-exploit-patched-ds.html"/><id>https://papagiglio.github.io/internet-status-digest/alerts/2026-11-03-0208-synology-nas-ransomware-attacks-exploit-patched-ds.html</id>

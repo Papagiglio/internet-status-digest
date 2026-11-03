@@ -1,0 +1,71 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Internet &amp; Cloud Health Digest — Nov 3, 2026</title>
+<link rel="alternate" type="application/rss+xml" title="Internet &amp; Cloud Health Digest (RSS)" href="https://papagiglio.github.io/internet-status-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Internet &amp; Cloud Health Digest (Atom)" href="https://papagiglio.github.io/internet-status-digest/atom.xml">
+<link rel="canonical" href="https://papagiglio.github.io/internet-status-digest/2026-11-03.html"><style>body{font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:46rem;margin:0 auto;padding:1rem;color:#1d1d1f;background:#fff}
+header{border-bottom:2px solid #0b5cad;margin-bottom:1rem;padding-bottom:.5rem}header h1{margin:.2rem 0;font-size:1.5rem}header h1 a{color:inherit;text-decoration:none}
+nav a,.sub a{margin-right:1rem}a{color:#0b5cad}ul{padding-left:1.2rem}li{margin:.2rem 0}.note{color:#555;font-size:.9rem}
+article p strong:only-child{display:block;margin-top:1.2rem;font-size:1.05rem}code{background:#f2f2f2;padding:0 .2rem;border-radius:3px}
+footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85rem;color:#666}
+@media (prefers-color-scheme:dark){body{background:#111;color:#e6e6e6}a{color:#6cb4ff}code{background:#222}.note,footer{color:#aaa}}</style></head><body>
+<header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
+<p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
+<nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
+<article><p class="note">Digest for Nov 3, 2026</p><p><strong>Daily internet &amp; cloud health digest, Nov 3, 2026 (past 24 hours)</strong>
+Source: Scout run <code>2026-11-03-0600.md</code>, with direct checks of the Oracle Cloud, Azure, Cloudflare, AI provider and EDI VAN status pages, CISA's exploited-vulnerabilities list and security news.</p>
+<p><strong>1. Cyber incidents</strong></p>
+<p><strong>WordPress sites running the CryptoPayment Gateway plugin</strong></p>
+<ul>
+<li>Industry: Retail / e-commerce (crypto payments)</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 3, 2026</li>
+<li>Status: Investigating (exploitation attempts seen, no fix available)</li>
+<li>Summary: Defused Cyber has seen attackers trying to exploit CVE-2026-81648 (CVSS 10) in the CryptoPayment Gateway plugin, versions 1.2.1 through 1.2.2, the latest release. The bug lets anyone with no login delete files on the server, rewrite the payment settings and pull stored wallet credentials in plain text, and WPScan lists no fix.</li>
+<li>Supply chain / third-party risk: Medium for online stores taking crypto through this plugin; removing or disabling it is the only protection for now.</li>
+<li>Source: <a href="https://thehackernews.com/2026/11/attackers-target-unpatched.html">The Hacker News</a></li>
+</ul>
+<p><strong>Enterprises with hijacked AI model accounts ("LLMjacking")</strong></p>
+<ul>
+<li>Industry: Financial services, Retail, Technology, Transportation</li>
+<li>Threat actor: Unknown (multiple)</li>
+<li>Date reported: Nov 2–3, 2026</li>
+<li>Status: Ongoing</li>
+<li>Summary: Google's Threat Intelligence Group and Mandiant warned that attackers are stealing cloud AI API keys through phishing, leaked source code, misconfigured environments and exposed client-side code, then running up model usage on the victim's bill. Single incidents have cost some companies up to about $1 million in cloud charges, often within hours.</li>
+<li>Supply chain / third-party risk: Medium. Any company with AI keys in code, CI pipelines or vendor apps should check for exposed keys and set spending alerts and caps.</li>
+<li>Source: <a href="https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html">The Hacker News</a></li>
+</ul>
+<p><strong>Thousands of web apps built with Lovable</strong></p>
+<ul>
+<li>Industry: Technology providers (AI app builder)</li>
+<li>Threat actor: None identified (researcher finding)</li>
+<li>Date reported: Nov 3, 2026</li>
+<li>Status: Ongoing</li>
+<li>Summary: Security firm Crissy Field found that 24,664 of 34,545 Lovable-built apps using a Supabase database handed out database records with no sign-in, and records with email addresses on 7,403 sites. The worst cases exposed passport records, payment details, contracts, invoices and more than 200,000 chat messages; it's unknown whether anyone misused the data, and Lovable says customers are responsible for their own data handling.</li>
+<li>Supply chain / third-party risk: Medium. Vendors or internal teams shipping quick AI-built apps may be leaking customer data without knowing it.</li>
+<li>Source: <a href="https://www.indiatoday.in/technology/news/story/ai-app-maker-lovable-apps-expose-personal-details-researchers-find-thousands-of-cases-3031369-2026-11-03">India Today</a></li>
+</ul>
+<p><strong>Ukrainian law enforcement, justice, local government and defense organizations</strong></p>
+<ul>
+<li>Industry: Government</li>
+<li>Threat actor: Gorbag (Russia-aligned, also tracked as UAC-0226)</li>
+<li>Date reported: Nov 3, 2026</li>
+<li>Status: Confirmed</li>
+<li>Summary: ESET says Gorbag has been sending government-themed phishing emails, including ones exploiting a WinRAR flaw and macro-laden Excel files, to plant its BeautyStealer malware, which grabs browser data, VPN and RDP settings, password-manager databases and Office files. The group has hit only Ukrainian targets since early 2025.</li>
+<li>Supply chain / third-party risk: Low for U.S. businesses, though it's another reason to keep WinRAR patched.</li>
+<li>Source: <a href="https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html">The Hacker News</a></li>
+</ul>
+<p><strong>3. Internet, network, cloud and EDI VAN issues</strong></p>
+<ul>
+<li>Philippine network RADIUS Telecoms leaked about 2,600 internet routes learned from PCCW, Lumen, Cogent and others to Telstra for about 21 minutes starting 11:36 PM CST Nov 2, which could misroute traffic for networks in 6 countries. Status: resolved. <a href="https://x.com/Qrator_Radar/status/2117548628214792261">Qrator Radar on X</a></li>
+<li>Hetzner's Cloud DNS API and reverse-DNS APIs were down from 2:58 to 3:55 AM CST today. Status: resolved. <a href="https://status.hetzner.com/incident/ca26bc3c-8872-43eb-8215-69e85ee23081">Hetzner Status</a></li>
+<li>Cloudflare had congestion in Hong Kong that caused extra 5xx errors and interconnect timeouts from 12:20 to 12:32 AM CST today. Status: resolved. <a href="https://www.cloudflarestatus.com/incidents/6c4ak19xodyt">Cloudflare Status</a></li>
+<li>Oracle Cloud (Normal Performance) and Microsoft Azure (no active events) had nothing to report, and Cloudflare's other incidents were minor, with a Workers and Pages build-errors issue still being monitored. Cleo, SPS Commerce and TrueCommerce are all operational with no new incidents, and I didn't find any outage or security reports for the other EDI VAN providers.</li>
+</ul>
+<p><strong>4. Status changes</strong></p>
+<ul>
+<li>Binance's $6.43 billion theft went from attributed to North Korea's TraderTraitor with withdrawals reopening to Binance publishing the root cause: a trojanized Homebrew installer and fake job interviews compromised two engineers, then attackers abused an internal AI tool and a stolen deployment token to reach the wallet signing service on Oct 29. Binance says it has rebuilt the wallet system and the AI tool. <a href="https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html">The Hacker News</a></li>
+<li>The European supermarket refrigeration attacks went from investigating at Belgian, Luxembourg and Swedish chains to Danfoss confirming its controls were involved, with more victims named in Ireland (13 SuperValu stores), Estonia, the Netherlands, Finland, Portugal and Italy. They're still unclaimed and under investigation. <a href="https://thehackernews.com/2026/11/second-wave-of-cyberattacks-hits.html">The Hacker News</a></li>
+<li>The critical Linux TCP remote code execution flaw CVE-2026-98432 (the one Akamai and Linode are still investigating on their platforms) went from no Red Hat fix to fixed kernels for RHEL 8, 9 and 10, rated 9.8. Ubuntu's fixes are still only in testing, and no attacks have been reported. <a href="https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html">The Hacker News</a></li>
+<li>Linode's Paris 2 (FR-PAR-2) connectivity issue went from ongoing to resolved at 2:53 PM CST Nov 2. <a href="https://stspg.io/9whblgmkt6x6">Linode Status</a></li>
+</ul></article>
+<footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
