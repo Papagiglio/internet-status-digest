@@ -11,61 +11,81 @@ footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85
 <header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
 <p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
 <nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
-<section><h2>Alerts since this digest</h2><ul><li><a href="https://papagiglio.github.io/internet-status-digest/alerts/2026-11-04-0606-resolved-github-pull-requests-git-operations-and-i.html">Alert: Resolved: GitHub Pull Requests, Git Operations and Issues incident (Resolved)</a> <span class="note">Nov 4 6:06 AM CST</span></li><li><a href="https://papagiglio.github.io/internet-status-digest/alerts/2026-11-04-0503-github-outage-hitting-pull-requests-git-operations.html">Alert: GitHub outage hitting Pull Requests, Git operations, Issues and Actions (Ongoing)</a> <span class="note">Nov 4 5:03 AM CST</span></li><li><a href="https://papagiglio.github.io/internet-status-digest/alerts/2026-11-03-1458-cisa-confirms-active-exploitation-of-wordpress-cor.html">Alert: CISA confirms active exploitation of WordPress core flaw CVE-2026-119977 (Ongoing)</a> <span class="note">Nov 3 2:58 PM CST</span></li><li><a href="https://papagiglio.github.io/internet-status-digest/alerts/2026-11-03-1308-chainstack-production-breach-exposes-customer-data.html">Alert: Chainstack production breach exposes customer data and password hashes (Ongoing)</a> <span class="note">Nov 3 1:08 PM CST</span></li></ul></section><article><p class="note">Latest: Nov 3, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-03.html">permalink</a></p><p><strong>Daily internet &amp; cloud health digest, Nov 3, 2026 (past 24 hours)</strong>
-Source: Scout run <code>2026-11-03-0600.md</code>, with direct checks of the Oracle Cloud, Azure, Cloudflare, AI provider and EDI VAN status pages, CISA's exploited-vulnerabilities list and security news.</p>
+<article><p class="note">Latest: Nov 4, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-04.html">permalink</a></p><p><strong>Daily internet &amp; cloud health digest, Nov 4, 2026 (past 24 hours)</strong>
+Source: Scout run <code>2026-11-04-1200.md</code> (also <code>2026-11-04-0600.md</code>), with direct checks of Oracle Cloud, Azure, Cloudflare, GitHub, Elastic, OpenAI, Claude, EDI VAN status pages, CISA’s exploited-vulnerabilities list, and security news.</p>
 <p><strong>1. Cyber incidents</strong></p>
-<p><strong>WordPress sites running the CryptoPayment Gateway plugin</strong></p>
+<p><strong>Crédit Mutuel Arkéa (France)</strong></p>
 <ul>
-<li>Industry: Retail / e-commerce (crypto payments)</li>
+<li>Industry: Financial services / banking</li>
 <li>Threat actor: Unknown</li>
-<li>Date reported: Nov 3, 2026</li>
-<li>Status: Investigating (exploitation attempts seen, no fix available)</li>
-<li>Summary: Defused Cyber has seen attackers trying to exploit CVE-2026-81648 (CVSS 10) in the CryptoPayment Gateway plugin, versions 1.2.1 through 1.2.2, the latest release. The bug lets anyone with no login delete files on the server, rewrite the payment settings and pull stored wallet credentials in plain text, and WPScan lists no fix.</li>
-<li>Supply chain / third-party risk: Medium for online stores taking crypto through this plugin; removing or disabling it is the only protection for now.</li>
-<li>Source: <a href="https://thehackernews.com/2026/11/attackers-target-unpatched.html">The Hacker News</a></li>
+<li>Date reported: Nov 4, 2026</li>
+<li>Status: Confirmed (contained; recovery under way)</li>
+<li>Summary: The French regional bank confirmed a cyberattack that let attackers use the bank’s own account to send fraudulent transfers to other banks, then likely into crypto. Entry was through a supplier platform, not Fortuneo. Clients’ funds were not hit; some transfers were delayed while Arkéa paused activity. It did not confirm ZachXBT’s ~$133M / €118M figure but said losses are in that order of magnitude and not a threat to the bank’s soundness; some funds were blocked and recovery is ongoing.</li>
+<li>Supply chain / third-party risk: High for banks and payment providers that trust supplier platforms for treasury or settlement access; a vendor compromise can move institutional funds without touching retail accounts.</li>
+<li>Source: <a href="https://www.cm-arkea.com/arkea/banque/assurances/pa_38367/fr/credit-mutuel-arkea-annonce-avoir-ete-victime-d-une-cyberattaque">Crédit Mutuel Arkéa</a>, <a href="https://www.afp.com/en/french-regional-bank-says-cyberattack-caused-fraudulent-transactions">AFP</a></li>
 </ul>
-<p><strong>Enterprises with hijacked AI model accounts ("LLMjacking")</strong></p>
+<p><strong>Managed service providers and their Microsoft 365 / Azure clients (Todyl “Key Eater” campaign)</strong></p>
 <ul>
-<li>Industry: Financial services, Retail, Technology, Transportation</li>
-<li>Threat actor: Unknown (multiple)</li>
-<li>Date reported: Nov 2–3, 2026</li>
+<li>Industry: Technology providers / MSPs (downstream: government, energy, food &amp; agriculture, transportation, education, legal, nonprofits)</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 3–4, 2026</li>
 <li>Status: Ongoing</li>
-<li>Summary: Google's Threat Intelligence Group and Mandiant warned that attackers are stealing cloud AI API keys through phishing, leaked source code, misconfigured environments and exposed client-side code, then running up model usage on the victim's bill. Single incidents have cost some companies up to about $1 million in cloud charges, often within hours.</li>
-<li>Supply chain / third-party risk: Medium. Any company with AI keys in code, CI pipelines or vendor apps should check for exposed keys and set spending alerts and caps.</li>
-<li>Source: <a href="https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html">The Hacker News</a></li>
+<li>Summary: Todyl says that since Nov 1 one operator has been signing in as MSPs’ own Entra ID apps with stolen, still-valid secrets (and some Azure DevOps federated identities / session tokens), reaching about 45 app registrations across ~18 orgs and 27 organizations so far. App sign-ins skip MFA and user Conditional Access; the actor reads Key Vault, bulk-downloads credential and config files from SharePoint, and fans out through MSP multi-tenant / GDAP access. All confirmed activity came from 199.19.77.84; the latest attempt Todyl saw was blocked. No Microsoft vulnerability is involved.</li>
+<li>Supply chain / third-party risk: Very high. One compromised MSP app can expose every client it manages; harvested secrets target VPNs, RMM, backups, firewalls, and AI keys.</li>
+<li>Source: <a href="https://www.todyl.com/blog/stolen-app-credentials-real-access-an-actor-is-signing-into-entra-id-and-azure-devops-as-your-workloads">Todyl</a></li>
 </ul>
-<p><strong>Thousands of web apps built with Lovable</strong></p>
+<p><strong>Organizations hit by APT29 watering-hole campaign (incl. U.S. chemical-industry site and Plerdy SEO script)</strong></p>
 <ul>
-<li>Industry: Technology providers (AI app builder)</li>
-<li>Threat actor: None identified (researcher finding)</li>
-<li>Date reported: Nov 3, 2026</li>
-<li>Status: Ongoing</li>
-<li>Summary: Security firm Crissy Field found that 24,664 of 34,545 Lovable-built apps using a Supabase database handed out database records with no sign-in, and records with email addresses on 7,403 sites. The worst cases exposed passport records, payment details, contracts, invoices and more than 200,000 chat messages; it's unknown whether anyone misused the data, and Lovable says customers are responsible for their own data handling.</li>
-<li>Supply chain / third-party risk: Medium. Vendors or internal teams shipping quick AI-built apps may be leaking customer data without knowing it.</li>
-<li>Source: <a href="https://www.indiatoday.in/technology/news/story/ai-app-maker-lovable-apps-expose-personal-details-researchers-find-thousands-of-cases-3031369-2026-11-03">India Today</a></li>
+<li>Industry: Government / espionage targets (also commercial sites loading the compromised tracker)</li>
+<li>Threat actor: APT29 (Midnight Blizzard), Russia-aligned per Sekoia</li>
+<li>Date reported: Nov 4, 2026 (campaign window Aug 27–Sep 3 called out in coverage)</li>
+<li>Status: Confirmed (patches available; campaign described as past window)</li>
+<li>Summary: Sekoia attributes a watering-hole campaign that profiled visitors then delivered zero-click N-day exploit chains for already-patched iOS and Android/Chrome flaws, stealing cookies, messaging databases, Keychain data, location and photos. Compromised sites included a U.S. chemical industry trade association and a Ukrainian web-analytics script (Plerdy) loaded by thousands of sites. Apple and Google have patched the flaws used; updating devices is the fix. Malware does not survive a reboot.</li>
+<li>Supply chain / third-party risk: Medium–high for anyone loading third-party analytics/SEO scripts, and for mobile fleets that lag on OS patches.</li>
+<li>Source: <a href="https://www.sekoia.com/blog/poisoned-source-apt29-watering-holes-targets-mobile-devices-with-n-day-exploits">Sekoia</a>, <a href="https://www.bleepingcomputer.com/news/security/hackers-use-n-day-exploits-in-zero-click-attacks-on-ios-android-devices/">BleepingComputer</a>, <a href="https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html">The Hacker News</a></li>
 </ul>
-<p><strong>Ukrainian law enforcement, justice, local government and defense organizations</strong></p>
+<p><strong>Google Workspace users targeted by Calendar-invite session phishing (“Operation CloudFire”)</strong></p>
 <ul>
-<li>Industry: Government</li>
-<li>Threat actor: Gorbag (Russia-aligned, also tracked as UAC-0226)</li>
-<li>Date reported: Nov 3, 2026</li>
-<li>Status: Confirmed</li>
-<li>Summary: ESET says Gorbag has been sending government-themed phishing emails, including ones exploiting a WinRAR flaw and macro-laden Excel files, to plant its BeautyStealer malware, which grabs browser data, VPN and RDP settings, password-manager databases and Office files. The group has hit only Ukrainian targets since early 2025.</li>
-<li>Supply chain / third-party risk: Low for U.S. businesses, though it's another reason to keep WinRAR patched.</li>
-<li>Source: <a href="https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html">The Hacker News</a></li>
+<li>Industry: Technology / enterprise productivity</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 4, 2026 (active since mid-August)</li>
+<li>Status: Investigating (Material says the Google wave looks dispersed; dormant Microsoft 365 variant exists)</li>
+<li>Summary: Material Security documented a campaign that sent Calendar invites from compromised, familiar senders, routed victims through Google’s own redirector to a reverse-proxied Google sign-in that relays MFA codes and number matching, capturing live sessions past MFA. Material took down 897 domains and blocked tens of thousands of messages; themes have shifted toward Drive share invites, and an unfinished Microsoft 365 branch was found but not activated.</li>
+<li>Supply chain / third-party risk: Medium. Hijacked Workspace sessions reach mail, Drive, and OAuth grants in the victim’s name; review audit logs and revoke sessions quickly.</li>
+<li>Source: <a href="https://www.bleepingcomputer.com/news/security/google-calendar-phishing-campaign-hijacks-sessions-bypasses-mfa/">BleepingComputer</a></li>
+</ul>
+<p><strong>NIKKE / Level Infinite (Tencent) PC launcher</strong></p>
+<ul>
+<li>Industry: Technology / gaming</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 4, 2026</li>
+<li>Status: Confirmed (investigating impact)</li>
+<li>Summary: Level Infinite confirmed that NIKKE PC launcher script files may have been tampered with; it patched the client around 11:30 AM CST Nov 3 and is assessing damage. Reporting says CDN JavaScript altered since late September put PC-launcher users at risk of a remote-access trojan that can steal browser passwords, tokens, API keys and crypto-wallet data. Mobile versions are not implicated; already-infected PCs need cleanup beyond the patch.</li>
+<li>Supply chain / third-party risk: Medium for players and for any shared workstations that ran the launcher; rotate passwords, tokens, and wallet keys if the PC was used.</li>
+<li>Source: <a href="https://www.asiae.co.kr/en/article/2026110419104958978">Asiae / Level Infinite confirmation via Scout</a></li>
+</ul>
+<p><strong>Kyiv Independent</strong></p>
+<ul>
+<li>Industry: Media / news</li>
+<li>Threat actor: Unknown (Russia suspected, not confirmed)</li>
+<li>Date reported: Nov 4, 2026</li>
+<li>Status: Investigating (unauthorized posts removed; donor/payment data reportedly not accessed)</li>
+<li>Summary: Attackers gained access to the outlet’s CMS and a newsletter service on Nov 4 and sent false Russian- and English-language emails, including claims about a nuclear warhead aimed at Kyiv and fabricated Zelensky/Putin messaging. Staff deleted unauthorized site posts, told readers their banking/donor details appear untouched so far, and say the content points to a Russian operation.</li>
+<li>Supply chain / third-party risk: Low for most businesses; high reputational/info-ops impact for anyone amplifying unverified crisis emails.</li>
+<li>Source: <a href="https://kyivindependent.com/kyiv-independent-hit-by-suspected-russian-cyberattack/">Kyiv Independent</a></li>
 </ul>
 <p><strong>3. Internet, network, cloud and EDI VAN issues</strong></p>
 <ul>
-<li>Philippine network RADIUS Telecoms leaked about 2,600 internet routes learned from PCCW, Lumen, Cogent and others to Telstra for about 21 minutes starting 11:36 PM CST Nov 2, which could misroute traffic for networks in 6 countries. Status: resolved. <a href="https://x.com/Qrator_Radar/status/2117548628214792261">Qrator Radar on X</a></li>
-<li>Hetzner's Cloud DNS API and reverse-DNS APIs were down from 2:58 to 3:55 AM CST today. Status: resolved. <a href="https://status.hetzner.com/incident/ca26bc3c-8872-43eb-8215-69e85ee23081">Hetzner Status</a></li>
-<li>Cloudflare had congestion in Hong Kong that caused extra 5xx errors and interconnect timeouts from 12:20 to 12:32 AM CST today. Status: resolved. <a href="https://www.cloudflarestatus.com/incidents/6c4ak19xodyt">Cloudflare Status</a></li>
-<li>Oracle Cloud (Normal Performance) and Microsoft Azure (no active events) had nothing to report, and Cloudflare's other incidents were minor, with a Workers and Pages build-errors issue still being monitored. Cleo, SPS Commerce and TrueCommerce are all operational with no new incidents, and I didn't find any outage or security reports for the other EDI VAN providers.</li>
+<li>GitHub opened a second major Actions incident at 11:40 AM CST today (events that trigger Actions), mitigated with delayed job status updates still being monitored as of ~12:07 PM CST. Status: ongoing (monitoring). <a href="https://stspg.io/7pwv28hvkmz8">GitHub Status</a></li>
+<li>GitHub Actions, Pages and Webhooks were degraded from about 10:05 to 11:01 AM CST and then resolved (separate from the early-morning outage below). Status: resolved. <a href="https://stspg.io/pjgptg3cfc6n">GitHub Status</a></li>
+<li>Elastic Cloud still has a major mOLTP PrivateLink connectivity incident open since about 6:08 AM CST. Status: ongoing. <a href="https://stspg.io/7kt2g0ygmd8q">Elastic Status</a></li>
+<li>Cloudflare had Tokyo (NRT) network latency from about 7:39 to 9:33 AM CST. Status: resolved. <a href="https://www.cloudflarestatus.com/incidents/nbnize4e990z">Cloudflare Status</a></li>
+<li>Oracle Cloud remains Normal Performance, Azure has no active events, and OpenAI and Claude report all systems operational. Cleo, SPS Commerce and TrueCommerce are operational with no new incidents. OpenText’s Middle East ME22 regional outage is still the same long-running investigating item, not a new event. No new outage or security reports turned up for the other EDI VAN providers checked.</li>
 </ul>
 <p><strong>4. Status changes</strong></p>
 <ul>
-<li>Binance's $6.43 billion theft went from attributed to North Korea's TraderTraitor with withdrawals reopening to Binance publishing the root cause: a trojanized Homebrew installer and fake job interviews compromised two engineers, then attackers abused an internal AI tool and a stolen deployment token to reach the wallet signing service on Oct 29. Binance says it has rebuilt the wallet system and the AI tool. <a href="https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html">The Hacker News</a></li>
-<li>The European supermarket refrigeration attacks went from investigating at Belgian, Luxembourg and Swedish chains to Danfoss confirming its controls were involved, with more victims named in Ireland (13 SuperValu stores), Estonia, the Netherlands, Finland, Portugal and Italy. They're still unclaimed and under investigation. <a href="https://thehackernews.com/2026/11/second-wave-of-cyberattacks-hits.html">The Hacker News</a></li>
-<li>The critical Linux TCP remote code execution flaw CVE-2026-98432 (the one Akamai and Linode are still investigating on their platforms) went from no Red Hat fix to fixed kernels for RHEL 8, 9 and 10, rated 9.8. Ubuntu's fixes are still only in testing, and no attacks have been reported. <a href="https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html">The Hacker News</a></li>
-<li>Linode's Paris 2 (FR-PAR-2) connectivity issue went from ongoing to resolved at 2:53 PM CST Nov 2. <a href="https://stspg.io/9whblgmkt6x6">Linode Status</a></li>
+<li>GitHub’s early-morning major incident (Pull Requests partial outage; Git Operations, Issues, and later Actions degraded) went from investigating/ongoing (alerted ~5:04 AM CST) to resolved at 5:50 AM CST. <a href="https://stspg.io/18blsgwnbyy6">GitHub Status</a></li>
+<li>WordPress core CVE-2026-119977 went from “exploit attempts seen” (Nov 1 digest) to confirmed active exploitation on CISA’s Known Exploited Vulnerabilities catalog (added Nov 3, due Nov 6; fix 7.1.4). <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a></li>
+<li>The European refrigeration / cold-chain cyberattacks expanded again: France’s blood service (EFS) confirmed cold-room monitoring at three sites was tampered with through its refrigeration contractor (setpoints raised; alarms caught it; no products lost; remote access cut). Still under investigation with Danfoss-linked controls previously confirmed elsewhere. <a href="https://www.sudouest.fr/economie/cybersecurite/cyberattaque-des-chambres-froides-stockant-des-dons-du-sang-piratees-et-programmees-pour-chauffer-a-110-0c-31377554.php">Sud Ouest / Scout</a></li>
 </ul></article>
 <footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>

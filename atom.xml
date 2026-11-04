@@ -1,7 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Internet &amp; Cloud Health Digest</title><id>https://papagiglio.github.io/internet-status-digest/</id>
 <link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/"/><link rel="self" type="application/atom+xml" href="https://papagiglio.github.io/internet-status-digest/atom.xml"/>
-<updated>2026-11-04T06:06:46-06:00</updated><author><name>Internet Status</name></author>
+<updated>2026-11-04T12:00:00-06:00</updated><author><name>Internet Status</name></author>
+<entry><title>Internet &amp; Cloud Health Digest — Nov 4, 2026</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/2026-11-04.html"/><id>https://papagiglio.github.io/internet-status-digest/2026-11-04.html</id>
+<published>2026-11-04T12:00:00-06:00</published><updated>2026-11-04T12:00:00-06:00</updated><summary>Crédit Mutuel Arkéa (France); Managed service providers and their Microsoft 365 / Azure clients (Todyl “Key Eater” campaign); Organizations hit by APT29 watering-hole campaign (incl. U.S. chemical-industry site and Plerdy SEO script); Google Workspace users targeted by Calendar-invite session…</summary><content type="html">&lt;p&gt;&lt;strong&gt;Daily internet &amp;amp; cloud health digest, Nov 4, 2026 (past 24 hours)&lt;/strong&gt;
+Source: Scout run &lt;code&gt;2026-11-04-1200.md&lt;/code&gt; (also &lt;code&gt;2026-11-04-0600.md&lt;/code&gt;), with direct checks of Oracle Cloud, Azure, Cloudflare, GitHub, Elastic, OpenAI, Claude, EDI VAN status pages, CISA’s exploited-vulnerabilities list, and security news.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Cyber incidents&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Crédit Mutuel Arkéa (France)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Financial services / banking&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 4, 2026&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (contained; recovery under way)&lt;/li&gt;
+&lt;li&gt;Summary: The French regional bank confirmed a cyberattack that let attackers use the bank’s own account to send fraudulent transfers to other banks, then likely into crypto. Entry was through a supplier platform, not Fortuneo. Clients’ funds were not hit; some transfers were delayed while Arkéa paused activity. It did not confirm ZachXBT’s ~$133M / €118M figure but said losses are in that order of magnitude and not a threat to the bank’s soundness; some funds were blocked and recovery is ongoing.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: High for banks and payment providers that trust supplier platforms for treasury or settlement access; a vendor compromise can move institutional funds without touching retail accounts.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.cm-arkea.com/arkea/banque/assurances/pa_38367/fr/credit-mutuel-arkea-annonce-avoir-ete-victime-d-une-cyberattaque&quot;&gt;Crédit Mutuel Arkéa&lt;/a&gt;, &lt;a href=&quot;https://www.afp.com/en/french-regional-bank-says-cyberattack-caused-fraudulent-transactions&quot;&gt;AFP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Managed service providers and their Microsoft 365 / Azure clients (Todyl “Key Eater” campaign)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology providers / MSPs (downstream: government, energy, food &amp;amp; agriculture, transportation, education, legal, nonprofits)&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 3–4, 2026&lt;/li&gt;
+&lt;li&gt;Status: Ongoing&lt;/li&gt;
+&lt;li&gt;Summary: Todyl says that since Nov 1 one operator has been signing in as MSPs’ own Entra ID apps with stolen, still-valid secrets (and some Azure DevOps federated identities / session tokens), reaching about 45 app registrations across ~18 orgs and 27 organizations so far. App sign-ins skip MFA and user Conditional Access; the actor reads Key Vault, bulk-downloads credential and config files from SharePoint, and fans out through MSP multi-tenant / GDAP access. All confirmed activity came from 199.19.77.84; the latest attempt Todyl saw was blocked. No Microsoft vulnerability is involved.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Very high. One compromised MSP app can expose every client it manages; harvested secrets target VPNs, RMM, backups, firewalls, and AI keys.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.todyl.com/blog/stolen-app-credentials-real-access-an-actor-is-signing-into-entra-id-and-azure-devops-as-your-workloads&quot;&gt;Todyl&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Organizations hit by APT29 watering-hole campaign (incl. U.S. chemical-industry site and Plerdy SEO script)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Government / espionage targets (also commercial sites loading the compromised tracker)&lt;/li&gt;
+&lt;li&gt;Threat actor: APT29 (Midnight Blizzard), Russia-aligned per Sekoia&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 4, 2026 (campaign window Aug 27–Sep 3 called out in coverage)&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (patches available; campaign described as past window)&lt;/li&gt;
+&lt;li&gt;Summary: Sekoia attributes a watering-hole campaign that profiled visitors then delivered zero-click N-day exploit chains for already-patched iOS and Android/Chrome flaws, stealing cookies, messaging databases, Keychain data, location and photos. Compromised sites included a U.S. chemical industry trade association and a Ukrainian web-analytics script (Plerdy) loaded by thousands of sites. Apple and Google have patched the flaws used; updating devices is the fix. Malware does not survive a reboot.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium–high for anyone loading third-party analytics/SEO scripts, and for mobile fleets that lag on OS patches.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.sekoia.com/blog/poisoned-source-apt29-watering-holes-targets-mobile-devices-with-n-day-exploits&quot;&gt;Sekoia&lt;/a&gt;, &lt;a href=&quot;https://www.bleepingcomputer.com/news/security/hackers-use-n-day-exploits-in-zero-click-attacks-on-ios-android-devices/&quot;&gt;BleepingComputer&lt;/a&gt;, &lt;a href=&quot;https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html&quot;&gt;The Hacker News&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Google Workspace users targeted by Calendar-invite session phishing (“Operation CloudFire”)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology / enterprise productivity&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 4, 2026 (active since mid-August)&lt;/li&gt;
+&lt;li&gt;Status: Investigating (Material says the Google wave looks dispersed; dormant Microsoft 365 variant exists)&lt;/li&gt;
+&lt;li&gt;Summary: Material Security documented a campaign that sent Calendar invites from compromised, familiar senders, routed victims through Google’s own redirector to a reverse-proxied Google sign-in that relays MFA codes and number matching, capturing live sessions past MFA. Material took down 897 domains and blocked tens of thousands of messages; themes have shifted toward Drive share invites, and an unfinished Microsoft 365 branch was found but not activated.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium. Hijacked Workspace sessions reach mail, Drive, and OAuth grants in the victim’s name; review audit logs and revoke sessions quickly.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.bleepingcomputer.com/news/security/google-calendar-phishing-campaign-hijacks-sessions-bypasses-mfa/&quot;&gt;BleepingComputer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;NIKKE / Level Infinite (Tencent) PC launcher&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology / gaming&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 4, 2026&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (investigating impact)&lt;/li&gt;
+&lt;li&gt;Summary: Level Infinite confirmed that NIKKE PC launcher script files may have been tampered with; it patched the client around 11:30 AM CST Nov 3 and is assessing damage. Reporting says CDN JavaScript altered since late September put PC-launcher users at risk of a remote-access trojan that can steal browser passwords, tokens, API keys and crypto-wallet data. Mobile versions are not implicated; already-infected PCs need cleanup beyond the patch.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium for players and for any shared workstations that ran the launcher; rotate passwords, tokens, and wallet keys if the PC was used.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.asiae.co.kr/en/article/2026110419104958978&quot;&gt;Asiae / Level Infinite confirmation via Scout&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Kyiv Independent&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Media / news&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown (Russia suspected, not confirmed)&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 4, 2026&lt;/li&gt;
+&lt;li&gt;Status: Investigating (unauthorized posts removed; donor/payment data reportedly not accessed)&lt;/li&gt;
+&lt;li&gt;Summary: Attackers gained access to the outlet’s CMS and a newsletter service on Nov 4 and sent false Russian- and English-language emails, including claims about a nuclear warhead aimed at Kyiv and fabricated Zelensky/Putin messaging. Staff deleted unauthorized site posts, told readers their banking/donor details appear untouched so far, and say the content points to a Russian operation.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Low for most businesses; high reputational/info-ops impact for anyone amplifying unverified crisis emails.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://kyivindependent.com/kyiv-independent-hit-by-suspected-russian-cyberattack/&quot;&gt;Kyiv Independent&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Internet, network, cloud and EDI VAN issues&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub opened a second major Actions incident at 11:40 AM CST today (events that trigger Actions), mitigated with delayed job status updates still being monitored as of ~12:07 PM CST. Status: ongoing (monitoring). &lt;a href=&quot;https://stspg.io/7pwv28hvkmz8&quot;&gt;GitHub Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub Actions, Pages and Webhooks were degraded from about 10:05 to 11:01 AM CST and then resolved (separate from the early-morning outage below). Status: resolved. &lt;a href=&quot;https://stspg.io/pjgptg3cfc6n&quot;&gt;GitHub Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Elastic Cloud still has a major mOLTP PrivateLink connectivity incident open since about 6:08 AM CST. Status: ongoing. &lt;a href=&quot;https://stspg.io/7kt2g0ygmd8q&quot;&gt;Elastic Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cloudflare had Tokyo (NRT) network latency from about 7:39 to 9:33 AM CST. Status: resolved. &lt;a href=&quot;https://www.cloudflarestatus.com/incidents/nbnize4e990z&quot;&gt;Cloudflare Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Oracle Cloud remains Normal Performance, Azure has no active events, and OpenAI and Claude report all systems operational. Cleo, SPS Commerce and TrueCommerce are operational with no new incidents. OpenText’s Middle East ME22 regional outage is still the same long-running investigating item, not a new event. No new outage or security reports turned up for the other EDI VAN providers checked.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4. Status changes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub’s early-morning major incident (Pull Requests partial outage; Git Operations, Issues, and later Actions degraded) went from investigating/ongoing (alerted ~5:04 AM CST) to resolved at 5:50 AM CST. &lt;a href=&quot;https://stspg.io/18blsgwnbyy6&quot;&gt;GitHub Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WordPress core CVE-2026-119977 went from “exploit attempts seen” (Nov 1 digest) to confirmed active exploitation on CISA’s Known Exploited Vulnerabilities catalog (added Nov 3, due Nov 6; fix 7.1.4). &lt;a href=&quot;https://www.cisa.gov/known-exploited-vulnerabilities-catalog&quot;&gt;CISA KEV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The European refrigeration / cold-chain cyberattacks expanded again: France’s blood service (EFS) confirmed cold-room monitoring at three sites was tampered with through its refrigeration contractor (setpoints raised; alarms caught it; no products lost; remote access cut). Still under investigation with Danfoss-linked controls previously confirmed elsewhere. &lt;a href=&quot;https://www.sudouest.fr/economie/cybersecurite/cyberattaque-des-chambres-froides-stockant-des-dons-du-sang-piratees-et-programmees-pour-chauffer-a-110-0c-31377554.php&quot;&gt;Sud Ouest / Scout&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content></entry>
 <entry><title>Alert: Resolved: GitHub Pull Requests, Git Operations and Issues incident (Resolved)</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/alerts/2026-11-04-0606-resolved-github-pull-requests-git-operations-and-i.html"/><id>https://papagiglio.github.io/internet-status-digest/alerts/2026-11-04-0606-resolved-github-pull-requests-git-operations-and-i.html</id>
 <published>2026-11-04T06:06:46-06:00</published><updated>2026-11-04T06:06:46-06:00</updated><summary>GitHub&#x27;s major-impact incident affecting Pull Requests, Git Operations, Issues and Actions, which began at 3:49 AM CST on Nov 4, was marked resolved at 5:50 AM CST. Status: Resolved.</summary><content type="html">&lt;p&gt;&lt;strong&gt;Resolved: GitHub Pull Requests, Git Operations and Issues incident&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;GitHub&amp;#x27;s major-impact incident affecting Pull Requests, Git Operations, Issues and Actions, which began at 3:49 AM CST on Nov 4, was marked resolved at 5:50 AM CST.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Status: Resolved&lt;/li&gt;&lt;li&gt;Source: &lt;a href=&quot;https://stspg.io/18blsgwnbyy6&quot;&gt;GitHub Status&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Alert time: Nov 4, 2026 6:06 AM CST&lt;/li&gt;&lt;/ul&gt;</content></entry>
 <entry><title>Alert: GitHub outage hitting Pull Requests, Git operations, Issues and Actions (Ongoing)</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/alerts/2026-11-04-0503-github-outage-hitting-pull-requests-git-operations.html"/><id>https://papagiglio.github.io/internet-status-digest/alerts/2026-11-04-0503-github-outage-hitting-pull-requests-git-operations.html</id>
