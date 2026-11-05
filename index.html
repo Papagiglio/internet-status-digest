@@ -11,81 +11,90 @@ footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85
 <header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
 <p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
 <nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
-<article><p class="note">Latest: Nov 4, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-04.html">permalink</a></p><p><strong>Daily internet &amp; cloud health digest, Nov 4, 2026 (past 24 hours)</strong>
-Source: Scout run <code>2026-11-04-1200.md</code> (also <code>2026-11-04-0600.md</code>), with direct checks of Oracle Cloud, Azure, Cloudflare, GitHub, Elastic, OpenAI, Claude, EDI VAN status pages, CISA’s exploited-vulnerabilities list, and security news.</p>
+<article><p class="note">Latest: Nov 5, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-05.html">permalink</a></p><p><strong>Daily internet &amp; cloud health digest, Nov 5, 2026 (past 24 hours)</strong>
+Source: Scout run <code>2026-11-05-0600.md</code>, with direct checks of Oracle Cloud, Azure, Cloudflare, GitHub, Elastic, OpenAI, Claude, EDI VAN status pages, CISA’s exploited-vulnerabilities list, and security news.</p>
 <p><strong>1. Cyber incidents</strong></p>
-<p><strong>Crédit Mutuel Arkéa (France)</strong></p>
+<p><strong>Beget (Russia)</strong></p>
 <ul>
-<li>Industry: Financial services / banking</li>
-<li>Threat actor: Unknown</li>
-<li>Date reported: Nov 4, 2026</li>
-<li>Status: Confirmed (contained; recovery under way)</li>
-<li>Summary: The French regional bank confirmed a cyberattack that let attackers use the bank’s own account to send fraudulent transfers to other banks, then likely into crypto. Entry was through a supplier platform, not Fortuneo. Clients’ funds were not hit; some transfers were delayed while Arkéa paused activity. It did not confirm ZachXBT’s ~$133M / €118M figure but said losses are in that order of magnitude and not a threat to the bank’s soundness; some funds were blocked and recovery is ongoing.</li>
-<li>Supply chain / third-party risk: High for banks and payment providers that trust supplier platforms for treasury or settlement access; a vendor compromise can move institutional funds without touching retail accounts.</li>
-<li>Source: <a href="https://www.cm-arkea.com/arkea/banque/assurances/pa_38367/fr/credit-mutuel-arkea-annonce-avoir-ete-victime-d-une-cyberattaque">Crédit Mutuel Arkéa</a>, <a href="https://www.afp.com/en/french-regional-bank-says-cyberattack-caused-fraudulent-transactions">AFP</a></li>
-</ul>
-<p><strong>Managed service providers and their Microsoft 365 / Azure clients (Todyl “Key Eater” campaign)</strong></p>
-<ul>
-<li>Industry: Technology providers / MSPs (downstream: government, energy, food &amp; agriculture, transportation, education, legal, nonprofits)</li>
-<li>Threat actor: Unknown</li>
+<li>Industry: Technology providers / web hosting, cloud and domain registrar</li>
+<li>Threat actor: Unknown (no claim)</li>
 <li>Date reported: Nov 3–4, 2026</li>
-<li>Status: Ongoing</li>
-<li>Summary: Todyl says that since Nov 1 one operator has been signing in as MSPs’ own Entra ID apps with stolen, still-valid secrets (and some Azure DevOps federated identities / session tokens), reaching about 45 app registrations across ~18 orgs and 27 organizations so far. App sign-ins skip MFA and user Conditional Access; the actor reads Key Vault, bulk-downloads credential and config files from SharePoint, and fans out through MSP multi-tenant / GDAP access. All confirmed activity came from 199.19.77.84; the latest attempt Todyl saw was blocked. No Microsoft vulnerability is involved.</li>
-<li>Supply chain / third-party risk: Very high. One compromised MSP app can expose every client it manages; harvested secrets target VPNs, RMM, backups, firewalls, and AI keys.</li>
-<li>Source: <a href="https://www.todyl.com/blog/stolen-app-credentials-real-access-an-actor-is-signing-into-entra-id-and-azure-devops-as-your-workloads">Todyl</a></li>
+<li>Status: Confirmed (recovery under way)</li>
+<li>Summary: Overnight Nov 1–2, attackers reached Beget’s infrastructure-management systems and ran wiper scripts that erased VPS, S3 and Kubernetes data plus all binary VPS backups; file-level backups survived. More than 1,000 servers must be checked by hand, and some sites are back while most shared hosting is expected to recover. Disruption hit businesses, government sites and Russia’s Chestny Znak product-labeling system.</li>
+<li>Supply chain / third-party risk: High for anyone hosted there or depending on services that are, including retailers and manufacturers tied to Chestny Znak labeling; rotate any credentials stored on Beget servers.</li>
+<li>Source: <a href="https://therecord.media/russia-cyberattack-beget-cloud">The Record</a>, <a href="https://www.kommersant.ru/doc/9080025">Kommersant</a></li>
 </ul>
-<p><strong>Organizations hit by APT29 watering-hole campaign (incl. U.S. chemical-industry site and Plerdy SEO script)</strong></p>
+<p><strong>DigiCert</strong></p>
 <ul>
-<li>Industry: Government / espionage targets (also commercial sites loading the compromised tracker)</li>
-<li>Threat actor: APT29 (Midnight Blizzard), Russia-aligned per Sekoia</li>
-<li>Date reported: Nov 4, 2026 (campaign window Aug 27–Sep 3 called out in coverage)</li>
-<li>Status: Confirmed (patches available; campaign described as past window)</li>
-<li>Summary: Sekoia attributes a watering-hole campaign that profiled visitors then delivered zero-click N-day exploit chains for already-patched iOS and Android/Chrome flaws, stealing cookies, messaging databases, Keychain data, location and photos. Compromised sites included a U.S. chemical industry trade association and a Ukrainian web-analytics script (Plerdy) loaded by thousands of sites. Apple and Google have patched the flaws used; updating devices is the fix. Malware does not survive a reboot.</li>
-<li>Supply chain / third-party risk: Medium–high for anyone loading third-party analytics/SEO scripts, and for mobile fleets that lag on OS patches.</li>
-<li>Source: <a href="https://www.sekoia.com/blog/poisoned-source-apt29-watering-holes-targets-mobile-devices-with-n-day-exploits">Sekoia</a>, <a href="https://www.bleepingcomputer.com/news/security/hackers-use-n-day-exploits-in-zero-click-attacks-on-ios-android-devices/">BleepingComputer</a>, <a href="https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html">The Hacker News</a></li>
-</ul>
-<p><strong>Google Workspace users targeted by Calendar-invite session phishing (“Operation CloudFire”)</strong></p>
-<ul>
-<li>Industry: Technology / enterprise productivity</li>
+<li>Industry: Technology providers / certificate authority</li>
 <li>Threat actor: Unknown</li>
-<li>Date reported: Nov 4, 2026 (active since mid-August)</li>
-<li>Status: Investigating (Material says the Google wave looks dispersed; dormant Microsoft 365 variant exists)</li>
-<li>Summary: Material Security documented a campaign that sent Calendar invites from compromised, familiar senders, routed victims through Google’s own redirector to a reverse-proxied Google sign-in that relays MFA codes and number matching, capturing live sessions past MFA. Material took down 897 domains and blocked tens of thousands of messages; themes have shifted toward Drive share invites, and an unfinished Microsoft 365 branch was found but not activated.</li>
-<li>Supply chain / third-party risk: Medium. Hijacked Workspace sessions reach mail, Drive, and OAuth grants in the victim’s name; review audit logs and revoke sessions quickly.</li>
-<li>Source: <a href="https://www.bleepingcomputer.com/news/security/google-calendar-phishing-campaign-hijacks-sessions-bypasses-mfa/">BleepingComputer</a></li>
+<li>Date reported: Nov 1–5, 2026 (full incident report Nov 1, wide coverage Nov 5)</li>
+<li>Status: Confirmed</li>
+<li>Summary: An internal archive of customer validation records was left reachable from the internet after a February 2025 migration, and a self-registered account without MFA read part of it from June 27 to July 2, 2026. Most of the data was business contact details, but a small minority of accounts included passports, driver’s licenses or utility bills. DigiCert says CA systems, CertCentral, DigiCert ONE, logins and certificates were not affected, and no certificates need replacing; it hasn’t said how many people were hit.</li>
+<li>Supply chain / third-party risk: Medium. Exposed contact and ID data on certificate admins is useful for targeted phishing and impersonation against companies that buy certificates.</li>
+<li>Source: <a href="https://cybersecuritynews.com/digicert-confirms-data-breach/">Cybersecurity News</a>, <a href="https://www.zyphe.com/resources/news/digicert-data-breach-identity-documents-november-2026">Zyphe summary of DigiCert’s report</a></li>
 </ul>
-<p><strong>NIKKE / Level Infinite (Tencent) PC launcher</strong></p>
+<p><strong>Zyxel GS1900 network switches</strong></p>
 <ul>
-<li>Industry: Technology / gaming</li>
+<li>Industry: Technology providers / network equipment</li>
+<li>Threat actor: Kapibala</li>
+<li>Date reported: Nov 4–5, 2026</li>
+<li>Status: Confirmed (exploited Aug–Sep 2026; fixed firmware available)</li>
+<li>Summary: Switch hacks once blamed on a June flaw actually used a separate zero-day, CVE-2026-107441, that bypassed the June patch and let attackers run commands as root; nearly 1,000 switches in 48 countries were compromised. Zyxel’s fix is firmware 2.90 Patch 3 (advisory Nov 3).</li>
+<li>Supply chain / third-party risk: Medium–high for small offices, plants and branch sites running GS1900 switches; patched-in-June devices were still vulnerable, so update and check for compromise.</li>
+<li>Source: <a href="https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/">BleepingComputer</a>, <a href="https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-out-of-bounds-write-vulnerability-in-gs1900-series-switches-11-03-2026">Zyxel advisory</a></li>
+</ul>
+<p><strong>Apple devices (CVE-2024-27834 added to CISA’s exploited list)</strong></p>
+<ul>
+<li>Industry: Technology providers</li>
+<li>Threat actor: Unknown (info-stealer operators per CISA coverage)</li>
+<li>Date reported: Nov 4, 2026</li>
+<li>Status: Confirmed (patched in 2024)</li>
+<li>Summary: CISA added an old, already-patched Apple WebKit flaw to its Known Exploited Vulnerabilities catalog after it was used to deliver info-stealing malware. Devices still running unpatched older Apple OS versions are the ones at risk.</li>
+<li>Supply chain / third-party risk: Low–medium; mainly a patch-hygiene check for older Macs and iPhones in the fleet.</li>
+<li>Source: <a href="https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html">The Hacker News</a>, <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a></li>
+</ul>
+<p><strong>Linux servers running Control Web Panel (CWPdoor backdoor)</strong></p>
+<ul>
+<li>Industry: Technology providers / web hosting</li>
+<li>Threat actor: Unknown (sample found alongside the Ebury backdoor)</li>
+<li>Date reported: Nov 4–5, 2026</li>
+<li>Status: Confirmed (real victims in the wild)</li>
+<li>Summary: XLab found a trojanized build of <code>cwpsrv</code>, the web server behind the CWP admin panel, that sits dormant until it gets a signed, encrypted HTTP request, then runs attacker commands and hides the request from logs. It replaces versions 1.15.10 and 1.24.0 and had zero antivirus detections; more than 340,000 CWP panels are internet-facing.</li>
+<li>Supply chain / third-party risk: Medium for hosting providers and businesses using CWP-managed servers; check for the <code>ngx_http_integrity_helper</code> socket and rotate panel credentials if infected.</li>
+<li>Source: <a href="https://www.bleepingcomputer.com/news/security/hackers-backdoor-linux-servers-using-trojanized-cwp-web-server/">BleepingComputer</a>, <a href="https://blog.xlab.qianxin.com/cwpdoor-the-invisible-backdoor-living-inside-control-web-panel/">XLab</a></li>
+</ul>
+<p><strong>SignalPlus</strong></p>
+<ul>
+<li>Industry: Financial services / crypto trading tools</li>
 <li>Threat actor: Unknown</li>
-<li>Date reported: Nov 4, 2026</li>
-<li>Status: Confirmed (investigating impact)</li>
-<li>Summary: Level Infinite confirmed that NIKKE PC launcher script files may have been tampered with; it patched the client around 11:30 AM CST Nov 3 and is assessing damage. Reporting says CDN JavaScript altered since late September put PC-launcher users at risk of a remote-access trojan that can steal browser passwords, tokens, API keys and crypto-wallet data. Mobile versions are not implicated; already-infected PCs need cleanup beyond the patch.</li>
-<li>Supply chain / third-party risk: Medium for players and for any shared workstations that ran the launcher; rotate passwords, tokens, and wallet keys if the PC was used.</li>
-<li>Source: <a href="https://www.asiae.co.kr/en/article/2026110419104958978">Asiae / Level Infinite confirmation via Scout</a></li>
+<li>Date reported: Nov 4–5, 2026</li>
+<li>Status: Confirmed (services suspended)</li>
+<li>Summary: SignalPlus says a compromised third-party Telegram account and a fake Teams invite led to an attack with under $82,000 in losses, which it will reimburse. Binance and Deribit revoked every SignalPlus-linked API key and say their own systems and funds weren’t affected.</li>
+<li>Supply chain / third-party risk: Medium for traders who connected SignalPlus to other exchanges; revoke those keys.</li>
+<li>Source: <a href="https://www.coindesk.com/tech/2026/11/05/binance-cuts-signalplus-access-after-security-warning-urges-users-to-check-accounts">CoinDesk</a>, <a href="https://www.panews.io/articles/01a1ac07-b647-7232-bd73-952857f0ba64">PANews</a></li>
 </ul>
-<p><strong>Kyiv Independent</strong></p>
+<p><strong>Queens Public Library (New York)</strong></p>
 <ul>
-<li>Industry: Media / news</li>
-<li>Threat actor: Unknown (Russia suspected, not confirmed)</li>
-<li>Date reported: Nov 4, 2026</li>
-<li>Status: Investigating (unauthorized posts removed; donor/payment data reportedly not accessed)</li>
-<li>Summary: Attackers gained access to the outlet’s CMS and a newsletter service on Nov 4 and sent false Russian- and English-language emails, including claims about a nuclear warhead aimed at Kyiv and fabricated Zelensky/Putin messaging. Staff deleted unauthorized site posts, told readers their banking/donor details appear untouched so far, and say the content points to a Russian operation.</li>
-<li>Supply chain / third-party risk: Low for most businesses; high reputational/info-ops impact for anyone amplifying unverified crisis emails.</li>
-<li>Source: <a href="https://kyivindependent.com/kyiv-independent-hit-by-suspected-russian-cyberattack/">Kyiv Independent</a></li>
+<li>Industry: Government / public library</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 5, 2026 (attack Nov 3)</li>
+<li>Status: Investigating (services still down)</li>
+<li>Summary: Ransomware knocked out the library’s website, app, public computers, Wi-Fi, self-checkout and digital media. All 66 branches stayed open, and the library is working with law enforcement on a recovery it says will take time.</li>
+<li>Supply chain / third-party risk: Low for businesses; possible patron-data exposure is not yet known.</li>
+<li>Source: <a href="https://www.theregister.com/cyber-crime/2026/11/05/new-yorks-queens-public-library-battles-ransomware-crims-wi-fi-checkouts-and-website-go-dark/5307796">The Register</a>, <a href="https://gothamist.com/news/queens-public-library-online-system-downed-by-ransomware-hack-officials-said">Gothamist</a></li>
 </ul>
 <p><strong>3. Internet, network, cloud and EDI VAN issues</strong></p>
 <ul>
-<li>GitHub opened a second major Actions incident at 11:40 AM CST today (events that trigger Actions), mitigated with delayed job status updates still being monitored as of ~12:07 PM CST. Status: ongoing (monitoring). <a href="https://stspg.io/7pwv28hvkmz8">GitHub Status</a></li>
-<li>GitHub Actions, Pages and Webhooks were degraded from about 10:05 to 11:01 AM CST and then resolved (separate from the early-morning outage below). Status: resolved. <a href="https://stspg.io/pjgptg3cfc6n">GitHub Status</a></li>
-<li>Elastic Cloud still has a major mOLTP PrivateLink connectivity incident open since about 6:08 AM CST. Status: ongoing. <a href="https://stspg.io/7kt2g0ygmd8q">Elastic Status</a></li>
-<li>Cloudflare had Tokyo (NRT) network latency from about 7:39 to 9:33 AM CST. Status: resolved. <a href="https://www.cloudflarestatus.com/incidents/nbnize4e990z">Cloudflare Status</a></li>
-<li>Oracle Cloud remains Normal Performance, Azure has no active events, and OpenAI and Claude report all systems operational. Cleo, SPS Commerce and TrueCommerce are operational with no new incidents. OpenText’s Middle East ME22 regional outage is still the same long-running investigating item, not a new event. No new outage or security reports turned up for the other EDI VAN providers checked.</li>
+<li>Cloudflare had a network disruption across multiple India locations starting about 9:05 AM CST today and pulled nine PoPs from service, then cleared it. Status: resolved. <a href="https://www.cloudflarestatus.com/incidents/1i6fnludjh1m">Cloudflare Status</a></li>
+<li>Cloudflare Durable Objects in Western Europe had increased errors from about 7:23 AM CST; a fix is in and it’s being monitored. Status: ongoing (monitoring). <a href="https://www.cloudflarestatus.com/incidents/oy8gxjb38yse">Cloudflare Status</a></li>
+<li>Oracle Cloud shows Normal Performance and Azure has no active events. Cleo, SPS Commerce and TrueCommerce are operational, OpenText’s Middle East ME22 item is the same long-running one, and no new outage or security reports turned up for the other EDI VAN providers checked.</li>
 </ul>
 <p><strong>4. Status changes</strong></p>
 <ul>
-<li>GitHub’s early-morning major incident (Pull Requests partial outage; Git Operations, Issues, and later Actions degraded) went from investigating/ongoing (alerted ~5:04 AM CST) to resolved at 5:50 AM CST. <a href="https://stspg.io/18blsgwnbyy6">GitHub Status</a></li>
-<li>WordPress core CVE-2026-119977 went from “exploit attempts seen” (Nov 1 digest) to confirmed active exploitation on CISA’s Known Exploited Vulnerabilities catalog (added Nov 3, due Nov 6; fix 7.1.4). <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a></li>
-<li>The European refrigeration / cold-chain cyberattacks expanded again: France’s blood service (EFS) confirmed cold-room monitoring at three sites was tampered with through its refrigeration contractor (setpoints raised; alarms caught it; no products lost; remote access cut). Still under investigation with Danfoss-linked controls previously confirmed elsewhere. <a href="https://www.sudouest.fr/economie/cybersecurite/cyberattaque-des-chambres-froides-stockant-des-dons-du-sang-piratees-et-programmees-pour-chauffer-a-110-0c-31377554.php">Sud Ouest / Scout</a></li>
+<li>Chainalysis breach went from confirmed, contact data only (Oct 31 digest) to confirmed exposure of names, usernames, password hashes and live tokens for all users, with some KYT accounts accessed; KYT, address screening and the login page were taken offline, and every user must reset passwords and rotate API keys. <a href="https://therecord.media/chainalysis-all-users-hit-by-agentic-cyberattack">The Record</a>, <a href="https://www.chainalysis.com/blog/security-incident-october-30/">Chainalysis</a></li>
+<li>DreamHost went from monitoring (Oct 27 digest) to a confirmed breach: its File Manager exposed FTP/SFTP logins for users who signed in from August through Oct 23, plus some webmail sessions and possibly mailbox contents. <a href="https://www.bleepingcomputer.com/news/security/dreamhost-confirms-data-breach-exposed-ftp-logins-and-webmail-sessions/">BleepingComputer</a>, <a href="https://www.dreamhost.com/news/announcements/october-security-incident/">DreamHost</a></li>
+<li>GitHub’s second major Actions incident from yesterday went from ongoing (monitoring) to resolved at 12:16 PM CST Nov 4. <a href="https://stspg.io/7pwv28hvkmz8">GitHub Status</a></li>
+<li>Elastic Cloud’s mOLTP PrivateLink connectivity incident went from ongoing to resolved at 7:36 PM CST Nov 4. <a href="https://stspg.io/7kt2g0ygmd8q">Elastic Status</a></li>
 </ul></article>
 <footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
