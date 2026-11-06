@@ -1,7 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Internet &amp; Cloud Health Digest</title><id>https://papagiglio.github.io/internet-status-digest/</id>
 <link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/"/><link rel="self" type="application/atom+xml" href="https://papagiglio.github.io/internet-status-digest/atom.xml"/>
-<updated>2026-11-05T12:00:00-06:00</updated><author><name>Internet Status</name></author>
+<updated>2026-11-06T12:00:00-06:00</updated><author><name>Internet Status</name></author>
+<entry><title>Internet &amp; Cloud Health Digest — Nov 6, 2026</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/2026-11-06.html"/><id>https://papagiglio.github.io/internet-status-digest/2026-11-06.html</id>
+<published>2026-11-06T12:00:00-06:00</published><updated>2026-11-06T12:00:00-06:00</updated><summary>Busan Saha-gu spine and joint hospital (South Korea); AI deepfake CEO / attorney wire-fraud ring (~$129M); mSecure (mSeven Software); QNAP NAS devices running Plex Media Server (Plex2Shell); OpenSSH “SSHole” on musl/Alpine (CVE-2026-123158); Fake OpenAI / SpaceX / Anthropic event phishing…</summary><content type="html">&lt;p&gt;&lt;strong&gt;Daily internet &amp;amp; cloud health digest, Nov 6, 2026 (past 24 hours)&lt;/strong&gt;
+Source: Scout run &lt;code&gt;2026-11-06-0600.md&lt;/code&gt; (plus &lt;code&gt;2026-11-05-1800.md&lt;/code&gt; and &lt;code&gt;2026-11-06-0000.md&lt;/code&gt;), with direct checks of Oracle Cloud, Azure, Cloudflare, AWS, GCP, Akamai, GitHub, OpenAI, Claude, Cleo, OpenText, SPS Commerce, TrueCommerce, CISA’s exploited-vulnerabilities list, and security news.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Cyber incidents&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Busan Saha-gu spine and joint hospital (South Korea)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Healthcare&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 6, 2026 (attack Nov 2)&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (recovery under way)&lt;/li&gt;
+&lt;li&gt;Summary: Yonhap and Nocut report a ransomware attack on Nov 2 that knocked out hospital systems and blocked access to about a year of patient records plus some test and prescription data. Attackers demanded a large Bitcoin ransom; the hospital is restoring systems and restarting EMR in stages, with outpatient billing and new admissions reported operating again by Nov 6. The local public health center is guiding a Ministry of Health and Welfare breach report.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium for regional care continuity; possible patient-data exposure is not yet detailed in English coverage.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.yna.co.kr/view/AKR20261106097300051&quot;&gt;Yonhap&lt;/a&gt;, &lt;a href=&quot;https://en.nocutnews.co.kr/news/6603346&quot;&gt;Nocut News (EN)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;AI deepfake CEO / attorney wire-fraud ring (~$129M)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Cross-sector (hospitals, banking, tech, finance, pet food / food &amp;amp; agriculture)&lt;/li&gt;
+&lt;li&gt;Threat actor: Alleged Jacob Soall, Sharon Hazan, Guy Sheetrit (and co-conspirators)&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 6, 2026 (scheme 2024–early 2026)&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (indictments; extraditions pending)&lt;/li&gt;
+&lt;li&gt;Summary: SDNY prosecutors say the three used AI voice and video to impersonate CEOs and big-firm attorneys in BEC-style wires that stole about $129 million from companies worldwide, then moved proceeds into crypto. Named hits include a Missouri hospital (~$5M), a California hospital (~$2.9M), a Rhode Island bank, a UK tech firm, a Massachusetts finance company, and a Florida pet-food company. Arrests were earlier in Spain and the UK; charges include wire fraud, aggravated identity theft, and money laundering.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: High for any org that wires large sums on voice/video instruction; treat CEO/attorney video calls as phishing until verified out-of-band.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://therecord.media/ceo-spoofing-scammers-charged&quot;&gt;The Record&lt;/a&gt;, &lt;a href=&quot;https://www.securityweek.com/3-charged-in-scheme-to-use-ai-to-impersonate-ceos-and-attorneys-to-steal-129-million/&quot;&gt;SecurityWeek&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;mSecure (mSeven Software)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology providers / password manager&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 3–5, 2026 (wider detail Nov 5)&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (investigation; vault decryption not evidenced)&lt;/li&gt;
+&lt;li&gt;Summary: mSeven told current and former customers of suspicious activity, then support replies and follow-ups said an unauthorized actor obtained an encrypted copy of a database for users who synced with mSecure Cloud. The company says it has no evidence the vault contents were decrypted, but still urges changing master and stored passwords, resetting MFA, and replacing passkeys. Local-only / Wi-Fi sync users are outside the stated scope.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: High if staff reused vault secrets elsewhere; assume harvest-now-decrypt-later risk and rotate critical business credentials stored in the cloud vault.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.bleepingcomputer.com/news/security/msecure-password-manager-hack-prompts-password-reset-warnings/&quot;&gt;BleepingComputer&lt;/a&gt;, &lt;a href=&quot;https://support.msecure.com/en/support/discussions/topics/36000039028&quot;&gt;mSecure support notice&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;QNAP NAS devices running Plex Media Server (Plex2Shell)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology providers / network storage&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown (mass exploitation)&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 6, 2026&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (actively exploited; fix available)&lt;/li&gt;
+&lt;li&gt;Summary: QNAP says customers’ NAS boxes with internet-exposed Plex Media Server are being compromised via the Plex2Shell chain (CVE-2026-96652/96654/96655/96656 in Plex ≤1.43.2). Attackers have used footholds for crypto mining and proxying; QNAP OS itself is not the flaw. Patch Plex to 1.43.3.10861 or later; if Plex was reachable from the internet while vulnerable, treat the NAS as compromised and clean-reinstall rather than only updating.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium–high for SMBs and plants that keep files or backups on exposed QNAP/Plex boxes; rotate NAS and backup credentials after cleanup.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.qnap.com/en/security-news/2026/qnap-security-notice-plex-media-server-vulnerabilities-plex2shell-update-to-1-43-3-10861-or-later-immediately&quot;&gt;QNAP advisory&lt;/a&gt;, &lt;a href=&quot;https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/&quot;&gt;BleepingComputer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;OpenSSH “SSHole” on musl/Alpine (CVE-2026-123158)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology providers / Linux infrastructure&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown (honeypot exploitation confirmed)&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 5–6, 2026&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (exploited in the wild on honeypots; patched in OpenSSH 10.6p2)&lt;/li&gt;
+&lt;li&gt;Summary: On Alpine and other musl OpenSSH builds without PAM, an oversized password can authenticate to accounts whose password field is “*” (password disabled). Previdian saw exploitation attempts within hours of disclosure and confirmed root on an Alpine honeypot. Fix is OpenSSH 10.6p2; Alpine also asks owners to hunt “Accepted password for” lines on accounts that should never take passwords.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium for containers and appliances on Alpine/musl with password auth enabled; patch or disable password authentication and review SSH logs.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html&quot;&gt;The Hacker News&lt;/a&gt;, &lt;a href=&quot;https://www.helpnetsecurity.com/2026/11/06/openssh-sshole-cve-2026-123158-exploitation/&quot;&gt;Help Net Security&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Fake OpenAI / SpaceX / Anthropic event phishing (Microsoft and Google work accounts)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology providers / enterprise identity&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 5, 2026&lt;/li&gt;
+&lt;li&gt;Status: Ongoing&lt;/li&gt;
+&lt;li&gt;Summary: Push Security says attackers are running fake premium-AI event registration pages that chain Kali365 device-code phishing against Microsoft and VoidProxy adversary-in-the-middle pages against Google to steal credentials and session cookies. Campaigns were seen in late October 2026; targets are work accounts, not consumer AI apps.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: High for anyone who signs into M365 or Google Workspace from “AI event” invites; verify events out-of-band and revoke suspicious OAuth/device-code grants.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.bleepingcomputer.com/news/security/fake-openai-spacex-events-used-to-steal-microsoft-google-accounts/&quot;&gt;BleepingComputer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;MetaMask Staking&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology providers / crypto wallet and staking&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 5, 2026 (incident identified Sep 28)&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (contained; validators exited)&lt;/li&gt;
+&lt;li&gt;Summary: MetaMask’s Nov 5 update says an attacker who reached systems that store execution-layer reward recipient addresses diverted about 0.385 ETH in staking rewards on Sep 28. Customer staked principal, withdrawal keys, Secret Recovery Phrases, and MetaMask wallet keys were not compromised; affected validators were exited as a precaution, causing temporary withdrawal delays for some staking customers. Ordinary wallet users need take no action.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Low for wallet users; medium for partners depending on MetaMask Staking validator operations while exits finish.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://metamask.com/news/user-update&quot;&gt;MetaMask update&lt;/a&gt;, &lt;a href=&quot;https://www.bleepingcomputer.com/news/security/metamask-says-recent-attack-didnt-affect-wallet-infrastructure/&quot;&gt;BleepingComputer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Internet, network, cloud and EDI VAN issues&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Japan’s Shinkin Kyodo Center had an equipment failure (not a cyberattack) that knocked out ATMs, teller, and online banking at 128 shinkin banks across western Japan from about 1:30 p.m. JST; services were fully restored after about 7 p.m. JST. Status: resolved. &lt;a href=&quot;https://sp.m.jiji.com/english/show/51424&quot;&gt;Jiji&lt;/a&gt;, &lt;a href=&quot;https://news.ntv.co.jp/category/economy/2da0d08e921b4777a0a540f447a1c84d&quot;&gt;Nippon TV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;NTT Docomo’s nationwide 5G Standalone voice/data/SMS disruption that began about 11:18 a.m. JST Thursday was restored about 1:20 a.m. JST Friday; Docomo blamed switching-gear congestion and reported no cyberattack. Status: resolved. &lt;a href=&quot;https://www.docomo.ne.jp/info/network/kanto/pages/261106_00_m.html&quot;&gt;NTT Docomo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cloudflare had brief network performance issues in Singapore starting about 2:54 a.m. CST today and marked them resolved about 4:43 a.m. CST. Status: resolved. &lt;a href=&quot;https://www.cloudflarestatus.com/incidents/3ehw20ozwlkr&quot;&gt;Cloudflare Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Oracle Cloud shows Normal Performance and Azure has no active events. AWS still only shows the long-running me-south-1 / me-central-1 regional items. GCP has no open incidents. OpenAI, Claude, and GitHub are all systems operational. Cleo, SPS Commerce, and TrueCommerce are operational; OpenText’s Middle East ME22 critical item is the same long-running regional outage; no new outage or security reports turned up for the other EDI VAN providers checked. CISA’s KEV catalog is unchanged at version 2026.11.04 (1,768 entries).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4. Status changes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cloudflare Durable Objects in Western Europe went from ongoing (monitoring) in yesterday’s digest to resolved about 3:05 a.m. CST today. &lt;a href=&quot;https://www.cloudflarestatus.com/incidents/oy8gxjb38yse&quot;&gt;Cloudflare Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The European / global refrigeration and cold-chain controller attacks went from investigating (Danfoss-linked retail and France EFS blood-service hits) to a Nov 5 CISA/FBI/HHS/USDA/DOT fact sheet confirming malicious targeting of electronic temperature and commercial refrigeration controllers worldwide and urging owners to pull internet exposure, patch, and harden authentication. &lt;a href=&quot;https://www.cisa.gov/resources-tools/resources/us-government-partners-urge-hardening-industrial-refrigeration-and-cold-chain-monitoring-systems&quot;&gt;CISA fact sheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Chainalysis went from confirmed credential/token exposure with KYT and screening offline (yesterday’s status change) to a phased restore: customers must supply trusted IPs for an allowlist, then reset passwords and rotate API keys as KYT and Address Screening come back; Reactor and Data Solutions remain down while hardening continues. &lt;a href=&quot;https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html&quot;&gt;The Hacker News&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content></entry>
 <entry><title>Internet &amp; Cloud Health Digest — Nov 5, 2026</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/2026-11-05.html"/><id>https://papagiglio.github.io/internet-status-digest/2026-11-05.html</id>
 <published>2026-11-05T12:00:00-06:00</published><updated>2026-11-05T12:00:00-06:00</updated><summary>Beget (Russia); DigiCert; Zyxel GS1900 network switches; Apple devices (CVE-2024-27834 added to CISA’s exploited list); Linux servers running Control Web Panel (CWPdoor backdoor); SignalPlus; Queens Public Library (New York); Cloudflare had a network disruption across multiple India locations…</summary><content type="html">&lt;p&gt;&lt;strong&gt;Daily internet &amp;amp; cloud health digest, Nov 5, 2026 (past 24 hours)&lt;/strong&gt;
 Source: Scout run &lt;code&gt;2026-11-05-0600.md&lt;/code&gt;, with direct checks of Oracle Cloud, Azure, Cloudflare, GitHub, Elastic, OpenAI, Claude, EDI VAN status pages, CISA’s exploited-vulnerabilities list, and security news.&lt;/p&gt;
