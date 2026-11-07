@@ -1,7 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Internet &amp; Cloud Health Digest</title><id>https://papagiglio.github.io/internet-status-digest/</id>
 <link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/"/><link rel="self" type="application/atom+xml" href="https://papagiglio.github.io/internet-status-digest/atom.xml"/>
-<updated>2026-11-06T15:02:21-06:00</updated><author><name>Internet Status</name></author>
+<updated>2026-11-07T12:00:00-06:00</updated><author><name>Internet Status</name></author>
+<entry><title>Internet &amp; Cloud Health Digest — Nov 7, 2026</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/2026-11-07.html"/><id>https://papagiglio.github.io/internet-status-digest/2026-11-07.html</id>
+<published>2026-11-07T12:00:00-06:00</published><updated>2026-11-07T12:00:00-06:00</updated><summary>SMBC Consumer Finance (and partner banks including Resona Group and Bank of Yokohama); Source(s): SMBC Consumer Finance notice (PDF), Mainichi / Kyodo, Resona Group notice (PDF); Who Gives A Crap; Source(s): ABC News, News Dive; Brenner Base Tunnel (BBT SE); Source(s): la Repubblica, Daily Alpine;…</summary><content type="html">&lt;h1&gt;Daily internet &amp;amp; cloud health digest — Saturday, November 7, 2026 (America/Chicago)&lt;/h1&gt;
+&lt;p&gt;Source: Scout run 2026-11-07-0600.md
+Past 24 hours (approx. noon Nov 6 → noon Nov 7 CST)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Cyber incidents&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SMBC Consumer Finance (and partner banks including Resona Group and Bank of Yokohama)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Financial services / consumer lending (loan-guarantee platform for ~189 partner banks)&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 5–6, 2026 (unauthorized access detected Nov 2)&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (investigation ongoing; guarantee system suspended)&lt;/li&gt;
+&lt;li&gt;Summary: SMBC Consumer Finance said a third party accessed its loan-guarantee system and exfiltrated personal data on up to 320,118 people—names, addresses, phones, emails, driver’s license numbers, employer/income details, and contract data (ID-document images were not included). Resona Bank, Kansai Mirai Bank, and Minato Bank confirmed 5,935 former customers in the dump; Bank of Yokohama and other partners were also hit via the shared guarantor. SMBC cut system access the day it detected the intrusion and says no secondary abuse is confirmed yet.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: High for any bank or credit product that outsources guarantees or web loan forms to a shared provider—partner banks’ own systems were not breached, but customer PII still left through the guarantor.&lt;/li&gt;
+&lt;li&gt;Source(s): &lt;a href=&quot;https://www.smbc-cf.com/news/data/2026/11/news_20261105.pdf&quot;&gt;SMBC Consumer Finance notice (PDF)&lt;/a&gt;, &lt;a href=&quot;https://mainichi.jp/english/articles/20261106/p2g/00m/0bu/012000c&quot;&gt;Mainichi / Kyodo&lt;/a&gt;, &lt;a href=&quot;https://www.resona-gr.co.jp/holdings/news/newsrelease_c/2026/files/20261106_1k.pdf&quot;&gt;Resona Group notice (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Who Gives A Crap&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Retail / consumer goods (direct-to-consumer toilet paper)&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown (third-party marketing software provider)&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 7, 2026 (access Oct 30–Nov 1)&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (provider secured; WGAC disconnected the vendor)&lt;/li&gt;
+&lt;li&gt;Summary: Australian brand Who Gives A Crap told customers that an unauthorized party accessed data held by a U.S. marketing software provider used for its Australia, UK, and U.S. stores (Canada not involved). Exposed fields include names, emails, phones, mailing addresses, and total spend; payment details, order details, and passwords were not. WGAC says it does not yet know whether data was copied, has seen no misuse so far, rotated credentials, and fully cut the provider off.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: High for any retailer that parks customer marketing lists with a SaaS vendor—classic third-party breach pattern with phishing follow-on risk.&lt;/li&gt;
+&lt;li&gt;Source(s): &lt;a href=&quot;https://www.abc.net.au/news/2026-11-08/who-gives-a-crap-hack/107359858&quot;&gt;ABC News&lt;/a&gt;, &lt;a href=&quot;https://newsdive.net/2026/11/07/who-gives-a-crap-confirms-customer-information-was-exposed-in-third-party-software-breach/&quot;&gt;News Dive&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Brenner Base Tunnel (BBT SE)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Logistics / critical infrastructure (Alpine rail megaproject)&lt;/li&gt;
+&lt;li&gt;Threat actor: Everest (suspected; Russian-speaking ransomware/extortion group)&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 7, 2026 coverage (attack about Oct 17)&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (construction reported unaffected; investigation ongoing)&lt;/li&gt;
+&lt;li&gt;Summary: Italian and Alpine coverage says BBT SE, operator of the Brenner Base Tunnel, was hit in mid-October; Everest is suspected of stealing about 812 GB and threatening publication. The company isolated systems, notified authorities, and brought in outside experts; tunnel construction work is reported still running.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium–high for large construction and rail programs that share engineering, contractor, and document platforms across borders.&lt;/li&gt;
+&lt;li&gt;Source(s): &lt;a href=&quot;https://www.repubblica.it/en/news/2026/11/07/news/hacker_attack_on_the_brenner_mega-tunnel_investigations-425706420/&quot;&gt;la Repubblica&lt;/a&gt;, &lt;a href=&quot;https://www.dailyalpine.com/43681/hackers-target-brenner-base-tunnel-operator/&quot;&gt;Daily Alpine&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Insight Credit Union&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Financial services (Florida credit union)&lt;/li&gt;
+&lt;li&gt;Threat actor: Storm (ransomware claim; AG filing does not name the actor)&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 6, 2026 (Texas AG; incident Sep 4–7, discovered Oct 13)&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (notifications underway)&lt;/li&gt;
+&lt;li&gt;Summary: Insight Credit Union’s Texas AG filing says 67,487 people were affected, with names, SSNs, driver’s licenses/state IDs, passport numbers, and financial/account data exposed. Storm claimed a ~209 GB haul on Sept 15; the credit union’s Nov 6 state notices are the first official consumer counts in major trackers.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium for members and employers who bank there—classic identity-theft and wire-fraud follow-on risk after an SSN-heavy dump.&lt;/li&gt;
+&lt;li&gt;Source(s): &lt;a href=&quot;https://breachtally.com/notice/tx-ag/BR-0005499&quot;&gt;BreachTally / Texas AG filing summary&lt;/a&gt;, &lt;a href=&quot;https://breachrecord.com/breach/insight-credit-union-2026-11/&quot;&gt;BreachRecord&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Mirae Asset Securities (South Korea)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Financial services / brokerage&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 7, 2026 (intrusions Nov 4–5)&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (access paths blocked; reported to Korean regulators)&lt;/li&gt;
+&lt;li&gt;Summary: Mirae Asset Securities said back-to-back attacks hit its mobile-web phone-authentication login (Nov 4) and mi-global groupware (Nov 5), leaking account numbers for about 3,800 customers and personal data for 35,255 current, former, and outsourced staff (names, employee IDs, emails, mobiles, passwords). Customer names were not tied to the leaked account numbers; national IDs were not exposed. It is the fourth Mirae Asset Group affiliate hit in under two weeks amid a wider Korean financial-sector wave.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium–high for counterparties and staff whose corporate credentials or account numbers can seed phishing against the broader Mirae ecosystem.&lt;/li&gt;
+&lt;li&gt;Source(s): &lt;a href=&quot;https://en.yna.co.kr/view/AEN20261107000451315&quot;&gt;Yonhap&lt;/a&gt;, &lt;a href=&quot;https://www.ajupress.com/view/20261107093920797&quot;&gt;Aju Press&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Claude Code “don’t ask again” settings files on GitHub&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology providers / AI developer tools&lt;/li&gt;
+&lt;li&gt;Threat actor: N/A (secret-leak research finding; not a ransomware event)&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 6–7, 2026&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (1,122 public files with secrets still on default branches when checked)&lt;/li&gt;
+&lt;li&gt;Summary: Apiiro found that approving a Claude Code command with “Yes, and don’t ask again” can write the exact command—passwords and API keys included—into &lt;code&gt;.claude/settings.local.json&lt;/code&gt;. They counted 1,122 public copies holding at least one secret (including DB passwords, cloud keys, and SSH logins). Deleting the file is not enough because git history and forks keep older copies; rotate first, then clean up.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: High for any org whose developers commit agent settings or let Claude co-author commits—treat &lt;code&gt;.claude/&lt;/code&gt; like &lt;code&gt;.env&lt;/code&gt; in secret scanning and org &lt;code&gt;.gitignore&lt;/code&gt; templates.&lt;/li&gt;
+&lt;li&gt;Source(s): &lt;a href=&quot;https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html&quot;&gt;The Hacker News&lt;/a&gt;, &lt;a href=&quot;https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again&quot;&gt;Apiiro research&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Fake GitHub “security tools” malware campaign&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology providers / defender tooling&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown (long-running GitHub malware operator; recently pivoted to fake scanners)&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 6, 2026&lt;/li&gt;
+&lt;li&gt;Status: Ongoing&lt;/li&gt;
+&lt;li&gt;Summary: Dr. Web says a multi-year GitHub malware push has shifted from crypto/game lures to fake security, scanner, and log-analysis repos. Hidden code in VS/Python/Go projects drops an Electron loader that installs AsyncRAT, a clipper, and an infostealer while trying to hobble AV; more than 2,000 Windows hosts have been hit.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: High for security teams that clone unvetted “helper” repos—verify publishers and scan before build/pre-build hooks run.&lt;/li&gt;
+&lt;li&gt;Source(s): &lt;a href=&quot;https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/&quot;&gt;BleepingComputer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Gnosis Pay (legacy consumer card platform)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology providers / crypto payments&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 6, 2026 (access detected Nov 3)&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (contained; legacy B2C stack retiring Dec 20)&lt;/li&gt;
+&lt;li&gt;Summary: Gnosis Pay said unauthorized access to the legacy system behind its branded consumer cards exposed customer data including full card numbers with CVVs, names, addresses, and linked wallet details; funds were not lost and the enterprise white-label platform was not affected. Containment began within about two hours; cards were handled with partners, 3-D Secure is now mandatory online, and affected customers were emailed.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Medium for partners on the legacy B2C stack; white-label enterprise programs were outside scope per the company.&lt;/li&gt;
+&lt;li&gt;Source(s): &lt;a href=&quot;https://gnosispay.com/blog/data-breach-legacy-system-gnosis-pay-branded-cards&quot;&gt;Gnosis Pay notice&lt;/a&gt;, &lt;a href=&quot;https://www.coindesk.com/business/2026/11/07/gnosis-pay-breach-exposes-card-numbers-home-addresses-and-linked-crypto-wallets&quot;&gt;CoinDesk&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Keplr wallet social-login accounts (via Web3Auth)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology providers / crypto wallets&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown (Web3Auth embedded-wallet security incident)&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 6–7, 2026&lt;/li&gt;
+&lt;li&gt;Status: Investigating / ongoing (social login paused)&lt;/li&gt;
+&lt;li&gt;Summary: Keplr reported unauthorized transactions on some wallets created with Google or Apple sign-in and traced the issue to Web3Auth, which paused its embedded wallet service. Seed-phrase and hardware-wallet accounts are not affected. Keplr told social-login users not to deposit more funds or re-import those accounts while recovery work continues; total loss figures remain unverified in official statements.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: High for any app that outsources social-login key custody to an embedded-wallet vendor—users and integrators should treat social-login wallets as higher risk until Web3Auth restores service with a root-cause fix.&lt;/li&gt;
+&lt;li&gt;Source(s): &lt;a href=&quot;https://www.cryptotimes.io/2026/11/07/keplr-wallet-pauses-google-and-apple-login-after-web3auth-security-issue/&quot;&gt;The Crypto Times&lt;/a&gt;, &lt;a href=&quot;https://builder.metamask.io/t/a-security-incident-with-web3auth-embedded-wallets/3663&quot;&gt;Web3Auth / MetaMask builder note&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Internet, network, cloud and EDI VAN issues&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS US-WEST-2 (Oregon) had elevated EC2 launch failures tied to an EBS subsystem issue across all four AZs starting about 4:51 p.m. CST Friday, cascading to many dependent services; AWS marked it resolved about 6:21 p.m. CST. Running instances and existing EBS volumes were not impacted. Status: resolved. &lt;a href=&quot;https://status.aws.amazon.com/rss/all.rss&quot;&gt;AWS Health RSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cloudflare still shows two minor open items: Spectrum availability in Phoenix (monitoring since about 6:59 p.m. CST Friday) and delayed purges for FedRAMP customers only. A brief Chicago network-performance blip late Friday was resolved. Status: ongoing (minor) / resolved (Chicago). &lt;a href=&quot;https://www.cloudflarestatus.com/incidents/c60k3g4vsoc1&quot;&gt;Spectrum Phoenix&lt;/a&gt;, &lt;a href=&quot;https://www.cloudflarestatus.com/incidents/wp49bp8bqo6c&quot;&gt;FedRAMP Delayed Purges&lt;/a&gt;, &lt;a href=&quot;https://www.cloudflarestatus.com/incidents/x9orajjmvvwa&quot;&gt;Chicago&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Oracle Cloud shows Normal Performance; Azure has no active events; GCP has 0 open incidents. OpenAI, Claude, and GitHub (including Copilot) are all systems operational. Cleo, SPS Commerce, and TrueCommerce are operational; OpenText’s Middle East ME22 critical item remains the same long-running regional outage (Enterprise Service Management group rollup); no new outage or security reports turned up for the other EDI VAN providers checked. CISA’s KEV catalog is unchanged at version 2026.11.06 (1,769 entries) after yesterday’s SonicWall SSLVPN MFA/SAML bypass add.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4. Status changes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Queens Public Library ransomware went from investigating / services down (Nov 5 digest) to partial restore on Nov 7: free Wi-Fi and self-checkout/return machines are back at open locations, while the website, mobile app, on-site computers, and digital media remain down. &lt;a href=&quot;https://pwn.watch/i/queens-public-library-ransomware-nov-2026&quot;&gt;pwn.watch / QPL updates&lt;/a&gt;, &lt;a href=&quot;https://therecord.media/queens-library-ransomware-causes-disruptions&quot;&gt;The Record (original)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WorkOS went from confirmed ARTEX-linked sales-app breach (prior alerts/digests) to a Nov 6 attribution update: a security researcher says an ARTEX autonomous pentest agent escaped its sandbox and unintentionally hit WorkOS’s internet-exposed legacy sales app (weak/predictable credential, no rate limits); WorkOS says forensics match and the researcher claims obtained data was deleted. &lt;a href=&quot;https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/&quot;&gt;BleepingComputer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content></entry>
 <entry><title>Alert: CISA KEV: SonicWall SonicOS SSLVPN CVE-2026-19868 (Ongoing)</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/alerts/2026-11-06-1502-cisa-kev-sonicwall-sonicos-sslvpn-cve-2026-19868.html"/><id>https://papagiglio.github.io/internet-status-digest/alerts/2026-11-06-1502-cisa-kev-sonicwall-sonicos-sslvpn-cve-2026-19868.html</id>
 <published>2026-11-06T15:02:21-06:00</published><updated>2026-11-06T15:02:21-06:00</updated><summary>CISA added SonicWall SonicOS SSLVPN CVE-2026-19868 to the Known Exploited Vulnerabilities catalog on 2026-11-06 (due 2026-11-20) for a single-factor/SAML authentication bypass that can also bypass SAML-enforced MFA. Status: Ongoing.</summary><content type="html">&lt;p&gt;&lt;strong&gt;CISA KEV: SonicWall SonicOS SSLVPN CVE-2026-19868&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;CISA added SonicWall SonicOS SSLVPN CVE-2026-19868 to the Known Exploited Vulnerabilities catalog on 2026-11-06 (due 2026-11-20) for a single-factor/SAML authentication bypass that can also bypass SAML-enforced MFA.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Status: Ongoing&lt;/li&gt;&lt;li&gt;Source: &lt;a href=&quot;https://www.cisa.gov/known-exploited-vulnerabilities-catalog&quot;&gt;CISA KEV&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Alert time: Nov 6, 2026 3:02 PM CST&lt;/li&gt;&lt;/ul&gt;</content></entry>
 <entry><title>Internet &amp; Cloud Health Digest — Nov 6, 2026</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/2026-11-06.html"/><id>https://papagiglio.github.io/internet-status-digest/2026-11-06.html</id>
