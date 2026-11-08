@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>Internet &amp; Cloud Health Digest</title><link>https://papagiglio.github.io/internet-status-digest/</link><description>Daily digest of major internet, cloud, AI and EDI VAN outages and cyber incidents. Published around noon Central, plus major incident alerts as they happen.</description>
-<language>en-us</language><lastBuildDate>Sun, 08 Nov 2026 10:00:37 -0600</lastBuildDate><atom:link href="https://papagiglio.github.io/internet-status-digest/feed.xml" rel="self" type="application/rss+xml"/>
+<language>en-us</language><lastBuildDate>Sun, 08 Nov 2026 12:00:00 -0600</lastBuildDate><atom:link href="https://papagiglio.github.io/internet-status-digest/feed.xml" rel="self" type="application/rss+xml"/>
+<item><title>Internet &amp; Cloud Health Digest — Nov 8, 2026</title><link>https://papagiglio.github.io/internet-status-digest/2026-11-08.html</link><guid isPermaLink="true">https://papagiglio.github.io/internet-status-digest/2026-11-08.html</guid>
+<pubDate>Sun, 08 Nov 2026 12:00:00 -0600</pubDate><description>Rosstat (Federal State Statistics Service of Russia); Source(s): Kyiv Independent, Euronews, The Record; Italian Foreign Ministry / Antonio Tajani; Source(s): AP News, BBC, Italian Foreign Ministry; GitHub reported timeouts and degraded API performance for some unauthenticated users starting about…</description><content:encoded><![CDATA[<h1>Daily internet &amp; cloud health digest — Sunday, November 8, 2026 (America/Chicago)</h1>
+<p>Source: Scout run 2026-11-08-0600.md
+Past 24 hours (approx. noon Nov 7 → noon Nov 8 CST)</p>
+<p><strong>1. Cyber incidents</strong></p>
+<p><strong>Rosstat (Federal State Statistics Service of Russia)</strong></p>
+<ul>
+<li>Industry: Government</li>
+<li>Threat actor: Belarusian Cyber Partisans and Silent Crow</li>
+<li>Date reported: Nov 7–8, 2026 (attacks Oct 29–Nov 1)</li>
+<li>Status: Confirmed (agency acknowledges the cyberattacks; denies a data leak)</li>
+<li>Summary: Belarusian Cyber Partisans and the pro-Ukraine group Silent Crow say they spent months inside Rosstat and then launched a destructive attack overnight Oct 31–Nov 1, later publishing death-record analysis they say shows about 393,881 to 450,100 Russia-linked war deaths since February 2022. Those casualty figures have not been independently verified, and the groups’ claims about how much data was taken vary by report. Rosstat confirmed it was targeted in cyberattacks between Oct 29 and Nov 1 but says it found no evidence that databases were compromised or information leaked.</li>
+<li>Supply chain / third-party risk: Medium for anyone who depends on official Russian statistical feeds or shared demographic systems—if the leak claim is accurate, census, mortality, and related personal records could be exposed beyond the war-casualty figures.</li>
+<li>Source(s): <a href="https://kyivindependent.com/hackers-claim-leaked-russian-data-reveals-up-to-450-000-war-related-deaths-in-ukraine/">Kyiv Independent</a>, <a href="https://www.euronews.com/2026/11/08/rosstat-hack-data-obtained-suggests-over-390000-russian-deaths-in-ukraine-war">Euronews</a>, <a href="https://therecord.media/hackers-ukraine-belarus-russia">The Record</a></li>
+</ul>
+<p><strong>Italian Foreign Ministry / Antonio Tajani</strong></p>
+<ul>
+<li>Industry: Government</li>
+<li>Threat actor: Unknown (Italian officials blame pro-Russian hackers; some local press named NoName057(16), not independently confirmed)</li>
+<li>Date reported: Nov 7, 2026</li>
+<li>Status: Confirmed</li>
+<li>Summary: Italian Foreign Minister and Deputy Prime Minister Antonio Tajani said Saturday that cybercriminals had been publishing his personal data on the dark web for days and were seeking more information about him and his family, including offers to pay for details. He tied the targeting to Italy’s support for Ukraine and asked that hybrid threats be discussed at the Nov 9–10 G7 foreign ministers’ meeting in Paris. Prime Minister Giorgia Meloni blamed pro-Russian hackers and called the sale of officials’ personal data a serious concern; the foreign ministry said other officials, including Rome’s chief prosecutor, received similar threats.</li>
+<li>Supply chain / third-party risk: Low for commercial supply chains—this is a targeted leak and intimidation campaign against government officials rather than a vendor or B2B network breach.</li>
+<li>Source(s): <a href="https://apnews.com/article/italy-minister-tajani-cyberattack-41b956d638e95528bef84fd856d5b5d6">AP News</a>, <a href="https://www.bbc.com/news/articles/cr20wvge32j3o">BBC</a>, <a href="https://www.esteri.it/it/sala_stampa/archivionotizie/comunicati/2026/11/tajani-dati-personali-diffusi-sul-dark-web-chiesto-di-trattare-minacce-ibride-al-prossimo-g7-esteri-solidarieta-a-lo-voi-gabrielli-e-tassan-zanin/">Italian Foreign Ministry</a></li>
+</ul>
+<p><strong>3. Internet, network, cloud and EDI VAN issues</strong></p>
+<ul>
+<li>GitHub reported timeouts and degraded API performance for some unauthenticated users starting about 4:36 a.m. CST Sunday and marked the incident resolved about 6:32 a.m. CST. Status: resolved. <a href="https://stspg.io/5yt31mfmyc6p">GitHub Status</a></li>
+<li>Oracle Cloud shows Normal Performance; Azure has no active events; GCP has 0 open incidents. OpenAI, Claude, and GitHub (including Copilot) are all systems operational. Cleo, SPS Commerce, and TrueCommerce are operational; OpenText’s Middle East ME22 critical item remains the same long-running regional outage (last update Nov 2). Cloudflare still shows the same two minor open items already reported yesterday (Spectrum availability in Phoenix, and delayed purges for FedRAMP customers only) with no status change. CISA’s KEV catalog is unchanged at version 2026.11.06 (1,769 entries). No new outage or security reports turned up for the other EDI VAN providers checked.</li>
+</ul>
+<p><strong>4. Status changes</strong></p>
+<ul>
+<li>University Hospitals Cleveland went from websites and MyChart down (Oct 29 alert; incident detected Oct 22) to MyChart restored on Nov 7. Some portal features remain limited, and new test results may be delayed while data is reconciled. <a href="https://www.cleveland19.com/2026/11/07/mychart-back-online-university-hospitals-after-cybersecurity-incident/">Cleveland19</a>, <a href="https://www.wkyc.com/article/news/health/mychart-back-online-university-hospitals-patients-cybersecurity-incident/95-6af8caac-1641-4090-807c-640fb2112aae">WKYC</a></li>
+<li>Chainalysis went from a phased restore of KYT and Address Screening (Nov 6 digest; Reactor still offline) to Reactor, KYT (UI and API), and Address Screening back online as of about 12:50 p.m. CST Saturday, with customers asked to reconnect through trusted-IP allowlists. <a href="https://www.chainalysis.com/blog/security-incident-october-30/">Chainalysis update</a></li>
+</ul>]]></content:encoded></item>
 <item><title>Alert: Iris Ohyama: Iris Plaza cloud breach exposes data of up to 7.7M customers (Ongoing)</title><link>https://papagiglio.github.io/internet-status-digest/alerts/2026-11-08-1000-iris-ohyama-iris-plaza-cloud-breach-exposes-data-o.html</link><guid isPermaLink="true">https://papagiglio.github.io/internet-status-digest/alerts/2026-11-08-1000-iris-ohyama-iris-plaza-cloud-breach-exposes-data-o.html</guid>
 <pubDate>Sun, 08 Nov 2026 10:00:37 -0600</pubDate><description>Japanese household-goods manufacturer Iris Ohyama says unauthorized access to a third-party cloud service behind its Iris Plaza online store may have exposed names, addresses, phone numbers, emails, birth dates and encrypted passwords for up to 7.7 million people. Status: Ongoing.</description><content:encoded><![CDATA[<p><strong>Iris Ohyama: Iris Plaza cloud breach exposes data of up to 7.7M customers</strong></p><p>Japanese household-goods manufacturer Iris Ohyama says unauthorized access to a third-party cloud service behind its Iris Plaza online store may have exposed names, addresses, phone numbers, emails, birth dates and encrypted passwords for up to 7.7 million people.</p><ul><li>Status: Ongoing</li><li>Source: <a href="https://www.bleepingcomputer.com/news/security/iris-ohyama-data-cloud-breach-exposes-info-of-77-million-customers/">BleepingComputer</a></li><li>Alert time: Nov 8, 2026 10:00 AM CST</li></ul>]]></content:encoded></item>
 <item><title>Internet &amp; Cloud Health Digest — Nov 7, 2026</title><link>https://papagiglio.github.io/internet-status-digest/2026-11-07.html</link><guid isPermaLink="true">https://papagiglio.github.io/internet-status-digest/2026-11-07.html</guid>
