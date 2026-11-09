@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Internet &amp; Cloud Health Digest</title><id>https://papagiglio.github.io/internet-status-digest/</id>
 <link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/"/><link rel="self" type="application/atom+xml" href="https://papagiglio.github.io/internet-status-digest/atom.xml"/>
-<updated>2026-11-08T12:00:00-06:00</updated><author><name>Internet Status</name></author>
+<updated>2026-11-09T12:00:00-06:00</updated><author><name>Internet Status</name></author>
+<entry><title>Internet &amp; Cloud Health Digest — Nov 9, 2026</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/2026-11-09.html"/><id>https://papagiglio.github.io/internet-status-digest/2026-11-09.html</id>
+<published>2026-11-09T12:00:00-06:00</published><updated>2026-11-09T12:00:00-06:00</updated><summary>Internet &amp; Cloud Health Digest, Mon Nov 9, 2026 (past 24 hours); WP Duplicate WordPress plugin (v1.1.11 and earlier); Cleo, Oracle Cloud, Azure, Google Cloud, and the other EDI VAN providers checked showed no new incidents</summary><content type="html">&lt;p&gt;&lt;strong&gt;Internet &amp;amp; Cloud Health Digest, Mon Nov 9, 2026 (past 24 hours)&lt;/strong&gt;
+Source: Scout run 2026-11-09-0600.md, plus direct checks of Cleo, OCI, Azure and EDI VAN status pages&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Cyber incidents&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;WP Duplicate WordPress plugin (v1.1.11 and earlier)&lt;/strong&gt;. Industry: Technology Providers / web hosting. Threat actor: Unknown. Date reported: Nov 9. Status: Investigating (exploitation reported, no fix yet). WPScan says an unauthenticated file-upload flaw (CVE-2026-123751) leading to code execution is being exploited. Supply chain risk: any site running the plugin, including agencies and hosts managing many client sites, is exposed until it is removed. Source: &lt;a href=&quot;https://whatgotpwned.com/&quot;&gt;WhatGotPwned&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Network, cloud and EDI VAN status&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cleo, Oracle Cloud, Azure, Google Cloud, and the other EDI VAN providers checked showed no new incidents. Status: clear.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nothing else new in the past 24 hours.&lt;/p&gt;</content></entry>
 <entry><title>Internet &amp; Cloud Health Digest — Nov 8, 2026</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/2026-11-08.html"/><id>https://papagiglio.github.io/internet-status-digest/2026-11-08.html</id>
 <published>2026-11-08T12:00:00-06:00</published><updated>2026-11-08T12:00:00-06:00</updated><summary>Rosstat (Federal State Statistics Service of Russia); Source(s): Kyiv Independent, Euronews, The Record; Italian Foreign Ministry / Antonio Tajani; Source(s): AP News, BBC, Italian Foreign Ministry; GitHub reported timeouts and degraded API performance for some unauthenticated users starting about…</summary><content type="html">&lt;h1&gt;Daily internet &amp;amp; cloud health digest — Sunday, November 8, 2026 (America/Chicago)&lt;/h1&gt;
 &lt;p&gt;Source: Scout run 2026-11-08-0600.md
