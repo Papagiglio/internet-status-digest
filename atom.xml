@@ -1,7 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Internet &amp; Cloud Health Digest</title><id>https://papagiglio.github.io/internet-status-digest/</id>
 <link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/"/><link rel="self" type="application/atom+xml" href="https://papagiglio.github.io/internet-status-digest/atom.xml"/>
-<updated>2026-11-12T13:36:55-06:00</updated><author><name>Internet Status</name></author>
+<updated>2026-11-13T12:00:00-06:00</updated><author><name>Internet Status</name></author>
+<entry><title>Internet &amp; Cloud Health Digest — Nov 13, 2026</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/2026-11-13.html"/><id>https://papagiglio.github.io/internet-status-digest/2026-11-13.html</id>
+<published>2026-11-13T12:00:00-06:00</published><updated>2026-11-13T12:00:00-06:00</updated><summary>Check Point gateways (PHP2Shell, CVE-2026-109618/109619) — exploited, including destructive wiper attacks; Expedia — cyberattack via third-party data platform vendor; Storm ransomware — five US banks and Insight Credit Union; Delta Dental of Missouri; Carsem Group (semiconductor packaging/test);…</summary><content type="html">&lt;h1&gt;Internet &amp;amp; Cloud Health Digest — Fri Nov 13, 2026 (noon CST)&lt;/h1&gt;
+&lt;p&gt;Source: Scout run 2026-11-13-1030.md, plus direct checks (Cleo, OCI, Azure, Microsoft 365, EDI VANs) and a live news search at ~12 PM CST.&lt;/p&gt;
+&lt;h2&gt;1. Cyber incidents&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Check Point gateways (PHP2Shell, CVE-2026-109618/109619) — exploited, including destructive wiper attacks&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology Provider (network security)&lt;/li&gt;
+&lt;li&gt;Country / Location: Global (vendor HQ not stated in source)&lt;/li&gt;
+&lt;li&gt;Threat Actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date Reported: Nov 13, 2026 (exploitation since ~Oct 30)&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (hotfixes available)&lt;/li&gt;
+&lt;li&gt;Summary: Attackers are exploiting a PHP flaw chain in Check Point gateways, and some attacks deploy wipers. Hotfixes are out.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Any organization behind an unpatched Check Point gateway, including MSP-managed ones, is exposed.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.securityweek.com/php2shell-exploited-in-destructive-check-point-gateway-attacks/&quot;&gt;SecurityWeek&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Expedia — cyberattack via third-party data platform vendor&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Travel / Technology&lt;/li&gt;
+&lt;li&gt;Country / Location: Not stated&lt;/li&gt;
+&lt;li&gt;Threat Actor: n0n (extortion group)&lt;/li&gt;
+&lt;li&gt;Date Reported: Nov 12, 2026&lt;/li&gt;
+&lt;li&gt;Status: Confirmed, investigating&lt;/li&gt;
+&lt;li&gt;Summary: Expedia confirmed a cyberattack through a compromised third-party data platform vendor. The extortion group n0n is linked.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Vendor compromise could expose other customers of the same data platform.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://skift.com/2026/11/12/expedia-confirms-cyberattack-through-third-party-vendor/&quot;&gt;Skift&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Storm ransomware — five US banks and Insight Credit Union&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Financial Services&lt;/li&gt;
+&lt;li&gt;Country / Location: United States (specific banks not detailed here)&lt;/li&gt;
+&lt;li&gt;Threat Actor: Storm&lt;/li&gt;
+&lt;li&gt;Date Reported: Nov 12–13, 2026&lt;/li&gt;
+&lt;li&gt;Status: Claimed; Sawyer Savings Bank and Insight confirmed breaches&lt;/li&gt;
+&lt;li&gt;Summary: Storm claims attacks on five banks and a credit union, and two have confirmed. Questions are being raised about shared third-party providers.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Possible common core-processor or vendor link.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://thecudaily.com/ransomware-group-claims-responsibility-for-cyberattacks-on-one-cu-five-banks-questions-raised-over-third-parties/&quot;&gt;CU Daily&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Delta Dental of Missouri&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Healthcare / Insurance&lt;/li&gt;
+&lt;li&gt;Country / Location: United States, Missouri&lt;/li&gt;
+&lt;li&gt;Threat Actor: n0n&lt;/li&gt;
+&lt;li&gt;Date Reported: Nov 12–13, 2026&lt;/li&gt;
+&lt;li&gt;Status: Claimed, investigating&lt;/li&gt;
+&lt;li&gt;Summary: n0n claims an attack and the company has engaged forensics.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Provider and employer plan data may be involved.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.drbicuspid.com/dental-practice/patient-communication/privacy/article/16424437/ransomware-group-claims-attack-on-delta-dental-of-mo&quot;&gt;DrBicuspid&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Carsem Group (semiconductor packaging/test)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Manufacturing&lt;/li&gt;
+&lt;li&gt;Country / Location: Not stated&lt;/li&gt;
+&lt;li&gt;Threat Actor: Emperador&lt;/li&gt;
+&lt;li&gt;Date Reported: Nov 13, 2026&lt;/li&gt;
+&lt;li&gt;Status: Claimed&lt;/li&gt;
+&lt;li&gt;Summary: Emperador claims 65.1 MB stolen and says samples will be leaked within three days.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Carsem serves semiconductor customers.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://qpulse.quasarcybertech.com/news/8409/emperador-ransomware-group-claims-attack-on-semiconductor-packaging-provider-carsem&quot;&gt;QPulse&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Galorath Incorporated (SEER software)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Professional Services / Software&lt;/li&gt;
+&lt;li&gt;Country / Location: Not stated&lt;/li&gt;
+&lt;li&gt;Threat Actor: Akira&lt;/li&gt;
+&lt;li&gt;Date Reported: Nov 13, 2026&lt;/li&gt;
+&lt;li&gt;Status: Claimed&lt;/li&gt;
+&lt;li&gt;Summary: Akira claims 12 GB including employee PII and contracts or NDAs with aerospace and defense firms.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Aerospace and defense customers may be exposed.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://qpulse.quasarcybertech.com/news/8413/akira-ransomware-group-claims-data-exfiltration-from-galorath-incorporated&quot;&gt;QPulse&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Dorsata (Metabase zero-day breach, 58,249 patients)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Healthcare Technology&lt;/li&gt;
+&lt;li&gt;Country / Location: United States, Arlington, Virginia&lt;/li&gt;
+&lt;li&gt;Threat Actor: Unknown (Dire Wolf exploited the same flaw in later attacks)&lt;/li&gt;
+&lt;li&gt;Date Reported: Nov 13, 2026 (breach Aug 10–12)&lt;/li&gt;
+&lt;li&gt;Status: Confirmed&lt;/li&gt;
+&lt;li&gt;Summary: An unauthorized party exploited a Metabase zero-day and accessed patient records held for provider partners.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Provider partners&#x27; patient data is affected, and other Metabase users could face the same flaw.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.hipaajournal.com/data-breaches-dorsata-bay-area-psychological-consultants-lansing-urgent-care/&quot;&gt;HIPAA Journal&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Kalahari Resorts&lt;/strong&gt; — Industry: Hospitality; Country / Location: United States (HQ not stated); Threat Actor: Incransom; Reported Nov 12–13; Status: Claimed (unverified). Claims 2.3M files. Third-party risk: unverified. Source: &lt;a href=&quot;https://www.dexpose.io/incransom-targets-kalahari-resorts-in-major-ransomware-attack/&quot;&gt;DeXpose&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1001RDV / Logicielnet (appointment booking)&lt;/strong&gt; — Industry: Healthcare technology; Country / Location: France; Threat Actor: Unknown; Reported Nov 12–13; Status: Claimed (company denies database access). Hackers defaced the site and claim 9M patient rows. Third-party risk: unverified. Source: &lt;a href=&quot;https://www.24h00.info/en/1001rdv-piratage-revendique-9-millions-patients-ce-que-lon-sait/&quot;&gt;24h00&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;2. Internet, cloud, SaaS and EDI&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Microsoft 365 / Exchange Online, Outlook, Teams, Copilot&lt;/strong&gt; (Global; first reported to you Nov 12) — see Status changes below.&lt;/li&gt;
+&lt;li&gt;Cloud and status checks: Azure (&quot;no Azure issues&quot;), Oracle Cloud (Normal Performance), AWS and Google Cloud (nothing open), and Cloudflare (maintenance only) are clear.&lt;/li&gt;
+&lt;li&gt;EDI VANs: Cleo, SPS Commerce, TrueCommerce and OpenText Trading Grid show no active outage, only scheduled certificate-renewal maintenance on Nov 22 for OpenText Trading Grid. Resolved: SPS Commerce had a 25-minute Document Processing blip on Nov 9. &lt;a href=&quot;https://isdown.app/status/sps-commerce/incidents/683757-document-processing-identified&quot;&gt;SPS via IsDown&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. Status changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Microsoft 365 / Exchange Online outage (Global, began Nov 12 ~11:54 AM CST):&lt;/strong&gt; ongoing → mostly recovered, still ongoing. Microsoft says a network capacity upgrade caused it, not cyber activity, and capacity isn&#x27;t yet back to baseline. A post-incident report is promised. Some users still see delays. &lt;a href=&quot;https://apnews.com/live/microsoft-services-global-outage-news-updates-11-13-2026&quot;&gt;AP&lt;/a&gt;, &lt;a href=&quot;https://www.bbc.com/news/live/cq5y10ge3dp3t&quot;&gt;BBC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Maersk (Denmark HQ; legacy acquired system):&lt;/strong&gt; confirmed/contained → extortion detail: WhiteArmor claims 100 GB and demands $5M; ongoing. &lt;a href=&quot;https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/&quot;&gt;SecurityWeek&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content></entry>
 <entry><title>Alert: Microsoft 365 / Outlook outage (Exchange Online) (Ongoing)</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/alerts/2026-11-12-1336-microsoft-365-outlook-outage-exchange-online.html"/><id>https://papagiglio.github.io/internet-status-digest/alerts/2026-11-12-1336-microsoft-365-outlook-outage-exchange-online.html</id>
 <published>2026-11-12T13:36:55-06:00</published><updated>2026-11-12T13:36:55-06:00</updated><summary>Users worldwide, starting in the Americas, can&#x27;t reach Exchange Online mailboxes in Outlook on the web, the Outlook apps and the mail APIs since about 11 AM CT Nov 12; Microsoft blames heavy load on part of its infrastructure (incident EX1550543). Status: Ongoing.</summary><content type="html">&lt;p&gt;&lt;strong&gt;Microsoft 365 / Outlook outage (Exchange Online)&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Users worldwide, starting in the Americas, can&amp;#x27;t reach Exchange Online mailboxes in Outlook on the web, the Outlook apps and the mail APIs since about 11 AM CT Nov 12; Microsoft blames heavy load on part of its infrastructure (incident EX1550543).&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Status: Ongoing&lt;/li&gt;&lt;li&gt;Source: &lt;a href=&quot;https://globalnews.ca/news/12148204/microsoft-outage-2026/&quot;&gt;Global News&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Alert time: Nov 12, 2026 1:36 PM CST&lt;/li&gt;&lt;/ul&gt;</content></entry>
 <entry><title>Internet &amp; Cloud Health Digest — Nov 12, 2026</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/2026-11-12.html"/><id>https://papagiglio.github.io/internet-status-digest/2026-11-12.html</id>
