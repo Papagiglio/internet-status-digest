@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Internet &amp; Cloud Health Digest — Nov 14, 2026</title>
+<link rel="alternate" type="application/rss+xml" title="Internet &amp; Cloud Health Digest (RSS)" href="https://papagiglio.github.io/internet-status-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Internet &amp; Cloud Health Digest (Atom)" href="https://papagiglio.github.io/internet-status-digest/atom.xml">
+<link rel="canonical" href="https://papagiglio.github.io/internet-status-digest/2026-11-14.html"><style>body{font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:46rem;margin:0 auto;padding:1rem;color:#1d1d1f;background:#fff}
+header{border-bottom:2px solid #0b5cad;margin-bottom:1rem;padding-bottom:.5rem}header h1{margin:.2rem 0;font-size:1.5rem}header h1 a{color:inherit;text-decoration:none}
+nav a,.sub a{margin-right:1rem}a{color:#0b5cad}ul{padding-left:1.2rem}li{margin:.2rem 0}.note{color:#555;font-size:.9rem}
+article p strong:only-child{display:block;margin-top:1.2rem;font-size:1.05rem}code{background:#f2f2f2;padding:0 .2rem;border-radius:3px}
+footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85rem;color:#666}
+@media (prefers-color-scheme:dark){body{background:#111;color:#e6e6e6}a{color:#6cb4ff}code{background:#222}.note,footer{color:#aaa}}</style></head><body>
+<header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
+<p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
+<nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
+<article><p class="note">Digest for Nov 14, 2026</p><h1>Daily Internet &amp; Cloud Health Digest, Nov 14, 2026 (noon CT)</h1>
+<p>Source: Scout run 2026-11-14-1040.md, plus a live search for the last few hours and direct checks of Cleo, OCI and Azure.</p>
+<h2>1. Cyber incidents</h2>
+<p><strong>University of Texas at Arlington</strong></p>
+<ul>
+<li>Industry: Education (higher ed)</li>
+<li>Country / Location: United States, Arlington, Texas</li>
+<li>Threat actor: Qilin ransomware (attributed)</li>
+<li>Date reported: Nov 13–14, 2026</li>
+<li>Status: Confirmed</li>
+<li>Summary: UT Arlington confirmed that personal data was stolen in an attack attributed to Qilin. Some of the data includes Social Security numbers.</li>
+<li>Supply chain / third-party risk: Students, staff and research partners may have exposed identity data, which could lead to downstream phishing and fraud.</li>
+<li>Source: <a href="https://uxc.news/p/university-of-texas-at-arlington-reports-personal-data-theft-in-attack-attributed-to-qilin-ransomware-group">UXC News</a></li>
+</ul>
+<p><strong>UnrealIRCd (CVE-2026-114713), actively exploited</strong></p>
+<ul>
+<li>Industry: Technology provider (open-source software)</li>
+<li>Country / Location: Global (affected software, no single location stated)</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 13, 2026</li>
+<li>Status: Confirmed (CISA says it is exploited)</li>
+<li>Summary: CISA added this flaw to its Known Exploited Vulnerabilities catalog on Nov 13. Federal agencies must patch it.</li>
+<li>Supply chain / third-party risk: Any organization running self-hosted IRC servers is exposed, including some embedded and hosting setups.</li>
+<li>Source: <a href="https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA alert</a></li>
+</ul>
+<h2>2. Internet, cloud and network</h2>
+<ul>
+<li>Twilio SMS delivery delays to Orange Mali (Mali): minor, ongoing. <a href="https://incidents.fru.dev/months/2026-11">Incident feed</a></li>
+<li>Infraly reported intermittent instability on select East Coast routes (United States): minor, ongoing. <a href="https://pingoru.io/providers/infraly/incidents/12486137">Pingoru</a></li>
+<li>Cleo, Oracle Cloud and Azure were clear in the direct checks. Google Cloud had no open incident, and AWS had only the long-running ME-CENTRAL-1 (UAE) issue. I did not find any new EDI VAN issue.</li>
+</ul>
+<h2>3. Status changes</h2>
+<ul>
+<li>Check Point gateways (PHP2Shell, CVE-2026-123039), destructive attacks, Global: now in CISA's exploited list (KEV, Nov 13), so exploitation is confirmed and still ongoing. <a href="https://www.securityweek.com/php2shell-exploited-in-destructive-check-point-gateway-attacks/">SecurityWeek</a></li>
+<li>Microsoft 365 / Outlook / Teams outage (Global): ongoing → resolved. Microsoft said service was fully restored. <a href="https://apnews.com/article/microsoft-outage-outlook-email-365-recover-ca395c0f1e51af784b6d70afb6554f6a">AP</a></li>
+<li>Cloudflare R2 / Tiered Cache (Global): minor, 11:00 PM–12:45 AM CT, resolved. <a href="https://squidgrid.net/incident-cloudflare-980f319416">Squidgrid</a></li>
+</ul></article>
+<footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>

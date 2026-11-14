@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Internet &amp; Cloud Health Digest</title><id>https://papagiglio.github.io/internet-status-digest/</id>
 <link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/"/><link rel="self" type="application/atom+xml" href="https://papagiglio.github.io/internet-status-digest/atom.xml"/>
-<updated>2026-11-14T05:59:01-06:00</updated><author><name>Internet Status</name></author>
+<updated>2026-11-14T12:00:00-06:00</updated><author><name>Internet Status</name></author>
+<entry><title>Internet &amp; Cloud Health Digest — Nov 14, 2026</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/2026-11-14.html"/><id>https://papagiglio.github.io/internet-status-digest/2026-11-14.html</id>
+<published>2026-11-14T12:00:00-06:00</published><updated>2026-11-14T12:00:00-06:00</updated><summary>University of Texas at Arlington; UnrealIRCd (CVE-2026-114713), actively exploited; Twilio SMS delivery delays to Orange Mali (Mali): minor, ongoing; Infraly reported intermittent instability on select East Coast routes (United States): minor, ongoing; Cleo, Oracle Cloud and Azure were clear in the…</summary><content type="html">&lt;h1&gt;Daily Internet &amp;amp; Cloud Health Digest, Nov 14, 2026 (noon CT)&lt;/h1&gt;
+&lt;p&gt;Source: Scout run 2026-11-14-1040.md, plus a live search for the last few hours and direct checks of Cleo, OCI and Azure.&lt;/p&gt;
+&lt;h2&gt;1. Cyber incidents&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;University of Texas at Arlington&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Education (higher ed)&lt;/li&gt;
+&lt;li&gt;Country / Location: United States, Arlington, Texas&lt;/li&gt;
+&lt;li&gt;Threat actor: Qilin ransomware (attributed)&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 13–14, 2026&lt;/li&gt;
+&lt;li&gt;Status: Confirmed&lt;/li&gt;
+&lt;li&gt;Summary: UT Arlington confirmed that personal data was stolen in an attack attributed to Qilin. Some of the data includes Social Security numbers.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Students, staff and research partners may have exposed identity data, which could lead to downstream phishing and fraud.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://uxc.news/p/university-of-texas-at-arlington-reports-personal-data-theft-in-attack-attributed-to-qilin-ransomware-group&quot;&gt;UXC News&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;UnrealIRCd (CVE-2026-114713), actively exploited&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Industry: Technology provider (open-source software)&lt;/li&gt;
+&lt;li&gt;Country / Location: Global (affected software, no single location stated)&lt;/li&gt;
+&lt;li&gt;Threat actor: Unknown&lt;/li&gt;
+&lt;li&gt;Date reported: Nov 13, 2026&lt;/li&gt;
+&lt;li&gt;Status: Confirmed (CISA says it is exploited)&lt;/li&gt;
+&lt;li&gt;Summary: CISA added this flaw to its Known Exploited Vulnerabilities catalog on Nov 13. Federal agencies must patch it.&lt;/li&gt;
+&lt;li&gt;Supply chain / third-party risk: Any organization running self-hosted IRC servers is exposed, including some embedded and hosting setups.&lt;/li&gt;
+&lt;li&gt;Source: &lt;a href=&quot;https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog&quot;&gt;CISA alert&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2. Internet, cloud and network&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Twilio SMS delivery delays to Orange Mali (Mali): minor, ongoing. &lt;a href=&quot;https://incidents.fru.dev/months/2026-11&quot;&gt;Incident feed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Infraly reported intermittent instability on select East Coast routes (United States): minor, ongoing. &lt;a href=&quot;https://pingoru.io/providers/infraly/incidents/12486137&quot;&gt;Pingoru&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cleo, Oracle Cloud and Azure were clear in the direct checks. Google Cloud had no open incident, and AWS had only the long-running ME-CENTRAL-1 (UAE) issue. I did not find any new EDI VAN issue.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. Status changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Check Point gateways (PHP2Shell, CVE-2026-123039), destructive attacks, Global: now in CISA&#x27;s exploited list (KEV, Nov 13), so exploitation is confirmed and still ongoing. &lt;a href=&quot;https://www.securityweek.com/php2shell-exploited-in-destructive-check-point-gateway-attacks/&quot;&gt;SecurityWeek&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Microsoft 365 / Outlook / Teams outage (Global): ongoing → resolved. Microsoft said service was fully restored. &lt;a href=&quot;https://apnews.com/article/microsoft-outage-outlook-email-365-recover-ca395c0f1e51af784b6d70afb6554f6a&quot;&gt;AP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cloudflare R2 / Tiered Cache (Global): minor, 11:00 PM–12:45 AM CT, resolved. &lt;a href=&quot;https://squidgrid.net/incident-cloudflare-980f319416&quot;&gt;Squidgrid&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content></entry>
 <entry><title>Alert: Resolved: FAA nationwide ground stop of US flights (Resolved)</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/alerts/2026-11-14-0559-resolved-faa-nationwide-ground-stop-of-us-flights.html"/><id>https://papagiglio.github.io/internet-status-digest/alerts/2026-11-14-0559-resolved-faa-nationwide-ground-stop-of-us-flights.html</id>
 <published>2026-11-14T05:59:01-06:00</published><updated>2026-11-14T05:59:01-06:00</updated><summary>A US-wide FAA ground stop on Nov 13 caused by failing air traffic communications equipment was lifted that evening, with about 10,000 flights canceled and delays expected for days (United States, nationwide); officials say no evidence of a cyberattack. Status: Resolved.</summary><content type="html">&lt;p&gt;&lt;strong&gt;Resolved: FAA nationwide ground stop of US flights&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;A US-wide FAA ground stop on Nov 13 caused by failing air traffic communications equipment was lifted that evening, with about 10,000 flights canceled and delays expected for days (United States, nationwide); officials say no evidence of a cyberattack.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Status: Resolved&lt;/li&gt;&lt;li&gt;Source: &lt;a href=&quot;https://www.faa.gov/newsroom/faa-statement-nationwide-ground-stop&quot;&gt;FAA&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Alert time: Nov 14, 2026 5:59 AM CST&lt;/li&gt;&lt;/ul&gt;</content></entry>
 <entry><title>Alert: Resolved: Microsoft 365 (Outlook, Teams, Copilot) global outage (Resolved)</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/alerts/2026-11-14-0558-resolved-microsoft-365-outlook-teams-copilot-globa.html"/><id>https://papagiglio.github.io/internet-status-digest/alerts/2026-11-14-0558-resolved-microsoft-365-outlook-teams-copilot-globa.html</id>
