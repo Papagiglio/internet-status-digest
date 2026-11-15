@@ -27,7 +27,7 @@
 </ul>
 <h2>3. Status changes</h2>
 <ul>
-<li>Cursor / Claude Code extension supply-chain compromise (United States, San Francisco; Cursor's HQ is my assumption from the vendor, treat as Not stated if unsure): the earlier "resolved" status is now ongoing. The root cause is a leaked Fireworks AI key, and a remediation script is published. Versions 2.1.312/2.1.313 were served from Oct 29, affecting up to 5,000 users. Old: resolved (Oct 30). New: ongoing. <a href="https://cursor.com/blog/security-incident-update">Cursor</a></li>
+<li>Cursor / Claude Code extension supply-chain compromise (Global; HQ not stated in source): the earlier "resolved" status is now ongoing. The root cause is a leaked Fireworks AI key, and a remediation script is published. Versions 2.1.312/2.1.313 were served from Oct 29, affecting up to 5,000 users. Old: resolved (Oct 30). New: ongoing. <a href="https://cursor.com/blog/security-incident-update">Cursor</a></li>
 <li>Check Point Gaia OS CVE-2026-123039 (Global): on CISA KEV, federal due date Nov 16. Status: ongoing, exploited. <a href="https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA</a></li>
 <li>N-able N-central hosted (Global): still offline since about Nov 10. Old: ongoing. New: ongoing. <a href="https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html">The Hacker News</a></li>
 </ul>]]></content:encoded></item>
