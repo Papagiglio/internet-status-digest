@@ -11,41 +11,32 @@ footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85
 <header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
 <p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
 <nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
-<article><p class="note">Latest: Nov 14, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-14.html">permalink</a></p><h1>Daily Internet &amp; Cloud Health Digest, Nov 14, 2026 (noon CT)</h1>
-<p>Source: Scout run 2026-11-14-1040.md, plus a live search for the last few hours and direct checks of Cleo, OCI and Azure.</p>
+<article><p class="note">Latest: Nov 15, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-15.html">permalink</a></p><h1>Internet &amp; Cloud Health Digest — Nov 15, 2026 (noon CT)</h1>
+<p>Source: Scout run 2026-11-15-1030.md, plus direct checks of Cleo, OCI, Azure, Microsoft 365, EDI VANs and a fresh outage search.</p>
 <h2>1. Cyber incidents</h2>
-<p><strong>University of Texas at Arlington</strong></p>
+<p><strong>Steeden Financial Group</strong></p>
 <ul>
-<li>Industry: Education (higher ed)</li>
-<li>Country / Location: United States, Arlington, Texas</li>
-<li>Threat actor: Qilin ransomware (attributed)</li>
-<li>Date reported: Nov 13–14, 2026</li>
-<li>Status: Confirmed</li>
-<li>Summary: UT Arlington confirmed that personal data was stolen in an attack attributed to Qilin. Some of the data includes Social Security numbers.</li>
-<li>Supply chain / third-party risk: Students, staff and research partners may have exposed identity data, which could lead to downstream phishing and fraud.</li>
-<li>Source: <a href="https://uxc.news/p/university-of-texas-at-arlington-reports-personal-data-theft-in-attack-attributed-to-qilin-ransomware-group">UXC News</a></li>
+<li>Industry: Financial services</li>
+<li>Country / Location: Not stated</li>
+<li>Threat Actor / Ransomware Group: n0n</li>
+<li>Date Reported: Nov 15, 2026</li>
+<li>Status: Claimed</li>
+<li>Brief Summary: The n0n ransomware group says it leaked more than 600,000 records from Steeden Financial Group. The company hasn't confirmed this in the source.</li>
+<li>Potential Supply Chain / Third-Party Risk Impact: Client and partner data could be exposed. Nothing in the source says it extends beyond the company.</li>
+<li>Source(s): <a href="https://qpulse.quasarcybertech.com/news/8459/n0n-ransomware-group-exposes-600-000-records-from-steeden-financial-group">Quasar QPulse</a></li>
 </ul>
-<p><strong>UnrealIRCd (CVE-2026-114713), actively exploited</strong></p>
+<h2>2. Internet, cloud, security-vendor and EDI issues</h2>
 <ul>
-<li>Industry: Technology provider (open-source software)</li>
-<li>Country / Location: Global (affected software, no single location stated)</li>
-<li>Threat actor: Unknown</li>
-<li>Date reported: Nov 13, 2026</li>
-<li>Status: Confirmed (CISA says it is exploited)</li>
-<li>Summary: CISA added this flaw to its Known Exploited Vulnerabilities catalog on Nov 13. Federal agencies must patch it.</li>
-<li>Supply chain / third-party risk: Any organization running self-hosted IRC servers is exposed, including some embedded and hosting setups.</li>
-<li>Source: <a href="https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA alert</a></li>
-</ul>
-<h2>2. Internet, cloud and network</h2>
-<ul>
-<li>Twilio SMS delivery delays to Orange Mali (Mali): minor, ongoing. <a href="https://incidents.fru.dev/months/2026-11">Incident feed</a></li>
-<li>Infraly reported intermittent instability on select East Coast routes (United States): minor, ongoing. <a href="https://pingoru.io/providers/infraly/incidents/12486137">Pingoru</a></li>
-<li>Cleo, Oracle Cloud and Azure were clear in the direct checks. Google Cloud had no open incident, and AWS had only the long-running ME-CENTRAL-1 (UAE) issue. I did not find any new EDI VAN issue.</li>
+<li>AWS me-central-1 (UAE) and me-south-1 (Bahrain): multiple services are in outage or partial outage, and AWS says some UAE (mec1-az2) and Bahrain data can't be restored. Start date unconfirmed (earlier this month). Location: UAE and Bahrain. Status: ongoing. <a href="https://stackpulse.app/services/aws-uae-me-central-1">StackPulse</a></li>
+<li>AWS US-EAST-1: a connectivity issue (about 2 hours, IAM/NLB) was resolved around 6:38 AM CT. Location: United States, N. Virginia. Status: resolved. <a href="https://status.aws.amazon.com/">AWS Health</a></li>
+<li>Cloudflare: a minor Workers Event Subscription issue is ongoing, and Bogotá errors are resolved. Location: Global, with Bogotá, Colombia. Status: ongoing (minor). <a href="https://www.cloudflarestatus.com/history">Cloudflare Status</a></li>
+<li>Twilio and Elastic Cloud: incidents reported Nov 15. Location: Not stated. Status: ongoing, details unconfirmed. <a href="https://statuswall.fyi/d/2026-11-15">Status Wall</a></li>
+<li>Clear: Azure (no active events), Oracle OCI (Normal Performance), Cleo (All Systems Operational), Google Cloud (no open incidents), Microsoft 365 (resolved Nov 14). SPS Commerce and OpenText show no open incidents. I found nothing new for IBM Sterling.</li>
 </ul>
 <h2>3. Status changes</h2>
 <ul>
-<li>Check Point gateways (PHP2Shell, CVE-2026-123039), destructive attacks, Global: now in CISA's exploited list (KEV, Nov 13), so exploitation is confirmed and still ongoing. <a href="https://www.securityweek.com/php2shell-exploited-in-destructive-check-point-gateway-attacks/">SecurityWeek</a></li>
-<li>Microsoft 365 / Outlook / Teams outage (Global): ongoing → resolved. Microsoft said service was fully restored. <a href="https://apnews.com/article/microsoft-outage-outlook-email-365-recover-ca395c0f1e51af784b6d70afb6554f6a">AP</a></li>
-<li>Cloudflare R2 / Tiered Cache (Global): minor, 11:00 PM–12:45 AM CT, resolved. <a href="https://squidgrid.net/incident-cloudflare-980f319416">Squidgrid</a></li>
+<li>Cursor / Claude Code extension supply-chain compromise (United States, San Francisco; Cursor's HQ is my assumption from the vendor, treat as Not stated if unsure): the earlier "resolved" status is now ongoing. The root cause is a leaked Fireworks AI key, and a remediation script is published. Versions 2.1.312/2.1.313 were served from Oct 29, affecting up to 5,000 users. Old: resolved (Oct 30). New: ongoing. <a href="https://cursor.com/blog/security-incident-update">Cursor</a></li>
+<li>Check Point Gaia OS CVE-2026-123039 (Global): on CISA KEV, federal due date Nov 16. Status: ongoing, exploited. <a href="https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA</a></li>
+<li>N-able N-central hosted (Global): still offline since about Nov 10. Old: ongoing. New: ongoing. <a href="https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html">The Hacker News</a></li>
 </ul></article>
 <footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>

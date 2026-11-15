@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Internet &amp; Cloud Health Digest — Nov 15, 2026</title>
+<link rel="alternate" type="application/rss+xml" title="Internet &amp; Cloud Health Digest (RSS)" href="https://papagiglio.github.io/internet-status-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Internet &amp; Cloud Health Digest (Atom)" href="https://papagiglio.github.io/internet-status-digest/atom.xml">
+<link rel="canonical" href="https://papagiglio.github.io/internet-status-digest/2026-11-15.html"><style>body{font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:46rem;margin:0 auto;padding:1rem;color:#1d1d1f;background:#fff}
+header{border-bottom:2px solid #0b5cad;margin-bottom:1rem;padding-bottom:.5rem}header h1{margin:.2rem 0;font-size:1.5rem}header h1 a{color:inherit;text-decoration:none}
+nav a,.sub a{margin-right:1rem}a{color:#0b5cad}ul{padding-left:1.2rem}li{margin:.2rem 0}.note{color:#555;font-size:.9rem}
+article p strong:only-child{display:block;margin-top:1.2rem;font-size:1.05rem}code{background:#f2f2f2;padding:0 .2rem;border-radius:3px}
+footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85rem;color:#666}
+@media (prefers-color-scheme:dark){body{background:#111;color:#e6e6e6}a{color:#6cb4ff}code{background:#222}.note,footer{color:#aaa}}</style></head><body>
+<header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
+<p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
+<nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
+<article><p class="note">Digest for Nov 15, 2026</p><h1>Internet &amp; Cloud Health Digest — Nov 15, 2026 (noon CT)</h1>
+<p>Source: Scout run 2026-11-15-1030.md, plus direct checks of Cleo, OCI, Azure, Microsoft 365, EDI VANs and a fresh outage search.</p>
+<h2>1. Cyber incidents</h2>
+<p><strong>Steeden Financial Group</strong></p>
+<ul>
+<li>Industry: Financial services</li>
+<li>Country / Location: Not stated</li>
+<li>Threat Actor / Ransomware Group: n0n</li>
+<li>Date Reported: Nov 15, 2026</li>
+<li>Status: Claimed</li>
+<li>Brief Summary: The n0n ransomware group says it leaked more than 600,000 records from Steeden Financial Group. The company hasn't confirmed this in the source.</li>
+<li>Potential Supply Chain / Third-Party Risk Impact: Client and partner data could be exposed. Nothing in the source says it extends beyond the company.</li>
+<li>Source(s): <a href="https://qpulse.quasarcybertech.com/news/8459/n0n-ransomware-group-exposes-600-000-records-from-steeden-financial-group">Quasar QPulse</a></li>
+</ul>
+<h2>2. Internet, cloud, security-vendor and EDI issues</h2>
+<ul>
+<li>AWS me-central-1 (UAE) and me-south-1 (Bahrain): multiple services are in outage or partial outage, and AWS says some UAE (mec1-az2) and Bahrain data can't be restored. Start date unconfirmed (earlier this month). Location: UAE and Bahrain. Status: ongoing. <a href="https://stackpulse.app/services/aws-uae-me-central-1">StackPulse</a></li>
+<li>AWS US-EAST-1: a connectivity issue (about 2 hours, IAM/NLB) was resolved around 6:38 AM CT. Location: United States, N. Virginia. Status: resolved. <a href="https://status.aws.amazon.com/">AWS Health</a></li>
+<li>Cloudflare: a minor Workers Event Subscription issue is ongoing, and Bogotá errors are resolved. Location: Global, with Bogotá, Colombia. Status: ongoing (minor). <a href="https://www.cloudflarestatus.com/history">Cloudflare Status</a></li>
+<li>Twilio and Elastic Cloud: incidents reported Nov 15. Location: Not stated. Status: ongoing, details unconfirmed. <a href="https://statuswall.fyi/d/2026-11-15">Status Wall</a></li>
+<li>Clear: Azure (no active events), Oracle OCI (Normal Performance), Cleo (All Systems Operational), Google Cloud (no open incidents), Microsoft 365 (resolved Nov 14). SPS Commerce and OpenText show no open incidents. I found nothing new for IBM Sterling.</li>
+</ul>
+<h2>3. Status changes</h2>
+<ul>
+<li>Cursor / Claude Code extension supply-chain compromise (United States, San Francisco; Cursor's HQ is my assumption from the vendor, treat as Not stated if unsure): the earlier "resolved" status is now ongoing. The root cause is a leaked Fireworks AI key, and a remediation script is published. Versions 2.1.312/2.1.313 were served from Oct 29, affecting up to 5,000 users. Old: resolved (Oct 30). New: ongoing. <a href="https://cursor.com/blog/security-incident-update">Cursor</a></li>
+<li>Check Point Gaia OS CVE-2026-123039 (Global): on CISA KEV, federal due date Nov 16. Status: ongoing, exploited. <a href="https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA</a></li>
+<li>N-able N-central hosted (Global): still offline since about Nov 10. Old: ongoing. New: ongoing. <a href="https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html">The Hacker News</a></li>
+</ul></article>
+<footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
