@@ -11,32 +11,189 @@ footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85
 <header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
 <p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
 <nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
-<article><p class="note">Latest: Nov 15, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-15.html">permalink</a></p><h1>Internet &amp; Cloud Health Digest — Nov 15, 2026 (noon CT)</h1>
-<p>Source: Scout run 2026-11-15-1030.md, plus direct checks of Cleo, OCI, Azure, Microsoft 365, EDI VANs and a fresh outage search.</p>
+<article><p class="note">Latest: Nov 16, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-16.html">permalink</a></p><h1>Internet &amp; Cloud Health Digest, Nov 16, 2026 (noon CT)</h1>
+<p>Source: Scout run 2026-11-16-1035.md, plus direct checks (Cleo, OCI, Azure, Microsoft 365, EDI VANs, ransomware.live, BlueVoyant, live outage search).</p>
 <h2>1. Cyber incidents</h2>
-<p><strong>Steeden Financial Group</strong></p>
+<p><strong>La Poste / Maileva: 22M recipients exposed</strong></p>
 <ul>
-<li>Industry: Financial services</li>
-<li>Country / Location: Not stated</li>
-<li>Threat Actor / Ransomware Group: n0n</li>
-<li>Date Reported: Nov 15, 2026</li>
-<li>Status: Claimed</li>
-<li>Brief Summary: The n0n ransomware group says it leaked more than 600,000 records from Steeden Financial Group. The company hasn't confirmed this in the source.</li>
-<li>Potential Supply Chain / Third-Party Risk Impact: Client and partner data could be exposed. Nothing in the source says it extends beyond the company.</li>
-<li>Source(s): <a href="https://qpulse.quasarcybertech.com/news/8459/n0n-ransomware-group-exposes-600-000-records-from-steeden-financial-group">Quasar QPulse</a></li>
+<li>Industry: Postal / logistics services. Country / Location: France (La Poste group; Maileva is its mailing service).</li>
+<li>Threat actor: Unknown. Reported: Nov 16. Status: Investigating.</li>
+<li>Summary: Secret CISO's Nov 16 roundup reports Maileva exposed data on about 22 million recipients. Details on cause are not given in the source I could read.</li>
+<li>Supply chain risk: Businesses and agencies that send mail through Maileva may have had recipient data exposed.</li>
+<li>Source: <a href="https://www.secretciso.org/secret-ciso-11-16-22m-maileva-exposed-drones-grounded-cloud-ransomed-sonicwall-exploited/">Secret CISO</a></li>
 </ul>
-<h2>2. Internet, cloud, security-vendor and EDI issues</h2>
+<p><strong>Vanguard social-engineering breach</strong></p>
 <ul>
-<li>AWS me-central-1 (UAE) and me-south-1 (Bahrain): multiple services are in outage or partial outage, and AWS says some UAE (mec1-az2) and Bahrain data can't be restored. Start date unconfirmed (earlier this month). Location: UAE and Bahrain. Status: ongoing. <a href="https://stackpulse.app/services/aws-uae-me-central-1">StackPulse</a></li>
-<li>AWS US-EAST-1: a connectivity issue (about 2 hours, IAM/NLB) was resolved around 6:38 AM CT. Location: United States, N. Virginia. Status: resolved. <a href="https://status.aws.amazon.com/">AWS Health</a></li>
-<li>Cloudflare: a minor Workers Event Subscription issue is ongoing, and Bogotá errors are resolved. Location: Global, with Bogotá, Colombia. Status: ongoing (minor). <a href="https://www.cloudflarestatus.com/history">Cloudflare Status</a></li>
-<li>Twilio and Elastic Cloud: incidents reported Nov 15. Location: Not stated. Status: ongoing, details unconfirmed. <a href="https://statuswall.fyi/d/2026-11-15">Status Wall</a></li>
-<li>Clear: Azure (no active events), Oracle OCI (Normal Performance), Cleo (All Systems Operational), Google Cloud (no open incidents), Microsoft 365 (resolved Nov 14). SPS Commerce and OpenText show no open incidents. I found nothing new for IBM Sterling.</li>
+<li>Industry: Financial services. Country / Location: Not stated. Threat actor: Unknown. Reported: Nov 16. Status: Investigating.</li>
+<li>Summary: Vanguard reportedly suffered a breach via social engineering. Scope was not detailed in the roundups.</li>
+<li>Supply chain risk: Possible exposure of client or advisor data; unconfirmed.</li>
+<li>Source: <a href="https://www.secretciso.org/secret-ciso-11-16-22m-maileva-exposed-drones-grounded-cloud-ransomed-sonicwall-exploited/">Secret CISO</a></li>
 </ul>
-<h2>3. Status changes</h2>
+<p><strong>ActiveCloud ransomware</strong></p>
 <ul>
-<li>Cursor / Claude Code extension supply-chain compromise (Global; HQ not stated in source): the earlier "resolved" status is now ongoing. The root cause is a leaked Fireworks AI key, and a remediation script is published. Versions 2.1.312/2.1.313 were served from Oct 29, affecting up to 5,000 users. Old: resolved (Oct 30). New: ongoing. <a href="https://cursor.com/blog/security-incident-update">Cursor</a></li>
-<li>Check Point Gaia OS CVE-2026-123039 (Global): on CISA KEV, federal due date Nov 16. Status: ongoing, exploited. <a href="https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA</a></li>
-<li>N-able N-central hosted (Global): still offline since about Nov 10. Old: ongoing. New: ongoing. <a href="https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html">The Hacker News</a></li>
+<li>Industry: Cloud / technology provider. Country / Location: Not stated. Threat actor: Unknown. Reported: Nov 16. Status: Investigating.</li>
+<li>Summary: A ransomware attack on cloud hosting provider ActiveCloud is listed in the Nov 16 roundup. Few details are public.</li>
+<li>Supply chain risk: Hosted customers could be disrupted.</li>
+<li>Source: <a href="https://www.secretciso.org/secret-ciso-11-16-22m-maileva-exposed-drones-grounded-cloud-ransomed-sonicwall-exploited/">Secret CISO</a></li>
+</ul>
+<p><strong>Quantum Systems malicious update</strong></p>
+<ul>
+<li>Industry: Drones / defense technology. Country / Location: Not stated. Threat actor: Unknown. Reported: Nov 16. Status: Investigating.</li>
+<li>Summary: A malicious software update was reported at Quantum Systems, with drones grounded per the roundup headline.</li>
+<li>Supply chain risk: Operators relying on its update channel may be affected.</li>
+<li>Source: <a href="https://www.secretciso.org/secret-ciso-11-16-22m-maileva-exposed-drones-grounded-cloud-ransomed-sonicwall-exploited/">Secret CISO</a></li>
+</ul>
+<p><strong>China-nexus CL-STA-1238 using AI tools against 19 orgs</strong> (Palo Alto Unit 42)</p>
+<ul>
+<li>Industry: Multiple. Country / Location: Not stated (actor China-nexus). Status: Ongoing/Investigating. Reported: Nov 16.</li>
+<li>Summary: Unit 42 reports the actor using AI tooling against 19 organizations.</li>
+<li>Source: <a href="https://aboutdfir.com/infosec-news-nuggets-11-16-2026/">About DFIR</a></li>
+</ul>
+<p><strong>Fortinet Nov 10 patch batch (~100 flaws, one rated 9.8)</strong>: Global; patching ongoing, no exploitation reported. <a href="https://securityticks.com/category/fortinet/">Source</a></p>
+<h2>2. Notable Ransomware Victims</h2>
+<p>All entries are attacker claims unless noted.</p>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Organization</th>
+<th>Industry</th>
+<th>Country / Location</th>
+<th>Group</th>
+<th>Status</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nov 15</td>
+<td>Starbucks</td>
+<td>Coffee retail</td>
+<td>United States</td>
+<td>N0N</td>
+<td>Claimed</td>
+<td>N0N lists Starbucks on its leak site. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 15</td>
+<td>Gap Inc.</td>
+<td>Apparel retail</td>
+<td>United States</td>
+<td>N0N</td>
+<td>Claimed</td>
+<td>N0N lists Gap Inc. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 15</td>
+<td>VF Corporation</td>
+<td>Apparel / footwear</td>
+<td>United States</td>
+<td>N0N</td>
+<td>Claimed</td>
+<td>N0N lists VF Corp (Timberland's parent). <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 15</td>
+<td>Samsung Electronics</td>
+<td>Consumer electronics</td>
+<td>South Korea</td>
+<td>N0N</td>
+<td>Claimed</td>
+<td>N0N lists Samsung, citing smart TV advertising data. <a href="https://observatorioblockchain.com/en/cybersecurity/ransomware-n0n-starbucks-samsung-gap/">Observatorio Blockchain</a></td>
+</tr>
+<tr>
+<td>Nov 16</td>
+<td>Sekisui House</td>
+<td>Construction / real estate</td>
+<td>Japan (Osaka)</td>
+<td>Metaencryptor</td>
+<td>Claimed</td>
+<td>Metaencryptor claims data exfiltration from Sekisui House. <a href="https://qpulse.quasarcybertech.com/news/8504/metaencryptor-ransomware-group-claims-attack-on-sekisui-house-ltd">QPulse</a></td>
+</tr>
+<tr>
+<td>Nov 16</td>
+<td>Trustbridge &amp; EmpathHealth</td>
+<td>Healthcare (hospice)</td>
+<td>United States, Florida</td>
+<td>Daixin</td>
+<td>Claimed</td>
+<td>Daixin says it holds PII/PHI tied to Hospice of Palm Beach County and Hospice by the Sea. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 16</td>
+<td>Interdent</td>
+<td>Dental practice support</td>
+<td>Not stated</td>
+<td>Curious Worm</td>
+<td>Claimed</td>
+<td>Group lists 850 GB from the roughly $343M-revenue firm. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
+</tr>
+<tr>
+<td>Nov 16</td>
+<td>Chemipharm</td>
+<td>Pharma distribution</td>
+<td>Not stated</td>
+<td>Ransomhouse</td>
+<td>Claimed</td>
+<td>Ransomhouse lists the pharmacy and hospital supplier. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
+</tr>
+<tr>
+<td>Nov 16</td>
+<td>Indiabulls Housing Finance</td>
+<td>Finance / real estate</td>
+<td>India</td>
+<td>Ransomhouse</td>
+<td>Claimed</td>
+<td>Ransomhouse lists the India-listed conglomerate. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
+</tr>
+<tr>
+<td>Nov 16</td>
+<td>The Mandrel Group</td>
+<td>Manufacturing / repair</td>
+<td>United States, McDonald, Ohio</td>
+<td>Akira</td>
+<td>Claimed</td>
+<td>Akira lists the Ohio production and repair firm. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
+</tr>
+<tr>
+<td>Nov 16</td>
+<td>BHIC Bofors Asia</td>
+<td>Defense</td>
+<td>Malaysia</td>
+<td>Incransom</td>
+<td>Claimed</td>
+<td>Incransom lists the Malaysian defense joint venture. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
+</tr>
+<tr>
+<td>Nov 16</td>
+<td>Waterman Group</td>
+<td>Engineering</td>
+<td>Australia</td>
+<td>Rhysida</td>
+<td>Claimed</td>
+<td>Rhysida lists the Australian engineering firm. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
+</tr>
+</tbody>
+</table>
+<h2>3. AI service outages</h2>
+<ul>
+<li>Anthropic Claude unable to join meetings: Global; ongoing since ~9:10 AM CT. <a href="https://statuswall.fyi/d/2026-11-16">Status Wall</a></li>
+<li>Claude Sonnet 5.5 / Fable 5.2 elevated errors: Global; resolved (~1h). <a href="https://statuswall.fyi/d/2026-11-16">Status Wall</a></li>
+<li>Cloudflare Workers AI "errors creating predictions": Global; resolved ~10:20 AM CT. <a href="https://www.cloudflarestatus.com/incidents/69855o2zz6kl">Cloudflare Status</a></li>
+</ul>
+<h2>4. Network, cloud, SaaS and EDI issues</h2>
+<ul>
+<li>Twilio SMS delays to Pakistan (Telenor), Congo (MTN), New Zealand short codes, UK voice audio quality: ongoing. <a href="https://statuswall.fyi/d/2026-11-16">Status Wall</a></li>
+<li>GitHub pull request incident: Global; resolved. Bitbucket Cloud slowness: Global; resolved. <a href="https://statuswall.fyi/d/2026-11-16">Status Wall</a></li>
+<li>Glide Classic instability during a DDoS: Global; ongoing. <a href="https://status.glideapps.com/incidents/411920">Glide Status</a></li>
+<li>Clear: AWS, Azure ("no active events"), Google Cloud, Oracle OCI (Normal Performance), Microsoft 365 (no new incident), Cleo, SPS Commerce, TrueCommerce, Descartes. OpenText Trading Grid is up; OpenText lists unrelated partial incidents plus a Nov 21 Inovisworks FTP SSL certificate renewal. <a href="https://azure.status.microsoft/en-us/status">Azure</a>, <a href="https://ocistatus.oraclecloud.com/">OCI</a>, <a href="https://status.cleo.com/">Cleo</a></li>
+<li>Note: Scout could not read Oracle status; I checked it directly. BlueVoyant's latest post (PHP2Shell supply-chain exposure) is a follow-up to an item reported Nov 13. <a href="https://www.bluevoyant.com/blog">BlueVoyant</a></li>
+</ul>
+<h2>5. Status changes</h2>
+<ul>
+<li>Palo Alto PAN-OS PHP2Shell (Global): ongoing, still exploited; ~25 servers compromised per Scout, chained with Fragnesia. <a href="https://www.thenextgentechinsider.com/pulse/critical-php2shell-flaws-target-palo-alto-networks-management-interfaces">Source</a></li>
+<li>Check Point Gaia OS CVE-2026-123039 (Global): KEV listed, patch needed, ongoing. <a href="https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA</a></li>
+<li>SonicWall SSL-VPN MFA/SAML bypass (Global): now reported exploited, ongoing. <a href="https://www.secretciso.org/secret-ciso-11-16-22m-maileva-exposed-drones-grounded-cloud-ransomed-sonicwall-exploited/">Secret CISO</a></li>
+<li>Microsoft 365 phishing: fake "Outage" emails now use the Nov 12-14 outage as a lure; outage itself stays resolved. <a href="https://www.cisotribune.com/town-square/2026-11-16">CISO Tribune</a></li>
 </ul></article>
 <footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
