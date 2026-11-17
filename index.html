@@ -11,47 +11,16 @@ footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85
 <header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
 <p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
 <nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
-<article><p class="note">Latest: Nov 16, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-16.html">permalink</a></p><h1>Internet &amp; Cloud Health Digest, Nov 16, 2026 (noon CT)</h1>
-<p>Source: Scout run 2026-11-16-1035.md, plus direct checks (Cleo, OCI, Azure, Microsoft 365, EDI VANs, ransomware.live, BlueVoyant, live outage search).</p>
+<article><p class="note">Latest: Nov 17, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-17.html">permalink</a></p><h1>Internet &amp; Cloud Health Digest — Tue Nov 17, 2026 (noon CST)</h1>
+<p>Source: Scout run 2026-11-17-1035.md, plus direct checks (OCI, Azure, Cleo, FAA NAS, ransomware.live, news search)</p>
 <h2>1. Cyber incidents</h2>
-<p><strong>La Poste / Maileva: 22M recipients exposed</strong></p>
 <ul>
-<li>Industry: Postal / logistics services. Country / Location: France (La Poste group; Maileva is its mailing service).</li>
-<li>Threat actor: Unknown. Reported: Nov 16. Status: Investigating.</li>
-<li>Summary: Secret CISO's Nov 16 roundup reports Maileva exposed data on about 22 million recipients. Details on cause are not given in the source I could read.</li>
-<li>Supply chain risk: Businesses and agencies that send mail through Maileva may have had recipient data exposed.</li>
-<li>Source: <a href="https://www.secretciso.org/secret-ciso-11-16-22m-maileva-exposed-drones-grounded-cloud-ransomed-sonicwall-exploited/">Secret CISO</a></li>
+<li><strong>Visa (via Asia-Pacific third-party provider) and JPMorgan Chase</strong> — Industry: Financial Services / Payments; Country / Location: Visa: USA, San Francisco Bay Area (HQ), provider region Asia-Pacific; JPMorgan: USA, New York (HQ); Threat Actor: n0n ransomware gang; Date Reported: Nov 17; Status: Claimed (Visa confirmed a third-party incident; JPMorgan denies cyber link). Summary: n0n listed both firms with a 48-hour leak deadline. Visa says an Asia-Pacific provider was hit, not Visa systems or payment data. JPMorgan says its Nov 16 outage was a software bug, with no evidence of a cyberattack. Supply chain risk: unnamed Visa service provider could expose other payments clients. Sources: <a href="https://cybernews.com/security/visa-jpmorgan-data-breach/">Cybernews</a></li>
+<li><strong>Infoblox</strong> — Industry: Technology Provider (DNS/DHCP/IPAM); Country / Location: USA (HQ Santa Clara, CA); Threat Actor: Unknown; Date Reported: Nov 17; Status: Confirmed / Investigating. Summary: Attackers used credentials of a third-party data-migration vendor to reach Infoblox's SharePoint. Reportedly stolen: employee data (incl. SSNs, direct-deposit details) and some customers' NIOS backups (DNS/DHCP configs, Grid databases). Infoblox says its products, cloud services and build pipeline were not involved. Supply chain risk: customers' network configuration snapshots could aid targeted attacks on their DNS/DHCP infrastructure. Sources: <a href="https://www.techradar.com/pro/security/infoblox-confirms-company-and-customer-data-exposed-in-sharepoint-breach">TechRadar</a></li>
+<li><strong>Uber (via AI provider Fireworks)</strong> — Industry: Transportation / Technology; Country / Location: USA (HQ San Francisco, CA); Threat Actor: Unknown financially motivated group (LLMjacking-linked, per Fireworks); Date Reported: Nov 17 (notices sent Nov 10); Status: Confirmed. Summary: Uber told 149,346 drivers their names, driver's license numbers, dates of birth and addresses were accessed through Uber's account at Fireworks. Uber cut its data connections to the provider. Supply chain risk: shows downstream exposure from AI/data service providers; the same Fireworks incident affected the Cursor/Claude Code extension earlier. Sources: <a href="https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/">BleepingComputer</a></li>
+<li><strong>Debenhams</strong> — Industry: Retail / E-commerce; Country / Location: United Kingdom; Threat Actor: n0n; Date Reported: Nov 16–17; Status: Claimed (data leaked). Summary: n0n published storefront data, including 15,708 customer emails and 8,530 password-recovery codes. Attack estimated Nov 9. Supply chain risk: account-takeover and phishing exposure for customers; e-commerce platform vendor involvement not stated. Sources: <a href="https://qpulse.quasarcybertech.com/news/8565/n0n-ransomware-group-leaks-customer-data-and-password-recovery-codes-from-debenhams">QPulse</a></li>
 </ul>
-<p><strong>Vanguard social-engineering breach</strong></p>
-<ul>
-<li>Industry: Financial services. Country / Location: Not stated. Threat actor: Unknown. Reported: Nov 16. Status: Investigating.</li>
-<li>Summary: Vanguard reportedly suffered a breach via social engineering. Scope was not detailed in the roundups.</li>
-<li>Supply chain risk: Possible exposure of client or advisor data; unconfirmed.</li>
-<li>Source: <a href="https://www.secretciso.org/secret-ciso-11-16-22m-maileva-exposed-drones-grounded-cloud-ransomed-sonicwall-exploited/">Secret CISO</a></li>
-</ul>
-<p><strong>ActiveCloud ransomware</strong></p>
-<ul>
-<li>Industry: Cloud / technology provider. Country / Location: Not stated. Threat actor: Unknown. Reported: Nov 16. Status: Investigating.</li>
-<li>Summary: A ransomware attack on cloud hosting provider ActiveCloud is listed in the Nov 16 roundup. Few details are public.</li>
-<li>Supply chain risk: Hosted customers could be disrupted.</li>
-<li>Source: <a href="https://www.secretciso.org/secret-ciso-11-16-22m-maileva-exposed-drones-grounded-cloud-ransomed-sonicwall-exploited/">Secret CISO</a></li>
-</ul>
-<p><strong>Quantum Systems malicious update</strong></p>
-<ul>
-<li>Industry: Drones / defense technology. Country / Location: Not stated. Threat actor: Unknown. Reported: Nov 16. Status: Investigating.</li>
-<li>Summary: A malicious software update was reported at Quantum Systems, with drones grounded per the roundup headline.</li>
-<li>Supply chain risk: Operators relying on its update channel may be affected.</li>
-<li>Source: <a href="https://www.secretciso.org/secret-ciso-11-16-22m-maileva-exposed-drones-grounded-cloud-ransomed-sonicwall-exploited/">Secret CISO</a></li>
-</ul>
-<p><strong>China-nexus CL-STA-1238 using AI tools against 19 orgs</strong> (Palo Alto Unit 42)</p>
-<ul>
-<li>Industry: Multiple. Country / Location: Not stated (actor China-nexus). Status: Ongoing/Investigating. Reported: Nov 16.</li>
-<li>Summary: Unit 42 reports the actor using AI tooling against 19 organizations.</li>
-<li>Source: <a href="https://aboutdfir.com/infosec-news-nuggets-11-16-2026/">About DFIR</a></li>
-</ul>
-<p><strong>Fortinet Nov 10 patch batch (~100 flaws, one rated 9.8)</strong>: Global; patching ongoing, no exploitation reported. <a href="https://securityticks.com/category/fortinet/">Source</a></p>
 <h2>2. Notable Ransomware Victims</h2>
-<p>All entries are attacker claims unless noted.</p>
 <table>
 <thead>
 <tr>
@@ -66,134 +35,160 @@ footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85
 </thead>
 <tbody>
 <tr>
-<td>Nov 15</td>
-<td>Starbucks</td>
-<td>Coffee retail</td>
-<td>United States</td>
-<td>N0N</td>
+<td>Nov 17</td>
+<td>Molex (Koch)</td>
+<td>Manufacturing (electronics)</td>
+<td>USA</td>
+<td>Vortex</td>
 <td>Claimed</td>
-<td>N0N lists Starbucks on its leak site. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+<td>Vortex claims 16.4M records from the connector maker. <a href="https://www.ransomware.live/">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 15</td>
-<td>Gap Inc.</td>
-<td>Apparel retail</td>
-<td>United States</td>
-<td>N0N</td>
+<td>Nov 17</td>
+<td>Owens &amp; Minor</td>
+<td>Healthcare supply / Logistics</td>
+<td>USA</td>
+<td>Vortex</td>
 <td>Claimed</td>
-<td>N0N lists Gap Inc. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+<td>Vortex lists ~58M records from the medical distributor. <a href="https://www.ransomware.live/">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 15</td>
-<td>VF Corporation</td>
-<td>Apparel / footwear</td>
-<td>United States</td>
-<td>N0N</td>
+<td>Nov 17</td>
+<td>Caris Life Sciences</td>
+<td>Healthcare</td>
+<td>USA</td>
+<td>Vortex</td>
 <td>Claimed</td>
-<td>N0N lists VF Corp (Timberland's parent). <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+<td>Vortex claims ~21.4M records. <a href="https://www.ransomware.live/">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 15</td>
-<td>Samsung Electronics</td>
-<td>Consumer electronics</td>
-<td>South Korea</td>
-<td>N0N</td>
+<td>Nov 17</td>
+<td>Castle Biosciences</td>
+<td>Healthcare</td>
+<td>USA</td>
+<td>Vortex</td>
 <td>Claimed</td>
-<td>N0N lists Samsung, citing smart TV advertising data. <a href="https://observatorioblockchain.com/en/cybersecurity/ransomware-n0n-starbucks-samsung-gap/">Observatorio Blockchain</a></td>
+<td>Vortex claims ~2M records. <a href="https://www.ransomware.live/">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 16</td>
-<td>Sekisui House</td>
-<td>Construction / real estate</td>
-<td>Japan (Osaka)</td>
-<td>Metaencryptor</td>
+<td>Nov 17</td>
+<td>Carrington Mortgage Services (Mycorpass)</td>
+<td>Financial Services</td>
+<td>USA</td>
+<td>Vortex</td>
 <td>Claimed</td>
-<td>Metaencryptor claims data exfiltration from Sekisui House. <a href="https://qpulse.quasarcybertech.com/news/8504/metaencryptor-ransomware-group-claims-attack-on-sekisui-house-ltd">QPulse</a></td>
+<td>Listed alongside Apellis Pharmaceuticals in the same Vortex batch. <a href="https://www.ransomware.live/">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 16</td>
-<td>Trustbridge &amp; EmpathHealth</td>
-<td>Healthcare (hospice)</td>
-<td>United States, Florida</td>
-<td>Daixin</td>
+<td>Nov 17</td>
+<td>DIRECTV Latin America</td>
+<td>Telecom / Media</td>
+<td>Argentina (Latin America)</td>
+<td>The Gentlemen</td>
 <td>Claimed</td>
-<td>Daixin says it holds PII/PHI tied to Hospice of Palm Beach County and Hospice by the Sea. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+<td>One of ~17 victims posted in minutes by this group. <a href="https://www.ransomware.live/">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 16</td>
-<td>Interdent</td>
-<td>Dental practice support</td>
-<td>Not stated</td>
-<td>Curious Worm</td>
+<td>Nov 17</td>
+<td>Groupe SERL</td>
+<td>Energy / Utilities</td>
+<td>France</td>
+<td>The Gentlemen</td>
 <td>Claimed</td>
-<td>Group lists 850 GB from the roughly $343M-revenue firm. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
+<td>Listed in the same batch. <a href="https://www.ransomware.live/">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 16</td>
-<td>Chemipharm</td>
-<td>Pharma distribution</td>
-<td>Not stated</td>
-<td>Ransomhouse</td>
+<td>Nov 17</td>
+<td>Borax Argentina</td>
+<td>Mining / Chemicals</td>
+<td>Argentina</td>
+<td>The Gentlemen</td>
 <td>Claimed</td>
-<td>Ransomhouse lists the pharmacy and hospital supplier. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
+<td>Listed in the same batch. <a href="https://www.ransomware.live/">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 16</td>
-<td>Indiabulls Housing Finance</td>
-<td>Finance / real estate</td>
-<td>India</td>
-<td>Ransomhouse</td>
+<td>Nov 17</td>
+<td>Cykoria</td>
+<td>Food &amp; Ag</td>
+<td>Poland</td>
+<td>The Gentlemen</td>
 <td>Claimed</td>
-<td>Ransomhouse lists the India-listed conglomerate. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
+<td>Listed in the same batch. <a href="https://www.ransomware.live/">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 16</td>
-<td>The Mandrel Group</td>
-<td>Manufacturing / repair</td>
-<td>United States, McDonald, Ohio</td>
-<td>Akira</td>
+<td>Nov 17</td>
+<td>WWGlas</td>
+<td>Manufacturing (glass)</td>
+<td>Germany</td>
+<td>Payload</td>
 <td>Claimed</td>
-<td>Akira lists the Ohio production and repair firm. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
+<td>German family glassmaker posted. <a href="https://www.ransomware.live/">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 16</td>
-<td>BHIC Bofors Asia</td>
-<td>Defense</td>
-<td>Malaysia</td>
+<td>Nov 17</td>
+<td>Chin Fong Machine Industrial</td>
+<td>Manufacturing</td>
+<td>Taiwan</td>
 <td>Incransom</td>
 <td>Claimed</td>
-<td>Incransom lists the Malaysian defense joint venture. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
+<td>Machinery maker posted. <a href="https://www.ransomware.live/">ransomware.live</a></td>
+</tr>
+<tr>
+<td>Nov 17</td>
+<td>Van der Spek Vianen B.V.</td>
+<td>Not stated</td>
+<td>Netherlands</td>
+<td>Rhysida</td>
+<td>Claimed</td>
+<td>Posted by Rhysida. <a href="https://www.ransomware.live/">ransomware.live</a></td>
 </tr>
 <tr>
 <td>Nov 16</td>
-<td>Waterman Group</td>
-<td>Engineering</td>
-<td>Australia</td>
-<td>Rhysida</td>
+<td>California Cross Dock</td>
+<td>Logistics</td>
+<td>USA</td>
+<td>Qilin</td>
 <td>Claimed</td>
-<td>Rhysida lists the Australian engineering firm. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
+<td>Cross-dock logistics firm posted. <a href="https://www.ransomware.live/">ransomware.live</a></td>
+</tr>
+<tr>
+<td>Nov 16</td>
+<td>A.I.M Cash &amp; Carry</td>
+<td>Wholesale / Retail</td>
+<td>Ireland</td>
+<td>Qilin</td>
+<td>Claimed</td>
+<td>Posted by Qilin. <a href="https://www.ransomware.live/">ransomware.live</a></td>
+</tr>
+<tr>
+<td>Nov 16</td>
+<td>Airways Aviation</td>
+<td>Aviation</td>
+<td>UAE</td>
+<td>Qilin</td>
+<td>Claimed</td>
+<td>Posted by Qilin. <a href="https://www.ransomware.live/">ransomware.live</a></td>
 </tr>
 </tbody>
 </table>
-<h2>3. AI service outages</h2>
+<h2>3. US federal agencies</h2>
 <ul>
-<li>Anthropic Claude unable to join meetings: Global; ongoing since ~9:10 AM CT. <a href="https://statuswall.fyi/d/2026-11-16">Status Wall</a></li>
-<li>Claude Sonnet 5.5 / Fable 5.2 elevated errors: Global; resolved (~1h). <a href="https://statuswall.fyi/d/2026-11-16">Status Wall</a></li>
-<li>Cloudflare Workers AI "errors creating predictions": Global; resolved ~10:20 AM CT. <a href="https://www.cloudflarestatus.com/incidents/69855o2zz6kl">Cloudflare Status</a></li>
+<li><strong>NSA (internal communications system)</strong> — Fort Meade, Maryland, USA; partial outage Tue morning (CST), cause reported as a technical problem, not a cyberattack; staggered staff arrivals, no loss of critical communications, restoration status not stated. <a href="https://www.foxnews.com/live-news/tech-outages-microsoft-banks-faa-fbi-11-17-26">Fox News</a></li>
 </ul>
-<h2>4. Network, cloud, SaaS and EDI issues</h2>
+<h2>4. Internet/network outages, cloud &amp; SaaS</h2>
 <ul>
-<li>Twilio SMS delays to Pakistan (Telenor), Congo (MTN), New Zealand short codes, UK voice audio quality: ongoing. <a href="https://statuswall.fyi/d/2026-11-16">Status Wall</a></li>
-<li>GitHub pull request incident: Global; resolved. Bitbucket Cloud slowness: Global; resolved. <a href="https://statuswall.fyi/d/2026-11-16">Status Wall</a></li>
-<li>Glide Classic instability during a DDoS: Global; ongoing. <a href="https://status.glideapps.com/incidents/411920">Glide Status</a></li>
-<li>Clear: AWS, Azure ("no active events"), Google Cloud, Oracle OCI (Normal Performance), Microsoft 365 (no new incident), Cleo, SPS Commerce, TrueCommerce, Descartes. OpenText Trading Grid is up; OpenText lists unrelated partial incidents plus a Nov 21 Inovisworks FTP SSL certificate renewal. <a href="https://azure.status.microsoft/en-us/status">Azure</a>, <a href="https://ocistatus.oraclecloud.com/">OCI</a>, <a href="https://status.cleo.com/">Cleo</a></li>
-<li>Note: Scout could not read Oracle status; I checked it directly. BlueVoyant's latest post (PHP2Shell supply-chain exposure) is a follow-up to an item reported Nov 13. <a href="https://www.bluevoyant.com/blog">BlueVoyant</a></li>
+<li><strong>Apple iCloud, App Store, Apple Pay, device activation</strong> — Global (user reports); sign-in/connection failures since about 11 AM CST; ongoing, Apple's status page still lists services as available. <a href="https://9to5mac.com/2026/11/17/icloud-app-store-and-other-apple-services-hit-by-ongoing-outage/">9to5Mac</a></li>
+<li><strong>Cloudflare Workers AI</strong> — Global; errors and stalled predictions on some models since 9:02 AM CST; ongoing. <a href="https://www.cloudflarestatus.com/">Cloudflare Status</a></li>
+<li><strong>Gmail</strong> — Global (Downdetector only); sending/receiving complaints, Google Workspace dashboard shows no incidents; unconfirmed. <a href="https://www.foxnews.com/live-news/tech-outages-microsoft-banks-faa-fbi-11-17-26">Fox News</a></li>
+<li><strong>JPMorgan Chase / Zelle</strong> — USA; Nov 16 outage from a software bug affected other banks' transactions; resolved Monday night. <a href="https://abc7.com/live-updates/bank-outages-today-live-updates-chase-wells-fargo-america-others-are-reported-down/20045306/">ABC7</a></li>
+<li>Cloudflare Turnstile verification failures (since 4:24 AM CST, Global): ongoing. <a href="https://www.cloudflarestatus.com/incidents/5831aw44ia7i">Cloudflare</a></li>
+<li>All clear: Oracle OCI (Normal Performance), Azure (feed empty), Cleo, Microsoft 365 (no new incident); federal agencies otherwise checked and clear (FAA ground stop: none new); Google Workspace dashboard clear. BlueVoyant: no new posts found.</li>
 </ul>
 <h2>5. Status changes</h2>
 <ul>
-<li>Palo Alto PAN-OS PHP2Shell (Global): ongoing, still exploited; ~25 servers compromised per Scout, chained with Fragnesia. <a href="https://www.thenextgentechinsider.com/pulse/critical-php2shell-flaws-target-palo-alto-networks-management-interfaces">Source</a></li>
-<li>Check Point Gaia OS CVE-2026-123039 (Global): KEV listed, patch needed, ongoing. <a href="https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA</a></li>
-<li>SonicWall SSL-VPN MFA/SAML bypass (Global): now reported exploited, ongoing. <a href="https://www.secretciso.org/secret-ciso-11-16-22m-maileva-exposed-drones-grounded-cloud-ransomed-sonicwall-exploited/">Secret CISO</a></li>
-<li>Microsoft 365 phishing: fake "Outage" emails now use the Nov 12-14 outage as a lure; outage itself stays resolved. <a href="https://www.cisotribune.com/town-square/2026-11-16">CISO Tribune</a></li>
+<li><strong>FAA nationwide ground stop (Nov 13, USA):</strong> resolved → root cause identified: a faulty L3Harris-installed router at an Arkansas site flooded the network; FAA paused router installs and disabled the function on 60+ routers. <a href="https://www.foxnews.com/live-news/tech-outages-microsoft-banks-faa-fbi-11-17-26">Fox News</a></li>
+<li><strong>Infoblox / Visa:</strong> see section 1 (new). <strong>Maersk (Denmark, LF Logistics/OCF):</strong> Maersk says the incident is isolated to a local system with no impact on API/EDI integrations; WhiteArmor $5M demand, 30-day deadline; ongoing. <a href="https://ciomonitor.com/articles/whitearmor-ransomware-gang-demands-5-million-from-maersk-in-data-breach">CIO Monitor</a></li>
+<li><strong>CISA KEV additions Nov 17 (Global):</strong> SmsForwarder, Flowise (CVE-2026-30820), Traccar, Cacti (CVE-2024-25641) and others; patch needed, ongoing. <a href="https://zerodayfindings.com/security-updates/known-exploited">Source</a></li>
+<li><strong>PHP2Shell (PAN-OS, Check Point, FortiSOAR; Global):</strong> ongoing, still exploited. <a href="https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/">Unit 42</a></li>
 </ul></article>
 <footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
