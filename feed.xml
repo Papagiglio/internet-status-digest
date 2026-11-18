@@ -1,7 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>Internet &amp; Cloud Health Digest</title><link>https://papagiglio.github.io/internet-status-digest/</link><description>Daily digest of major internet, cloud, AI and EDI VAN outages and cyber incidents. Published around noon Central, plus major incident alerts as they happen.</description>
-<language>en-us</language><lastBuildDate>Tue, 17 Nov 2026 12:00:00 -0600</lastBuildDate><atom:link href="https://papagiglio.github.io/internet-status-digest/feed.xml" rel="self" type="application/rss+xml"/>
+<language>en-us</language><lastBuildDate>Wed, 18 Nov 2026 12:00:00 -0600</lastBuildDate><atom:link href="https://papagiglio.github.io/internet-status-digest/feed.xml" rel="self" type="application/rss+xml"/>
+<item><title>Internet &amp; Cloud Health Digest — Nov 18, 2026</title><link>https://papagiglio.github.io/internet-status-digest/2026-11-18.html</link><guid isPermaLink="true">https://papagiglio.github.io/internet-status-digest/2026-11-18.html</guid>
+<pubDate>Wed, 18 Nov 2026 12:00:00 -0600</pubDate><description>Claude / Anthropic (Global): elevated errors on the Google Docs connector, ~31 min, resolved; GitHub Copilot (Global): degraded availability of &quot;MAI Code 2 Flash&quot; since ~9:00 UTC; monitoring; HashiCorp HCP Terraform (Global): full outage of Terraform runs and UI from ~8:56 AM CST; fix deployed,…</description><content:encoded><![CDATA[<h1>Internet &amp; Cloud Health Digest — Wed Nov 18, 2026 (noon CST)</h1>
+<p>Source: Scout run 2026-11-18-1030.md, plus direct checks (OCI, Azure, Cleo, Microsoft 365, FAA, federal status pages, web searches, ransomware.live/Ransomnews, BlueVoyant).</p>
+<h2>1. Cyber incidents</h2>
+<p><strong>Osaki Electric Co., Ltd.</strong> — Manufacturing (smart meters); Japan / Tokyo; Threat actor: Unknown (not claimed); Reported: Nov 18; Status: Confirmed.
+Osaki disclosed to the Tokyo Stock Exchange a ransomware/extortion attack that halted production. No group has claimed it yet.
+Supply chain risk: production halt can delay meter deliveries to utilities and downstream customers.
+Sources: <a href="https://ransomnews.com/confirmed-ransomware-attacks/">Ransomnews</a>, <a href="https://www.ransomware.live/press">ransomware.live press</a></p>
+<p><strong>NVIDIA (claimed victim)</strong> — Technology / semiconductors; USA / Santa Clara, California (HQ); Threat actor: The Gentlemen; Reported: Nov 18; Status: Claimed (unverified).
+The Gentlemen listed Nvidia on its leak site with a ~234-hour (&lt;10 days) countdown but showed no evidence of stolen data. Nvidia has not confirmed a breach.
+Supply chain risk: large B2B/partner footprint; a real leak could expose partner or customer data.
+Source: <a href="https://cybernews.com/security/nvidia-the-gentlemen-ransomware-attack/">Cybernews</a></p>
+<p><strong>Equinor</strong> — Energy; Norway / Stavanger (HQ); Threat actor: Unknown; Reported: Nov 17; Status: Investigating.
+Equinor detected a cyberattack on some IT systems. No data theft or production impact reported so far.
+Supply chain risk: low so far; watch for vendor/partner IT exposure.
+Source: <a href="https://www.equinor.com/news/20261711-equinor-detected-cyber-attack">Equinor</a></p>
+<p><strong>Oracle Java "Java4Shell" (CVE-2026-114938)</strong> — Technology (software); Global; Threat actor: Unknown; Reported: Nov 17; Status: Investigating / patch urgently.
+CISA urged immediate patching of this critical unauthenticated RCE in the Java x86-64 HotSpot Base64 decoder. Aptible and Akamai have posted customer advisories.
+Supply chain risk: Java is embedded in many B2B/EDI and enterprise stacks; inventory and patch.
+Sources: <a href="https://www.cisa.gov/news-events/alerts/2026/11/17/critical-java-vulnerability-requires-immediate-patching">CISA</a>, <a href="https://rewindex.com/outages/2026-11-18">Rewindex</a></p>
+<h2>2. Notable Ransomware Victims</h2>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Organization</th>
+<th>Industry</th>
+<th>Country / Location</th>
+<th>Group</th>
+<th>Status</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nov 17</td>
+<td>South Sound Oral Surgery</td>
+<td>Healthcare</td>
+<td>USA / Lacey, Olympia, Tacoma, WA</td>
+<td>The Gentlemen</td>
+<td>Claimed</td>
+<td>Claimed on the leak site Nov 17 (attack est. Nov 16); data and systems affected not specified. <a href="https://qpulse.quasarcybertech.com/news/8674/ransomware-group-thegentlemen-targets-south-sound-oral-surgery">QPulse</a></td>
+</tr>
+</tbody>
+</table>
+<h2>3. AI service outages</h2>
+<ul>
+<li><strong>Claude / Anthropic (Global):</strong> elevated errors on the Google Docs connector, ~31 min, resolved. <a href="https://rewindex.com/outages/2026-11-18">Rewindex</a></li>
+<li><strong>GitHub Copilot (Global):</strong> degraded availability of "MAI Code 2 Flash" since ~9:00 UTC; monitoring. <a href="https://rewindex.com/outages/2026-11-18">Rewindex</a></li>
+</ul>
+<h2>4. Internet/network outages, cloud &amp; SaaS provider problems</h2>
+<ul>
+<li><strong>HashiCorp HCP Terraform (Global):</strong> full outage of Terraform runs and UI from ~8:56 AM CST; fix deployed, monitoring. <a href="https://status.hashicorp.com/incidents/01M7QPTFKHQBM6C882TG3AHG4C">HashiCorp</a></li>
+<li><strong>OVHcloud (France – Global Zimbra; GRA2 Gravelines dedicated servers):</strong> two major incidents since ~1:38 AM / 1:58 AM CST; investigating/identified. <a href="https://rewindex.com/outages/2026-11-18">Rewindex</a></li>
+<li><strong>Scaleway (France / Paris FR-PAR-1):</strong> Apple Silicon Macs cannot reach the public API since ~2:17 AM CST; investigating. <a href="https://rewindex.com/outages/2026-11-18">Rewindex</a></li>
+<li><strong>Marriott (USA/Global, Bonvoy sign-in):</strong> sign-in outage on Marriott.com and app, resolved; not cyber-related per Marriott. <a href="https://6abc.com/live-updates/tech-outage-live-updates/20048533/">6abc</a></li>
+<li><strong>Cloudflare (India, Mumbai, Paris):</strong> short minor regional incidents (Access, 5xx, network), all resolved. <a href="https://rewindex.com/outages/2026-11-18">Rewindex</a></li>
+<li><strong>AWS Middle East (UAE me-central-1, Bahrain me-south-1):</strong> tracker-reported partial issues, ongoing (previously reported). </li>
+<li>All clear: Oracle OCI (Normal Performance), Azure (feed empty), Cleo (no open incidents), Microsoft 365 (no current incident), other EDI VANs (nothing found), federal agencies checked and clear (FAA, IRS, SSA, Login.gov, USPS operational). BlueVoyant: only a PHP2Shell supply-chain post (not new in last 24h).</li>
+</ul>
+<h2>5. Status changes</h2>
+<ul>
+<li><strong>J.B. Hunt (USA / Lowell, Arkansas):</strong> WhiteArmor claim → J.B. Hunt confirmed a cyber incident; ongoing. <a href="https://breachnews.com/ransomware/jb-hunt-ryder-echo-whitearmor-ransomware-claims/">Breachnews</a></li>
+<li><strong>Visa / JPMorgan (USA):</strong> Visa confirmed a third-party APAC provider incident (its systems unaffected); JPMorgan attributes its outage to a software bug; n0n 48-hr deadline; ongoing. <a href="https://www.techradar.com/pro/security/visa-confirms-apparent-cyberattack-hackers-also-claim-hit-on-jpmorgan">TechRadar</a></li>
+<li><strong>Apple iCloud/App Store (Global):</strong> ongoing → resolved; Apple says an internal update caused it. <a href="https://www.euronews.com/2026/11/18/apple-outage-hits-app-store-becoming-the-latest-casualty-of-major-cyber-breakdowns">Euronews</a></li>
+<li><strong>NSA internal network (USA):</strong> ongoing → mission-critical capabilities remained operational; described as degradation during maintenance. <a href="https://www.npr.org/2026/11/18/nx-s1-6044230/concerns-grow-after-spate-of-tech-outages-nationwide">NPR</a></li>
+<li><strong>Spectrum/Charter (USA):</strong> ~2h broadband outage from ~midnight CST Nov 18, resolved. <a href="https://instatus.com/now/spectrum.com">Instatus</a></li>
+</ul>]]></content:encoded></item>
 <item><title>Internet &amp; Cloud Health Digest — Nov 17, 2026</title><link>https://papagiglio.github.io/internet-status-digest/2026-11-17.html</link><guid isPermaLink="true">https://papagiglio.github.io/internet-status-digest/2026-11-17.html</guid>
 <pubDate>Tue, 17 Nov 2026 12:00:00 -0600</pubDate><description>Visa (via Asia-Pacific third-party provider) and JPMorgan Chase — Industry: Financial Services / Payments; Country / Location: Visa: USA, San Francisco Bay Area (HQ), provider region Asia-Pacific; JPMorgan: USA, New York (HQ); Threat Actor: n0n ransomware gang; Date Reported: Nov 17; Status:…</description><content:encoded><![CDATA[<h1>Internet &amp; Cloud Health Digest — Tue Nov 17, 2026 (noon CST)</h1>
 <p>Source: Scout run 2026-11-17-1035.md, plus direct checks (OCI, Azure, Cleo, FAA NAS, ransomware.live, news search)</p>

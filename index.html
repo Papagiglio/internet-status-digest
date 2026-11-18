@@ -11,15 +11,25 @@ footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85
 <header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
 <p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
 <nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
-<article><p class="note">Latest: Nov 17, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-17.html">permalink</a></p><h1>Internet &amp; Cloud Health Digest — Tue Nov 17, 2026 (noon CST)</h1>
-<p>Source: Scout run 2026-11-17-1035.md, plus direct checks (OCI, Azure, Cleo, FAA NAS, ransomware.live, news search)</p>
+<article><p class="note">Latest: Nov 18, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-18.html">permalink</a></p><h1>Internet &amp; Cloud Health Digest — Wed Nov 18, 2026 (noon CST)</h1>
+<p>Source: Scout run 2026-11-18-1030.md, plus direct checks (OCI, Azure, Cleo, Microsoft 365, FAA, federal status pages, web searches, ransomware.live/Ransomnews, BlueVoyant).</p>
 <h2>1. Cyber incidents</h2>
-<ul>
-<li><strong>Visa (via Asia-Pacific third-party provider) and JPMorgan Chase</strong> — Industry: Financial Services / Payments; Country / Location: Visa: USA, San Francisco Bay Area (HQ), provider region Asia-Pacific; JPMorgan: USA, New York (HQ); Threat Actor: n0n ransomware gang; Date Reported: Nov 17; Status: Claimed (Visa confirmed a third-party incident; JPMorgan denies cyber link). Summary: n0n listed both firms with a 48-hour leak deadline. Visa says an Asia-Pacific provider was hit, not Visa systems or payment data. JPMorgan says its Nov 16 outage was a software bug, with no evidence of a cyberattack. Supply chain risk: unnamed Visa service provider could expose other payments clients. Sources: <a href="https://cybernews.com/security/visa-jpmorgan-data-breach/">Cybernews</a></li>
-<li><strong>Infoblox</strong> — Industry: Technology Provider (DNS/DHCP/IPAM); Country / Location: USA (HQ Santa Clara, CA); Threat Actor: Unknown; Date Reported: Nov 17; Status: Confirmed / Investigating. Summary: Attackers used credentials of a third-party data-migration vendor to reach Infoblox's SharePoint. Reportedly stolen: employee data (incl. SSNs, direct-deposit details) and some customers' NIOS backups (DNS/DHCP configs, Grid databases). Infoblox says its products, cloud services and build pipeline were not involved. Supply chain risk: customers' network configuration snapshots could aid targeted attacks on their DNS/DHCP infrastructure. Sources: <a href="https://www.techradar.com/pro/security/infoblox-confirms-company-and-customer-data-exposed-in-sharepoint-breach">TechRadar</a></li>
-<li><strong>Uber (via AI provider Fireworks)</strong> — Industry: Transportation / Technology; Country / Location: USA (HQ San Francisco, CA); Threat Actor: Unknown financially motivated group (LLMjacking-linked, per Fireworks); Date Reported: Nov 17 (notices sent Nov 10); Status: Confirmed. Summary: Uber told 149,346 drivers their names, driver's license numbers, dates of birth and addresses were accessed through Uber's account at Fireworks. Uber cut its data connections to the provider. Supply chain risk: shows downstream exposure from AI/data service providers; the same Fireworks incident affected the Cursor/Claude Code extension earlier. Sources: <a href="https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/">BleepingComputer</a></li>
-<li><strong>Debenhams</strong> — Industry: Retail / E-commerce; Country / Location: United Kingdom; Threat Actor: n0n; Date Reported: Nov 16–17; Status: Claimed (data leaked). Summary: n0n published storefront data, including 15,708 customer emails and 8,530 password-recovery codes. Attack estimated Nov 9. Supply chain risk: account-takeover and phishing exposure for customers; e-commerce platform vendor involvement not stated. Sources: <a href="https://qpulse.quasarcybertech.com/news/8565/n0n-ransomware-group-leaks-customer-data-and-password-recovery-codes-from-debenhams">QPulse</a></li>
-</ul>
+<p><strong>Osaki Electric Co., Ltd.</strong> — Manufacturing (smart meters); Japan / Tokyo; Threat actor: Unknown (not claimed); Reported: Nov 18; Status: Confirmed.
+Osaki disclosed to the Tokyo Stock Exchange a ransomware/extortion attack that halted production. No group has claimed it yet.
+Supply chain risk: production halt can delay meter deliveries to utilities and downstream customers.
+Sources: <a href="https://ransomnews.com/confirmed-ransomware-attacks/">Ransomnews</a>, <a href="https://www.ransomware.live/press">ransomware.live press</a></p>
+<p><strong>NVIDIA (claimed victim)</strong> — Technology / semiconductors; USA / Santa Clara, California (HQ); Threat actor: The Gentlemen; Reported: Nov 18; Status: Claimed (unverified).
+The Gentlemen listed Nvidia on its leak site with a ~234-hour (&lt;10 days) countdown but showed no evidence of stolen data. Nvidia has not confirmed a breach.
+Supply chain risk: large B2B/partner footprint; a real leak could expose partner or customer data.
+Source: <a href="https://cybernews.com/security/nvidia-the-gentlemen-ransomware-attack/">Cybernews</a></p>
+<p><strong>Equinor</strong> — Energy; Norway / Stavanger (HQ); Threat actor: Unknown; Reported: Nov 17; Status: Investigating.
+Equinor detected a cyberattack on some IT systems. No data theft or production impact reported so far.
+Supply chain risk: low so far; watch for vendor/partner IT exposure.
+Source: <a href="https://www.equinor.com/news/20261711-equinor-detected-cyber-attack">Equinor</a></p>
+<p><strong>Oracle Java "Java4Shell" (CVE-2026-114938)</strong> — Technology (software); Global; Threat actor: Unknown; Reported: Nov 17; Status: Investigating / patch urgently.
+CISA urged immediate patching of this critical unauthenticated RCE in the Java x86-64 HotSpot Base64 decoder. Aptible and Akamai have posted customer advisories.
+Supply chain risk: Java is embedded in many B2B/EDI and enterprise stacks; inventory and patch.
+Sources: <a href="https://www.cisa.gov/news-events/alerts/2026/11/17/critical-java-vulnerability-requires-immediate-patching">CISA</a>, <a href="https://rewindex.com/outages/2026-11-18">Rewindex</a></p>
 <h2>2. Notable Ransomware Victims</h2>
 <table>
 <thead>
@@ -36,159 +46,36 @@ footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85
 <tbody>
 <tr>
 <td>Nov 17</td>
-<td>Molex (Koch)</td>
-<td>Manufacturing (electronics)</td>
-<td>USA</td>
-<td>Vortex</td>
-<td>Claimed</td>
-<td>Vortex claims 16.4M records from the connector maker. <a href="https://www.ransomware.live/">ransomware.live</a></td>
-</tr>
-<tr>
-<td>Nov 17</td>
-<td>Owens &amp; Minor</td>
-<td>Healthcare supply / Logistics</td>
-<td>USA</td>
-<td>Vortex</td>
-<td>Claimed</td>
-<td>Vortex lists ~58M records from the medical distributor. <a href="https://www.ransomware.live/">ransomware.live</a></td>
-</tr>
-<tr>
-<td>Nov 17</td>
-<td>Caris Life Sciences</td>
+<td>South Sound Oral Surgery</td>
 <td>Healthcare</td>
-<td>USA</td>
-<td>Vortex</td>
-<td>Claimed</td>
-<td>Vortex claims ~21.4M records. <a href="https://www.ransomware.live/">ransomware.live</a></td>
-</tr>
-<tr>
-<td>Nov 17</td>
-<td>Castle Biosciences</td>
-<td>Healthcare</td>
-<td>USA</td>
-<td>Vortex</td>
-<td>Claimed</td>
-<td>Vortex claims ~2M records. <a href="https://www.ransomware.live/">ransomware.live</a></td>
-</tr>
-<tr>
-<td>Nov 17</td>
-<td>Carrington Mortgage Services (Mycorpass)</td>
-<td>Financial Services</td>
-<td>USA</td>
-<td>Vortex</td>
-<td>Claimed</td>
-<td>Listed alongside Apellis Pharmaceuticals in the same Vortex batch. <a href="https://www.ransomware.live/">ransomware.live</a></td>
-</tr>
-<tr>
-<td>Nov 17</td>
-<td>DIRECTV Latin America</td>
-<td>Telecom / Media</td>
-<td>Argentina (Latin America)</td>
+<td>USA / Lacey, Olympia, Tacoma, WA</td>
 <td>The Gentlemen</td>
 <td>Claimed</td>
-<td>One of ~17 victims posted in minutes by this group. <a href="https://www.ransomware.live/">ransomware.live</a></td>
-</tr>
-<tr>
-<td>Nov 17</td>
-<td>Groupe SERL</td>
-<td>Energy / Utilities</td>
-<td>France</td>
-<td>The Gentlemen</td>
-<td>Claimed</td>
-<td>Listed in the same batch. <a href="https://www.ransomware.live/">ransomware.live</a></td>
-</tr>
-<tr>
-<td>Nov 17</td>
-<td>Borax Argentina</td>
-<td>Mining / Chemicals</td>
-<td>Argentina</td>
-<td>The Gentlemen</td>
-<td>Claimed</td>
-<td>Listed in the same batch. <a href="https://www.ransomware.live/">ransomware.live</a></td>
-</tr>
-<tr>
-<td>Nov 17</td>
-<td>Cykoria</td>
-<td>Food &amp; Ag</td>
-<td>Poland</td>
-<td>The Gentlemen</td>
-<td>Claimed</td>
-<td>Listed in the same batch. <a href="https://www.ransomware.live/">ransomware.live</a></td>
-</tr>
-<tr>
-<td>Nov 17</td>
-<td>WWGlas</td>
-<td>Manufacturing (glass)</td>
-<td>Germany</td>
-<td>Payload</td>
-<td>Claimed</td>
-<td>German family glassmaker posted. <a href="https://www.ransomware.live/">ransomware.live</a></td>
-</tr>
-<tr>
-<td>Nov 17</td>
-<td>Chin Fong Machine Industrial</td>
-<td>Manufacturing</td>
-<td>Taiwan</td>
-<td>Incransom</td>
-<td>Claimed</td>
-<td>Machinery maker posted. <a href="https://www.ransomware.live/">ransomware.live</a></td>
-</tr>
-<tr>
-<td>Nov 17</td>
-<td>Van der Spek Vianen B.V.</td>
-<td>Not stated</td>
-<td>Netherlands</td>
-<td>Rhysida</td>
-<td>Claimed</td>
-<td>Posted by Rhysida. <a href="https://www.ransomware.live/">ransomware.live</a></td>
-</tr>
-<tr>
-<td>Nov 16</td>
-<td>California Cross Dock</td>
-<td>Logistics</td>
-<td>USA</td>
-<td>Qilin</td>
-<td>Claimed</td>
-<td>Cross-dock logistics firm posted. <a href="https://www.ransomware.live/">ransomware.live</a></td>
-</tr>
-<tr>
-<td>Nov 16</td>
-<td>A.I.M Cash &amp; Carry</td>
-<td>Wholesale / Retail</td>
-<td>Ireland</td>
-<td>Qilin</td>
-<td>Claimed</td>
-<td>Posted by Qilin. <a href="https://www.ransomware.live/">ransomware.live</a></td>
-</tr>
-<tr>
-<td>Nov 16</td>
-<td>Airways Aviation</td>
-<td>Aviation</td>
-<td>UAE</td>
-<td>Qilin</td>
-<td>Claimed</td>
-<td>Posted by Qilin. <a href="https://www.ransomware.live/">ransomware.live</a></td>
+<td>Claimed on the leak site Nov 17 (attack est. Nov 16); data and systems affected not specified. <a href="https://qpulse.quasarcybertech.com/news/8674/ransomware-group-thegentlemen-targets-south-sound-oral-surgery">QPulse</a></td>
 </tr>
 </tbody>
 </table>
-<h2>3. US federal agencies</h2>
+<h2>3. AI service outages</h2>
 <ul>
-<li><strong>NSA (internal communications system)</strong> — Fort Meade, Maryland, USA; partial outage Tue morning (CST), cause reported as a technical problem, not a cyberattack; staggered staff arrivals, no loss of critical communications, restoration status not stated. <a href="https://www.foxnews.com/live-news/tech-outages-microsoft-banks-faa-fbi-11-17-26">Fox News</a></li>
+<li><strong>Claude / Anthropic (Global):</strong> elevated errors on the Google Docs connector, ~31 min, resolved. <a href="https://rewindex.com/outages/2026-11-18">Rewindex</a></li>
+<li><strong>GitHub Copilot (Global):</strong> degraded availability of "MAI Code 2 Flash" since ~9:00 UTC; monitoring. <a href="https://rewindex.com/outages/2026-11-18">Rewindex</a></li>
 </ul>
-<h2>4. Internet/network outages, cloud &amp; SaaS</h2>
+<h2>4. Internet/network outages, cloud &amp; SaaS provider problems</h2>
 <ul>
-<li><strong>Apple iCloud, App Store, Apple Pay, device activation</strong> — Global (user reports); sign-in/connection failures since about 11 AM CST; ongoing, Apple's status page still lists services as available. <a href="https://9to5mac.com/2026/11/17/icloud-app-store-and-other-apple-services-hit-by-ongoing-outage/">9to5Mac</a></li>
-<li><strong>Cloudflare Workers AI</strong> — Global; errors and stalled predictions on some models since 9:02 AM CST; ongoing. <a href="https://www.cloudflarestatus.com/">Cloudflare Status</a></li>
-<li><strong>Gmail</strong> — Global (Downdetector only); sending/receiving complaints, Google Workspace dashboard shows no incidents; unconfirmed. <a href="https://www.foxnews.com/live-news/tech-outages-microsoft-banks-faa-fbi-11-17-26">Fox News</a></li>
-<li><strong>JPMorgan Chase / Zelle</strong> — USA; Nov 16 outage from a software bug affected other banks' transactions; resolved Monday night. <a href="https://abc7.com/live-updates/bank-outages-today-live-updates-chase-wells-fargo-america-others-are-reported-down/20045306/">ABC7</a></li>
-<li>Cloudflare Turnstile verification failures (since 4:24 AM CST, Global): ongoing. <a href="https://www.cloudflarestatus.com/incidents/5831aw44ia7i">Cloudflare</a></li>
-<li>All clear: Oracle OCI (Normal Performance), Azure (feed empty), Cleo, Microsoft 365 (no new incident); federal agencies otherwise checked and clear (FAA ground stop: none new); Google Workspace dashboard clear. BlueVoyant: no new posts found.</li>
+<li><strong>HashiCorp HCP Terraform (Global):</strong> full outage of Terraform runs and UI from ~8:56 AM CST; fix deployed, monitoring. <a href="https://status.hashicorp.com/incidents/01M7QPTFKHQBM6C882TG3AHG4C">HashiCorp</a></li>
+<li><strong>OVHcloud (France – Global Zimbra; GRA2 Gravelines dedicated servers):</strong> two major incidents since ~1:38 AM / 1:58 AM CST; investigating/identified. <a href="https://rewindex.com/outages/2026-11-18">Rewindex</a></li>
+<li><strong>Scaleway (France / Paris FR-PAR-1):</strong> Apple Silicon Macs cannot reach the public API since ~2:17 AM CST; investigating. <a href="https://rewindex.com/outages/2026-11-18">Rewindex</a></li>
+<li><strong>Marriott (USA/Global, Bonvoy sign-in):</strong> sign-in outage on Marriott.com and app, resolved; not cyber-related per Marriott. <a href="https://6abc.com/live-updates/tech-outage-live-updates/20048533/">6abc</a></li>
+<li><strong>Cloudflare (India, Mumbai, Paris):</strong> short minor regional incidents (Access, 5xx, network), all resolved. <a href="https://rewindex.com/outages/2026-11-18">Rewindex</a></li>
+<li><strong>AWS Middle East (UAE me-central-1, Bahrain me-south-1):</strong> tracker-reported partial issues, ongoing (previously reported). </li>
+<li>All clear: Oracle OCI (Normal Performance), Azure (feed empty), Cleo (no open incidents), Microsoft 365 (no current incident), other EDI VANs (nothing found), federal agencies checked and clear (FAA, IRS, SSA, Login.gov, USPS operational). BlueVoyant: only a PHP2Shell supply-chain post (not new in last 24h).</li>
 </ul>
 <h2>5. Status changes</h2>
 <ul>
-<li><strong>FAA nationwide ground stop (Nov 13, USA):</strong> resolved → root cause identified: a faulty L3Harris-installed router at an Arkansas site flooded the network; FAA paused router installs and disabled the function on 60+ routers. <a href="https://www.foxnews.com/live-news/tech-outages-microsoft-banks-faa-fbi-11-17-26">Fox News</a></li>
-<li><strong>Infoblox / Visa:</strong> see section 1 (new). <strong>Maersk (Denmark, LF Logistics/OCF):</strong> Maersk says the incident is isolated to a local system with no impact on API/EDI integrations; WhiteArmor $5M demand, 30-day deadline; ongoing. <a href="https://ciomonitor.com/articles/whitearmor-ransomware-gang-demands-5-million-from-maersk-in-data-breach">CIO Monitor</a></li>
-<li><strong>CISA KEV additions Nov 17 (Global):</strong> SmsForwarder, Flowise (CVE-2026-30820), Traccar, Cacti (CVE-2024-25641) and others; patch needed, ongoing. <a href="https://zerodayfindings.com/security-updates/known-exploited">Source</a></li>
-<li><strong>PHP2Shell (PAN-OS, Check Point, FortiSOAR; Global):</strong> ongoing, still exploited. <a href="https://unit42.paloaltonetworks.com/cve-2026-109618-cve-2026-109619/">Unit 42</a></li>
+<li><strong>J.B. Hunt (USA / Lowell, Arkansas):</strong> WhiteArmor claim → J.B. Hunt confirmed a cyber incident; ongoing. <a href="https://breachnews.com/ransomware/jb-hunt-ryder-echo-whitearmor-ransomware-claims/">Breachnews</a></li>
+<li><strong>Visa / JPMorgan (USA):</strong> Visa confirmed a third-party APAC provider incident (its systems unaffected); JPMorgan attributes its outage to a software bug; n0n 48-hr deadline; ongoing. <a href="https://www.techradar.com/pro/security/visa-confirms-apparent-cyberattack-hackers-also-claim-hit-on-jpmorgan">TechRadar</a></li>
+<li><strong>Apple iCloud/App Store (Global):</strong> ongoing → resolved; Apple says an internal update caused it. <a href="https://www.euronews.com/2026/11/18/apple-outage-hits-app-store-becoming-the-latest-casualty-of-major-cyber-breakdowns">Euronews</a></li>
+<li><strong>NSA internal network (USA):</strong> ongoing → mission-critical capabilities remained operational; described as degradation during maintenance. <a href="https://www.npr.org/2026/11/18/nx-s1-6044230/concerns-grow-after-spate-of-tech-outages-nationwide">NPR</a></li>
+<li><strong>Spectrum/Charter (USA):</strong> ~2h broadband outage from ~midnight CST Nov 18, resolved. <a href="https://instatus.com/now/spectrum.com">Instatus</a></li>
 </ul></article>
 <footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
