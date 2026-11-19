@@ -1,7 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Internet &amp; Cloud Health Digest</title><id>https://papagiglio.github.io/internet-status-digest/</id>
 <link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/"/><link rel="self" type="application/atom+xml" href="https://papagiglio.github.io/internet-status-digest/atom.xml"/>
-<updated>2026-11-18T15:59:34-06:00</updated><author><name>Internet Status</name></author>
+<updated>2026-11-19T12:00:00-06:00</updated><author><name>Internet Status</name></author>
+<entry><title>Internet &amp; Cloud Health Digest — Nov 19, 2026</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/2026-11-19.html"/><id>https://papagiglio.github.io/internet-status-digest/2026-11-19.html</id>
+<published>2026-11-19T12:00:00-06:00</published><updated>2026-11-19T12:00:00-06:00</updated><summary>Pakistan (SEA-ME-WE 5 cable near Strait of Hormuz): intermittent connectivity, traffic rerouted; ongoing; DIGI (Spain, nationwide): broadband/fiber outage, mobile unaffected; status unclear, likely ongoing; Security vendors: Fortinet Nov advisories (98 vulns, 19 critical; patches out), Palo Alto…</summary><content type="html">&lt;h1&gt;Internet &amp;amp; Cloud Health Digest — Thu Nov 19, 2026 (noon CST)&lt;/h1&gt;
+&lt;p&gt;Source: Scout run 2026-11-19-1035.md, plus direct checks (OCI, Azure, Cleo, Microsoft 365, FAA, federal agencies, ransomware trackers, BleepingComputer/Reuters searches, BlueVoyant).&lt;/p&gt;
+&lt;h2&gt;1. Cyber incidents&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Mastercard (cardholder benefit-program data)&lt;/strong&gt; — Financial services / payments; USA / Purchase, New York (HQ); Threat actor: n0n; Reported: Nov 19; Status: Confirmed (third-party provider).
+Mastercard said a third-party provider incident exposed a limited number of email addresses from a small subset of cardholders in a specific benefit program. Its payment network is unaffected. Cybernews estimates about 2,000 Mastercard customers if the data is authentic.
+Supply chain risk: the same unnamed Asia-Pacific marketing/loyalty provider also hit Visa and JPMorgan; other clients of that vendor may be exposed.
+Sources: &lt;a href=&quot;https://www.investing.com/news/stock-market-news/jpmorgan-says-thirdparty-vendors-targeted-in-cyberattack-5039129&quot;&gt;Reuters via Investing.com&lt;/a&gt;, &lt;a href=&quot;https://www.theverge.com/tech/1037695/jpmorgan-chase-cyberattack&quot;&gt;The Verge&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Drive Medical (Drive DeVilbiss Healthcare)&lt;/strong&gt; — Healthcare / medical equipment manufacturing and distribution; USA / Not stated (US-based); Threat actor: Vortex; Reported: Nov 17–18; Status: Claimed (unverified).
+Vortex listed Drive Medical on its leak site, claiming about 1.44 million records. Drive Medical has not confirmed.
+Supply chain risk: large distributor to hospitals and home-care channels; leaked data could expose provider and patient information.
+Source: &lt;a href=&quot;https://undercodenews.com/vortex-ransomware-claims-drive-medical-in-alleged-144-million-record-healthcare-data-breach-video/&quot;&gt;Undercode News&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sonoco&lt;/strong&gt; — Manufacturing (packaging); USA / Hartsville, South Carolina (HQ, per company; not stated in source); Threat actor: Helix; Reported: Nov 17; Status: Claimed (unverified).
+Helix listed Sonoco on its leak site; no data or confirmation published yet.
+Supply chain risk: major packaging supplier to food, consumer and industrial customers; disruption would ripple downstream.
+Source: &lt;a href=&quot;https://breaches.portend.ai/leak&quot;&gt;Portend breach tracker&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;2. Notable Ransomware Victims&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Day&lt;/th&gt;
+&lt;th&gt;Organization&lt;/th&gt;
+&lt;th&gt;Industry&lt;/th&gt;
+&lt;th&gt;Country / Location&lt;/th&gt;
+&lt;th&gt;Group&lt;/th&gt;
+&lt;th&gt;Status&lt;/th&gt;
+&lt;th&gt;Summary&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Nov 17&lt;/td&gt;
+&lt;td&gt;West-Com Nurse Call Systems&lt;/td&gt;
+&lt;td&gt;Healthcare technology&lt;/td&gt;
+&lt;td&gt;USA / Not stated&lt;/td&gt;
+&lt;td&gt;EndZone&lt;/td&gt;
+&lt;td&gt;Claimed&lt;/td&gt;
+&lt;td&gt;Claims 15GB exfiltrated and partial encryption, leaving call systems running. &lt;a href=&quot;https://breaches.portend.ai/leak&quot;&gt;Portend&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nov 18&lt;/td&gt;
+&lt;td&gt;FAIR Health&lt;/td&gt;
+&lt;td&gt;Healthcare data&lt;/td&gt;
+&lt;td&gt;USA / Not stated&lt;/td&gt;
+&lt;td&gt;PixelLeaks&lt;/td&gt;
+&lt;td&gt;Claimed&lt;/td&gt;
+&lt;td&gt;Listed on the leak site Nov 18; no details published. &lt;a href=&quot;https://breaches.portend.ai/leak&quot;&gt;Portend&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nov 18&lt;/td&gt;
+&lt;td&gt;CobbleStone Software&lt;/td&gt;
+&lt;td&gt;Technology&lt;/td&gt;
+&lt;td&gt;USA / Not stated&lt;/td&gt;
+&lt;td&gt;DireWolf&lt;/td&gt;
+&lt;td&gt;Claimed&lt;/td&gt;
+&lt;td&gt;Listed on the leak site Nov 18. &lt;a href=&quot;https://www.derp.ca/ransomware/&quot;&gt;Derp&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nov 18&lt;/td&gt;
+&lt;td&gt;Jackson Walker; Tarter Krinsky &amp;amp; Drogin LLP&lt;/td&gt;
+&lt;td&gt;Professional services (law)&lt;/td&gt;
+&lt;td&gt;USA / Not stated&lt;/td&gt;
+&lt;td&gt;Silent Ransom Group&lt;/td&gt;
+&lt;td&gt;Claimed&lt;/td&gt;
+&lt;td&gt;Two law firms listed Nov 18. &lt;a href=&quot;https://www.derp.ca/ransomware/&quot;&gt;Derp&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nov 18&lt;/td&gt;
+&lt;td&gt;Terminais&lt;/td&gt;
+&lt;td&gt;Transportation / logistics&lt;/td&gt;
+&lt;td&gt;Mozambique / Not stated&lt;/td&gt;
+&lt;td&gt;MedusaLocker&lt;/td&gt;
+&lt;td&gt;Claimed&lt;/td&gt;
+&lt;td&gt;Listed Nov 18. &lt;a href=&quot;https://www.derp.ca/ransomware/&quot;&gt;Derp&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nov 18&lt;/td&gt;
+&lt;td&gt;SOGELEC Iskan for Electrical Contracting&lt;/td&gt;
+&lt;td&gt;Energy &amp;amp; utilities&lt;/td&gt;
+&lt;td&gt;Qatar / Not stated&lt;/td&gt;
+&lt;td&gt;n0n&lt;/td&gt;
+&lt;td&gt;Claimed&lt;/td&gt;
+&lt;td&gt;Listed Nov 18. &lt;a href=&quot;https://www.derp.ca/ransomware/&quot;&gt;Derp&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nov 18&lt;/td&gt;
+&lt;td&gt;Powers &amp;amp; Sons (powersandsons.com)&lt;/td&gt;
+&lt;td&gt;Manufacturing&lt;/td&gt;
+&lt;td&gt;USA / Not stated&lt;/td&gt;
+&lt;td&gt;Settra&lt;/td&gt;
+&lt;td&gt;Claimed&lt;/td&gt;
+&lt;td&gt;Listed Nov 18. &lt;a href=&quot;https://www.derp.ca/ransomware/&quot;&gt;Derp&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nov 18&lt;/td&gt;
+&lt;td&gt;Primecare of MI; Softline Furniture&lt;/td&gt;
+&lt;td&gt;Healthcare; Retail&lt;/td&gt;
+&lt;td&gt;USA / Not stated&lt;/td&gt;
+&lt;td&gt;LockBit&lt;/td&gt;
+&lt;td&gt;Claimed&lt;/td&gt;
+&lt;td&gt;Both listed Nov 18. &lt;a href=&quot;https://www.derp.ca/ransomware/&quot;&gt;Derp&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nov 18&lt;/td&gt;
+&lt;td&gt;Audiotec; Bench Equity&lt;/td&gt;
+&lt;td&gt;Technology; Financial services&lt;/td&gt;
+&lt;td&gt;Not stated&lt;/td&gt;
+&lt;td&gt;Akira&lt;/td&gt;
+&lt;td&gt;Claimed&lt;/td&gt;
+&lt;td&gt;Listed Nov 18. &lt;a href=&quot;https://www.derp.ca/ransomware/&quot;&gt;Derp&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nov 18&lt;/td&gt;
+&lt;td&gt;STL International Pte Ltd&lt;/td&gt;
+&lt;td&gt;Not stated&lt;/td&gt;
+&lt;td&gt;Singapore&lt;/td&gt;
+&lt;td&gt;Krybit&lt;/td&gt;
+&lt;td&gt;Claimed&lt;/td&gt;
+&lt;td&gt;Listed Nov 18. &lt;a href=&quot;https://www.derp.ca/ransomware/&quot;&gt;Derp&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nov 18&lt;/td&gt;
+&lt;td&gt;n0n batch (Companies #217–241, US/UK/Canada/Mexico/Philippines)&lt;/td&gt;
+&lt;td&gt;Not stated&lt;/td&gt;
+&lt;td&gt;Multiple&lt;/td&gt;
+&lt;td&gt;n0n&lt;/td&gt;
+&lt;td&gt;Claimed&lt;/td&gt;
+&lt;td&gt;About 25 unnamed listings in ~1 hour. &lt;a href=&quot;https://www.derp.ca/ransomware/&quot;&gt;Derp&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;3. Internet/network outages, security/network firm issues, cloud &amp;amp; SaaS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Pakistan (SEA-ME-WE 5 cable near Strait of Hormuz):&lt;/strong&gt; intermittent connectivity, traffic rerouted; ongoing. &lt;a href=&quot;https://www.tomshardware.com/networking/pakistan-undersea-cable-fault-causes-internet-failure-near-strait-of-hormuz-fault-detected-offshore-weeks-after-iran-threatened-infrastructure-in-the-region&quot;&gt;Tom&#x27;s Hardware&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DIGI (Spain, nationwide):&lt;/strong&gt; broadband/fiber outage, mobile unaffected; status unclear, likely ongoing. &lt;a href=&quot;https://www.larazon.es/tecnologia-consumo/operadoras/digi-se-ha-caido-esta-fallando-cuando-volvera-conexion_202611196aff0d24f6b335433bb5d2c3.html&quot;&gt;La Razón&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Security vendors:&lt;/strong&gt; Fortinet Nov advisories (98 vulns, 19 critical; patches out), Palo Alto Panorama authenticated RCE fix, CISA KEV adds Nov 17–18 (Synology DSM, LiteLLM, REDCap, Apache Axis, Puppet Enterprise); Zscaler OpenJDK patch resolved. &lt;a href=&quot;https://digital.nhs.uk/cyber-alerts/2026/cc-4888&quot;&gt;NHS Digital&lt;/a&gt;, &lt;a href=&quot;https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog&quot;&gt;CISA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;All clear: Oracle OCI (Normal Performance), Azure (feed empty), Cleo (all operational), Microsoft 365/Outlook/Teams (no active incident; Nov 12–13 outage backlog clearing per &lt;a href=&quot;https://fortune.com/2026/11/19/microsoft-365-outlook-outage-email-backlog/&quot;&gt;Fortune&lt;/a&gt;), AWS/GCP/Cloudflare (no new major), other EDI VANs (nothing found), AI services (nothing found), Federal agencies checked and clear (no new non-cyber outages, CISA emergency directives or shutdowns). BlueVoyant: no new posts found in the last 24h.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;4. Status changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;JPMorgan Chase (USA / New York):&lt;/strong&gt; n0n claim → JPMorgan confirmed third-party vendors were attacked and marketing data (names, emails, ~16,000 records) may be exposed; no link to this week&#x27;s outage, which it blames on a software bug; ongoing. &lt;a href=&quot;https://www.investing.com/news/stock-market-news/jpmorgan-says-thirdparty-vendors-targeted-in-cyberattack-5039129&quot;&gt;Reuters via Investing.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Visa (USA / APAC):&lt;/strong&gt; third-party confirmed → n0n leaked data Nov 19 (~6,000 premium dining/loyalty customers, mainly Asia-Pacific); no payment data; ongoing. &lt;a href=&quot;https://cybernews.com/security/visa-jpmorgan-data-breach/&quot;&gt;Cybernews&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NVIDIA (USA / Santa Clara, CA):&lt;/strong&gt; Gentlemen claim → NVIDIA says it is investigating an incident that may have affected a third-party partner and found no sign its own systems were hit; leak countdown ends Nov 28. &lt;a href=&quot;https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/&quot;&gt;BleepingComputer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Osaki Electric (Japan / Tokyo):&lt;/strong&gt; confirmed; servers encrypted Nov 17, smart-meter production and shipments suspended; Qilin listed it Nov 18; ongoing. &lt;a href=&quot;https://www.osaki.co.jp/en/ir/news/auto_20261118582910/pdfFile.pdf&quot;&gt;Osaki notice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FAA Nov 13 ground stop (USA, nationwide):&lt;/strong&gt; FAA says root cause announcement expected this week; Juniper router installs paused; engineers replicated the overload in the lab; not cyber. &lt;a href=&quot;https://www.aol.com/articles/us-plans-announce-cause-outage-144854000.html&quot;&gt;Reuters via AOL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Wellington IT (Belfast, UK/Ireland):&lt;/strong&gt; still investigating; &lt;strong&gt;Microsoft Agent Framework PyPI (Global):&lt;/strong&gt; malicious versions quarantined, no formal resolution. (Previously alerted Nov 18.)&lt;/li&gt;
+&lt;/ul&gt;</content></entry>
 <entry><title>Alert: Microsoft Agent Framework PyPI package compromised with credential stealer (Ongoing)</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/alerts/2026-11-18-1559-microsoft-agent-framework-pypi-package-compromised.html"/><id>https://papagiglio.github.io/internet-status-digest/alerts/2026-11-18-1559-microsoft-agent-framework-pypi-package-compromised.html</id>
 <published>2026-11-18T15:59:34-06:00</published><updated>2026-11-18T15:59:34-06:00</updated><summary>Malicious versions 1.26.1 and 1.26.2 of Microsoft&#x27;s agent-framework PyPI package (about 200,000 monthly downloads) were published Nov 17 to steal Azure, AWS, GitHub and other cloud credentials from developer systems (Global; Microsoft is HQ&#x27;d in Redmond, US). Status: Ongoing.</summary><content type="html">&lt;p&gt;&lt;strong&gt;Microsoft Agent Framework PyPI package compromised with credential stealer&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Malicious versions 1.26.1 and 1.26.2 of Microsoft&amp;#x27;s agent-framework PyPI package (about 200,000 monthly downloads) were published Nov 17 to steal Azure, AWS, GitHub and other cloud credentials from developer systems (Global; Microsoft is HQ&amp;#x27;d in Redmond, US).&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Status: Ongoing&lt;/li&gt;&lt;li&gt;Source: &lt;a href=&quot;https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/&quot;&gt;BleepingComputer&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Alert time: Nov 18, 2026 3:59 PM CST&lt;/li&gt;&lt;/ul&gt;</content></entry>
 <entry><title>Alert: Wellington IT breach exposes payee data of ~40 Irish credit unions (Ongoing)</title><link rel="alternate" type="text/html" href="https://papagiglio.github.io/internet-status-digest/alerts/2026-11-18-1559-wellington-it-breach-exposes-payee-data-of-40-iris.html"/><id>https://papagiglio.github.io/internet-status-digest/alerts/2026-11-18-1559-wellington-it-breach-exposes-payee-data-of-40-iris.html</id>
