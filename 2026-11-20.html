@@ -1,0 +1,167 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Internet &amp; Cloud Health Digest — Nov 20, 2026</title>
+<link rel="alternate" type="application/rss+xml" title="Internet &amp; Cloud Health Digest (RSS)" href="https://papagiglio.github.io/internet-status-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Internet &amp; Cloud Health Digest (Atom)" href="https://papagiglio.github.io/internet-status-digest/atom.xml">
+<link rel="canonical" href="https://papagiglio.github.io/internet-status-digest/2026-11-20.html"><style>body{font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:46rem;margin:0 auto;padding:1rem;color:#1d1d1f;background:#fff}
+header{border-bottom:2px solid #0b5cad;margin-bottom:1rem;padding-bottom:.5rem}header h1{margin:.2rem 0;font-size:1.5rem}header h1 a{color:inherit;text-decoration:none}
+nav a,.sub a{margin-right:1rem}a{color:#0b5cad}ul{padding-left:1.2rem}li{margin:.2rem 0}.note{color:#555;font-size:.9rem}
+article p strong:only-child{display:block;margin-top:1.2rem;font-size:1.05rem}code{background:#f2f2f2;padding:0 .2rem;border-radius:3px}
+footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85rem;color:#666}
+@media (prefers-color-scheme:dark){body{background:#111;color:#e6e6e6}a{color:#6cb4ff}code{background:#222}.note,footer{color:#aaa}}</style></head><body>
+<header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
+<p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
+<nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
+<article><p class="note">Digest for Nov 20, 2026</p><h1>Internet &amp; Cloud Health Digest — Fri Nov 20, 2026 (noon CST)</h1>
+<p>Source: Scout run 2026-11-20-1030.md, plus direct checks (OCI, Azure, Cleo, Cloudflare, OpenAI, Claude, CISA KEV, FAA/federal agencies, ransomware trackers, BleepingComputer/SecurityWeek/Nextgov searches). BlueVoyant site blocked automated access (Cloudflare challenge), so no posts could be verified.</p>
+<h2>1. Cyber incidents</h2>
+<p><strong>U.S. Department of Agriculture (USDA) — Farm Production and Conservation systems</strong> — Government (agriculture); USA / Washington, DC (HQ), nationwide FSA/NRCS offices; Threat Actor: Unknown; Reported: Nov 19 (internal notice Nov 16); Status: Investigating (ongoing outages).
+USDA's cybersecurity operations center "uncovered a security incident," forcing resets of all database passwords and applications, which has caused multi-day outages of tools for farm loans, payments and crop insurance; some staff also had VPN trouble Thursday. It is unclear who is responsible or whether data was taken; USDA has not publicly confirmed a breach, and officials have described the outages as updates/maintenance.
+Supply chain risk: farmers, lenders and crop-insurance partners depend on these payment and loan tools; delays in federal payments and possible exposure of producer data.
+Sources: <a href="https://www.nextgov.com/cybersecurity/2026/11/usda-grapples-security-breach-it-staff-take-multiple-systems-offline/417350/">Nextgov/FCW</a>, <a href="https://www.dtnpf.com/agriculture/web/ag/columns/washington-insider/article/2026/11/19/usda-loan-software-systems-face-amid">DTN</a>, <a href="https://cybernews.com/security/usda-outage-alleged-security-incident/">Cybernews</a></p>
+<p><strong>SBC Medical Group Holdings</strong> — Healthcare services; USA / California (HQ), patients in Japan; Threat Actor: Unknown; Reported: Nov 20; Status: Confirmed (remediated, investigation continuing).
+SEC filing discloses hackers accessed a managed online platform and stole data on over 2 million people tied to Japanese clinics (names, contact details, dates of birth, some treatment info, 14 credit cards, passwords). A separate incident at the Tribeau reservation service exposed about 19,000 people.
+Supply chain risk: third-party reservation platform (Tribeau) and clinic partners affected; credential reuse risk from stolen passwords.
+Source: <a href="https://www.securityweek.com/sbc-medical-group-data-breach-impacts-over-2-million/">SecurityWeek</a></p>
+<h2>2. Notable Ransomware Victims</h2>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Organization</th>
+<th>Industry</th>
+<th>Country / Location</th>
+<th>Group</th>
+<th>Status</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nov 19–20</td>
+<td>Boeing (Boeing Sikorsky Aircraft Support)</td>
+<td>Aerospace / defense</td>
+<td>USA / Not stated</td>
+<td>INC Ransom</td>
+<td>Claimed</td>
+<td>Group claims complete compromise of a Boeing subsidiary unit; unverified. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 19–20</td>
+<td>Eni</td>
+<td>Energy</td>
+<td>Italy / Not stated</td>
+<td>INC Ransom</td>
+<td>Claimed</td>
+<td>Claims 18.78 GB of contracts and supplier agreements. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 20</td>
+<td>Halfords Group plc</td>
+<td>Retail (automotive/cycling)</td>
+<td>United Kingdom / Not stated</td>
+<td>n0n</td>
+<td>Claimed</td>
+<td>Listed on n0n's leak site; no confirmation. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 20</td>
+<td>Guardant Health</td>
+<td>Healthcare (diagnostics)</td>
+<td>USA / Not stated</td>
+<td>n0n</td>
+<td>Claimed</td>
+<td>Listed on n0n's leak site; no confirmation. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 20</td>
+<td>William Cook Holdings</td>
+<td>Manufacturing (industrial)</td>
+<td>United Kingdom / Sheffield</td>
+<td>Aurora</td>
+<td>Claimed</td>
+<td>Listed on Aurora's leak site. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 20</td>
+<td>Clarkesville Police Department / City of Clarkesville</td>
+<td>Government</td>
+<td>USA / Georgia</td>
+<td>Rhysida</td>
+<td>Claimed</td>
+<td>Municipal police department listed on leak site. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 19</td>
+<td>Smith &amp; Wesson; UCHealth</td>
+<td>Manufacturing (firearms); Healthcare</td>
+<td>USA / Not stated</td>
+<td>Handsome Boy Hacking Club</td>
+<td>Claimed</td>
+<td>Both listed within a day; unverified. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 20</td>
+<td>Ekwiik (Ideal Prepaid)</td>
+<td>Utilities / telecom prepaid platform</td>
+<td>Botswana / Not stated</td>
+<td>n0n</td>
+<td>Claimed</td>
+<td>Listed on n0n's leak site. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 20</td>
+<td>Ban Lee Heng Motor (Melaka)</td>
+<td>Automotive</td>
+<td>Malaysia / Melaka</td>
+<td>Climax</td>
+<td>Claimed</td>
+<td>Claims 26 GB / 40,111 files. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 20</td>
+<td>Pecora Corporation</td>
+<td>Manufacturing (building products)</td>
+<td>USA / Not stated</td>
+<td>Akira</td>
+<td>Claimed</td>
+<td>Listed on Akira's leak site. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 20</td>
+<td>Northland Truss Systems; BOH Electronics</td>
+<td>Manufacturing</td>
+<td>USA / Not stated</td>
+<td>Majinahanashi</td>
+<td>Claimed</td>
+<td>Publication scheduled Nov 23. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 17–18</td>
+<td>AARP; Marketech International; Fort Smith EMS; PanLink</td>
+<td>Non-profit; Technology; Healthcare; Consulting</td>
+<td>USA (Sweden for PanLink) / Not stated</td>
+<td>The Gentlemen</td>
+<td>Claimed</td>
+<td>Listed alongside the NVIDIA claim; AARP has not confirmed. <a href="https://atlas.brandefense.io/ransomware-intelligence/groups/the-gentlemen">Brandefense</a></td>
+</tr>
+</tbody>
+</table>
+<h2>3. US federal agencies</h2>
+<ul>
+<li><strong>NSA (NSANet, USA / Fort Meade, MD):</strong> classified network outage that began Nov 17 reported resolved Nov 20 (per X trending summary; officials attributed it to PHP2Shell patching, not an attack). <a href="https://applescoop.org/story/are-outages-connected-cyberattack-dni-dhs-fbi-congress-hearing">CBS via AppleScoop</a></li>
+</ul>
+<h2>4. Internet/network outages, security/network firm issues, cloud &amp; SaaS</h2>
+<ul>
+<li><strong>Akamai (Global; Singapore/Japan edge):</strong> "Reporting Issues" incident (fix in, data catching up) plus Singapore/Japan edge and config-deployment delay incidents, status unconfirmed as of Scout sweep, ongoing/monitoring. <a href="https://www.akamaistatus.com/incidents/bjf3f254x3rd">Akamai status</a></li>
+<li><strong>Airtel (Nigeria/India):</strong> network failures reported ongoing per X trending summary, unconfirmed by carrier. <a href="https://x.com/i/trending/2123814048240431524">X</a></li>
+<li><strong>CISA KEV (Global):</strong> Apache Roller deserialization RCE CVE-2026-129448 added Nov 20 (catalog now 1,790). <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a></li>
+<li>All clear: Oracle OCI (Normal Performance), Azure (feed empty), Cleo (all operational), Microsoft 365/Outlook/Teams (no active incident), OpenAI and Claude (operational), AWS/GCP (no new major), other EDI VANs (nothing found), Federal agencies checked (no other non-cyber outages, CISA emergency directives or shutdowns found). Cloudflare shows only a minor long-running Workers Event Subscription issue (Global, since Nov 10).</li>
+</ul>
+<h2>5. Status changes</h2>
+<ul>
+<li><strong>JPMorgan / Visa / Mastercard (USA / APAC vendor):</strong> third-party breach confirmed; BleepingComputer links it to n0n's alleged Qubole (Idera) compromise via stolen credentials Oct 14–26 and data leaked Nov 16; Euronews reports about 16,000 customers' emails/phones leaked, no card data; ongoing. <a href="https://www.bleepingcomputer.com/news/security/vendor-data-breach-exposes-chase-visa-mastercard-customer-info/">BleepingComputer</a></li>
+<li><strong>NVIDIA (USA / Santa Clara, CA):</strong> still no proof posted; leak countdown ends Nov 28; NVIDIA investigating a possible third-party partner incident; unchanged, ongoing. <a href="https://www.theregister.com/security/2026/11/19/nvidia-adds-possible-hack-to-list-of-very-bad-things-under-investigation/5311153">The Register</a></li>
+<li><strong>FAA Nov 13 ground stop (USA, nationwide):</strong> root cause still undetermined; Juniper router installs paused, overload replicated in a lab, no sign of cyberattack; ongoing. <a href="https://www.cnbc.com/2026/11/18/faa-ground-stop-router-investigation.html">CNBC</a></li>
+<li><strong>Microsoft Outlook/Teams outage (Global):</strong> resolved. <a href="https://x.com/i/trending/2123677628573909446">X</a></li>
+</ul></article>
+<footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
