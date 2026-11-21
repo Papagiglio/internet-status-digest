@@ -1,0 +1,143 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Internet &amp; Cloud Health Digest — Nov 21, 2026</title>
+<link rel="alternate" type="application/rss+xml" title="Internet &amp; Cloud Health Digest (RSS)" href="https://papagiglio.github.io/internet-status-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Internet &amp; Cloud Health Digest (Atom)" href="https://papagiglio.github.io/internet-status-digest/atom.xml">
+<link rel="canonical" href="https://papagiglio.github.io/internet-status-digest/2026-11-21.html"><style>body{font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:46rem;margin:0 auto;padding:1rem;color:#1d1d1f;background:#fff}
+header{border-bottom:2px solid #0b5cad;margin-bottom:1rem;padding-bottom:.5rem}header h1{margin:.2rem 0;font-size:1.5rem}header h1 a{color:inherit;text-decoration:none}
+nav a,.sub a{margin-right:1rem}a{color:#0b5cad}ul{padding-left:1.2rem}li{margin:.2rem 0}.note{color:#555;font-size:.9rem}
+article p strong:only-child{display:block;margin-top:1.2rem;font-size:1.05rem}code{background:#f2f2f2;padding:0 .2rem;border-radius:3px}
+footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85rem;color:#666}
+@media (prefers-color-scheme:dark){body{background:#111;color:#e6e6e6}a{color:#6cb4ff}code{background:#222}.note,footer{color:#aaa}}</style></head><body>
+<header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
+<p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
+<nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
+<article><p class="note">Digest for Nov 21, 2026</p><h1>Internet &amp; Cloud Health Digest — Sat Nov 21, 2026, noon CST</h1>
+<p>Source: Scout run 2026-11-21-1040.md, plus direct checks (Cleo, OCI, Azure, M365, FAA NAS, ransomware.live, BlueVoyant, news)</p>
+<h2>1. Cyber incidents</h2>
+<p><strong>FBI — National Crime Information Center (NCIC) intrusion</strong></p>
+<ul>
+<li>Industry: Government / law enforcement</li>
+<li>Country / Location: United States, Washington, DC</li>
+<li>Threat Actor: Unknown (no link to ShinyHunters' September FBI job-portal breach reported)</li>
+<li>Date Reported: Nov 21, 2026</li>
+<li>Status: Investigating</li>
+<li>Summary: CNN, NBC and AP report the FBI is investigating an apparent hack of the NCIC, the nationwide criminal-justice database. It is unclear how the intrusion happened or whether records were taken. Officials say the recent wave of US outages is not linked to criminal activity.</li>
+<li>Supply chain / third-party risk: Police and agencies nationwide query NCIC, so access or integrity problems could affect law-enforcement and background-check workflows.</li>
+<li>Sources: <a href="https://www.nbcnews.com/politics/justice-department/fbi-investigating-potential-breach-crime-database-rcna610536">NBC News</a>, <a href="https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/">BleepingComputer</a>, <a href="https://apnews.com/article/fbi-database-ncic-hack-d066cff87a64a564db0a00172c124972">AP</a></li>
+</ul>
+<p><strong>Rokkatei (六花亭) online shop — payment-page tampering</strong></p>
+<ul>
+<li>Industry: Retail / Food (confectionery)</li>
+<li>Country / Location: Japan, Hokkaido</li>
+<li>Threat Actor: Unknown</li>
+<li>Date Reported: Nov 18–21, 2026</li>
+<li>Status: Confirmed</li>
+<li>Summary: Rokkatei says its online shop payment page was tampered with and confirmed one fraudulent card charge of about ¥50,000 on Nov 20. About 8,000 transactions may be affected, and names, addresses, phones and emails may be exposed.</li>
+<li>Supply chain / third-party risk: Customer card data exposure; the payment-page compromise points to a web-skimming risk for e-commerce platforms.</li>
+<li>Sources: <a href="https://www.rokkatei.co.jp/news/info/20261121-25796/">Rokkatei notice</a></li>
+</ul>
+<h2>2. Notable Ransomware Victims</h2>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Organization</th>
+<th>Industry</th>
+<th>Country / Location</th>
+<th>Group</th>
+<th>Status</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nov 21</td>
+<td>Lucid Motors</td>
+<td>Automotive / Manufacturing</td>
+<td>United States (Not stated)</td>
+<td>Inception</td>
+<td>Claimed</td>
+<td>Inception claims 58 GB including SAP IDs, HR, procurement and supplier documents and an Atlassian API token; Lucid has not confirmed (<a href="https://qpulse.quasarcybertech.com/news/8905/inception-ransomware-group-claims-exfiltration-of-58-gb-of-data-from-lucid-motors">QPulse</a>).</td>
+</tr>
+<tr>
+<td>Nov 20</td>
+<td>Lee Memorial Health System</td>
+<td>Healthcare</td>
+<td>United States</td>
+<td>MedusaLocker</td>
+<td>Claimed</td>
+<td>Group claims 9.3 GB of files exfiltrated; unconfirmed (<a href="https://qpulse.quasarcybertech.com/news/8896/medusalocker-ransomware-group-targets-lee-memorial-health-system">QPulse</a>).</td>
+</tr>
+<tr>
+<td>Nov 21</td>
+<td>Regions Behavioral Hospital</td>
+<td>Healthcare</td>
+<td>United States</td>
+<td>INC Ransom</td>
+<td>Claimed</td>
+<td>Listed on the group's leak site (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+</tr>
+<tr>
+<td>Nov 21</td>
+<td>Dallas Fort Worth Fertility Associates</td>
+<td>Healthcare</td>
+<td>United States</td>
+<td>Barracuda</td>
+<td>Claimed</td>
+<td>Listed on the group's leak site (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+</tr>
+<tr>
+<td>Nov 21</td>
+<td>Realta Technologies</td>
+<td>Technology</td>
+<td>Ireland</td>
+<td>Eclipse</td>
+<td>Claimed</td>
+<td>Listed on the group's leak site (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+</tr>
+<tr>
+<td>Nov 20</td>
+<td>Aixia Group AB</td>
+<td>Technology (AI/IT)</td>
+<td>Sweden</td>
+<td>PixelLeaks</td>
+<td>Claimed</td>
+<td>Nasdaq-listed IT firm listed by the group (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+</tr>
+<tr>
+<td>Nov 20</td>
+<td>Kingsport Cargo</td>
+<td>Logistics</td>
+<td>Not stated</td>
+<td>PixelLeaks</td>
+<td>Claimed</td>
+<td>Logistics firm's intranet listed by the group (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+</tr>
+<tr>
+<td>Nov 20</td>
+<td>Vizrt</td>
+<td>Technology (broadcast software)</td>
+<td>Norway</td>
+<td>Everest</td>
+<td>Claimed</td>
+<td>Listed on the group's leak site (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+</tr>
+</tbody>
+</table>
+<h2>3. US federal agencies</h2>
+<ul>
+<li>FAA national airspace: no ground stops or system failures on the NAS status page, only routine airport delays (<a href="https://nasstatus.faa.gov/">FAA NAS status</a>).</li>
+</ul>
+<h2>4. Internet and network outages, security/network firms, cloud and SaaS</h2>
+<ul>
+<li>Cloudflare Workers/Queues degraded and Akamai reporting/data services degraded, both minor, Global, ongoing (<a href="https://www.isinternetup.com/outages">isinternetup</a>).</li>
+<li>Twilio voice problems in Colombia and the Philippines, ongoing (<a href="https://status.twilio.com">Twilio status</a>).</li>
+<li>CoreWeave cooling issue in US-EAST-15A and Liquid Web network disruption in Lansing, Michigan, USA, ongoing (<a href="https://onlineornot.com/status">OnlineOrNot</a>).</li>
+</ul>
+<h2>5. Status changes</h2>
+<ul>
+<li>USDA security incident (United States, Washington, DC): was investigating; NBC now reports the farmer-payment system was targeted by hackers, still investigating (<a href="https://www.theguardian.com/us-news/2026/nov/21/usda-fbi-outages-cyber-attack">Guardian</a>).</li>
+<li>N-able Mail Assure / SpamExperts breach (Global; HQ United States): still ongoing, management portals, APIs and quarantine remain offline, mail flow normal (<a href="https://pingoru.io/providers/n-able/incidents/12489469">Pingoru</a>).</li>
+</ul>
+<p>All clear: Cleo, OCI, Azure, Microsoft 365/Outlook/Teams, EDI VANs checked (nothing found), and federal agencies (SSA, IRS, VA) show no new outages.</p></article>
+<footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
