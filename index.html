@@ -11,16 +11,31 @@ footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85
 <header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
 <p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
 <nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
-<article><p class="note">Latest: Nov 22, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-22.html">permalink</a></p><h1>Internet &amp; Cloud Health Digest — Sun Nov 22, 2026 (noon CST)</h1>
-<p>Source: Scout run 2026-11-22-1035.md, plus live checks (status pages, news, ransomware trackers, BlueVoyant, federal agencies, EDI VANs)</p>
+<article><p class="note">Latest: Nov 23, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-23.html">permalink</a></p><h1>Internet &amp; Cloud Health Digest — Mon Nov 23, 2026 (noon CST)</h1>
+<p>Source: Scout run 2026-11-23-1030.md, plus live checks (Cleo, OCI, Azure, M365, EDI VANs, FAA, ransomware.live, BlueVoyant, news search)</p>
 <h2>1. Cyber incidents</h2>
-<p><strong>Cleverbridge</strong> — Industry: Technology / e-commerce payments provider | Country / Location: Not stated | Threat actor: Unknown | Reported: Nov 22 | Status: Confirmed
-Cleverbridge detected unauthorized activity on Nov 4; attackers copied payment-card numbers, expiry dates and CVVs but reportedly not other personal data. Supply chain risk: it processes checkout for software merchants, so many downstream vendors' customers could have card data exposed. Source: <a href="https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/">BleepingComputer</a></p>
-<p><strong>Rackspace Spot</strong> — Industry: Technology / cloud provider | Country / Location: United States (Rackspace HQ, San Antonio, Texas; location of affected infrastructure not stated) | Threat actor: Unknown | Reported: Nov 22 | Status: Confirmed, contained
-Attackers used leaked credentials on Nov 17 to create Kubernetes pods, read Secrets and list nodes/volumes; tokens and sessions were revoked and keys rotated. Supply chain risk: customer Kubernetes secrets were readable, so downstream credentials may need rotating. Source: <a href="https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/">BleepingComputer</a></p>
-<p><strong>KEPCO (Korea Electric Power Corp.)</strong> — Industry: Energy / utility (state-run) | Country / Location: South Korea | Threat actor: Unknown | Reported: Nov 22 | Status: Investigating
-KEPCO confirmed another breach (Nov 20) exposing data of about 1.52 million people via KEPCO ON and SRM, including IDs, contacts, bank/card and billing data; the attack vector is still under investigation. Supply chain risk: the SRM procurement system suggests supplier/vendor data may be involved. Source: <a href="https://en.yna.co.kr/view/AEN20261122002700315">Yonhap</a></p>
-<p><strong>Persistent Systems (persistent.com)</strong> and other claims are in the table below.</p>
+<p><strong>Suzlon Energy</strong></p>
+<ul>
+<li>Industry: Energy / Renewables (wind turbines)</li>
+<li>Country / Location: India</li>
+<li>Threat Actor: Unknown</li>
+<li>Date Reported: Nov 23</li>
+<li>Status: Confirmed (investigating)</li>
+<li>Summary: Suzlon confirmed a cyber incident in a Nov 23 filing. Indian peers LTTS and Persistent are also investigating ransomware leak-site claims.</li>
+<li>Supply chain / third-party risk: Large manufacturing and energy supply-chain footprint; customers and suppliers may be exposed if systems or data were affected.</li>
+<li>Source: <a href="https://bharat.digital/originals/persistent-ltts-suzlon-cyber-incident-filings-inc-ransom-leak-site-claims-cert-in-nov-2026/">Bharat Digital</a></li>
+</ul>
+<p><strong>Fisher &amp; Paykel Healthcare</strong></p>
+<ul>
+<li>Industry: Healthcare / Medical devices</li>
+<li>Country / Location: New Zealand (Auckland, HQ not stated in source)</li>
+<li>Threat Actor: Falcon ransomware</li>
+<li>Date Reported: Nov 22–23</li>
+<li>Status: Claimed</li>
+<li>Summary: Falcon claims it stole company data and threatens further attacks. The company has not confirmed it in the sources I found.</li>
+<li>Supply chain / third-party risk: Hospital and respiratory-care customers could be affected if the data is real.</li>
+<li>Source: <a href="https://www.threatintel.co.nz/falcon-ransomware-group-claims-fisher-paykel-healthcare-data-theft-threatens-further-attacks/">ThreatIntel NZ</a></li>
+</ul>
 <h2>2. Notable Ransomware Victims</h2>
 <table>
 <thead>
@@ -36,104 +51,105 @@ KEPCO confirmed another breach (Nov 20) exposing data of about 1.52 million peop
 </thead>
 <tbody>
 <tr>
-<td>Nov 22</td>
-<td>Persistent Systems (persistent.com)</td>
-<td>Technology / IT services</td>
-<td>Not stated</td>
+<td>Nov 23</td>
+<td>Ipsos</td>
+<td>Market research</td>
+<td>France</td>
+<td>Qilin</td>
+<td>Claimed</td>
+<td>Qilin listed Ipsos on its leak site. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
+</tr>
+<tr>
+<td>Nov 23</td>
+<td>Lowell Foods</td>
+<td>Food &amp; Agriculture</td>
+<td>United States</td>
 <td>INC Ransom</td>
 <td>Claimed</td>
-<td>INC Ransom claims tens of thousands of confidential data items; unverified. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+<td>INC Ransom listed the food company. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 22</td>
-<td>Samsung Group (claim)</td>
-<td>Technology / manufacturing</td>
-<td>Not stated (listing shows Netherlands)</td>
-<td>Hyflock</td>
+<td>Nov 23</td>
+<td>Connecticut Interlocal Risk Management Agency</td>
+<td>Government / Insurance pool</td>
+<td>United States, Connecticut</td>
+<td>Insomnia</td>
 <td>Claimed</td>
-<td>Hyflock lists a claimed 1TB breach; unverified and not confirmed by Samsung. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+<td>Insomnia listed the municipal risk pool. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 22</td>
-<td>Queens Public Library</td>
-<td>Government / library</td>
-<td>United States, Queens, New York</td>
-<td>The Gentlemen</td>
+<td>Nov 23</td>
+<td>Connecticut Conference of Municipalities</td>
+<td>Government</td>
+<td>United States, Connecticut</td>
+<td>Insomnia</td>
 <td>Claimed</td>
-<td>The group listed the 66-branch public library system. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+<td>Insomnia listed the municipal association. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 22</td>
-<td>Invicta Watch Group</td>
-<td>Retail / consumer goods</td>
+<td>Nov 23</td>
+<td>PSS-Socotherm S.A</td>
+<td>Manufacturing (pipe coating)</td>
 <td>Not stated</td>
 <td>Qilin</td>
 <td>Claimed</td>
-<td>Qilin listed the watch maker. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+<td>Qilin listed the manufacturer. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 22</td>
-<td>ION Asset Architecture UK</td>
-<td>Software</td>
-<td>United Kingdom</td>
-<td>Qilin</td>
+<td>Nov 23</td>
+<td>Saurer Intelligent Technology</td>
+<td>Manufacturing</td>
+<td>China</td>
+<td>Aurora</td>
 <td>Claimed</td>
-<td>Qilin listed the software firm. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+<td>Aurora listed the textile-machinery maker. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 22</td>
-<td>UCA General Insurance Services</td>
-<td>Insurance</td>
-<td>Not stated</td>
-<td>Endzone</td>
+<td>Nov 23</td>
+<td>Aurora Cannabis</td>
+<td>Consumer / Cannabis</td>
+<td>Canada</td>
+<td>Osiris</td>
 <td>Claimed</td>
-<td>Endzone listed the commercial-property insurance program manager. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+<td>Osiris listed the cannabis producer. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 22</td>
-<td>Law Offices of Cynthia A. de Petris</td>
-<td>Legal</td>
-<td>Nicaragua (per listing)</td>
-<td>Rhysida</td>
+<td>Nov 23</td>
+<td>AMI Mechanical Corp</td>
+<td>Construction / Mechanical</td>
+<td>United States</td>
+<td>Eclipse</td>
 <td>Claimed</td>
-<td>Rhysida claims 54.4 GB including client ID documents. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+<td>Eclipse listed the contractor. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
 </tr>
 <tr>
-<td>Nov 21–22</td>
-<td>tiic.com.ph, threeroyal.com, factotal.com, offshore-ocs.com</td>
-<td>Chemicals, finance, offshore</td>
-<td>Philippines (tiic); others Not stated</td>
+<td>Nov 23</td>
+<td>SafePay batch (interprint.es, bienefeld-gmbh.de, spiegelberg.com, traconelectric.com and others)</td>
+<td>Mixed, mostly manufacturing</td>
+<td>Spain, Germany, Romania, Thailand and others</td>
 <td>SafePay</td>
 <td>Claimed</td>
-<td>SafePay listed nine victims in 24 hours, including industrial chemicals manufacturers. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
-</tr>
-<tr>
-<td>Nov 21</td>
-<td>Vegely Welding Inc.</td>
-<td>Manufacturing</td>
-<td>Not stated</td>
-<td>Pear</td>
-<td>Claimed</td>
-<td>Pear claimed the welding firm. <a href="https://qpulse.quasarcybertech.com/news/8910/ransomware-group-pear-claims-vegely-welding-inc-as-victim">QPulse</a></td>
+<td>SafePay posted about 10 small and mid-size firms in one batch. <a href="https://www.ransomware.live/recent">ransomware.live</a></td>
 </tr>
 </tbody>
 </table>
-<p>All rows are leak-site claims, not verified. No BleepingComputer/The Record/SecurityWeek corroboration found for them.</p>
-<h2>3. AI service outages</h2>
-<p>Grok/xAI: minor ongoing degradation on a third-party Gemini model, Global, ongoing; ChatGPT, Claude and Gemini operational. <a href="https://howtoai.com/ai-status/">Status aggregators</a></p>
-<h2>4. Internet, network, cloud and business outages</h2>
+<h2>4. AI service outages</h2>
 <ul>
-<li>Delta Air Lines weight-and-balance automation failure is delaying flights at Atlanta (Georgia, US) and nationwide, using manual workarounds; ongoing. <a href="https://apnews.com/article/delta-atlanta-flight-delays-d4bdb732da930205ec3453d35c28daa2">AP</a></li>
-<li>Frontier fiber outage in parts of California and Texas, US; ongoing. <a href="https://instatus.com/now/xfinity.com/outages/2026-11-22-01">Scout/Instatus</a></li>
-<li>Xfinity (Comcast) outage of about 4 hours on Nov 22, US; resolved, no global DNS/BGP issue. <a href="https://instatus.com/now/xfinity.com/outages/2026-11-22-01">Instatus</a></li>
-<li>Cloudflare Chicago (ORD) network-performance issue early Nov 22, Chicago, US; resolved after about 41 minutes. <a href="https://isdown.app/status/cloudflare/incidents/693155-network-performance-issues-in-chicago-datacenter-ord">IsDown</a></li>
-<li>AWS brief ~11-minute issue Nov 21, region not stated; resolved (aggregator report only). <a href="https://downlivemap.com/outage/11947-amazon-web-services-outage-november-21-2026/">DownLiveMap</a></li>
+<li>OpenAI had minor issues, and a GPT-6 conversation-error incident was resolved. Global. Resolved. <a href="https://rewindex.com/outages/2026-11-23">Rewindex Nov 23</a></li>
 </ul>
-<h2>5. Status changes</h2>
+<h2>5. Internet, network, cloud and SaaS issues</h2>
 <ul>
-<li>N-able Mail Assure / SpamExperts (Global): dashboard and API access restored Nov 21, phased recovery, ongoing → resolved/recovering. <a href="https://pingoru.io/providers/n-able/incidents/12489469">Pingoru</a></li>
-<li>FAA nationwide ground stop of Nov 13 (US): root cause now known — fiber/copper conversion at the El Dorado, Arkansas site, where a new HPE Juniper router flooded the FTI network; FAA halted installs of those routers; was "cause pending" → cause identified. <a href="https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers">FAA</a></li>
-<li>Visa/Mastercard/JPMorgan vendor breach (US): now reported as ransomware-linked third-party leak, no card numbers; ongoing. <a href="https://www.foxnews.com/tech/visa-mastercard-jpmorgan-customer-data-leaked">Fox News</a></li>
+<li>Atlassian (Jira, Bitbucket, Trello): an OAuth authentication failure caused login errors and timeouts. Global. Ongoing, with a mitigation applied and recovery under way as of 16:57 UTC (10:57 AM CST). <a href="https://bitbucket.status.atlassian.com/">Bitbucket Status</a></li>
+<li>Cloudflare Workers API: delayed or inconsistent responses. Global. Ongoing, minor. <a href="https://iszdown.com/outages">Iszdown</a></li>
+<li>FAA: ORD (Chicago O'Hare, Illinois, USA) had a staffing ground stop ending 12:15 PM CST. This is routine staffing, not a system failure. Resolving. <a href="https://nasstatus.faa.gov/">FAA NAS</a></li>
 </ul>
-<p>All clear: Cleo, Oracle OCI and Azure (no active events); Microsoft 365/Outlook/Teams operational; Google Cloud no open incidents; EDI VANs (OpenText, IBM Sterling, SPS, TrueCommerce, Descartes, others) no new issues found; US federal agencies checked and clear (FAA NAS, IRS, SSA, VA, CMS, USCIS, State, FEMA, NWS, Login.gov, ID.me, USPS, SAM.gov — no new outages, no CISA emergency directive; CISA's four Nov 20 KEV adds are due Nov 23). BlueVoyant: newest blog is the PHP2Shell supply-chain exposure post (already tracked), nothing new in 24h. <a href="https://www.bluevoyant.com/blog">BlueVoyant</a></p></article>
+<p>All clear: Cleo (operational), Oracle OCI (Normal Performance), Azure (no active events), Microsoft 365/Outlook/Teams (no open incident), SPS Commerce, TrueCommerce/DiCentral, OpenText Trading Grid (no outage). Google Cloud feed could not be fetched. Federal agencies checked and clear except the USDA incident below.</p>
+<h2>6. Status changes</h2>
+<ul>
+<li><strong>Palo Alto PAN-OS PHP2Shell (Global):</strong> previously reported as exploited. It is now ongoing, with attackers chaining it with CVE-2026-46300 for root on 25 systems. Fortinet FortiSOAR is also affected (DoS; patched in 8.0.1, 7.6.7 and 7.5.4). <a href="https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-157/">CSA Singapore</a></li>
+<li><strong>USDA (United States, nationwide):</strong> investigating → still ongoing. Farm payment, loan, GIS and contracting systems remain disrupted, and no attacker is named. <a href="https://www.nextgov.com/cybersecurity/2026/11/usda-grapples-security-breach-it-staff-take-multiple-systems-offline/417350/">Nextgov</a></li>
+<li><strong>Cleverbridge (Global):</strong> card-data breach still ongoing. <a href="https://x.com/i/trending/2124638977361899643">X trending</a></li>
+<li><strong>CISA KEV:</strong> no new entries since Nov 20. <a href="https://www.cisa.gov/cybersecurity-advisories/all.xml">CISA</a></li>
+</ul>
+<p>BlueVoyant: only a Nov 12 identity-threat blog, with no new incidents. <a href="https://www.bluevoyant.com/blog/q3-2026-detection-engineering-identity">BlueVoyant</a></p></article>
 <footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
