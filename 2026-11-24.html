@@ -1,0 +1,202 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Internet &amp; Cloud Health Digest — Nov 24, 2026</title>
+<link rel="alternate" type="application/rss+xml" title="Internet &amp; Cloud Health Digest (RSS)" href="https://papagiglio.github.io/internet-status-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Internet &amp; Cloud Health Digest (Atom)" href="https://papagiglio.github.io/internet-status-digest/atom.xml">
+<link rel="canonical" href="https://papagiglio.github.io/internet-status-digest/2026-11-24.html"><style>body{font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:46rem;margin:0 auto;padding:1rem;color:#1d1d1f;background:#fff}
+header{border-bottom:2px solid #0b5cad;margin-bottom:1rem;padding-bottom:.5rem}header h1{margin:.2rem 0;font-size:1.5rem}header h1 a{color:inherit;text-decoration:none}
+nav a,.sub a{margin-right:1rem}a{color:#0b5cad}ul{padding-left:1.2rem}li{margin:.2rem 0}.note{color:#555;font-size:.9rem}
+article p strong:only-child{display:block;margin-top:1.2rem;font-size:1.05rem}code{background:#f2f2f2;padding:0 .2rem;border-radius:3px}
+footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85rem;color:#666}
+@media (prefers-color-scheme:dark){body{background:#111;color:#e6e6e6}a{color:#6cb4ff}code{background:#222}.note,footer{color:#aaa}}</style></head><body>
+<header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
+<p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
+<nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
+<article><p class="note">Digest for Nov 24, 2026</p><h1>Internet &amp; Cloud Health Digest — Tue Nov 24, 2026 (noon CST)</h1>
+<p>Source: Scout run 2026-11-24-0530.md, plus live checks (status pages, news, ransomware trackers, BlueVoyant, FAA NAS)</p>
+<h2>1. Cyber incidents</h2>
+<p><strong>Keio Corp</strong> (Japan)</p>
+<ul>
+<li>Industry: Transportation / Retail / Education conglomerate</li>
+<li>Country / Location: Japan, Tokyo</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 24 (attack Sep 26)</li>
+<li>Status: Confirmed / Investigating</li>
+<li>Summary: Keio now says up to 11.08M personal records, including passport copies, may be exposed in the September ransomware attack.</li>
+<li>Supply chain / third-party risk: Large travel, retail and transit customer base; passport data raises identity-fraud risk.</li>
+<li>Source: <a href="https://www.nikkei.com/article/DGXZQOUC247GC0U6A121C2000000/">Nikkei</a></li>
+</ul>
+<p><strong>LaLiga</strong> (Spain, Madrid)</p>
+<ul>
+<li>Industry: Sports / Media</li>
+<li>Country / Location: Spain, Madrid</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 24</li>
+<li>Status: Confirmed</li>
+<li>Summary: LaLiga confirmed a cyberattack on its fan-services platform that exposed fans' personal data, and several clubs (e.g. CD Leganés) have acknowledged being affected.</li>
+<li>Supply chain / third-party risk: Shared platform spans many clubs, so exposure is multi-organization.</li>
+<li>Sources: <a href="https://www.laliga.com/noticias/laliga-ha-sido-victima-de-un-ciberataque-que-ha-afectado-a-datos-personales-de-aficionados">LaLiga</a>, <a href="https://www.marca.com/futbol/primera-division/2026/11/24/ciberataque-laliga-lista-clubes-han-reconocido-afectados.html">Marca</a></li>
+</ul>
+<p><strong>Gatwick Airport, third-party payment system</strong> (United Kingdom)</p>
+<ul>
+<li>Industry: Logistics &amp; Transportation (aviation)</li>
+<li>Country / Location: United Kingdom, Gatwick, West Sussex</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 24</li>
+<li>Status: Confirmed / Investigating</li>
+<li>Summary: A breach of a third-party drop-off charge payment system exposed customer login credentials, emails, home addresses, registered cars and in some cases card details.</li>
+<li>Supply chain / third-party risk: Vendor-side breach; other airports using the same provider may be affected (not stated).</li>
+<li>Source: <a href="https://www.bbc.com/news/articles/ckx283l7n17ro">BBC</a></li>
+</ul>
+<p><strong>European Commission, EU Academy</strong> (EU)</p>
+<ul>
+<li>Industry: Government</li>
+<li>Country / Location: Belgium, Brussels (EU institution)</li>
+<li>Threat actor: Unknown (attackers reportedly used the ARTEX AI pentest framework)</li>
+<li>Date reported: Nov 24 (breach Oct 22)</li>
+<li>Status: Confirmed / Investigating</li>
+<li>Summary: The Commission confirmed attackers stole personal data of an undisclosed number of EU Academy users; several apps, including the Sysper HR platform, were taken down and most are restored.</li>
+<li>Supply chain / third-party risk: Learning platform users across member-state agencies.</li>
+<li>Source: <a href="https://www.bleepingcomputer.com/news/security/european-commission-confirms-data-theft-in-eu-academy-breach/">BleepingComputer</a></li>
+</ul>
+<p><strong>McDonald's Japan</strong></p>
+<ul>
+<li>Industry: Food &amp; Restaurants / Retail</li>
+<li>Country / Location: Japan (subsidiary HQ location not stated)</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 21–24</li>
+<li>Status: Confirmed</li>
+<li>Summary: Attackers accessed the official app database, exposing purchase history, IP addresses and customer location information.</li>
+<li>Supply chain / third-party risk: Limited to app users; no supplier impact reported.</li>
+<li>Source: <a href="https://www.bleepingcomputer.com/news/security/mcdonalds-japan-data-breach-exposes-customer-location-information/">BleepingComputer</a></li>
+</ul>
+<p><strong>Gleneagles Hospital Hong Kong, My Gleneagles SmartHealth app</strong></p>
+<ul>
+<li>Industry: Healthcare</li>
+<li>Country / Location: Hong Kong</li>
+<li>Threat actor: Unknown</li>
+<li>Date reported: Nov 24</li>
+<li>Status: Confirmed / Investigating</li>
+<li>Summary: Unauthorised activity in the app's security infrastructure led to a patient data breach; the Department of Health is following up.</li>
+<li>Supply chain / third-party risk: Not stated.</li>
+<li>Source: <a href="https://www.info.gov.hk/gia/general/202611/24/P2026112400707.htm">HK Government</a></li>
+</ul>
+<p><strong>City of El Cajon</strong> (California)</p>
+<ul>
+<li>Industry: Government</li>
+<li>Country / Location: United States, El Cajon, California</li>
+<li>Threat actor: Rhysida (claimed)</li>
+<li>Date reported: Nov 24</li>
+<li>Status: Confirmed network incident / Investigating</li>
+<li>Summary: The city confirmed a network incident after about 8 TB appeared on Rhysida's leak site.</li>
+<li>Supply chain / third-party risk: Resident and vendor data possible.</li>
+<li>Source: <a href="https://www.nbcsandiego.com/news/local/suspected-cyberattack-targets-city-el-cajon/4105754/">NBC San Diego</a></li>
+</ul>
+<p><strong>Capital A</strong> (Malaysia)</p>
+<ul>
+<li>Industry: Aviation / Travel (AirAsia parent)</li>
+<li>Country / Location: Malaysia, Kuala Lumpur area</li>
+<li>Threat actor: Daixin Team (claimed)</li>
+<li>Date reported: Nov 24</li>
+<li>Status: Confirmed / Investigating</li>
+<li>Summary: Capital A says the attack hit redundant, not critical, systems.</li>
+<li>Supply chain / third-party risk: Large travel and logistics footprint; scope unverified.</li>
+<li>Source: <a href="https://theedgemalaysia.com/article/capital-says-recent-cyberattack-did-not-affect-its-critical-systems">The Edge Malaysia</a></li>
+</ul>
+<h2>2. Notable Ransomware Victims</h2>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Organization</th>
+<th>Industry</th>
+<th>Country / Location</th>
+<th>Group</th>
+<th>Status</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nov 24</td>
+<td>Old Dominion University</td>
+<td>Education</td>
+<td>United States (state not stated)</td>
+<td>Qilin</td>
+<td>Claimed</td>
+<td>Qilin listed the university on its leak site. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 24</td>
+<td>Lambert Somec</td>
+<td>Construction / Engineering</td>
+<td>Canada, Quebec</td>
+<td>Secp0</td>
+<td>Claimed</td>
+<td>Secp0 says it reviewed a 1.79M-path file-server tree from the Quebec contractor (~CA$162.7M revenue). <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 24</td>
+<td>Foundations Investment Advisors (fiwealth.com)</td>
+<td>Financial services</td>
+<td>United States, Phoenix, Arizona</td>
+<td>INC Ransom</td>
+<td>Claimed</td>
+<td>INC Ransom listed the SEC-registered advisory firm. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 24</td>
+<td>Mayerhofer Hoch-, Tief- und Ingenieurbau GmbH</td>
+<td>Construction</td>
+<td>Germany</td>
+<td>Qilin</td>
+<td>Claimed</td>
+<td>Qilin listed the German construction firm. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 24</td>
+<td>Vincci Hotels</td>
+<td>Hospitality</td>
+<td>Not stated</td>
+<td>Black X</td>
+<td>Claimed</td>
+<td>Black X claims all customer data including card numbers. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 24</td>
+<td>Liftstar GmbH (Lifta)</td>
+<td>Manufacturing</td>
+<td>Germany</td>
+<td>Aurora</td>
+<td>Claimed</td>
+<td>Aurora listed the family-owned stairlift maker. <a href="https://ransomnews.com/ransomware-attacks-today/">Ransomnews</a></td>
+</tr>
+<tr>
+<td>Nov 24</td>
+<td>U.S. county government website (unnamed)</td>
+<td>Government</td>
+<td>United States (county not stated)</td>
+<td>SoulGroup</td>
+<td>Claimed</td>
+<td>SoulGroup claimed an attack on a county government site. <a href="https://www.dexpose.io/soulgroup-ransomware-attack-on-u-s-county-government-website/">DeXpose</a></td>
+</tr>
+</tbody>
+</table>
+<p>Leak-site entries are operator claims, not confirmed breaches. 32 victims were listed in the past 24 hours (The Gentlemen 12, Aurora 4, Qilin 3).</p>
+<h2>3. Internet and network outages, security/cloud providers</h2>
+<ul>
+<li><strong>Russia (Moscow, St. Petersburg, other regions):</strong> mobile and home internet disruptions across T2, MTS, Yota, Beeline and Megafon continued Nov 24, with Rostelecom also reporting a mass failure; officials link restrictions to security measures — ongoing. <a href="https://meduza.io/en/news/2026/11/23/moscow-and-st-petersburg-residents-report-disruptions-to-mobile-and-home-internet-services">Meduza</a>, <a href="https://ria.ru/20261124/rostelekom-2133596802.html">RIA</a></li>
+<li><strong>Spectrum (United States):</strong> 2,700+ user complaints of outages and slow speeds Nov 23, unconfirmed by the carrier — ongoing/unconfirmed. <a href="https://x.com/search?q=spectrum%20outage">X search</a></li>
+<li><strong>Cloudflare (Global / France):</strong> Magic Transit minor degradation and Email Routing issues in France — ongoing, minor. <a href="https://www.cloudflarestatus.com/">Cloudflare Status</a></li>
+<li><strong>Astro Hosted shared clusters, AWS us-east-1 (United States):</strong> partial outage, recovery expected within hours — ongoing. <a href="https://status.astronomer.io/incidents/01M84W2WHRZ6GVK4555E5ZF5Y9">Astro Status</a></li>
+<li><strong>Spotify (Global):</strong> brief outage for some users — resolved. <a href="https://www.usatoday.com/story/tech/2026/11/24/spotify-down-outage/92938497007/">USA Today</a></li>
+<li><strong>Vendor news (not an outage):</strong> CrowdStrike announced it will acquire Zscaler for about $43.9B. <a href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-zscaler-bringing-network-security-and-zero-trust-to-the-falcon-platform/">CrowdStrike</a></li>
+</ul>
+<h2>4. Status changes</h2>
+<ul>
+<li><strong>Palo Alto PAN-OS/Panorama PHP2Shell (Global):</strong> still ongoing, exploited since about Nov 3; BlueVoyant now says PHP2Shell also reaches WordPress and cPanel. <a href="https://www.bluevoyant.com/blog">BlueVoyant</a>, <a href="https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-157/">CSA Singapore</a></li>
+<li><strong>CISA KEV (United States):</strong> added MONAI Label (CVE-2026-133968) and N-able MailAssure (CVE-2026-134624) on Nov 23, both actively exploited. <a href="https://www.cisa.gov/news-events/alerts/2026/11/23/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA</a></li>
+<li><strong>KEPCO (South Korea):</strong> now confirmed at about 1.5M people affected. <a href="https://www.techradar.com/pro/security/south-korean-power-giant-confirms-data-breach-kepco-says-incident-affected-1-5-million-people">TechRadar</a></li>
+<li><strong>Ipsos (France):</strong> Qilin claim still active, with Roblox and KPMG details reportedly leaked. <a href="https://cybernews.com/security/ipsos-data-leak-qilin-ransomware-gang/">Cybernews</a></li>
+</ul>
+<p><strong>All clear:</strong> Cleo, Oracle Cloud (OCI), Azure, Microsoft 365/Outlook/Teams and Google Cloud show no issues. No EDI VAN issues found. Federal agencies checked and clear (FAA NAS shows only routine airport delays; no new outages, shutdowns or emergency directives). AI providers: no major outage (Claude partial minor only).</p></article>
+<footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
