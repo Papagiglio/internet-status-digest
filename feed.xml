@@ -1,7 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
 <title>Internet &amp; Cloud Health Digest</title><link>https://papagiglio.github.io/internet-status-digest/</link><description>Daily digest of major internet, cloud, AI and EDI VAN outages and cyber incidents. Published around noon Central, plus major incident alerts as they happen.</description>
-<language>en-us</language><lastBuildDate>Wed, 25 Nov 2026 20:09:03 -0600</lastBuildDate><atom:link href="https://papagiglio.github.io/internet-status-digest/feed.xml" rel="self" type="application/rss+xml"/>
+<language>en-us</language><lastBuildDate>Thu, 26 Nov 2026 12:00:00 -0600</lastBuildDate><atom:link href="https://papagiglio.github.io/internet-status-digest/feed.xml" rel="self" type="application/rss+xml"/>
+<item><title>Internet &amp; Cloud Health Digest — Nov 26, 2026</title><link>https://papagiglio.github.io/internet-status-digest/2026-11-26.html</link><guid isPermaLink="true">https://papagiglio.github.io/internet-status-digest/2026-11-26.html</guid>
+<pubDate>Thu, 26 Nov 2026 12:00:00 -0600</pubDate><description>Mitel MiCollab zero-days (CVE-2026-133275/133303/133311/133323/133324) exploited; Drupal Core RCE (CVE-2026-132165) exploited; Capital Bank (Haiti) customer data leak; Cloudflare Dashboard and API (Global): service issues began 10:03 AM CST; a fix is in place and it is being monitored (CDN and edge…</description><content:encoded><![CDATA[<h1>Internet &amp; Cloud Health Digest — Thu Nov 26, 2026 (noon CST)</h1>
+<p>Source: Scout run 2026-11-26-1035.md, plus live checks (Cloudflare, Cleo, OCI, Azure, Microsoft 365, FAA NAS, ransomware.live, BlueVoyant, news search)</p>
+<h2>1. Cyber incidents</h2>
+<p><strong>Mitel MiCollab zero-days (CVE-2026-133275/133303/133311/133323/133324) exploited</strong></p>
+<ul>
+<li>Industry: Technology Provider (unified communications)</li>
+<li>Country / Location: Global (vendor HQ not stated in source)</li>
+<li>Threat Actor: Unknown</li>
+<li>Date Reported: Nov 25–26</li>
+<li>Status: Confirmed (active exploitation; added to CISA KEV Nov 25; federal agencies given 3 days to fix four of them)</li>
+<li>Summary: Five unauthenticated MiCollab flaws, including a CVSS 10 command injection, were exploited before Mitel's Nov 16 advisory in what looks like a data-theft/extortion campaign. No ransomware deployment was confirmed.</li>
+<li>Supply chain / third-party risk: Organizations using MiCollab for voice and collaboration, and their partners, may have exposed call and contact data; patch and review for compromise.</li>
+<li>Sources: <a href="https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/">SecurityWeek</a>, <a href="https://www.cisa.gov/news-events/alerts/2026/11/25/cisa-adds-10-known-exploited-vulnerabilities-catalog">CISA KEV additions</a></li>
+</ul>
+<p><strong>Drupal Core RCE (CVE-2026-132165) exploited</strong></p>
+<ul>
+<li>Industry: Technology Provider (CMS)</li>
+<li>Country / Location: Global</li>
+<li>Threat Actor: Unknown</li>
+<li>Date Reported: Nov 26 (exploitation since Nov 19)</li>
+<li>Status: Confirmed, ongoing</li>
+<li>Summary: Attackers are exploiting a critical Drupal Core remote code execution flaw to hijack sites; upgrading or blocking /core/install.php is the mitigation.</li>
+<li>Supply chain / third-party risk: Many government, retail and media sites and agencies' hosted web properties run Drupal.</li>
+<li>Source: <a href="https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/">BleepingComputer</a></li>
+</ul>
+<p><strong>Capital Bank (Haiti) customer data leak</strong></p>
+<ul>
+<li>Industry: Financial Services</li>
+<li>Country / Location: Haiti (city not stated)</li>
+<li>Threat Actor: Unknown</li>
+<li>Date Reported: Nov 26</li>
+<li>Status: Investigating</li>
+<li>Summary: A leak appears to expose data of more than 100,000 Capital Bank customers, according to the Haitian Times.</li>
+<li>Supply chain / third-party risk: Customers face phishing and fraud risk; no vendor link stated.</li>
+<li>Source: <a href="https://haitiantimes.com/2026/11/26/more-than-100000-capital-bank-customers-data-appear-in-leak-haitian-times-finds-exclusive/">Haitian Times</a></li>
+</ul>
+<h2>2. Notable Ransomware Victims</h2>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Organization</th>
+<th>Industry</th>
+<th>Country / Location</th>
+<th>Group</th>
+<th>Status</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nov 26</td>
+<td>Paramount</td>
+<td>Media</td>
+<td>United States</td>
+<td>Inception</td>
+<td>Claimed</td>
+<td>Inception claims 5.9 TB stolen, with a Nov 27 deadline; not confirmed by the company (<a href="https://www.bismark.it/9860/ransomware-inception-rivendicati-attacchi-contro-paramount-verisk-mcdonalds-e-mattel/">Bismark</a>).</td>
+</tr>
+<tr>
+<td>Nov 26</td>
+<td>Verisk</td>
+<td>Data analytics / insurance</td>
+<td>United States</td>
+<td>Inception</td>
+<td>Claimed</td>
+<td>Inception claims 1.01 TB stolen, with a Nov 27 deadline (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+</tr>
+<tr>
+<td>Nov 26</td>
+<td>McDonald's</td>
+<td>Food service / retail</td>
+<td>United States</td>
+<td>Inception</td>
+<td>Claimed</td>
+<td>Inception claims 293 GB stolen, with a Nov 27 deadline (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+</tr>
+<tr>
+<td>Nov 26</td>
+<td>Mattel</td>
+<td>Manufacturing (toys)</td>
+<td>United States</td>
+<td>Inception</td>
+<td>Claimed</td>
+<td>Inception claims 313 GB stolen, with a Dec 2 deadline (<a href="https://www.bismark.it/9860/ransomware-inception-rivendicati-attacchi-contro-paramount-verisk-mcdonalds-e-mattel/">Bismark</a>).</td>
+</tr>
+<tr>
+<td>Nov 26</td>
+<td>Indonesia national passport database (Directorate General of Immigration)</td>
+<td>Government</td>
+<td>Indonesia</td>
+<td>Hyflock</td>
+<td>Claimed</td>
+<td>Hyflock claims data on 90M+ passports including biometrics and may sell it; no official response yet (<a href="https://qpulse.quasarcybertech.com/news/9238/hyflock-ransomware-group-claims-breach-of-indonesia-national-passport-database">QPulse</a>).</td>
+</tr>
+<tr>
+<td>Nov 24–25</td>
+<td>CSG Systems International</td>
+<td>Technology provider (billing software)</td>
+<td>Not stated</td>
+<td>Falcon</td>
+<td>Claimed</td>
+<td>Falcon claims 1.3 TB including Entra ID and Salesforce data (<a href="https://qpulse.quasarcybertech.com/news/9143/ransomware-group-falcon-claims-1-3-tb-data-theft-from-csg-systems-international">QPulse</a>).</td>
+</tr>
+<tr>
+<td>Nov 24–25</td>
+<td>Siemens Healthineers (Cancer Care / Varian unit)</td>
+<td>Healthcare / technology</td>
+<td>Not stated</td>
+<td>The Gentlemen</td>
+<td>Claimed</td>
+<td>Listed on the leak site with no data volume and no company confirmation (<a href="https://breachnews.com/ransomware/the-gentlemen-ransomware-siemens-healthineers-cancer-care-claim/">BreachNews</a>).</td>
+</tr>
+<tr>
+<td>Nov 25</td>
+<td>Real Time Data Services</td>
+<td>IT / cloud hosting and telephony</td>
+<td>India, Gurugram, Haryana</td>
+<td>The Gentlemen</td>
+<td>Claimed</td>
+<td>Group says the attack hit its cloud hosting and telephony services used by clients worldwide (<a href="https://www.dexpose.io/thegentlemen-ransomware-attack-on-real-time-data-services/">DeXpose</a>).</td>
+</tr>
+<tr>
+<td>Nov 26</td>
+<td>Koh Young Technology</td>
+<td>Manufacturing (inspection equipment)</td>
+<td>South Korea</td>
+<td>Everest</td>
+<td>Claimed</td>
+<td>Newly listed on the leak site (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+</tr>
+<tr>
+<td>Nov 26</td>
+<td>Groupe Antilles-Glaces</td>
+<td>Food / cold chain</td>
+<td>Guadeloupe (France)</td>
+<td>Rhysida</td>
+<td>Claimed</td>
+<td>Newly listed on the leak site (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+</tr>
+<tr>
+<td>Nov 25</td>
+<td>Old Dominion University; Bethany Lutheran College</td>
+<td>Education</td>
+<td>United States</td>
+<td>Qilin</td>
+<td>Claimed</td>
+<td>Both listed by Qilin (<a href="https://intel.rosettalab.dev/threat/2026-11-25">Securlabs summary</a>).</td>
+</tr>
+</tbody>
+</table>
+<h2>3. Internet, network, cloud and SaaS issues</h2>
+<ul>
+<li><strong>Cloudflare Dashboard and API</strong> (Global): service issues began 10:03 AM CST; a fix is in place and it is being monitored (CDN and edge were not affected). Status: ongoing/monitoring. <a href="https://www.cloudflarestatus.com/">Cloudflare Status</a></li>
+<li><strong>OVHcloud Web Hosting, GRA (France) and BHS (Canada) clusters</strong>: sites intermittently error or run slow due to a software issue. Status: ongoing. <a href="https://web-cloud.status-ovhcloud.com/">OVHcloud Web Cloud Status</a></li>
+<li><strong>CoreWeave, US-EAST-15A (United States)</strong>: service disruption affecting GPU nodes. Status: ongoing. <a href="https://rewindex.com/outages/2026-11-26">Rewindex</a></li>
+<li><strong>Attio (Not stated)</strong>: app.attio.com unavailable, labelled critical by the vendor, started about 8:51 AM CST. Status: monitoring. <a href="https://rewindex.com/outages/2026-11-26">Rewindex</a></li>
+<li><strong>SmarTone mobile network (Hong Kong)</strong>: outage left mobile users offline; minor. Status: ongoing. <a href="https://www.scmp.com/news/hong-kong/article/3375900/smartone-network-outage-leaves-hong-kong-mobile-users-offline-and-angry">SCMP</a></li>
+</ul>
+<h2>4. Status changes</h2>
+<ul>
+<li><strong>1Password breach (Toronto, Canada)</strong>: ongoing → new details: the attacker accessed private source code and CI/CD systems via an employee GitHub account and copied limited customer account records (names, emails, identifiers); vaults and Secret Keys not affected, no customer action needed. <a href="https://1password.com/blog/update-on-nov-2026-security-incident">1Password</a>, <a href="https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/">BleepingComputer</a></li>
+</ul>
+<p>Clear: Cleo (all operational), Oracle OCI (Normal Performance), Azure (no active events), Microsoft 365/Outlook/Teams (only a brief Outlook blip about 7:25–7:52 AM CST, resolved), EDI VAN providers (no issues found). Federal agencies checked and clear: FAA NAS (routine airport delays only), IRS, SSA, VA, CMS, USCIS, passports, FEMA, NWS, Login.gov, ID.me, USPS, SAM.gov; no new federal incidents beyond those already reported (FinCEN, FBI NCIC, USDA). BlueVoyant: nothing new in its blog today (page showed no listings).</p>]]></content:encoded></item>
 <item><title>Alert: 1Password breach after employee GitHub account compromise (Ongoing)</title><link>https://papagiglio.github.io/internet-status-digest/alerts/2026-11-25-2009-1password-breach-after-employee-github-account-com.html</link><guid isPermaLink="true">https://papagiglio.github.io/internet-status-digest/alerts/2026-11-25-2009-1password-breach-after-employee-github-account-com.html</guid>
 <pubDate>Wed, 25 Nov 2026 20:09:03 -0600</pubDate><description>1Password, the Toronto, Canada password manager, says an attacker used a compromised employee GitHub account to copy account data for a subset of customers; vaults and encryption keys were not affected. Status: Ongoing.</description><content:encoded><![CDATA[<p><strong>1Password breach after employee GitHub account compromise</strong></p><p>1Password, the Toronto, Canada password manager, says an attacker used a compromised employee GitHub account to copy account data for a subset of customers; vaults and encryption keys were not affected.</p><ul><li>Status: Ongoing</li><li>Source: <a href="https://1password.com/blog/update-on-nov-2026-security-incident">1Password</a></li><li>Alert time: Nov 25, 2026 8:09 PM CST</li></ul>]]></content:encoded></item>
 <item><title>Internet &amp; Cloud Health Digest — Nov 25, 2026</title><link>https://papagiglio.github.io/internet-status-digest/2026-11-25.html</link><guid isPermaLink="true">https://papagiglio.github.io/internet-status-digest/2026-11-25.html</guid>
