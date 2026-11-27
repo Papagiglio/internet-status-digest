@@ -11,41 +11,96 @@ footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85
 <header><h1><a href="https://papagiglio.github.io/internet-status-digest/">Internet &amp; Cloud Health Digest</a></h1>
 <p class="note">Major internet, cloud, AI and EDI VAN outages and cyber incidents from the past 24 hours. Published daily around noon Central (America/Chicago), with major incident alerts added as they happen.</p>
 <nav><a href="https://papagiglio.github.io/internet-status-digest/">Latest</a><a href="https://papagiglio.github.io/internet-status-digest/archive.html">Archive</a><a href="https://papagiglio.github.io/internet-status-digest/feed.xml">Subscribe (RSS)</a><a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></nav></header>
-<article><p class="note">Latest: Nov 26, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-26.html">permalink</a></p><h1>Internet &amp; Cloud Health Digest — Thu Nov 26, 2026 (noon CST)</h1>
-<p>Source: Scout run 2026-11-26-1035.md, plus live checks (Cloudflare, Cleo, OCI, Azure, Microsoft 365, FAA NAS, ransomware.live, BlueVoyant, news search)</p>
+<article><p class="note">Latest: Nov 27, 2026 · <a href="https://papagiglio.github.io/internet-status-digest/2026-11-27.html">permalink</a></p><h1>Internet &amp; Cloud Health Digest — Fri Nov 27, 2026 (noon CST)</h1>
+<p>Source: Scout run 2026-11-27-1030.md, plus live checks (status pages, ransomware.live, BlueVoyant, federal agencies, outage news search)</p>
 <h2>1. Cyber incidents</h2>
-<p><strong>Mitel MiCollab zero-days (CVE-2026-133275/133303/133311/133323/133324) exploited</strong></p>
+<p><strong>U.S. Air Force Cloud One breach</strong></p>
 <ul>
-<li>Industry: Technology Provider (unified communications)</li>
-<li>Country / Location: Global (vendor HQ not stated in source)</li>
+<li>Industry: Government / Defense</li>
+<li>Country / Location: United States (Department of the Air Force)</li>
 <li>Threat Actor: Unknown</li>
-<li>Date Reported: Nov 25–26</li>
-<li>Status: Confirmed (active exploitation; added to CISA KEV Nov 25; federal agencies given 3 days to fix four of them)</li>
-<li>Summary: Five unauthenticated MiCollab flaws, including a CVSS 10 command injection, were exploited before Mitel's Nov 16 advisory in what looks like a data-theft/extortion campaign. No ransomware deployment was confirmed.</li>
-<li>Supply chain / third-party risk: Organizations using MiCollab for voice and collaboration, and their partners, may have exposed call and contact data; patch and review for compromise.</li>
-<li>Sources: <a href="https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/">SecurityWeek</a>, <a href="https://www.cisa.gov/news-events/alerts/2026/11/25/cisa-adds-10-known-exploited-vulnerabilities-catalog">CISA KEV additions</a></li>
-</ul>
-<p><strong>Drupal Core RCE (CVE-2026-132165) exploited</strong></p>
-<ul>
-<li>Industry: Technology Provider (CMS)</li>
-<li>Country / Location: Global</li>
-<li>Threat Actor: Unknown</li>
-<li>Date Reported: Nov 26 (exploitation since Nov 19)</li>
-<li>Status: Confirmed, ongoing</li>
-<li>Summary: Attackers are exploiting a critical Drupal Core remote code execution flaw to hijack sites; upgrading or blocking /core/install.php is the mitigation.</li>
-<li>Supply chain / third-party risk: Many government, retail and media sites and agencies' hosted web properties run Drupal.</li>
-<li>Source: <a href="https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/">BleepingComputer</a></li>
-</ul>
-<p><strong>Capital Bank (Haiti) customer data leak</strong></p>
-<ul>
-<li>Industry: Financial Services</li>
-<li>Country / Location: Haiti (city not stated)</li>
-<li>Threat Actor: Unknown</li>
-<li>Date Reported: Nov 26</li>
+<li>Date Reported: Nov 27</li>
 <li>Status: Investigating</li>
-<li>Summary: A leak appears to expose data of more than 100,000 Capital Bank customers, according to the Haitian Times.</li>
-<li>Supply chain / third-party risk: Customers face phishing and fraud risk; no vendor link stated.</li>
-<li>Source: <a href="https://haitiantimes.com/2026/11/26/more-than-100000-capital-bank-customers-data-appear-in-leak-haitian-times-finds-exclusive/">Haitian Times</a></li>
+<li>Summary: Reuters sources say hackers breached the Air Force's flagship Cloud One platform, found within the past month during an upgrade, and it has disrupted the platform. Scope, attacker and any data theft are unconfirmed, and the Air Force declined to comment.</li>
+<li>Supply chain / third-party risk: Cloud One hosts sensitive tactical, personnel and logistics data, so defense contractors and connected systems may be exposed.</li>
+<li>Source: <a href="https://www.cnbc.com/2026/11/27/hackers-breach-us-air-force-flagship-cloud-one-computing-platform.html">CNBC/Reuters</a></li>
+</ul>
+<p><strong>UK Department for Work and Pensions (DWP)</strong></p>
+<ul>
+<li>Industry: Government</li>
+<li>Country / Location: United Kingdom</li>
+<li>Threat Actor: Unknown</li>
+<li>Date Reported: Nov 27</li>
+<li>Status: Investigating</li>
+<li>Summary: DWP took some online services offline as a precaution after a cyber incident and is working with the NCSC. Regular benefit and pension payments are not affected.</li>
+<li>Supply chain / third-party risk: Contractors and agencies that connect to DWP online services may see disruption; scope not stated.</li>
+<li>Source: <a href="https://www.gov.uk/government/news/temporary-disruption-to-some-dwp-online-services">GOV.UK</a>, <a href="https://www.bbc.com/news/live/c6rrg94lgjrjt">BBC</a></li>
+</ul>
+<p><strong>Manchester Airports Group (MAG)</strong></p>
+<ul>
+<li>Industry: Logistics &amp; Transportation (airports)</li>
+<li>Country / Location: United Kingdom (Manchester, Stansted, East Midlands)</li>
+<li>Threat Actor: Unknown</li>
+<li>Date Reported: Nov 27</li>
+<li>Status: Confirmed</li>
+<li>Summary: MAG says an unauthorized third party accessed data on about 8.7 million customers, mostly email addresses, linked to Wi-Fi sign-ups, parking, lounges and fast-track. No payment data was affected and flight operations were not impacted.</li>
+<li>Supply chain / third-party risk: Customer contact data could fuel phishing against travelers; the access path has not been detailed.</li>
+<li>Source: <a href="https://ilkha.com/english/world/cyberattack-on-three-uk-airports-exposes-data-of-87-million-passengers-558060">İLKHA</a></li>
+</ul>
+<p><strong>Octopus Cards Limited</strong></p>
+<ul>
+<li>Industry: Payments / Transportation</li>
+<li>Country / Location: Hong Kong</li>
+<li>Threat Actor: Unknown</li>
+<li>Date Reported: Nov 27</li>
+<li>Status: Confirmed</li>
+<li>Summary: Octopus detected abnormal activity on Nov 27 and contained it. About 7,500 customers (names, photos, some auto-top-up bank code and amount) and about 22,000 merchants' contact details were affected. Core services still operate and no financial loss has been found.</li>
+<li>Supply chain / third-party risk: Merchant contact data could be used for targeted phishing.</li>
+<li>Source: <a href="https://www.octopus.com.hk/en/corporate/media/press-releases/2026/20261127.html">Octopus press release</a></li>
+</ul>
+<p><strong>SmartPLAY (LCSD contractor system)</strong></p>
+<ul>
+<li>Industry: Government services / Technology provider</li>
+<li>Country / Location: Hong Kong</li>
+<li>Threat Actor: Unknown</li>
+<li>Date Reported: Nov 26–27</li>
+<li>Status: Confirmed</li>
+<li>Summary: Hong Kong's LCSD confirmed its SmartPLAY booking system was illegally accessed, involving personal data linked to about 90,000 Leisure Link accounts. The contractor stopped the hack and the department is investigating.</li>
+<li>Supply chain / third-party risk: The flaw sits in a contractor-run system, so other systems from the same vendor may be affected.</li>
+<li>Source: <a href="https://www.news.gov.hk/eng/2026/11/20261127/20261127_193618_305.html">news.gov.hk</a></li>
+</ul>
+<p><strong>Aptean (ERP software vendor)</strong></p>
+<ul>
+<li>Industry: Technology Provider (ERP for manufacturers, distributors, food)</li>
+<li>Country / Location: United States, Alpharetta, Georgia</li>
+<li>Threat Actor: The Gentlemen</li>
+<li>Date Reported: Nov 26</li>
+<li>Status: Claimed</li>
+<li>Summary: The Gentlemen listed Aptean on its leak site, claiming many terabytes of data including client files. Aptean has made no statement and the claim is unverified.</li>
+<li>Supply chain / third-party risk: High, since Aptean's software serves many manufacturing and food customers.</li>
+<li>Source: <a href="https://breachnews.com/ransomware/the-gentlemen-ransomware-aptean-erp-claim/">BreachNews</a></li>
+</ul>
+<p><strong>Restaurant Brands International (Burger King, Tim Hortons, Popeyes)</strong></p>
+<ul>
+<li>Industry: Food &amp; Retail</li>
+<li>Country / Location: Canada, Toronto (not stated in source; HQ per public record; verify)</li>
+<li>Threat Actor: Inception</li>
+<li>Date Reported: Nov 26</li>
+<li>Status: Claimed</li>
+<li>Summary: Inception claims about 800,000 files (support tickets, loyalty records, partial payment details, OneDrive and Slack exports) and gave a 48-hour deadline. No samples have been shown.</li>
+<li>Supply chain / third-party risk: Franchisee and customer data may be exposed; unverified.</li>
+<li>Source: <a href="https://cybernews.com/security/burger-king-owner-ransomware-claims/">Cybernews</a></li>
+</ul>
+<p><strong>USA Today (Gannett)</strong></p>
+<ul>
+<li>Industry: Media</li>
+<li>Country / Location: United States, New York</li>
+<li>Threat Actor: n0n ransomware group</li>
+<li>Date Reported: Nov 26</li>
+<li>Status: Claimed</li>
+<li>Summary: n0n claims it stole about 166 million subscriber identity records. The company has not yet commented.</li>
+<li>Supply chain / third-party risk: Large subscriber dataset could drive phishing and fraud.</li>
+<li>Source: <a href="https://cybernews.com/security/usa-today-hacker-data-breach/">Cybernews</a></li>
 </ul>
 <h2>2. Notable Ransomware Victims</h2>
 <table>
@@ -63,116 +118,108 @@ footer{margin-top:2rem;border-top:1px solid #ddd;padding-top:.5rem;font-size:.85
 <tbody>
 <tr>
 <td>Nov 26</td>
-<td>Paramount</td>
-<td>Media</td>
-<td>United States</td>
-<td>Inception</td>
-<td>Claimed</td>
-<td>Inception claims 5.9 TB stolen, with a Nov 27 deadline; not confirmed by the company (<a href="https://www.bismark.it/9860/ransomware-inception-rivendicati-attacchi-contro-paramount-verisk-mcdonalds-e-mattel/">Bismark</a>).</td>
-</tr>
-<tr>
-<td>Nov 26</td>
-<td>Verisk</td>
-<td>Data analytics / insurance</td>
-<td>United States</td>
-<td>Inception</td>
-<td>Claimed</td>
-<td>Inception claims 1.01 TB stolen, with a Nov 27 deadline (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
-</tr>
-<tr>
-<td>Nov 26</td>
-<td>McDonald's</td>
-<td>Food service / retail</td>
-<td>United States</td>
-<td>Inception</td>
-<td>Claimed</td>
-<td>Inception claims 293 GB stolen, with a Nov 27 deadline (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
-</tr>
-<tr>
-<td>Nov 26</td>
-<td>Mattel</td>
-<td>Manufacturing (toys)</td>
-<td>United States</td>
-<td>Inception</td>
-<td>Claimed</td>
-<td>Inception claims 313 GB stolen, with a Dec 2 deadline (<a href="https://www.bismark.it/9860/ransomware-inception-rivendicati-attacchi-contro-paramount-verisk-mcdonalds-e-mattel/">Bismark</a>).</td>
-</tr>
-<tr>
-<td>Nov 26</td>
-<td>Indonesia national passport database (Directorate General of Immigration)</td>
-<td>Government</td>
-<td>Indonesia</td>
-<td>Hyflock</td>
-<td>Claimed</td>
-<td>Hyflock claims data on 90M+ passports including biometrics and may sell it; no official response yet (<a href="https://qpulse.quasarcybertech.com/news/9238/hyflock-ransomware-group-claims-breach-of-indonesia-national-passport-database">QPulse</a>).</td>
-</tr>
-<tr>
-<td>Nov 24–25</td>
-<td>CSG Systems International</td>
-<td>Technology provider (billing software)</td>
-<td>Not stated</td>
-<td>Falcon</td>
-<td>Claimed</td>
-<td>Falcon claims 1.3 TB including Entra ID and Salesforce data (<a href="https://qpulse.quasarcybertech.com/news/9143/ransomware-group-falcon-claims-1-3-tb-data-theft-from-csg-systems-international">QPulse</a>).</td>
-</tr>
-<tr>
-<td>Nov 24–25</td>
-<td>Siemens Healthineers (Cancer Care / Varian unit)</td>
-<td>Healthcare / technology</td>
-<td>Not stated</td>
+<td>SynCardia Systems</td>
+<td>Healthcare</td>
+<td>United States, Tucson, Arizona</td>
 <td>The Gentlemen</td>
 <td>Claimed</td>
-<td>Listed on the leak site with no data volume and no company confirmation (<a href="https://breachnews.com/ransomware/the-gentlemen-ransomware-siemens-healthineers-cancer-care-claim/">BreachNews</a>).</td>
+<td>Claims 1.5 TB of finance, clinical and engineering data from the artificial heart maker, unverified (<a href="https://breachnews.com/ransomware/the-gentlemen-ransomware-syncardia-artificial-heart-claim/">BreachNews</a>).</td>
 </tr>
 <tr>
-<td>Nov 25</td>
-<td>Real Time Data Services</td>
-<td>IT / cloud hosting and telephony</td>
-<td>India, Gurugram, Haryana</td>
-<td>The Gentlemen</td>
+<td>Nov 27</td>
+<td>Brit Insurance</td>
+<td>Insurance</td>
+<td>United Kingdom</td>
+<td>IncRansom</td>
 <td>Claimed</td>
-<td>Group says the attack hit its cloud hosting and telephony services used by clients worldwide (<a href="https://www.dexpose.io/thegentlemen-ransomware-attack-on-real-time-data-services/">DeXpose</a>).</td>
+<td>Listed on ransomware.live today (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+</tr>
+<tr>
+<td>Nov 27</td>
+<td>Wolters Kluwer</td>
+<td>Technology / Publishing</td>
+<td>Netherlands</td>
+<td>Direwolf</td>
+<td>Claimed</td>
+<td>Listed on ransomware.live today (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
 </tr>
 <tr>
 <td>Nov 26</td>
-<td>Koh Young Technology</td>
-<td>Manufacturing (inspection equipment)</td>
-<td>South Korea</td>
-<td>Everest</td>
+<td>Eversource</td>
+<td>Utilities</td>
+<td>United States</td>
+<td>Whitearmor</td>
 <td>Claimed</td>
-<td>Newly listed on the leak site (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+<td>Listed on ransomware.live (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
 </tr>
 <tr>
 <td>Nov 26</td>
-<td>Groupe Antilles-Glaces</td>
-<td>Food / cold chain</td>
-<td>Guadeloupe (France)</td>
-<td>Rhysida</td>
+<td>Monolithic Power Systems</td>
+<td>Semiconductors</td>
+<td>United States</td>
+<td>PixelLeaks</td>
 <td>Claimed</td>
-<td>Newly listed on the leak site (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+<td>Listed on ransomware.live (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
 </tr>
 <tr>
-<td>Nov 25</td>
-<td>Old Dominion University; Bethany Lutheran College</td>
+<td>Nov 27</td>
+<td>AVI-SPL</td>
+<td>Technology / AV integration</td>
+<td>United States</td>
+<td>iah6477</td>
+<td>Claimed</td>
+<td>Listed on ransomware.live, alongside Pregis and Blackstone Consulting from the same group (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+</tr>
+<tr>
+<td>Nov 27</td>
+<td>Pregis</td>
+<td>Manufacturing (packaging)</td>
+<td>United States</td>
+<td>iah6477</td>
+<td>Claimed</td>
+<td>Listed on ransomware.live (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+</tr>
+<tr>
+<td>Nov 27</td>
+<td>Thomas More University</td>
 <td>Education</td>
-<td>United States</td>
+<td>Belgium</td>
 <td>Qilin</td>
 <td>Claimed</td>
-<td>Both listed by Qilin (<a href="https://intel.rosettalab.dev/threat/2026-11-25">Securlabs summary</a>).</td>
+<td>Listed on ransomware.live (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
+</tr>
+<tr>
+<td>Nov 27</td>
+<td>Ferrometalco; US CNC Machine Company</td>
+<td>Manufacturing</td>
+<td>Colombia; United States</td>
+<td>SoulGroup</td>
+<td>Claimed</td>
+<td>Both listed on ransomware.live (<a href="https://www.ransomware.live/recent">ransomware.live</a>).</td>
 </tr>
 </tbody>
 </table>
-<h2>3. Internet, network, cloud and SaaS issues</h2>
+<h2>3. US federal agencies</h2>
 <ul>
-<li><strong>Cloudflare Dashboard and API</strong> (Global): service issues began 10:03 AM CST; a fix is in place and it is being monitored (CDN and edge were not affected). Status: ongoing/monitoring. <a href="https://www.cloudflarestatus.com/">Cloudflare Status</a></li>
-<li><strong>OVHcloud Web Hosting, GRA (France) and BHS (Canada) clusters</strong>: sites intermittently error or run slow due to a software issue. Status: ongoing. <a href="https://web-cloud.status-ovhcloud.com/">OVHcloud Web Cloud Status</a></li>
-<li><strong>CoreWeave, US-EAST-15A (United States)</strong>: service disruption affecting GPU nodes. Status: ongoing. <a href="https://rewindex.com/outages/2026-11-26">Rewindex</a></li>
-<li><strong>Attio (Not stated)</strong>: app.attio.com unavailable, labelled critical by the vendor, started about 8:51 AM CST. Status: monitoring. <a href="https://rewindex.com/outages/2026-11-26">Rewindex</a></li>
-<li><strong>SmarTone mobile network (Hong Kong)</strong>: outage left mobile users offline; minor. Status: ongoing. <a href="https://www.scmp.com/news/hong-kong/article/3375900/smartone-network-outage-leaves-hong-kong-mobile-users-offline-and-angry">SCMP</a></li>
+<li>U.S. Air Force Cloud One intrusion is covered in section 1. FAA NAS status shows only routine airport events and no ground stop. IRS, SSA, USPS, CISA emergency directives and shutdowns: nothing new found.</li>
 </ul>
-<h2>4. Status changes</h2>
+<h2>4. AI service outages</h2>
 <ul>
-<li><strong>1Password breach (Toronto, Canada)</strong>: ongoing → new details: the attacker accessed private source code and CI/CD systems via an employee GitHub account and copied limited customer account records (names, emails, identifiers); vaults and Secret Keys not affected, no customer action needed. <a href="https://1password.com/blog/update-on-nov-2026-security-incident">1Password</a>, <a href="https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/">BleepingComputer</a></li>
+<li>Claude (Anthropic), Global: brief "degraded performance for Claude Fable 5.2" incident, listed as resolved by one source and "monitoring" by another, status: monitoring/resolved. <a href="https://status.claude.com/">Claude Status</a> / <a href="https://rewindex.com/outages/2026-11-27">Rewindex</a></li>
 </ul>
-<p>Clear: Cleo (all operational), Oracle OCI (Normal Performance), Azure (no active events), Microsoft 365/Outlook/Teams (only a brief Outlook blip about 7:25–7:52 AM CST, resolved), EDI VAN providers (no issues found). Federal agencies checked and clear: FAA NAS (routine airport delays only), IRS, SSA, VA, CMS, USCIS, passports, FEMA, NWS, Login.gov, ID.me, USPS, SAM.gov; no new federal incidents beyond those already reported (FinCEN, FBI NCIC, USDA). BlueVoyant: nothing new in its blog today (page showed no listings).</p></article>
+<h2>5. Internet, network, cloud, SaaS and EDI</h2>
+<ul>
+<li>Twilio, UK/Mexico/US carriers: SMS/MMS delivery delays, ongoing. <a href="https://rewindex.com/outages/2026-11-27">Rewindex</a></li>
+<li>Akamai, Global: Edge Delivery problems listed as active, ongoing, unconfirmed on Akamai's page. <a href="https://cyberattack.ai/outages">CyberAttack.ai</a></li>
+<li>Russia (Moscow, St. Petersburg, Tatarstan): mobile internet disruptions, ongoing. <a href="https://www.mentoday.ru/technics/news/27-11-2026/internet-propal-v-moskve-peterburge-i-tatarstane-chto-so-svyazyu-v-regionah-rossii-27-noyabrya/">Mentoday</a></li>
+<li>Lloyds/Halifax apps, UK: Black Friday morning outage, resolved/unknown (Scout).</li>
+<li>Cloudflare, Global: minor ongoing Workers/Queues event-subscription issue. <a href="https://www.cloudflarestatus.com/">Cloudflare Status</a></li>
+<li>All clear: Cleo, OCI (Normal Performance), Azure (no active events), Google Cloud, Microsoft 365; AWS only the long-running me-central-1/me-south-1 events. EDI VANs checked (no issues found beyond Twilio).</li>
+<li>BlueVoyant: blog covers PHP2Shell residual supply chain exposure and weaponized AI coding tools; no new incident. <a href="https://www.bluevoyant.com/blog">BlueVoyant</a></li>
+</ul>
+<h2>6. Status changes</h2>
+<ul>
+<li>FinCEN (United States): still offline per X-sourced reports; no new confirmation (still investigating).</li>
+<li>Keio, 1Password, Mitel MiCollab: no change since the last digest.</li>
+</ul></article>
 <footer>Each item links to its original source. <a href="https://papagiglio.github.io/internet-status-digest/archive.html">All past digests</a> · <a href="https://papagiglio.github.io/internet-status-digest/feed.xml">RSS</a> · <a href="https://papagiglio.github.io/internet-status-digest/atom.xml">Atom</a></footer></body></html>
